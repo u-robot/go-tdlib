@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// Parse parses schema.
 func Parse(reader io.Reader) (*Schema, error) {
 	schema := &Schema{
 		Types:     []*Type{},
@@ -38,8 +39,8 @@ func Parse(reader io.Reader) (*Schema, error) {
 
 		default:
 			bodyFields := strings.Fields(line)
-			name := bodyFields[0]
-			class := strings.TrimRight(bodyFields[len(bodyFields)-1], ";")
+			name := FixAAA(bodyFields[0])
+			class := FixAAA(strings.TrimRight(bodyFields[len(bodyFields)-1], ";"))
 			if hitFunctions {
 				schema.Functions = append(schema.Functions, &Function{
 					Name:          name,
@@ -47,7 +48,7 @@ func Parse(reader io.Reader) (*Schema, error) {
 					Class:         class,
 					Properties:    []*Property{},
 					IsSynchronous: false,
-					Type:          FUNCTION_TYPE_UNKNOWN,
+					Type:          FunctionTypeUnknown,
 				})
 			} else {
 				if name == "vector" {
@@ -86,7 +87,7 @@ func parseFunction(firstLine string, scanner *bufio.Scanner) *Function {
 		Class:         class,
 		Properties:    properties,
 		IsSynchronous: isSynchronous,
-		Type:          FUNCTION_TYPE_UNKNOWN,
+		Type:          FunctionTypeUnknown,
 	}
 }
 
@@ -125,17 +126,17 @@ Loop:
 
 		default:
 			bodyFields := strings.Fields(line)
-			name = bodyFields[0]
+			name = FixAAA(bodyFields[0])
 
 			for _, rawProperty := range bodyFields[1 : len(bodyFields)-2] {
 				propertyParts := strings.Split(rawProperty, ":")
 				property := &Property{
-					Name: propertyParts[0],
-					Type: propertyParts[1],
+					Name: FixAAA(propertyParts[0]),
+					Type: FixAAA(propertyParts[1]),
 				}
 				properties = append(properties, property)
 			}
-			class = strings.TrimRight(bodyFields[len(bodyFields)-1], ";")
+			class = FixAAA(strings.TrimRight(bodyFields[len(bodyFields)-1], ";"))
 			break Loop
 		}
 	}
@@ -160,7 +161,7 @@ Loop:
 func parseProperty(str string) (string, string) {
 	strParts := strings.Fields(str)
 
-	return strParts[0], strings.Join(strParts[1:], " ")
+	return FixAAA(strParts[0]), FixAAA(strings.Join(strParts[1:], " "))
 }
 
 func getProperty(properties []*Property, name string) *Property {

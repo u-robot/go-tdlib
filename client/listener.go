@@ -44,12 +44,14 @@ func (store *listenerStore) gc() {
 	}
 }
 
+// Listener implements simple object handling update events.
 type Listener struct {
 	mu       sync.Mutex
 	isActive bool
 	Updates  chan Type
 }
 
+// Close safely closes listener.
 func (listener *Listener) Close() {
 	listener.mu.Lock()
 	defer listener.mu.Unlock()
@@ -58,6 +60,7 @@ func (listener *Listener) Close() {
 	close(listener.Updates)
 }
 
+// IsActive returns true if listener is active and is listening update events.
 func (listener *Listener) IsActive() bool {
 	listener.mu.Lock()
 	defer listener.mu.Unlock()

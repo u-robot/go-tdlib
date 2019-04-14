@@ -4,12 +4,13 @@ import (
 	"bufio"
 	"encoding/json"
 	"flag"
-	"github.com/zelenin/go-tdlib/tlparser"
 	"log"
 	"net/http"
 	"os"
 	"path/filepath"
 	"strings"
+
+	"github.com/u-robot/go-tdlib/tlparser"
 )
 
 func main() {
@@ -21,27 +22,27 @@ func main() {
 
 	flag.Parse()
 
-	resp, err := http.Get("https://raw.githubusercontent.com/tdlib/td/" + version + "/td/generate/scheme/td_api.tl")
+	response, err := http.Get("https://raw.githubusercontent.com/tdlib/td/" + version + "/td/generate/scheme/td_api.tl")
 	if err != nil {
 		log.Fatalf("http.Get error: %s", err)
 		return
 	}
-	defer resp.Body.Close()
+	defer response.Body.Close()
 
-	schema, err := tlparser.Parse(resp.Body)
+	schema, err := tlparser.Parse(response.Body)
 	if err != nil {
 		log.Fatalf("schema parse error: %s", err)
 		return
 	}
 
-	resp, err = http.Get("https://raw.githubusercontent.com/tdlib/td/" + version + "/td/telegram/Td.cpp")
+	response, err = http.Get("https://raw.githubusercontent.com/tdlib/td/" + version + "/td/telegram/Td.cpp")
 	if err != nil {
 		log.Fatalf("http.Get error: %s", err)
 		return
 	}
-	defer resp.Body.Close()
+	defer response.Body.Close()
 
-	err = tlparser.ParseCode(resp.Body, schema)
+	err = tlparser.ParseCode(response.Body, schema)
 	if err != nil {
 		log.Fatalf("parse code error: %s", err)
 		return

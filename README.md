@@ -9,6 +9,7 @@ Go wrapper for [TDLib (Telegram Database Library)](https://github.com/tdlib/td) 
 #### Precompiled
 
 Debian:
+
 ```bash
 su
 apt update
@@ -20,6 +21,7 @@ apt install -y tdlib-dev
 ```
 
 Ubuntu:
+
 ```bash
 sudo apt update
 sudo apt install -y apt-transport-https curl gnupg
@@ -30,6 +32,7 @@ sudo apt install -y tdlib-dev
 ```
 
 Fedora:
+
 ```bash
 sudo dnf update
 sudo dnf install tdlib-static
@@ -62,7 +65,7 @@ rm -rf ./../../tdlib-src
 
 ### Client
 
-[Register an application](https://my.telegram.org/apps) to obtain an api_id and api_hash 
+[Register an application](https://my.telegram.org/apps) to obtain an api_id and api_hash.
 
 ```go
 package main
@@ -71,22 +74,22 @@ import (
     "log"
     "path/filepath"
 
-    "github.com/zelenin/go-tdlib/client"
+    "github.com/u-robot/go-tdlib/client"
 )
 
 func main() {
     client.SetLogVerbosityLevel(1)
-    
+
     // client authorizer
-    authorizer := client.ClientAuthorizer()
+    authorizer := client.NewClientAuthorizer()
     go client.CliInteractor(authorizer)
-    
+
     // or bot authorizer
     botToken := "000000000:gsVCGG5YbikxYHC7bP5vRvmBqJ7Xz6vG6td"
     authorizer := client.BotAuthorizer(botToken)
-    
+
     const (
-        apiId   = 00000
+        apiID   = 00000
         apiHash = "8pu9yg32qkuukj83ozaqo5zzjwhkxhnk"
     )
 
@@ -98,7 +101,7 @@ func main() {
         UseChatInfoDatabase:    true,
         UseMessageDatabase:     true,
         UseSecretChats:         false,
-        ApiId:                  apiId,
+        ApiID:                  apiID,
         ApiHash:                apiHash,
         SystemLanguageCode:     "en",
         DeviceModel:            "Server",
@@ -133,7 +136,7 @@ if err != nil {
 
 listener := tdlibClient.GetListener()
 defer listener.Close()
- 
+
 for update := range listener.Updates {
     if update.GetClass() == client.ClassUpdate {
         log.Printf("%#v", update)
@@ -161,7 +164,7 @@ tdlibClient, err := client.NewClient(authorizer, proxyOption)
 ## Notes
 
 * WIP. Library API can be changed in the future
-* The package includes a .tl-parser and generated [json-schema](https://github.com/zelenin/go-tdlib/tree/master/data) for creating libraries in other languages
+* The package includes a .tl-parser and generated [json-schema](https://github.com/u-robot/go-tdlib/tree/master/data) for creating libraries in other languages
 
 ## Author
 

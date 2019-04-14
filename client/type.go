@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 )
 
+// Class constants.
 const (
 	ClassAuthenticationCodeType             = "AuthenticationCodeType"
 	ClassAuthorizationState                 = "AuthorizationState"
@@ -56,7 +57,7 @@ const (
 	ClassNetworkStatisticsEntry             = "NetworkStatisticsEntry"
 	ClassConnectionState                    = "ConnectionState"
 	ClassTopChatCategory                    = "TopChatCategory"
-	ClassTMeUrlType                         = "TMeUrlType"
+	ClassTMeURLType                         = "TMeURLType"
 	ClassTextParseMode                      = "TextParseMode"
 	ClassProxyType                          = "ProxyType"
 	ClassUpdate                             = "Update"
@@ -152,7 +153,7 @@ const (
 	ClassStickerSets                        = "StickerSets"
 	ClassCallProtocol                       = "CallProtocol"
 	ClassCallConnection                     = "CallConnection"
-	ClassCallId                             = "CallId"
+	ClassCallID                             = "CallID"
 	ClassCall                               = "Call"
 	ClassAnimations                         = "Animations"
 	ClassImportedContacts                   = "ImportedContacts"
@@ -172,7 +173,7 @@ const (
 	ClassWallpapers                         = "Wallpapers"
 	ClassHashtags                           = "Hashtags"
 	ClassUserPrivacySettingRules            = "UserPrivacySettingRules"
-	ClassAccountTtl                         = "AccountTtl"
+	ClassAccountTTL                         = "AccountTTL"
 	ClassSession                            = "Session"
 	ClassSessions                           = "Sessions"
 	ClassConnectedWebsite                   = "ConnectedWebsite"
@@ -184,8 +185,8 @@ const (
 	ClassStorageStatistics                  = "StorageStatistics"
 	ClassStorageStatisticsFast              = "StorageStatisticsFast"
 	ClassNetworkStatistics                  = "NetworkStatistics"
-	ClassTMeUrl                             = "TMeUrl"
-	ClassTMeUrls                            = "TMeUrls"
+	ClassTMeURL                             = "TMeURL"
+	ClassTMeURLs                            = "TMeURLs"
 	ClassCount                              = "Count"
 	ClassText                               = "Text"
 	ClassSeconds                            = "Seconds"
@@ -202,6 +203,7 @@ const (
 	ClassTestVectorStringObject             = "TestVectorStringObject"
 )
 
+// Type constants.
 const (
 	TypeError                                           = "error"
 	TypeOk                                              = "ok"
@@ -231,7 +233,7 @@ const (
 	TypeLocalFile                                       = "localFile"
 	TypeRemoteFile                                      = "remoteFile"
 	TypeFile                                            = "file"
-	TypeInputFileId                                     = "inputFileId"
+	TypeInputFileID                                     = "inputFileID"
 	TypeInputFileRemote                                 = "inputFileRemote"
 	TypeInputFileLocal                                  = "inputFileLocal"
 	TypeInputFileGenerated                              = "inputFileGenerated"
@@ -319,7 +321,7 @@ const (
 	TypeKeyboardButtonTypeRequestPhoneNumber            = "keyboardButtonTypeRequestPhoneNumber"
 	TypeKeyboardButtonTypeRequestLocation               = "keyboardButtonTypeRequestLocation"
 	TypeKeyboardButton                                  = "keyboardButton"
-	TypeInlineKeyboardButtonTypeUrl                     = "inlineKeyboardButtonTypeUrl"
+	TypeInlineKeyboardButtonTypeURL                     = "inlineKeyboardButtonTypeURL"
 	TypeInlineKeyboardButtonTypeCallback                = "inlineKeyboardButtonTypeCallback"
 	TypeInlineKeyboardButtonTypeCallbackGame            = "inlineKeyboardButtonTypeCallbackGame"
 	TypeInlineKeyboardButtonTypeSwitchInline            = "inlineKeyboardButtonTypeSwitchInline"
@@ -335,7 +337,7 @@ const (
 	TypeRichTextUnderline                               = "richTextUnderline"
 	TypeRichTextStrikethrough                           = "richTextStrikethrough"
 	TypeRichTextFixed                                   = "richTextFixed"
-	TypeRichTextUrl                                     = "richTextUrl"
+	TypeRichTextURL                                     = "richTextURL"
 	TypeRichTextEmailAddress                            = "richTextEmailAddress"
 	TypeRichTexts                                       = "richTexts"
 	TypePageBlockTitle                                  = "pageBlockTitle"
@@ -479,7 +481,7 @@ const (
 	TypeMessageChatUpgradeFrom                          = "messageChatUpgradeFrom"
 	TypeMessagePinMessage                               = "messagePinMessage"
 	TypeMessageScreenshotTaken                          = "messageScreenshotTaken"
-	TypeMessageChatSetTtl                               = "messageChatSetTtl"
+	TypeMessageChatSetTTL                               = "messageChatSetTTL"
 	TypeMessageCustomServiceAction                      = "messageCustomServiceAction"
 	TypeMessageGameScore                                = "messageGameScore"
 	TypeMessagePaymentSuccessful                        = "messagePaymentSuccessful"
@@ -493,14 +495,14 @@ const (
 	TypeTextEntityTypeHashtag                           = "textEntityTypeHashtag"
 	TypeTextEntityTypeCashtag                           = "textEntityTypeCashtag"
 	TypeTextEntityTypeBotCommand                        = "textEntityTypeBotCommand"
-	TypeTextEntityTypeUrl                               = "textEntityTypeUrl"
+	TypeTextEntityTypeURL                               = "textEntityTypeURL"
 	TypeTextEntityTypeEmailAddress                      = "textEntityTypeEmailAddress"
 	TypeTextEntityTypeBold                              = "textEntityTypeBold"
 	TypeTextEntityTypeItalic                            = "textEntityTypeItalic"
 	TypeTextEntityTypeCode                              = "textEntityTypeCode"
 	TypeTextEntityTypePre                               = "textEntityTypePre"
 	TypeTextEntityTypePreCode                           = "textEntityTypePreCode"
-	TypeTextEntityTypeTextUrl                           = "textEntityTypeTextUrl"
+	TypeTextEntityTypeTextURL                           = "textEntityTypeTextURL"
 	TypeTextEntityTypeMentionName                       = "textEntityTypeMentionName"
 	TypeTextEntityTypePhoneNumber                       = "textEntityTypePhoneNumber"
 	TypeInputThumbnail                                  = "inputThumbnail"
@@ -527,7 +529,7 @@ const (
 	TypeSearchMessagesFilterVideo                       = "searchMessagesFilterVideo"
 	TypeSearchMessagesFilterVoiceNote                   = "searchMessagesFilterVoiceNote"
 	TypeSearchMessagesFilterPhotoAndVideo               = "searchMessagesFilterPhotoAndVideo"
-	TypeSearchMessagesFilterUrl                         = "searchMessagesFilterUrl"
+	TypeSearchMessagesFilterURL                         = "searchMessagesFilterURL"
 	TypeSearchMessagesFilterChatPhoto                   = "searchMessagesFilterChatPhoto"
 	TypeSearchMessagesFilterCall                        = "searchMessagesFilterCall"
 	TypeSearchMessagesFilterMissedCall                  = "searchMessagesFilterMissedCall"
@@ -566,7 +568,7 @@ const (
 	TypeCallDiscardReasonHungUp                         = "callDiscardReasonHungUp"
 	TypeCallProtocol                                    = "callProtocol"
 	TypeCallConnection                                  = "callConnection"
-	TypeCallId                                          = "callId"
+	TypeCallID                                          = "callID"
 	TypeCallStatePending                                = "callStatePending"
 	TypeCallStateExchangingKeys                         = "callStateExchangingKeys"
 	TypeCallStateReady                                  = "callStateReady"
@@ -668,7 +670,7 @@ const (
 	TypeUserPrivacySettingShowStatus                    = "userPrivacySettingShowStatus"
 	TypeUserPrivacySettingAllowChatInvites              = "userPrivacySettingAllowChatInvites"
 	TypeUserPrivacySettingAllowCalls                    = "userPrivacySettingAllowCalls"
-	TypeAccountTtl                                      = "accountTtl"
+	TypeAccountTTL                                      = "accountTTL"
 	TypeSession                                         = "session"
 	TypeSessions                                        = "sessions"
 	TypeConnectedWebsite                                = "connectedWebsite"
@@ -719,12 +721,12 @@ const (
 	TypeTopChatCategoryChannels                         = "topChatCategoryChannels"
 	TypeTopChatCategoryInlineBots                       = "topChatCategoryInlineBots"
 	TypeTopChatCategoryCalls                            = "topChatCategoryCalls"
-	TypeTMeUrlTypeUser                                  = "tMeUrlTypeUser"
-	TypeTMeUrlTypeSupergroup                            = "tMeUrlTypeSupergroup"
-	TypeTMeUrlTypeChatInvite                            = "tMeUrlTypeChatInvite"
-	TypeTMeUrlTypeStickerSet                            = "tMeUrlTypeStickerSet"
-	TypeTMeUrl                                          = "tMeUrl"
-	TypeTMeUrls                                         = "tMeUrls"
+	TypeTMeURLTypeUser                                  = "tMeURLTypeUser"
+	TypeTMeURLTypeSupergroup                            = "tMeURLTypeSupergroup"
+	TypeTMeURLTypeChatInvite                            = "tMeURLTypeChatInvite"
+	TypeTMeURLTypeStickerSet                            = "tMeURLTypeStickerSet"
+	TypeTMeURL                                          = "tMeURL"
+	TypeTMeURLs                                         = "tMeURLs"
 	TypeCount                                           = "count"
 	TypeText                                            = "text"
 	TypeSeconds                                         = "seconds"
@@ -732,7 +734,7 @@ const (
 	TypeTextParseModeMarkdown                           = "textParseModeMarkdown"
 	TypeTextParseModeHTML                               = "textParseModeHTML"
 	TypeProxyTypeSocks5                                 = "proxyTypeSocks5"
-	TypeProxyTypeHttp                                   = "proxyTypeHttp"
+	TypeProxyTypeHTTP                                   = "proxyTypeHTTP"
 	TypeProxyTypeMtproto                                = "proxyTypeMtproto"
 	TypeProxy                                           = "proxy"
 	TypeProxies                                         = "proxies"
@@ -807,272 +809,272 @@ const (
 	TypeTestVectorStringObject                          = "testVectorStringObject"
 )
 
-// Provides information about the method by which an authentication code is delivered to the user
+// AuthenticationCodeType provides information about the method by which an authentication code is delivered to the user
 type AuthenticationCodeType interface {
 	AuthenticationCodeTypeType() string
 }
 
-// Represents the current authorization state of the client
+// AuthorizationState represents the current authorization state of the client
 type AuthorizationState interface {
 	AuthorizationStateType() string
 }
 
-// Points to a file
+// InputFile points to a file
 type InputFile interface {
 	InputFileType() string
 }
 
-// Part of the face, relative to which a mask should be placed
+// MaskPoint part of the face, relative to which a mask should be placed
 type MaskPoint interface {
 	MaskPointType() string
 }
 
-// Represents the relationship between user A and user B. For incoming_link, user A is the current user; for outgoing_link, user B is the current user
+// LinkState represents the relationship between user A and user B. For incoming_link, user A is the current user; for outgoing_link, user B is the current user
 type LinkState interface {
 	LinkStateType() string
 }
 
-// Represents the type of the user. The following types are possible: regular users, deleted users and bots
+// UserType represents the type of the user. The following types are possible: regular users, deleted users and bots
 type UserType interface {
 	UserTypeType() string
 }
 
-// Provides information about the status of a member in a chat
+// ChatMemberStatus provides information about the status of a member in a chat
 type ChatMemberStatus interface {
 	ChatMemberStatusType() string
 }
 
-// Specifies the kind of chat members to return in searchChatMembers
+// ChatMembersFilter specifies the kind of chat members to return in searchChatMembers
 type ChatMembersFilter interface {
 	ChatMembersFilterType() string
 }
 
-// Specifies the kind of chat members to return in getSupergroupMembers
+// SupergroupMembersFilter specifies the kind of chat members to return in getSupergroupMembers
 type SupergroupMembersFilter interface {
 	SupergroupMembersFilterType() string
 }
 
-// Describes the current secret chat state
+// SecretChatState describes the current secret chat state
 type SecretChatState interface {
 	SecretChatStateType() string
 }
 
-// Contains information about the initial sender of a forwarded message
+// MessageForwardInfo contains information about the initial sender of a forwarded message
 type MessageForwardInfo interface {
 	MessageForwardInfoType() string
 }
 
-// Contains information about the sending state of the message
+// MessageSendingState contains information about the sending state of the message
 type MessageSendingState interface {
 	MessageSendingStateType() string
 }
 
-// Describes the types of chats to which notification settings are applied
+// NotificationSettingsScope describes the types of chats to which notification settings are applied
 type NotificationSettingsScope interface {
 	NotificationSettingsScopeType() string
 }
 
-// Describes the type of a chat
+// ChatType describes the type of a chat
 type ChatType interface {
 	ChatTypeType() string
 }
 
-// Describes a keyboard button type
+// KeyboardButtonType describes a keyboard button type
 type KeyboardButtonType interface {
 	KeyboardButtonTypeType() string
 }
 
-// Describes the type of an inline keyboard button
+// InlineKeyboardButtonType describes the type of an inline keyboard button
 type InlineKeyboardButtonType interface {
 	InlineKeyboardButtonTypeType() string
 }
 
-// Contains a description of a custom keyboard and actions that can be done with it to quickly reply to bots
+// ReplyMarkup contains a description of a custom keyboard and actions that can be done with it to quickly reply to bots
 type ReplyMarkup interface {
 	ReplyMarkupType() string
 }
 
-// Describes a text object inside an instant-view web page
+// RichText describes a text object inside an instant-view web page
 type RichText interface {
 	RichTextType() string
 }
 
-// Describes a block of an instant view web page
+// PageBlock describes a block of an instant view web page
 type PageBlock interface {
 	PageBlockType() string
 }
 
-// Contains information about the payment method chosen by the user
+// InputCredentials contains information about the payment method chosen by the user
 type InputCredentials interface {
 	InputCredentialsType() string
 }
 
-// Contains the type of a Telegram Passport element
+// PassportElementType contains the type of a Telegram Passport element
 type PassportElementType interface {
 	PassportElementTypeType() string
 }
 
-// Contains information about a Telegram Passport element
+// PassportElement contains information about a Telegram Passport element
 type PassportElement interface {
 	PassportElementType() string
 }
 
-// Contains information about a Telegram Passport element to be saved
+// InputPassportElement contains information about a Telegram Passport element to be saved
 type InputPassportElement interface {
 	InputPassportElementType() string
 }
 
-// Contains the description of an error in a Telegram Passport element
+// PassportElementErrorSource contains the description of an error in a Telegram Passport element
 type PassportElementErrorSource interface {
 	PassportElementErrorSourceType() string
 }
 
-// Contains the description of an error in a Telegram Passport element; for bots only
+// InputPassportElementErrorSource contains the description of an error in a Telegram Passport element; for bots only
 type InputPassportElementErrorSource interface {
 	InputPassportElementErrorSourceType() string
 }
 
-// Contains the content of a message
+// MessageContent contains the content of a message
 type MessageContent interface {
 	MessageContentType() string
 }
 
-// Represents a part of the text which must be formatted differently
+// TextEntityType represents a part of the text which must be formatted differently
 type TextEntityType interface {
 	TextEntityTypeType() string
 }
 
-// The content of a message to send
+// InputMessageContent the content of a message to send
 type InputMessageContent interface {
 	InputMessageContentType() string
 }
 
-// Represents a filter for message search results
+// SearchMessagesFilter represents a filter for message search results
 type SearchMessagesFilter interface {
 	SearchMessagesFilterType() string
 }
 
-// Describes the different types of activity in a chat
+// ChatAction describes the different types of activity in a chat
 type ChatAction interface {
 	ChatActionType() string
 }
 
-// Describes the last time the user was online
+// UserStatus describes the last time the user was online
 type UserStatus interface {
 	UserStatusType() string
 }
 
-// Describes the reason why a call was discarded
+// CallDiscardReason describes the reason why a call was discarded
 type CallDiscardReason interface {
 	CallDiscardReasonType() string
 }
 
-// Describes the current call state
+// CallState describes the current call state
 type CallState interface {
 	CallStateType() string
 }
 
-// Represents a single result of an inline query; for bots only
+// InputInlineQueryResult represents a single result of an inline query; for bots only
 type InputInlineQueryResult interface {
 	InputInlineQueryResultType() string
 }
 
-// Represents a single result of an inline query
+// InlineQueryResult represents a single result of an inline query
 type InlineQueryResult interface {
 	InlineQueryResultType() string
 }
 
-// Represents a payload of a callback query
+// CallbackQueryPayload represents a payload of a callback query
 type CallbackQueryPayload interface {
 	CallbackQueryPayloadType() string
 }
 
-// Represents a chat event
+// ChatEventAction represents a chat event
 type ChatEventAction interface {
 	ChatEventActionType() string
 }
 
-// Represents the value of a string in a language pack
+// LanguagePackStringValue represents the value of a string in a language pack
 type LanguagePackStringValue interface {
 	LanguagePackStringValueType() string
 }
 
-// Represents a data needed to subscribe for push notifications. To use specific push notification service, you must specify the correct application platform and upload valid server authentication data at https://my.telegram.org
+// DeviceToken represents a data needed to subscribe for push notifications. To use specific push notification service, you must specify the correct application platform and upload valid server authentication data at https://my.telegram.org
 type DeviceToken interface {
 	DeviceTokenType() string
 }
 
-// Represents result of checking whether a username can be set for a chat
+// CheckChatUsernameResult represents result of checking whether a username can be set for a chat
 type CheckChatUsernameResult interface {
 	CheckChatUsernameResultType() string
 }
 
-// Represents the value of an option
+// OptionValue represents the value of an option
 type OptionValue interface {
 	OptionValueType() string
 }
 
-// Represents a single rule for managing privacy settings
+// UserPrivacySettingRule represents a single rule for managing privacy settings
 type UserPrivacySettingRule interface {
 	UserPrivacySettingRuleType() string
 }
 
-// Describes available user privacy settings
+// UserPrivacySetting describes available user privacy settings
 type UserPrivacySetting interface {
 	UserPrivacySettingType() string
 }
 
-// Describes the reason why a chat is reported
+// ChatReportReason describes the reason why a chat is reported
 type ChatReportReason interface {
 	ChatReportReasonType() string
 }
 
-// Represents the type of a file
+// FileType represents the type of a file
 type FileType interface {
 	FileTypeType() string
 }
 
-// Represents the type of a network
+// NetworkType represents the type of a network
 type NetworkType interface {
 	NetworkTypeType() string
 }
 
-// Contains statistics about network usage
+// NetworkStatisticsEntry contains statistics about network usage
 type NetworkStatisticsEntry interface {
 	NetworkStatisticsEntryType() string
 }
 
-// Describes the current state of the connection to Telegram servers
+// ConnectionState describes the current state of the connection to Telegram servers
 type ConnectionState interface {
 	ConnectionStateType() string
 }
 
-// Represents the categories of chats for which a list of frequently used chats can be retrieved
+// TopChatCategory represents the categories of chats for which a list of frequently used chats can be retrieved
 type TopChatCategory interface {
 	TopChatCategoryType() string
 }
 
-// Describes the type of a URL linking to an internal Telegram entity
-type TMeUrlType interface {
-	TMeUrlTypeType() string
+// TMeURLType describes the type of a URL linking to an internal Telegram entity
+type TMeURLType interface {
+	TMeURLTypeType() string
 }
 
-// Describes the way the text should be parsed for TextEntities
+// TextParseMode describes the way the text should be parsed for TextEntities
 type TextParseMode interface {
 	TextParseModeType() string
 }
 
-// Describes the type of the proxy server
+// ProxyType describes the type of the proxy server
 type ProxyType interface {
 	ProxyTypeType() string
 }
 
-// Contains notifications about data changes
+// Update contains notifications about data changes
 type Update interface {
 	UpdateType() string
 }
 
-// An object of this type can be returned on every function call, in case of an error
+// Error an object of this type can be returned on every function call, in case of an error
 type Error struct {
 	meta
 	// Error code; subject to future changes. If the error code is 406, the error message must not be processed in any way and must not be displayed to the user
@@ -1081,6 +1083,7 @@ type Error struct {
 	Message string `json:"message"`
 }
 
+// MarshalJSON returns Error object as the JSON encoding of Error.
 func (entity *Error) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1089,19 +1092,22 @@ func (entity *Error) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Error) GetClass() string {
 	return ClassError
 }
 
+// GetType returns constant class type string of the class.
 func (*Error) GetType() string {
 	return TypeError
 }
 
-// An object of this type is returned on a successful function call for certain functions
+// Ok an object of this type is returned on a successful function call for certain functions
 type Ok struct {
 	meta
 }
 
+// MarshalJSON returns Ok object as the JSON encoding of Ok.
 func (entity *Ok) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1110,15 +1116,17 @@ func (entity *Ok) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Ok) GetClass() string {
 	return ClassOk
 }
 
+// GetType returns constant class type string of the class.
 func (*Ok) GetType() string {
 	return TypeOk
 }
 
-// Contains parameters for TDLib initialization
+// TdlibParameters contains parameters for TDLib initialization
 type TdlibParameters struct {
 	meta
 	// If set to true, the Telegram test environment will be used instead of the production environment
@@ -1136,9 +1144,9 @@ type TdlibParameters struct {
 	// If set to true, support for secret chats will be enabled
 	UseSecretChats bool `json:"use_secret_chats"`
 	// Application identifier for Telegram API access, which can be obtained at https://my.telegram.org
-	ApiId int32 `json:"api_id"`
+	APIID int32 `json:"api_id"`
 	// Application identifier hash for Telegram API access, which can be obtained at https://my.telegram.org
-	ApiHash string `json:"api_hash"`
+	APIHash string `json:"api_hash"`
 	// IETF language tag of the user's operating system language; must be non-empty
 	SystemLanguageCode string `json:"system_language_code"`
 	// Model of the device the application is being run on; must be non-empty
@@ -1153,6 +1161,7 @@ type TdlibParameters struct {
 	IgnoreFileNames bool `json:"ignore_file_names"`
 }
 
+// MarshalJSON returns TdlibParameters object as the JSON encoding of TdlibParameters.
 func (entity *TdlibParameters) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1161,21 +1170,24 @@ func (entity *TdlibParameters) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TdlibParameters) GetClass() string {
 	return ClassTdlibParameters
 }
 
+// GetType returns constant class type string of the class.
 func (*TdlibParameters) GetType() string {
 	return TypeTdlibParameters
 }
 
-// An authentication code is delivered via a private Telegram message, which can be viewed in another client
+// AuthenticationCodeTypeTelegramMessage an authentication code is delivered via a private Telegram message, which can be viewed in another client
 type AuthenticationCodeTypeTelegramMessage struct {
 	meta
 	// Length of the code
 	Length int32 `json:"length"`
 }
 
+// MarshalJSON returns AuthenticationCodeTypeTelegramMessage object as the JSON encoding of AuthenticationCodeTypeTelegramMessage.
 func (entity *AuthenticationCodeTypeTelegramMessage) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1184,25 +1196,29 @@ func (entity *AuthenticationCodeTypeTelegramMessage) MarshalJSON() ([]byte, erro
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*AuthenticationCodeTypeTelegramMessage) GetClass() string {
 	return ClassAuthenticationCodeType
 }
 
+// GetType returns constant class type string of the class.
 func (*AuthenticationCodeTypeTelegramMessage) GetType() string {
 	return TypeAuthenticationCodeTypeTelegramMessage
 }
 
+// AuthenticationCodeTypeType returns constant class type string of the class.
 func (*AuthenticationCodeTypeTelegramMessage) AuthenticationCodeTypeType() string {
 	return TypeAuthenticationCodeTypeTelegramMessage
 }
 
-// An authentication code is delivered via an SMS message to the specified phone number
+// AuthenticationCodeTypeSms an authentication code is delivered via an SMS message to the specified phone number
 type AuthenticationCodeTypeSms struct {
 	meta
 	// Length of the code
 	Length int32 `json:"length"`
 }
 
+// MarshalJSON returns AuthenticationCodeTypeSms object as the JSON encoding of AuthenticationCodeTypeSms.
 func (entity *AuthenticationCodeTypeSms) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1211,25 +1227,29 @@ func (entity *AuthenticationCodeTypeSms) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*AuthenticationCodeTypeSms) GetClass() string {
 	return ClassAuthenticationCodeType
 }
 
+// GetType returns constant class type string of the class.
 func (*AuthenticationCodeTypeSms) GetType() string {
 	return TypeAuthenticationCodeTypeSms
 }
 
+// AuthenticationCodeTypeType returns constant class type string of the class.
 func (*AuthenticationCodeTypeSms) AuthenticationCodeTypeType() string {
 	return TypeAuthenticationCodeTypeSms
 }
 
-// An authentication code is delivered via a phone call to the specified phone number
+// AuthenticationCodeTypeCall an authentication code is delivered via a phone call to the specified phone number
 type AuthenticationCodeTypeCall struct {
 	meta
 	// Length of the code
 	Length int32 `json:"length"`
 }
 
+// MarshalJSON returns AuthenticationCodeTypeCall object as the JSON encoding of AuthenticationCodeTypeCall.
 func (entity *AuthenticationCodeTypeCall) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1238,25 +1258,29 @@ func (entity *AuthenticationCodeTypeCall) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*AuthenticationCodeTypeCall) GetClass() string {
 	return ClassAuthenticationCodeType
 }
 
+// GetType returns constant class type string of the class.
 func (*AuthenticationCodeTypeCall) GetType() string {
 	return TypeAuthenticationCodeTypeCall
 }
 
+// AuthenticationCodeTypeType returns constant class type string of the class.
 func (*AuthenticationCodeTypeCall) AuthenticationCodeTypeType() string {
 	return TypeAuthenticationCodeTypeCall
 }
 
-// An authentication code is delivered by an immediately cancelled call to the specified phone number. The number from which the call was made is the code
+// AuthenticationCodeTypeFlashCall an authentication code is delivered by an immediately cancelled call to the specified phone number. The number from which the call was made is the code
 type AuthenticationCodeTypeFlashCall struct {
 	meta
 	// Pattern of the phone number from which the call will be made
 	Pattern string `json:"pattern"`
 }
 
+// MarshalJSON returns AuthenticationCodeTypeFlashCall object as the JSON encoding of AuthenticationCodeTypeFlashCall.
 func (entity *AuthenticationCodeTypeFlashCall) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1265,19 +1289,22 @@ func (entity *AuthenticationCodeTypeFlashCall) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*AuthenticationCodeTypeFlashCall) GetClass() string {
 	return ClassAuthenticationCodeType
 }
 
+// GetType returns constant class type string of the class.
 func (*AuthenticationCodeTypeFlashCall) GetType() string {
 	return TypeAuthenticationCodeTypeFlashCall
 }
 
+// AuthenticationCodeTypeType returns constant class type string of the class.
 func (*AuthenticationCodeTypeFlashCall) AuthenticationCodeTypeType() string {
 	return TypeAuthenticationCodeTypeFlashCall
 }
 
-// Information about the authentication code that was sent
+// AuthenticationCodeInfo information about the authentication code that was sent
 type AuthenticationCodeInfo struct {
 	meta
 	// A phone number that is being authenticated
@@ -1290,6 +1317,7 @@ type AuthenticationCodeInfo struct {
 	Timeout int32 `json:"timeout"`
 }
 
+// MarshalJSON returns AuthenticationCodeInfo object as the JSON encoding of AuthenticationCodeInfo.
 func (entity *AuthenticationCodeInfo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1298,15 +1326,18 @@ func (entity *AuthenticationCodeInfo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*AuthenticationCodeInfo) GetClass() string {
 	return ClassAuthenticationCodeInfo
 }
 
+// GetType returns constant class type string of the class.
 func (*AuthenticationCodeInfo) GetType() string {
 	return TypeAuthenticationCodeInfo
 }
 
-func (authenticationCodeInfo *AuthenticationCodeInfo) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets AuthenticationCodeInfo object to a copy of JSON encoding of AuthenticationCodeInfo.
+func (entity *AuthenticationCodeInfo) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		PhoneNumber string          `json:"phone_number"`
 		Type        json.RawMessage `json:"type"`
@@ -1319,19 +1350,19 @@ func (authenticationCodeInfo *AuthenticationCodeInfo) UnmarshalJSON(data []byte)
 		return err
 	}
 
-	authenticationCodeInfo.PhoneNumber = tmp.PhoneNumber
-	authenticationCodeInfo.Timeout = tmp.Timeout
+	entity.PhoneNumber = tmp.PhoneNumber
+	entity.Timeout = tmp.Timeout
 
 	fieldType, _ := UnmarshalAuthenticationCodeType(tmp.Type)
-	authenticationCodeInfo.Type = fieldType
+	entity.Type = fieldType
 
 	fieldNextType, _ := UnmarshalAuthenticationCodeType(tmp.NextType)
-	authenticationCodeInfo.NextType = fieldNextType
+	entity.NextType = fieldNextType
 
 	return nil
 }
 
-// Information about the email address authentication code that was sent
+// EmailAddressAuthenticationCodeInfo information about the email address authentication code that was sent
 type EmailAddressAuthenticationCodeInfo struct {
 	meta
 	// Pattern of the email address to which an authentication code was sent
@@ -1340,6 +1371,7 @@ type EmailAddressAuthenticationCodeInfo struct {
 	Length int32 `json:"length"`
 }
 
+// MarshalJSON returns EmailAddressAuthenticationCodeInfo object as the JSON encoding of EmailAddressAuthenticationCodeInfo.
 func (entity *EmailAddressAuthenticationCodeInfo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1348,15 +1380,17 @@ func (entity *EmailAddressAuthenticationCodeInfo) MarshalJSON() ([]byte, error) 
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*EmailAddressAuthenticationCodeInfo) GetClass() string {
 	return ClassEmailAddressAuthenticationCodeInfo
 }
 
+// GetType returns constant class type string of the class.
 func (*EmailAddressAuthenticationCodeInfo) GetType() string {
 	return TypeEmailAddressAuthenticationCodeInfo
 }
 
-// Represents a part of the text that needs to be formatted in some unusual way
+// TextEntity represents a part of the text that needs to be formatted in some unusual way
 type TextEntity struct {
 	meta
 	// Offset of the entity in UTF-16 code points
@@ -1367,6 +1401,7 @@ type TextEntity struct {
 	Type TextEntityType `json:"type"`
 }
 
+// MarshalJSON returns TextEntity object as the JSON encoding of TextEntity.
 func (entity *TextEntity) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1375,15 +1410,18 @@ func (entity *TextEntity) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TextEntity) GetClass() string {
 	return ClassTextEntity
 }
 
+// GetType returns constant class type string of the class.
 func (*TextEntity) GetType() string {
 	return TypeTextEntity
 }
 
-func (textEntity *TextEntity) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets TextEntity object to a copy of JSON encoding of TextEntity.
+func (entity *TextEntity) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Offset int32           `json:"offset"`
 		Length int32           `json:"length"`
@@ -1395,22 +1433,23 @@ func (textEntity *TextEntity) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	textEntity.Offset = tmp.Offset
-	textEntity.Length = tmp.Length
+	entity.Offset = tmp.Offset
+	entity.Length = tmp.Length
 
 	fieldType, _ := UnmarshalTextEntityType(tmp.Type)
-	textEntity.Type = fieldType
+	entity.Type = fieldType
 
 	return nil
 }
 
-// Contains a list of text entities
+// TextEntities contains a list of text entities
 type TextEntities struct {
 	meta
 	// List of text entities
 	Entities []*TextEntity `json:"entities"`
 }
 
+// MarshalJSON returns TextEntities object as the JSON encoding of TextEntities.
 func (entity *TextEntities) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1419,15 +1458,17 @@ func (entity *TextEntities) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TextEntities) GetClass() string {
 	return ClassTextEntities
 }
 
+// GetType returns constant class type string of the class.
 func (*TextEntities) GetType() string {
 	return TypeTextEntities
 }
 
-// A text with some entities
+// FormattedText a text with some entities
 type FormattedText struct {
 	meta
 	// The text
@@ -1436,6 +1477,7 @@ type FormattedText struct {
 	Entities []*TextEntity `json:"entities"`
 }
 
+// MarshalJSON returns FormattedText object as the JSON encoding of FormattedText.
 func (entity *FormattedText) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1444,15 +1486,17 @@ func (entity *FormattedText) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*FormattedText) GetClass() string {
 	return ClassFormattedText
 }
 
+// GetType returns constant class type string of the class.
 func (*FormattedText) GetType() string {
 	return TypeFormattedText
 }
 
-// Contains Telegram terms of service
+// TermsOfService contains Telegram terms of service
 type TermsOfService struct {
 	meta
 	// Text of the terms of service
@@ -1463,6 +1507,7 @@ type TermsOfService struct {
 	ShowPopup bool `json:"show_popup"`
 }
 
+// MarshalJSON returns TermsOfService object as the JSON encoding of TermsOfService.
 func (entity *TermsOfService) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1471,19 +1516,22 @@ func (entity *TermsOfService) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TermsOfService) GetClass() string {
 	return ClassTermsOfService
 }
 
+// GetType returns constant class type string of the class.
 func (*TermsOfService) GetType() string {
 	return TypeTermsOfService
 }
 
-// TDLib needs TdlibParameters for initialization
+// AuthorizationStateWaitTdlibParameters tDLib needs TdlibParameters for initialization
 type AuthorizationStateWaitTdlibParameters struct {
 	meta
 }
 
+// MarshalJSON returns AuthorizationStateWaitTdlibParameters object as the JSON encoding of AuthorizationStateWaitTdlibParameters.
 func (entity *AuthorizationStateWaitTdlibParameters) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1492,25 +1540,29 @@ func (entity *AuthorizationStateWaitTdlibParameters) MarshalJSON() ([]byte, erro
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*AuthorizationStateWaitTdlibParameters) GetClass() string {
 	return ClassAuthorizationState
 }
 
+// GetType returns constant class type string of the class.
 func (*AuthorizationStateWaitTdlibParameters) GetType() string {
 	return TypeAuthorizationStateWaitTdlibParameters
 }
 
+// AuthorizationStateType returns constant class type string of the class.
 func (*AuthorizationStateWaitTdlibParameters) AuthorizationStateType() string {
 	return TypeAuthorizationStateWaitTdlibParameters
 }
 
-// TDLib needs an encryption key to decrypt the local database
+// AuthorizationStateWaitEncryptionKey tDLib needs an encryption key to decrypt the local database
 type AuthorizationStateWaitEncryptionKey struct {
 	meta
 	// True, if the database is currently encrypted
 	IsEncrypted bool `json:"is_encrypted"`
 }
 
+// MarshalJSON returns AuthorizationStateWaitEncryptionKey object as the JSON encoding of AuthorizationStateWaitEncryptionKey.
 func (entity *AuthorizationStateWaitEncryptionKey) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1519,23 +1571,27 @@ func (entity *AuthorizationStateWaitEncryptionKey) MarshalJSON() ([]byte, error)
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*AuthorizationStateWaitEncryptionKey) GetClass() string {
 	return ClassAuthorizationState
 }
 
+// GetType returns constant class type string of the class.
 func (*AuthorizationStateWaitEncryptionKey) GetType() string {
 	return TypeAuthorizationStateWaitEncryptionKey
 }
 
+// AuthorizationStateType returns constant class type string of the class.
 func (*AuthorizationStateWaitEncryptionKey) AuthorizationStateType() string {
 	return TypeAuthorizationStateWaitEncryptionKey
 }
 
-// TDLib needs the user's phone number to authorize
+// AuthorizationStateWaitPhoneNumber tDLib needs the user's phone number to authorize
 type AuthorizationStateWaitPhoneNumber struct {
 	meta
 }
 
+// MarshalJSON returns AuthorizationStateWaitPhoneNumber object as the JSON encoding of AuthorizationStateWaitPhoneNumber.
 func (entity *AuthorizationStateWaitPhoneNumber) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1544,19 +1600,22 @@ func (entity *AuthorizationStateWaitPhoneNumber) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*AuthorizationStateWaitPhoneNumber) GetClass() string {
 	return ClassAuthorizationState
 }
 
+// GetType returns constant class type string of the class.
 func (*AuthorizationStateWaitPhoneNumber) GetType() string {
 	return TypeAuthorizationStateWaitPhoneNumber
 }
 
+// AuthorizationStateType returns constant class type string of the class.
 func (*AuthorizationStateWaitPhoneNumber) AuthorizationStateType() string {
 	return TypeAuthorizationStateWaitPhoneNumber
 }
 
-// TDLib needs the user's authentication code to finalize authorization
+// AuthorizationStateWaitCode tDLib needs the user's authentication code to finalize authorization
 type AuthorizationStateWaitCode struct {
 	meta
 	// True, if the user is already registered
@@ -1567,6 +1626,7 @@ type AuthorizationStateWaitCode struct {
 	CodeInfo *AuthenticationCodeInfo `json:"code_info"`
 }
 
+// MarshalJSON returns AuthorizationStateWaitCode object as the JSON encoding of AuthorizationStateWaitCode.
 func (entity *AuthorizationStateWaitCode) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1575,19 +1635,22 @@ func (entity *AuthorizationStateWaitCode) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*AuthorizationStateWaitCode) GetClass() string {
 	return ClassAuthorizationState
 }
 
+// GetType returns constant class type string of the class.
 func (*AuthorizationStateWaitCode) GetType() string {
 	return TypeAuthorizationStateWaitCode
 }
 
+// AuthorizationStateType returns constant class type string of the class.
 func (*AuthorizationStateWaitCode) AuthorizationStateType() string {
 	return TypeAuthorizationStateWaitCode
 }
 
-// The user has been authorized, but needs to enter a password to start using the application
+// AuthorizationStateWaitPassword the user has been authorized, but needs to enter a password to start using the application
 type AuthorizationStateWaitPassword struct {
 	meta
 	// Hint for the password; can be empty
@@ -1598,6 +1661,7 @@ type AuthorizationStateWaitPassword struct {
 	RecoveryEmailAddressPattern string `json:"recovery_email_address_pattern"`
 }
 
+// MarshalJSON returns AuthorizationStateWaitPassword object as the JSON encoding of AuthorizationStateWaitPassword.
 func (entity *AuthorizationStateWaitPassword) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1606,23 +1670,27 @@ func (entity *AuthorizationStateWaitPassword) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*AuthorizationStateWaitPassword) GetClass() string {
 	return ClassAuthorizationState
 }
 
+// GetType returns constant class type string of the class.
 func (*AuthorizationStateWaitPassword) GetType() string {
 	return TypeAuthorizationStateWaitPassword
 }
 
+// AuthorizationStateType returns constant class type string of the class.
 func (*AuthorizationStateWaitPassword) AuthorizationStateType() string {
 	return TypeAuthorizationStateWaitPassword
 }
 
-// The user has been successfully authorized. TDLib is now ready to answer queries
+// AuthorizationStateReady the user has been successfully authorized. TDLib is now ready to answer queries
 type AuthorizationStateReady struct {
 	meta
 }
 
+// MarshalJSON returns AuthorizationStateReady object as the JSON encoding of AuthorizationStateReady.
 func (entity *AuthorizationStateReady) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1631,23 +1699,27 @@ func (entity *AuthorizationStateReady) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*AuthorizationStateReady) GetClass() string {
 	return ClassAuthorizationState
 }
 
+// GetType returns constant class type string of the class.
 func (*AuthorizationStateReady) GetType() string {
 	return TypeAuthorizationStateReady
 }
 
+// AuthorizationStateType returns constant class type string of the class.
 func (*AuthorizationStateReady) AuthorizationStateType() string {
 	return TypeAuthorizationStateReady
 }
 
-// The user is currently logging out
+// AuthorizationStateLoggingOut the user is currently logging out
 type AuthorizationStateLoggingOut struct {
 	meta
 }
 
+// MarshalJSON returns AuthorizationStateLoggingOut object as the JSON encoding of AuthorizationStateLoggingOut.
 func (entity *AuthorizationStateLoggingOut) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1656,23 +1728,27 @@ func (entity *AuthorizationStateLoggingOut) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*AuthorizationStateLoggingOut) GetClass() string {
 	return ClassAuthorizationState
 }
 
+// GetType returns constant class type string of the class.
 func (*AuthorizationStateLoggingOut) GetType() string {
 	return TypeAuthorizationStateLoggingOut
 }
 
+// AuthorizationStateType returns constant class type string of the class.
 func (*AuthorizationStateLoggingOut) AuthorizationStateType() string {
 	return TypeAuthorizationStateLoggingOut
 }
 
-// TDLib is closing, all subsequent queries will be answered with the error 500. Note that closing TDLib can take a while. All resources will be freed only after authorizationStateClosed has been received
+// AuthorizationStateClosing tDLib is closing, all subsequent queries will be answered with the error 500. Note that closing TDLib can take a while. All resources will be freed only after authorizationStateClosed has been received
 type AuthorizationStateClosing struct {
 	meta
 }
 
+// MarshalJSON returns AuthorizationStateClosing object as the JSON encoding of AuthorizationStateClosing.
 func (entity *AuthorizationStateClosing) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1681,23 +1757,27 @@ func (entity *AuthorizationStateClosing) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*AuthorizationStateClosing) GetClass() string {
 	return ClassAuthorizationState
 }
 
+// GetType returns constant class type string of the class.
 func (*AuthorizationStateClosing) GetType() string {
 	return TypeAuthorizationStateClosing
 }
 
+// AuthorizationStateType returns constant class type string of the class.
 func (*AuthorizationStateClosing) AuthorizationStateType() string {
 	return TypeAuthorizationStateClosing
 }
 
-// TDLib client is in its final state. All databases are closed and all resources are released. No other updates will be received after this. All queries will be responded to with error code 500. To continue working, one should create a new instance of the TDLib client
+// AuthorizationStateClosed tDLib client is in its final state. All databases are closed and all resources are released. No other updates will be received after this. All queries will be responded to with error code 500. To continue working, one should create a new instance of the TDLib client
 type AuthorizationStateClosed struct {
 	meta
 }
 
+// MarshalJSON returns AuthorizationStateClosed object as the JSON encoding of AuthorizationStateClosed.
 func (entity *AuthorizationStateClosed) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1706,19 +1786,22 @@ func (entity *AuthorizationStateClosed) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*AuthorizationStateClosed) GetClass() string {
 	return ClassAuthorizationState
 }
 
+// GetType returns constant class type string of the class.
 func (*AuthorizationStateClosed) GetType() string {
 	return TypeAuthorizationStateClosed
 }
 
+// AuthorizationStateType returns constant class type string of the class.
 func (*AuthorizationStateClosed) AuthorizationStateType() string {
 	return TypeAuthorizationStateClosed
 }
 
-// Represents the current state of 2-step verification
+// PasswordState represents the current state of 2-step verification
 type PasswordState struct {
 	meta
 	// True if a 2-step verification password is set
@@ -1733,6 +1816,7 @@ type PasswordState struct {
 	UnconfirmedRecoveryEmailAddressPattern string `json:"unconfirmed_recovery_email_address_pattern"`
 }
 
+// MarshalJSON returns PasswordState object as the JSON encoding of PasswordState.
 func (entity *PasswordState) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1741,21 +1825,24 @@ func (entity *PasswordState) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PasswordState) GetClass() string {
 	return ClassPasswordState
 }
 
+// GetType returns constant class type string of the class.
 func (*PasswordState) GetType() string {
 	return TypePasswordState
 }
 
-// Contains information about the current recovery email address
+// RecoveryEmailAddress contains information about the current recovery email address
 type RecoveryEmailAddress struct {
 	meta
 	// Recovery email address
 	RecoveryEmailAddress string `json:"recovery_email_address"`
 }
 
+// MarshalJSON returns RecoveryEmailAddress object as the JSON encoding of RecoveryEmailAddress.
 func (entity *RecoveryEmailAddress) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1764,15 +1851,17 @@ func (entity *RecoveryEmailAddress) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*RecoveryEmailAddress) GetClass() string {
 	return ClassRecoveryEmailAddress
 }
 
+// GetType returns constant class type string of the class.
 func (*RecoveryEmailAddress) GetType() string {
 	return TypeRecoveryEmailAddress
 }
 
-// Returns information about the availability of a temporary password, which can be used for payments
+// TemporaryPasswordState returns information about the availability of a temporary password, which can be used for payments
 type TemporaryPasswordState struct {
 	meta
 	// True, if a temporary password is available
@@ -1781,6 +1870,7 @@ type TemporaryPasswordState struct {
 	ValidFor int32 `json:"valid_for"`
 }
 
+// MarshalJSON returns TemporaryPasswordState object as the JSON encoding of TemporaryPasswordState.
 func (entity *TemporaryPasswordState) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1789,15 +1879,17 @@ func (entity *TemporaryPasswordState) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TemporaryPasswordState) GetClass() string {
 	return ClassTemporaryPasswordState
 }
 
+// GetType returns constant class type string of the class.
 func (*TemporaryPasswordState) GetType() string {
 	return TypeTemporaryPasswordState
 }
 
-// Represents a local file
+// LocalFile represents a local file
 type LocalFile struct {
 	meta
 	// Local path to the locally available file part; may be empty
@@ -1816,6 +1908,7 @@ type LocalFile struct {
 	DownloadedSize int32 `json:"downloaded_size"`
 }
 
+// MarshalJSON returns LocalFile object as the JSON encoding of LocalFile.
 func (entity *LocalFile) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1824,19 +1917,21 @@ func (entity *LocalFile) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*LocalFile) GetClass() string {
 	return ClassLocalFile
 }
 
+// GetType returns constant class type string of the class.
 func (*LocalFile) GetType() string {
 	return TypeLocalFile
 }
 
-// Represents a remote file
+// RemoteFile represents a remote file
 type RemoteFile struct {
 	meta
 	// Remote file identifier; may be empty. Can be used across application restarts or even from other devices for the current user. If the ID starts with "http://" or "https://", it represents the HTTP URL of the file. TDLib is currently unable to download files if only their URL is known. If downloadFile is called on such a file or if it is sent to a secret chat, TDLib starts a file generation process by sending updateFileGenerationStart to the client with the HTTP URL in the original_path and "#url#" as the conversion string. Clients should generate the file by downloading it to the specified location
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// True, if the file is currently being uploaded (or a remote copy is being generated by some other means)
 	IsUploadingActive bool `json:"is_uploading_active"`
 	// True, if a remote copy is fully available
@@ -1845,6 +1940,7 @@ type RemoteFile struct {
 	UploadedSize int32 `json:"uploaded_size"`
 }
 
+// MarshalJSON returns RemoteFile object as the JSON encoding of RemoteFile.
 func (entity *RemoteFile) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1853,19 +1949,21 @@ func (entity *RemoteFile) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*RemoteFile) GetClass() string {
 	return ClassRemoteFile
 }
 
+// GetType returns constant class type string of the class.
 func (*RemoteFile) GetType() string {
 	return TypeRemoteFile
 }
 
-// Represents a file
+// File represents a file
 type File struct {
 	meta
 	// Unique file identifier
-	Id int32 `json:"id"`
+	ID int32 `json:"id"`
 	// File size; 0 if unknown
 	Size int32 `json:"size"`
 	// Expected file size in case the exact file size is unknown, but an approximate size is known. Can be used to show download/upload progress
@@ -1876,6 +1974,7 @@ type File struct {
 	Remote *RemoteFile `json:"remote"`
 }
 
+// MarshalJSON returns File object as the JSON encoding of File.
 func (entity *File) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1884,48 +1983,55 @@ func (entity *File) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*File) GetClass() string {
 	return ClassFile
 }
 
+// GetType returns constant class type string of the class.
 func (*File) GetType() string {
 	return TypeFile
 }
 
-// A file defined by its unique ID
-type InputFileId struct {
+// InputFileID a file defined by its unique ID
+type InputFileID struct {
 	meta
 	// Unique file identifier
-	Id int32 `json:"id"`
+	ID int32 `json:"id"`
 }
 
-func (entity *InputFileId) MarshalJSON() ([]byte, error) {
+// MarshalJSON returns InputFileID object as the JSON encoding of InputFileID.
+func (entity *InputFileID) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
-	type stub InputFileId
+	type stub InputFileID
 
 	return json.Marshal((*stub)(entity))
 }
 
-func (*InputFileId) GetClass() string {
+// GetClass returns constant class string of the class.
+func (*InputFileID) GetClass() string {
 	return ClassInputFile
 }
 
-func (*InputFileId) GetType() string {
-	return TypeInputFileId
+// GetType returns constant class type string of the class.
+func (*InputFileID) GetType() string {
+	return TypeInputFileID
 }
 
-func (*InputFileId) InputFileType() string {
-	return TypeInputFileId
+// InputFileType returns constant class type string of the class.
+func (*InputFileID) InputFileType() string {
+	return TypeInputFileID
 }
 
-// A file defined by its remote ID
+// InputFileRemote a file defined by its remote ID
 type InputFileRemote struct {
 	meta
 	// Remote file identifier
-	Id string `json:"id"`
+	ID string `json:"id"`
 }
 
+// MarshalJSON returns InputFileRemote object as the JSON encoding of InputFileRemote.
 func (entity *InputFileRemote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1934,25 +2040,29 @@ func (entity *InputFileRemote) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputFileRemote) GetClass() string {
 	return ClassInputFile
 }
 
+// GetType returns constant class type string of the class.
 func (*InputFileRemote) GetType() string {
 	return TypeInputFileRemote
 }
 
+// InputFileType returns constant class type string of the class.
 func (*InputFileRemote) InputFileType() string {
 	return TypeInputFileRemote
 }
 
-// A file defined by a local path
+// InputFileLocal a file defined by a local path
 type InputFileLocal struct {
 	meta
 	// Local path to the file
 	Path string `json:"path"`
 }
 
+// MarshalJSON returns InputFileLocal object as the JSON encoding of InputFileLocal.
 func (entity *InputFileLocal) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1961,19 +2071,22 @@ func (entity *InputFileLocal) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputFileLocal) GetClass() string {
 	return ClassInputFile
 }
 
+// GetType returns constant class type string of the class.
 func (*InputFileLocal) GetType() string {
 	return TypeInputFileLocal
 }
 
+// InputFileType returns constant class type string of the class.
 func (*InputFileLocal) InputFileType() string {
 	return TypeInputFileLocal
 }
 
-// A file generated by the client
+// InputFileGenerated a file generated by the client
 type InputFileGenerated struct {
 	meta
 	// Local path to a file from which the file is generated; may be empty if there is no such file
@@ -1984,6 +2097,7 @@ type InputFileGenerated struct {
 	ExpectedSize int32 `json:"expected_size"`
 }
 
+// MarshalJSON returns InputFileGenerated object as the JSON encoding of InputFileGenerated.
 func (entity *InputFileGenerated) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -1992,19 +2106,22 @@ func (entity *InputFileGenerated) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputFileGenerated) GetClass() string {
 	return ClassInputFile
 }
 
+// GetType returns constant class type string of the class.
 func (*InputFileGenerated) GetType() string {
 	return TypeInputFileGenerated
 }
 
+// InputFileType returns constant class type string of the class.
 func (*InputFileGenerated) InputFileType() string {
 	return TypeInputFileGenerated
 }
 
-// Photo description
+// PhotoSize photo description
 type PhotoSize struct {
 	meta
 	// Thumbnail type (see https://core.telegram.org/constructor/photoSize)
@@ -2017,6 +2134,7 @@ type PhotoSize struct {
 	Height int32 `json:"height"`
 }
 
+// MarshalJSON returns PhotoSize object as the JSON encoding of PhotoSize.
 func (entity *PhotoSize) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2025,19 +2143,22 @@ func (entity *PhotoSize) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PhotoSize) GetClass() string {
 	return ClassPhotoSize
 }
 
+// GetType returns constant class type string of the class.
 func (*PhotoSize) GetType() string {
 	return TypePhotoSize
 }
 
-// A mask should be placed relatively to the forehead
+// MaskPointForehead a mask should be placed relatively to the forehead
 type MaskPointForehead struct {
 	meta
 }
 
+// MarshalJSON returns MaskPointForehead object as the JSON encoding of MaskPointForehead.
 func (entity *MaskPointForehead) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2046,23 +2167,27 @@ func (entity *MaskPointForehead) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MaskPointForehead) GetClass() string {
 	return ClassMaskPoint
 }
 
+// GetType returns constant class type string of the class.
 func (*MaskPointForehead) GetType() string {
 	return TypeMaskPointForehead
 }
 
+// MaskPointType returns constant class type string of the class.
 func (*MaskPointForehead) MaskPointType() string {
 	return TypeMaskPointForehead
 }
 
-// A mask should be placed relatively to the eyes
+// MaskPointEyes a mask should be placed relatively to the eyes
 type MaskPointEyes struct {
 	meta
 }
 
+// MarshalJSON returns MaskPointEyes object as the JSON encoding of MaskPointEyes.
 func (entity *MaskPointEyes) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2071,23 +2196,27 @@ func (entity *MaskPointEyes) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MaskPointEyes) GetClass() string {
 	return ClassMaskPoint
 }
 
+// GetType returns constant class type string of the class.
 func (*MaskPointEyes) GetType() string {
 	return TypeMaskPointEyes
 }
 
+// MaskPointType returns constant class type string of the class.
 func (*MaskPointEyes) MaskPointType() string {
 	return TypeMaskPointEyes
 }
 
-// A mask should be placed relatively to the mouth
+// MaskPointMouth a mask should be placed relatively to the mouth
 type MaskPointMouth struct {
 	meta
 }
 
+// MarshalJSON returns MaskPointMouth object as the JSON encoding of MaskPointMouth.
 func (entity *MaskPointMouth) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2096,23 +2225,27 @@ func (entity *MaskPointMouth) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MaskPointMouth) GetClass() string {
 	return ClassMaskPoint
 }
 
+// GetType returns constant class type string of the class.
 func (*MaskPointMouth) GetType() string {
 	return TypeMaskPointMouth
 }
 
+// MaskPointType returns constant class type string of the class.
 func (*MaskPointMouth) MaskPointType() string {
 	return TypeMaskPointMouth
 }
 
-// A mask should be placed relatively to the chin
+// MaskPointChin a mask should be placed relatively to the chin
 type MaskPointChin struct {
 	meta
 }
 
+// MarshalJSON returns MaskPointChin object as the JSON encoding of MaskPointChin.
 func (entity *MaskPointChin) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2121,19 +2254,22 @@ func (entity *MaskPointChin) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MaskPointChin) GetClass() string {
 	return ClassMaskPoint
 }
 
+// GetType returns constant class type string of the class.
 func (*MaskPointChin) GetType() string {
 	return TypeMaskPointChin
 }
 
+// MaskPointType returns constant class type string of the class.
 func (*MaskPointChin) MaskPointType() string {
 	return TypeMaskPointChin
 }
 
-// Position on a photo where a mask should be placed
+// MaskPosition position on a photo where a mask should be placed
 type MaskPosition struct {
 	meta
 	// Part of the face, relative to which the mask should be placed
@@ -2146,6 +2282,7 @@ type MaskPosition struct {
 	Scale float64 `json:"scale"`
 }
 
+// MarshalJSON returns MaskPosition object as the JSON encoding of MaskPosition.
 func (entity *MaskPosition) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2154,15 +2291,18 @@ func (entity *MaskPosition) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MaskPosition) GetClass() string {
 	return ClassMaskPosition
 }
 
+// GetType returns constant class type string of the class.
 func (*MaskPosition) GetType() string {
 	return TypeMaskPosition
 }
 
-func (maskPosition *MaskPosition) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets MaskPosition object to a copy of JSON encoding of MaskPosition.
+func (entity *MaskPosition) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Point  json.RawMessage `json:"point"`
 		XShift float64         `json:"x_shift"`
@@ -2175,17 +2315,17 @@ func (maskPosition *MaskPosition) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	maskPosition.XShift = tmp.XShift
-	maskPosition.YShift = tmp.YShift
-	maskPosition.Scale = tmp.Scale
+	entity.XShift = tmp.XShift
+	entity.YShift = tmp.YShift
+	entity.Scale = tmp.Scale
 
 	fieldPoint, _ := UnmarshalMaskPoint(tmp.Point)
-	maskPosition.Point = fieldPoint
+	entity.Point = fieldPoint
 
 	return nil
 }
 
-// Describes an animation file. The animation must be encoded in GIF or MPEG4 format
+// Animation describes an animation file. The animation must be encoded in GIF or MPEG4 format
 type Animation struct {
 	meta
 	// Duration of the animation, in seconds; as defined by the sender
@@ -2204,6 +2344,7 @@ type Animation struct {
 	Animation *File `json:"animation"`
 }
 
+// MarshalJSON returns Animation object as the JSON encoding of Animation.
 func (entity *Animation) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2212,15 +2353,17 @@ func (entity *Animation) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Animation) GetClass() string {
 	return ClassAnimation
 }
 
+// GetType returns constant class type string of the class.
 func (*Animation) GetType() string {
 	return TypeAnimation
 }
 
-// Describes an audio file. Audio is usually in MP3 format
+// Audio describes an audio file. Audio is usually in MP3 format
 type Audio struct {
 	meta
 	// Duration of the audio, in seconds; as defined by the sender
@@ -2239,6 +2382,7 @@ type Audio struct {
 	Audio *File `json:"audio"`
 }
 
+// MarshalJSON returns Audio object as the JSON encoding of Audio.
 func (entity *Audio) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2247,15 +2391,17 @@ func (entity *Audio) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Audio) GetClass() string {
 	return ClassAudio
 }
 
+// GetType returns constant class type string of the class.
 func (*Audio) GetType() string {
 	return TypeAudio
 }
 
-// Describes a document of any type
+// Document describes a document of any type
 type Document struct {
 	meta
 	// Original name of the file; as defined by the sender
@@ -2268,6 +2414,7 @@ type Document struct {
 	Document *File `json:"document"`
 }
 
+// MarshalJSON returns Document object as the JSON encoding of Document.
 func (entity *Document) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2276,25 +2423,28 @@ func (entity *Document) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Document) GetClass() string {
 	return ClassDocument
 }
 
+// GetType returns constant class type string of the class.
 func (*Document) GetType() string {
 	return TypeDocument
 }
 
-// Describes a photo
+// Photo describes a photo
 type Photo struct {
 	meta
 	// Photo identifier; 0 for deleted photos
-	Id JsonInt64 `json:"id"`
+	ID Int64JSON `json:"id"`
 	// True, if stickers were added to the photo
 	HasStickers bool `json:"has_stickers"`
 	// Available variants of the photo, in different sizes
 	Sizes []*PhotoSize `json:"sizes"`
 }
 
+// MarshalJSON returns Photo object as the JSON encoding of Photo.
 func (entity *Photo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2303,19 +2453,21 @@ func (entity *Photo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Photo) GetClass() string {
 	return ClassPhoto
 }
 
+// GetType returns constant class type string of the class.
 func (*Photo) GetType() string {
 	return TypePhoto
 }
 
-// Describes a sticker
+// Sticker describes a sticker
 type Sticker struct {
 	meta
 	// The identifier of the sticker set to which the sticker belongs; 0 if none
-	SetId JsonInt64 `json:"set_id"`
+	SetID Int64JSON `json:"set_id"`
 	// Sticker width; as defined by the sender
 	Width int32 `json:"width"`
 	// Sticker height; as defined by the sender
@@ -2332,6 +2484,7 @@ type Sticker struct {
 	Sticker *File `json:"sticker"`
 }
 
+// MarshalJSON returns Sticker object as the JSON encoding of Sticker.
 func (entity *Sticker) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2340,15 +2493,17 @@ func (entity *Sticker) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Sticker) GetClass() string {
 	return ClassSticker
 }
 
+// GetType returns constant class type string of the class.
 func (*Sticker) GetType() string {
 	return TypeSticker
 }
 
-// Describes a video file
+// Video describes a video file
 type Video struct {
 	meta
 	// Duration of the video, in seconds; as defined by the sender
@@ -2371,6 +2526,7 @@ type Video struct {
 	Video *File `json:"video"`
 }
 
+// MarshalJSON returns Video object as the JSON encoding of Video.
 func (entity *Video) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2379,15 +2535,17 @@ func (entity *Video) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Video) GetClass() string {
 	return ClassVideo
 }
 
+// GetType returns constant class type string of the class.
 func (*Video) GetType() string {
 	return TypeVideo
 }
 
-// Describes a video note. The video must be equal in width and height, cropped to a circle, and stored in MPEG4 format
+// VideoNote describes a video note. The video must be equal in width and height, cropped to a circle, and stored in MPEG4 format
 type VideoNote struct {
 	meta
 	// Duration of the video, in seconds; as defined by the sender
@@ -2400,6 +2558,7 @@ type VideoNote struct {
 	Video *File `json:"video"`
 }
 
+// MarshalJSON returns VideoNote object as the JSON encoding of VideoNote.
 func (entity *VideoNote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2408,15 +2567,17 @@ func (entity *VideoNote) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*VideoNote) GetClass() string {
 	return ClassVideoNote
 }
 
+// GetType returns constant class type string of the class.
 func (*VideoNote) GetType() string {
 	return TypeVideoNote
 }
 
-// Describes a voice note. The voice note must be encoded with the Opus codec, and stored inside an OGG container. Voice notes can have only a single audio channel
+// VoiceNote describes a voice note. The voice note must be encoded with the Opus codec, and stored inside an OGG container. Voice notes can have only a single audio channel
 type VoiceNote struct {
 	meta
 	// Duration of the voice note, in seconds; as defined by the sender
@@ -2429,6 +2590,7 @@ type VoiceNote struct {
 	Voice *File `json:"voice"`
 }
 
+// MarshalJSON returns VoiceNote object as the JSON encoding of VoiceNote.
 func (entity *VoiceNote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2437,15 +2599,17 @@ func (entity *VoiceNote) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*VoiceNote) GetClass() string {
 	return ClassVoiceNote
 }
 
+// GetType returns constant class type string of the class.
 func (*VoiceNote) GetType() string {
 	return TypeVoiceNote
 }
 
-// Describes a user contact
+// Contact describes a user contact
 type Contact struct {
 	meta
 	// Phone number of the user
@@ -2457,9 +2621,10 @@ type Contact struct {
 	// Additional data about the user in a form of vCard; 0-2048 bytes in length
 	Vcard string `json:"vcard"`
 	// Identifier of the user, if known; otherwise 0
-	UserId int32 `json:"user_id"`
+	UserID int32 `json:"user_id"`
 }
 
+// MarshalJSON returns Contact object as the JSON encoding of Contact.
 func (entity *Contact) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2468,15 +2633,17 @@ func (entity *Contact) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Contact) GetClass() string {
 	return ClassContact
 }
 
+// GetType returns constant class type string of the class.
 func (*Contact) GetType() string {
 	return TypeContact
 }
 
-// Describes a location on planet Earth
+// Location describes a location on planet Earth
 type Location struct {
 	meta
 	// Latitude of the location in degrees; as defined by the sender
@@ -2485,6 +2652,7 @@ type Location struct {
 	Longitude float64 `json:"longitude"`
 }
 
+// MarshalJSON returns Location object as the JSON encoding of Location.
 func (entity *Location) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2493,15 +2661,17 @@ func (entity *Location) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Location) GetClass() string {
 	return ClassLocation
 }
 
+// GetType returns constant class type string of the class.
 func (*Location) GetType() string {
 	return TypeLocation
 }
 
-// Describes a venue
+// Venue describes a venue
 type Venue struct {
 	meta
 	// Venue location; as defined by the sender
@@ -2513,11 +2683,12 @@ type Venue struct {
 	// Provider of the venue database; as defined by the sender. Currently only "foursquare" needs to be supported
 	Provider string `json:"provider"`
 	// Identifier of the venue in the provider database; as defined by the sender
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Type of the venue in the provider database; as defined by the sender
 	Type string `json:"type"`
 }
 
+// MarshalJSON returns Venue object as the JSON encoding of Venue.
 func (entity *Venue) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2526,19 +2697,21 @@ func (entity *Venue) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Venue) GetClass() string {
 	return ClassVenue
 }
 
+// GetType returns constant class type string of the class.
 func (*Venue) GetType() string {
 	return TypeVenue
 }
 
-// Describes a game
+// Game describes a game
 type Game struct {
 	meta
 	// Game ID
-	Id JsonInt64 `json:"id"`
+	ID Int64JSON `json:"id"`
 	// Game short name. To share a game use the URL https://t.me/{bot_username}?game={game_short_name}
 	ShortName string `json:"short_name"`
 	// Game title
@@ -2553,6 +2726,7 @@ type Game struct {
 	Animation *Animation `json:"animation"`
 }
 
+// MarshalJSON returns Game object as the JSON encoding of Game.
 func (entity *Game) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2561,25 +2735,28 @@ func (entity *Game) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Game) GetClass() string {
 	return ClassGame
 }
 
+// GetType returns constant class type string of the class.
 func (*Game) GetType() string {
 	return TypeGame
 }
 
-// Describes a user profile photo
+// ProfilePhoto describes a user profile photo
 type ProfilePhoto struct {
 	meta
 	// Photo identifier; 0 for an empty photo. Can be used to find a photo in a list of userProfilePhotos
-	Id JsonInt64 `json:"id"`
+	ID Int64JSON `json:"id"`
 	// A small (160x160) user profile photo
 	Small *File `json:"small"`
 	// A big (640x640) user profile photo
 	Big *File `json:"big"`
 }
 
+// MarshalJSON returns ProfilePhoto object as the JSON encoding of ProfilePhoto.
 func (entity *ProfilePhoto) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2588,15 +2765,17 @@ func (entity *ProfilePhoto) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ProfilePhoto) GetClass() string {
 	return ClassProfilePhoto
 }
 
+// GetType returns constant class type string of the class.
 func (*ProfilePhoto) GetType() string {
 	return TypeProfilePhoto
 }
 
-// Describes the photo of a chat
+// ChatPhoto describes the photo of a chat
 type ChatPhoto struct {
 	meta
 	// A small (160x160) chat photo
@@ -2605,6 +2784,7 @@ type ChatPhoto struct {
 	Big *File `json:"big"`
 }
 
+// MarshalJSON returns ChatPhoto object as the JSON encoding of ChatPhoto.
 func (entity *ChatPhoto) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2613,19 +2793,22 @@ func (entity *ChatPhoto) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatPhoto) GetClass() string {
 	return ClassChatPhoto
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatPhoto) GetType() string {
 	return TypeChatPhoto
 }
 
-// The phone number of user A is not known to user B
+// LinkStateNone the phone number of user A is not known to user B
 type LinkStateNone struct {
 	meta
 }
 
+// MarshalJSON returns LinkStateNone object as the JSON encoding of LinkStateNone.
 func (entity *LinkStateNone) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2634,23 +2817,27 @@ func (entity *LinkStateNone) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*LinkStateNone) GetClass() string {
 	return ClassLinkState
 }
 
+// GetType returns constant class type string of the class.
 func (*LinkStateNone) GetType() string {
 	return TypeLinkStateNone
 }
 
+// LinkStateType returns constant class type string of the class.
 func (*LinkStateNone) LinkStateType() string {
 	return TypeLinkStateNone
 }
 
-// The phone number of user A is known but that number has not been saved to the contacts list of user B
+// LinkStateKnowsPhoneNumber the phone number of user A is known but that number has not been saved to the contacts list of user B
 type LinkStateKnowsPhoneNumber struct {
 	meta
 }
 
+// MarshalJSON returns LinkStateKnowsPhoneNumber object as the JSON encoding of LinkStateKnowsPhoneNumber.
 func (entity *LinkStateKnowsPhoneNumber) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2659,23 +2846,27 @@ func (entity *LinkStateKnowsPhoneNumber) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*LinkStateKnowsPhoneNumber) GetClass() string {
 	return ClassLinkState
 }
 
+// GetType returns constant class type string of the class.
 func (*LinkStateKnowsPhoneNumber) GetType() string {
 	return TypeLinkStateKnowsPhoneNumber
 }
 
+// LinkStateType returns constant class type string of the class.
 func (*LinkStateKnowsPhoneNumber) LinkStateType() string {
 	return TypeLinkStateKnowsPhoneNumber
 }
 
-// The phone number of user A has been saved to the contacts list of user B
+// LinkStateIsContact the phone number of user A has been saved to the contacts list of user B
 type LinkStateIsContact struct {
 	meta
 }
 
+// MarshalJSON returns LinkStateIsContact object as the JSON encoding of LinkStateIsContact.
 func (entity *LinkStateIsContact) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2684,23 +2875,27 @@ func (entity *LinkStateIsContact) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*LinkStateIsContact) GetClass() string {
 	return ClassLinkState
 }
 
+// GetType returns constant class type string of the class.
 func (*LinkStateIsContact) GetType() string {
 	return TypeLinkStateIsContact
 }
 
+// LinkStateType returns constant class type string of the class.
 func (*LinkStateIsContact) LinkStateType() string {
 	return TypeLinkStateIsContact
 }
 
-// A regular user
+// UserTypeRegular a regular user
 type UserTypeRegular struct {
 	meta
 }
 
+// MarshalJSON returns UserTypeRegular object as the JSON encoding of UserTypeRegular.
 func (entity *UserTypeRegular) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2709,23 +2904,27 @@ func (entity *UserTypeRegular) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserTypeRegular) GetClass() string {
 	return ClassUserType
 }
 
+// GetType returns constant class type string of the class.
 func (*UserTypeRegular) GetType() string {
 	return TypeUserTypeRegular
 }
 
+// UserTypeType returns constant class type string of the class.
 func (*UserTypeRegular) UserTypeType() string {
 	return TypeUserTypeRegular
 }
 
-// A deleted user or deleted bot. No information on the user besides the user_id is available. It is not possible to perform any active actions on this type of user
+// UserTypeDeleted a deleted user or deleted bot. No information on the user besides the user_id is available. It is not possible to perform any active actions on this type of user
 type UserTypeDeleted struct {
 	meta
 }
 
+// MarshalJSON returns UserTypeDeleted object as the JSON encoding of UserTypeDeleted.
 func (entity *UserTypeDeleted) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2734,19 +2933,22 @@ func (entity *UserTypeDeleted) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserTypeDeleted) GetClass() string {
 	return ClassUserType
 }
 
+// GetType returns constant class type string of the class.
 func (*UserTypeDeleted) GetType() string {
 	return TypeUserTypeDeleted
 }
 
+// UserTypeType returns constant class type string of the class.
 func (*UserTypeDeleted) UserTypeType() string {
 	return TypeUserTypeDeleted
 }
 
-// A bot (see https://core.telegram.org/bots)
+// UserTypeBot a bot (see https://core.telegram.org/bots)
 type UserTypeBot struct {
 	meta
 	// True, if the bot can be invited to basic group and supergroup chats
@@ -2761,6 +2963,7 @@ type UserTypeBot struct {
 	NeedLocation bool `json:"need_location"`
 }
 
+// MarshalJSON returns UserTypeBot object as the JSON encoding of UserTypeBot.
 func (entity *UserTypeBot) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2769,23 +2972,27 @@ func (entity *UserTypeBot) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserTypeBot) GetClass() string {
 	return ClassUserType
 }
 
+// GetType returns constant class type string of the class.
 func (*UserTypeBot) GetType() string {
 	return TypeUserTypeBot
 }
 
+// UserTypeType returns constant class type string of the class.
 func (*UserTypeBot) UserTypeType() string {
 	return TypeUserTypeBot
 }
 
-// No information on the user besides the user_id is available, yet this user has not been deleted. This object is extremely rare and must be handled like a deleted user. It is not possible to perform any actions on users of this type
+// UserTypeUnknown no information on the user besides the user_id is available, yet this user has not been deleted. This object is extremely rare and must be handled like a deleted user. It is not possible to perform any actions on users of this type
 type UserTypeUnknown struct {
 	meta
 }
 
+// MarshalJSON returns UserTypeUnknown object as the JSON encoding of UserTypeUnknown.
 func (entity *UserTypeUnknown) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2794,19 +3001,22 @@ func (entity *UserTypeUnknown) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserTypeUnknown) GetClass() string {
 	return ClassUserType
 }
 
+// GetType returns constant class type string of the class.
 func (*UserTypeUnknown) GetType() string {
 	return TypeUserTypeUnknown
 }
 
+// UserTypeType returns constant class type string of the class.
 func (*UserTypeUnknown) UserTypeType() string {
 	return TypeUserTypeUnknown
 }
 
-// Represents commands supported by a bot
+// BotCommand represents commands supported by a bot
 type BotCommand struct {
 	meta
 	// Text of the bot command
@@ -2815,6 +3025,7 @@ type BotCommand struct {
 	Description string `json:"description"`
 }
 
+// MarshalJSON returns BotCommand object as the JSON encoding of BotCommand.
 func (entity *BotCommand) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2823,15 +3034,17 @@ func (entity *BotCommand) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*BotCommand) GetClass() string {
 	return ClassBotCommand
 }
 
+// GetType returns constant class type string of the class.
 func (*BotCommand) GetType() string {
 	return TypeBotCommand
 }
 
-// Provides information about a bot and its supported commands
+// BotInfo provides information about a bot and its supported commands
 type BotInfo struct {
 	meta
 	// Long description shown on the user info page
@@ -2840,6 +3053,7 @@ type BotInfo struct {
 	Commands []*BotCommand `json:"commands"`
 }
 
+// MarshalJSON returns BotInfo object as the JSON encoding of BotInfo.
 func (entity *BotInfo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2848,19 +3062,21 @@ func (entity *BotInfo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*BotInfo) GetClass() string {
 	return ClassBotInfo
 }
 
+// GetType returns constant class type string of the class.
 func (*BotInfo) GetType() string {
 	return TypeBotInfo
 }
 
-// Represents a user
+// User represents a user
 type User struct {
 	meta
 	// User identifier
-	Id int32 `json:"id"`
+	ID int32 `json:"id"`
 	// First name of the user
 	FirstName string `json:"first_name"`
 	// Last name of the user
@@ -2889,6 +3105,7 @@ type User struct {
 	LanguageCode string `json:"language_code"`
 }
 
+// MarshalJSON returns User object as the JSON encoding of User.
 func (entity *User) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2897,17 +3114,20 @@ func (entity *User) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*User) GetClass() string {
 	return ClassUser
 }
 
+// GetType returns constant class type string of the class.
 func (*User) GetType() string {
 	return TypeUser
 }
 
-func (user *User) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets User object to a copy of JSON encoding of User.
+func (entity *User) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id                int32           `json:"id"`
+		ID                int32           `json:"id"`
 		FirstName         string          `json:"first_name"`
 		LastName          string          `json:"last_name"`
 		Username          string          `json:"username"`
@@ -2928,33 +3148,33 @@ func (user *User) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	user.Id = tmp.Id
-	user.FirstName = tmp.FirstName
-	user.LastName = tmp.LastName
-	user.Username = tmp.Username
-	user.PhoneNumber = tmp.PhoneNumber
-	user.ProfilePhoto = tmp.ProfilePhoto
-	user.IsVerified = tmp.IsVerified
-	user.RestrictionReason = tmp.RestrictionReason
-	user.HaveAccess = tmp.HaveAccess
-	user.LanguageCode = tmp.LanguageCode
+	entity.ID = tmp.ID
+	entity.FirstName = tmp.FirstName
+	entity.LastName = tmp.LastName
+	entity.Username = tmp.Username
+	entity.PhoneNumber = tmp.PhoneNumber
+	entity.ProfilePhoto = tmp.ProfilePhoto
+	entity.IsVerified = tmp.IsVerified
+	entity.RestrictionReason = tmp.RestrictionReason
+	entity.HaveAccess = tmp.HaveAccess
+	entity.LanguageCode = tmp.LanguageCode
 
 	fieldStatus, _ := UnmarshalUserStatus(tmp.Status)
-	user.Status = fieldStatus
+	entity.Status = fieldStatus
 
 	fieldOutgoingLink, _ := UnmarshalLinkState(tmp.OutgoingLink)
-	user.OutgoingLink = fieldOutgoingLink
+	entity.OutgoingLink = fieldOutgoingLink
 
 	fieldIncomingLink, _ := UnmarshalLinkState(tmp.IncomingLink)
-	user.IncomingLink = fieldIncomingLink
+	entity.IncomingLink = fieldIncomingLink
 
 	fieldType, _ := UnmarshalUserType(tmp.Type)
-	user.Type = fieldType
+	entity.Type = fieldType
 
 	return nil
 }
 
-// Contains full information about a user (except the full list of profile photos)
+// UserFullInfo contains full information about a user (except the full list of profile photos)
 type UserFullInfo struct {
 	meta
 	// True, if the user is blacklisted by the current user
@@ -2973,6 +3193,7 @@ type UserFullInfo struct {
 	BotInfo *BotInfo `json:"bot_info"`
 }
 
+// MarshalJSON returns UserFullInfo object as the JSON encoding of UserFullInfo.
 func (entity *UserFullInfo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -2981,15 +3202,17 @@ func (entity *UserFullInfo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserFullInfo) GetClass() string {
 	return ClassUserFullInfo
 }
 
+// GetType returns constant class type string of the class.
 func (*UserFullInfo) GetType() string {
 	return TypeUserFullInfo
 }
 
-// Contains part of the list of user photos
+// UserProfilePhotos contains part of the list of user photos
 type UserProfilePhotos struct {
 	meta
 	// Total number of user profile photos
@@ -2998,6 +3221,7 @@ type UserProfilePhotos struct {
 	Photos []*Photo `json:"photos"`
 }
 
+// MarshalJSON returns UserProfilePhotos object as the JSON encoding of UserProfilePhotos.
 func (entity *UserProfilePhotos) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3006,23 +3230,26 @@ func (entity *UserProfilePhotos) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserProfilePhotos) GetClass() string {
 	return ClassUserProfilePhotos
 }
 
+// GetType returns constant class type string of the class.
 func (*UserProfilePhotos) GetType() string {
 	return TypeUserProfilePhotos
 }
 
-// Represents a list of users
+// Users represents a list of users
 type Users struct {
 	meta
 	// Approximate total count of users found
 	TotalCount int32 `json:"total_count"`
 	// A list of user identifiers
-	UserIds []int32 `json:"user_ids"`
+	UserIDs []int32 `json:"user_ids"`
 }
 
+// MarshalJSON returns Users object as the JSON encoding of Users.
 func (entity *Users) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3031,21 +3258,24 @@ func (entity *Users) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Users) GetClass() string {
 	return ClassUsers
 }
 
+// GetType returns constant class type string of the class.
 func (*Users) GetType() string {
 	return TypeUsers
 }
 
-// The user is the creator of a chat and has all the administrator privileges
+// ChatMemberStatusCreator the user is the creator of a chat and has all the administrator privileges
 type ChatMemberStatusCreator struct {
 	meta
 	// True, if the user is a member of the chat
 	IsMember bool `json:"is_member"`
 }
 
+// MarshalJSON returns ChatMemberStatusCreator object as the JSON encoding of ChatMemberStatusCreator.
 func (entity *ChatMemberStatusCreator) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3054,19 +3284,22 @@ func (entity *ChatMemberStatusCreator) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatMemberStatusCreator) GetClass() string {
 	return ClassChatMemberStatus
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatMemberStatusCreator) GetType() string {
 	return TypeChatMemberStatusCreator
 }
 
+// ChatMemberStatusType returns constant class type string of the class.
 func (*ChatMemberStatusCreator) ChatMemberStatusType() string {
 	return TypeChatMemberStatusCreator
 }
 
-// The user is a member of a chat and has some additional privileges. In basic groups, administrators can edit and delete messages sent by others, add new members, and ban unprivileged members. In supergroups and channels, there are more detailed options for administrator privileges
+// ChatMemberStatusAdministrator the user is a member of a chat and has some additional privileges. In basic groups, administrators can edit and delete messages sent by others, add new members, and ban unprivileged members. In supergroups and channels, there are more detailed options for administrator privileges
 type ChatMemberStatusAdministrator struct {
 	meta
 	// True, if the current user can edit the administrator privileges for the called user
@@ -3089,6 +3322,7 @@ type ChatMemberStatusAdministrator struct {
 	CanPromoteMembers bool `json:"can_promote_members"`
 }
 
+// MarshalJSON returns ChatMemberStatusAdministrator object as the JSON encoding of ChatMemberStatusAdministrator.
 func (entity *ChatMemberStatusAdministrator) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3097,23 +3331,27 @@ func (entity *ChatMemberStatusAdministrator) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatMemberStatusAdministrator) GetClass() string {
 	return ClassChatMemberStatus
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatMemberStatusAdministrator) GetType() string {
 	return TypeChatMemberStatusAdministrator
 }
 
+// ChatMemberStatusType returns constant class type string of the class.
 func (*ChatMemberStatusAdministrator) ChatMemberStatusType() string {
 	return TypeChatMemberStatusAdministrator
 }
 
-// The user is a member of a chat, without any additional privileges or restrictions
+// ChatMemberStatusMember the user is a member of a chat, without any additional privileges or restrictions
 type ChatMemberStatusMember struct {
 	meta
 }
 
+// MarshalJSON returns ChatMemberStatusMember object as the JSON encoding of ChatMemberStatusMember.
 func (entity *ChatMemberStatusMember) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3122,19 +3360,22 @@ func (entity *ChatMemberStatusMember) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatMemberStatusMember) GetClass() string {
 	return ClassChatMemberStatus
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatMemberStatusMember) GetType() string {
 	return TypeChatMemberStatusMember
 }
 
+// ChatMemberStatusType returns constant class type string of the class.
 func (*ChatMemberStatusMember) ChatMemberStatusType() string {
 	return TypeChatMemberStatusMember
 }
 
-// The user is under certain restrictions in the chat. Not supported in basic groups and channels
+// ChatMemberStatusRestricted the user is under certain restrictions in the chat. Not supported in basic groups and channels
 type ChatMemberStatusRestricted struct {
 	meta
 	// True, if the user is a member of the chat
@@ -3151,6 +3392,7 @@ type ChatMemberStatusRestricted struct {
 	CanAddWebPagePreviews bool `json:"can_add_web_page_previews"`
 }
 
+// MarshalJSON returns ChatMemberStatusRestricted object as the JSON encoding of ChatMemberStatusRestricted.
 func (entity *ChatMemberStatusRestricted) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3159,23 +3401,27 @@ func (entity *ChatMemberStatusRestricted) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatMemberStatusRestricted) GetClass() string {
 	return ClassChatMemberStatus
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatMemberStatusRestricted) GetType() string {
 	return TypeChatMemberStatusRestricted
 }
 
+// ChatMemberStatusType returns constant class type string of the class.
 func (*ChatMemberStatusRestricted) ChatMemberStatusType() string {
 	return TypeChatMemberStatusRestricted
 }
 
-// The user is not a chat member
+// ChatMemberStatusLeft the user is not a chat member
 type ChatMemberStatusLeft struct {
 	meta
 }
 
+// MarshalJSON returns ChatMemberStatusLeft object as the JSON encoding of ChatMemberStatusLeft.
 func (entity *ChatMemberStatusLeft) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3184,25 +3430,29 @@ func (entity *ChatMemberStatusLeft) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatMemberStatusLeft) GetClass() string {
 	return ClassChatMemberStatus
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatMemberStatusLeft) GetType() string {
 	return TypeChatMemberStatusLeft
 }
 
+// ChatMemberStatusType returns constant class type string of the class.
 func (*ChatMemberStatusLeft) ChatMemberStatusType() string {
 	return TypeChatMemberStatusLeft
 }
 
-// The user was banned (and hence is not a member of the chat). Implies the user can't return to the chat or view messages
+// ChatMemberStatusBanned the user was banned (and hence is not a member of the chat). Implies the user can't return to the chat or view messages
 type ChatMemberStatusBanned struct {
 	meta
 	// Point in time (Unix timestamp) when the user will be unbanned; 0 if never. If the user is banned for more than 366 days or for less than 30 seconds from the current time, the user is considered to be banned forever
 	BannedUntilDate int32 `json:"banned_until_date"`
 }
 
+// MarshalJSON returns ChatMemberStatusBanned object as the JSON encoding of ChatMemberStatusBanned.
 func (entity *ChatMemberStatusBanned) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3211,25 +3461,28 @@ func (entity *ChatMemberStatusBanned) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatMemberStatusBanned) GetClass() string {
 	return ClassChatMemberStatus
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatMemberStatusBanned) GetType() string {
 	return TypeChatMemberStatusBanned
 }
 
+// ChatMemberStatusType returns constant class type string of the class.
 func (*ChatMemberStatusBanned) ChatMemberStatusType() string {
 	return TypeChatMemberStatusBanned
 }
 
-// A user with information about joining/leaving a chat
+// ChatMember a user with information about joining/leaving a chat
 type ChatMember struct {
 	meta
 	// User identifier of the chat member
-	UserId int32 `json:"user_id"`
+	UserID int32 `json:"user_id"`
 	// Identifier of a user that invited/promoted/banned this member in the chat; 0 if unknown
-	InviterUserId int32 `json:"inviter_user_id"`
+	InviterUserID int32 `json:"inviter_user_id"`
 	// Point in time (Unix timestamp) when the user joined a chat
 	JoinedChatDate int32 `json:"joined_chat_date"`
 	// Status of the member in the chat
@@ -3238,6 +3491,7 @@ type ChatMember struct {
 	BotInfo *BotInfo `json:"bot_info"`
 }
 
+// MarshalJSON returns ChatMember object as the JSON encoding of ChatMember.
 func (entity *ChatMember) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3246,18 +3500,21 @@ func (entity *ChatMember) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatMember) GetClass() string {
 	return ClassChatMember
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatMember) GetType() string {
 	return TypeChatMember
 }
 
-func (chatMember *ChatMember) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets ChatMember object to a copy of JSON encoding of ChatMember.
+func (entity *ChatMember) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		UserId         int32           `json:"user_id"`
-		InviterUserId  int32           `json:"inviter_user_id"`
+		UserID         int32           `json:"user_id"`
+		InviterUserID  int32           `json:"inviter_user_id"`
 		JoinedChatDate int32           `json:"joined_chat_date"`
 		Status         json.RawMessage `json:"status"`
 		BotInfo        *BotInfo        `json:"bot_info"`
@@ -3268,18 +3525,18 @@ func (chatMember *ChatMember) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	chatMember.UserId = tmp.UserId
-	chatMember.InviterUserId = tmp.InviterUserId
-	chatMember.JoinedChatDate = tmp.JoinedChatDate
-	chatMember.BotInfo = tmp.BotInfo
+	entity.UserID = tmp.UserID
+	entity.InviterUserID = tmp.InviterUserID
+	entity.JoinedChatDate = tmp.JoinedChatDate
+	entity.BotInfo = tmp.BotInfo
 
 	fieldStatus, _ := UnmarshalChatMemberStatus(tmp.Status)
-	chatMember.Status = fieldStatus
+	entity.Status = fieldStatus
 
 	return nil
 }
 
-// Contains a list of chat members
+// ChatMembers contains a list of chat members
 type ChatMembers struct {
 	meta
 	// Approximate total count of chat members found
@@ -3288,6 +3545,7 @@ type ChatMembers struct {
 	Members []*ChatMember `json:"members"`
 }
 
+// MarshalJSON returns ChatMembers object as the JSON encoding of ChatMembers.
 func (entity *ChatMembers) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3296,19 +3554,22 @@ func (entity *ChatMembers) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatMembers) GetClass() string {
 	return ClassChatMembers
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatMembers) GetType() string {
 	return TypeChatMembers
 }
 
-// Returns the creator and administrators
+// ChatMembersFilterAdministrators returns the creator and administrators
 type ChatMembersFilterAdministrators struct {
 	meta
 }
 
+// MarshalJSON returns ChatMembersFilterAdministrators object as the JSON encoding of ChatMembersFilterAdministrators.
 func (entity *ChatMembersFilterAdministrators) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3317,23 +3578,27 @@ func (entity *ChatMembersFilterAdministrators) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatMembersFilterAdministrators) GetClass() string {
 	return ClassChatMembersFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatMembersFilterAdministrators) GetType() string {
 	return TypeChatMembersFilterAdministrators
 }
 
+// ChatMembersFilterType returns constant class type string of the class.
 func (*ChatMembersFilterAdministrators) ChatMembersFilterType() string {
 	return TypeChatMembersFilterAdministrators
 }
 
-// Returns all chat members, including restricted chat members
+// ChatMembersFilterMembers returns all chat members, including restricted chat members
 type ChatMembersFilterMembers struct {
 	meta
 }
 
+// MarshalJSON returns ChatMembersFilterMembers object as the JSON encoding of ChatMembersFilterMembers.
 func (entity *ChatMembersFilterMembers) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3342,23 +3607,27 @@ func (entity *ChatMembersFilterMembers) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatMembersFilterMembers) GetClass() string {
 	return ClassChatMembersFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatMembersFilterMembers) GetType() string {
 	return TypeChatMembersFilterMembers
 }
 
+// ChatMembersFilterType returns constant class type string of the class.
 func (*ChatMembersFilterMembers) ChatMembersFilterType() string {
 	return TypeChatMembersFilterMembers
 }
 
-// Returns users under certain restrictions in the chat; can be used only by administrators in a supergroup
+// ChatMembersFilterRestricted returns users under certain restrictions in the chat; can be used only by administrators in a supergroup
 type ChatMembersFilterRestricted struct {
 	meta
 }
 
+// MarshalJSON returns ChatMembersFilterRestricted object as the JSON encoding of ChatMembersFilterRestricted.
 func (entity *ChatMembersFilterRestricted) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3367,23 +3636,27 @@ func (entity *ChatMembersFilterRestricted) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatMembersFilterRestricted) GetClass() string {
 	return ClassChatMembersFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatMembersFilterRestricted) GetType() string {
 	return TypeChatMembersFilterRestricted
 }
 
+// ChatMembersFilterType returns constant class type string of the class.
 func (*ChatMembersFilterRestricted) ChatMembersFilterType() string {
 	return TypeChatMembersFilterRestricted
 }
 
-// Returns users banned from the chat; can be used only by administrators in a supergroup or in a channel
+// ChatMembersFilterBanned returns users banned from the chat; can be used only by administrators in a supergroup or in a channel
 type ChatMembersFilterBanned struct {
 	meta
 }
 
+// MarshalJSON returns ChatMembersFilterBanned object as the JSON encoding of ChatMembersFilterBanned.
 func (entity *ChatMembersFilterBanned) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3392,23 +3665,27 @@ func (entity *ChatMembersFilterBanned) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatMembersFilterBanned) GetClass() string {
 	return ClassChatMembersFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatMembersFilterBanned) GetType() string {
 	return TypeChatMembersFilterBanned
 }
 
+// ChatMembersFilterType returns constant class type string of the class.
 func (*ChatMembersFilterBanned) ChatMembersFilterType() string {
 	return TypeChatMembersFilterBanned
 }
 
-// Returns bot members of the chat
+// ChatMembersFilterBots returns bot members of the chat
 type ChatMembersFilterBots struct {
 	meta
 }
 
+// MarshalJSON returns ChatMembersFilterBots object as the JSON encoding of ChatMembersFilterBots.
 func (entity *ChatMembersFilterBots) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3417,23 +3694,27 @@ func (entity *ChatMembersFilterBots) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatMembersFilterBots) GetClass() string {
 	return ClassChatMembersFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatMembersFilterBots) GetType() string {
 	return TypeChatMembersFilterBots
 }
 
+// ChatMembersFilterType returns constant class type string of the class.
 func (*ChatMembersFilterBots) ChatMembersFilterType() string {
 	return TypeChatMembersFilterBots
 }
 
-// Returns recently active users in reverse chronological order
+// SupergroupMembersFilterRecent returns recently active users in reverse chronological order
 type SupergroupMembersFilterRecent struct {
 	meta
 }
 
+// MarshalJSON returns SupergroupMembersFilterRecent object as the JSON encoding of SupergroupMembersFilterRecent.
 func (entity *SupergroupMembersFilterRecent) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3442,23 +3723,27 @@ func (entity *SupergroupMembersFilterRecent) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SupergroupMembersFilterRecent) GetClass() string {
 	return ClassSupergroupMembersFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SupergroupMembersFilterRecent) GetType() string {
 	return TypeSupergroupMembersFilterRecent
 }
 
+// SupergroupMembersFilterType returns constant class type string of the class.
 func (*SupergroupMembersFilterRecent) SupergroupMembersFilterType() string {
 	return TypeSupergroupMembersFilterRecent
 }
 
-// Returns the creator and administrators
+// SupergroupMembersFilterAdministrators returns the creator and administrators
 type SupergroupMembersFilterAdministrators struct {
 	meta
 }
 
+// MarshalJSON returns SupergroupMembersFilterAdministrators object as the JSON encoding of SupergroupMembersFilterAdministrators.
 func (entity *SupergroupMembersFilterAdministrators) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3467,25 +3752,29 @@ func (entity *SupergroupMembersFilterAdministrators) MarshalJSON() ([]byte, erro
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SupergroupMembersFilterAdministrators) GetClass() string {
 	return ClassSupergroupMembersFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SupergroupMembersFilterAdministrators) GetType() string {
 	return TypeSupergroupMembersFilterAdministrators
 }
 
+// SupergroupMembersFilterType returns constant class type string of the class.
 func (*SupergroupMembersFilterAdministrators) SupergroupMembersFilterType() string {
 	return TypeSupergroupMembersFilterAdministrators
 }
 
-// Used to search for supergroup or channel members via a (string) query
+// SupergroupMembersFilterSearch used to search for supergroup or channel members via a (string) query
 type SupergroupMembersFilterSearch struct {
 	meta
 	// Query to search for
 	Query string `json:"query"`
 }
 
+// MarshalJSON returns SupergroupMembersFilterSearch object as the JSON encoding of SupergroupMembersFilterSearch.
 func (entity *SupergroupMembersFilterSearch) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3494,25 +3783,29 @@ func (entity *SupergroupMembersFilterSearch) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SupergroupMembersFilterSearch) GetClass() string {
 	return ClassSupergroupMembersFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SupergroupMembersFilterSearch) GetType() string {
 	return TypeSupergroupMembersFilterSearch
 }
 
+// SupergroupMembersFilterType returns constant class type string of the class.
 func (*SupergroupMembersFilterSearch) SupergroupMembersFilterType() string {
 	return TypeSupergroupMembersFilterSearch
 }
 
-// Returns restricted supergroup members; can be used only by administrators
+// SupergroupMembersFilterRestricted returns restricted supergroup members; can be used only by administrators
 type SupergroupMembersFilterRestricted struct {
 	meta
 	// Query to search for
 	Query string `json:"query"`
 }
 
+// MarshalJSON returns SupergroupMembersFilterRestricted object as the JSON encoding of SupergroupMembersFilterRestricted.
 func (entity *SupergroupMembersFilterRestricted) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3521,25 +3814,29 @@ func (entity *SupergroupMembersFilterRestricted) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SupergroupMembersFilterRestricted) GetClass() string {
 	return ClassSupergroupMembersFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SupergroupMembersFilterRestricted) GetType() string {
 	return TypeSupergroupMembersFilterRestricted
 }
 
+// SupergroupMembersFilterType returns constant class type string of the class.
 func (*SupergroupMembersFilterRestricted) SupergroupMembersFilterType() string {
 	return TypeSupergroupMembersFilterRestricted
 }
 
-// Returns users banned from the supergroup or channel; can be used only by administrators
+// SupergroupMembersFilterBanned returns users banned from the supergroup or channel; can be used only by administrators
 type SupergroupMembersFilterBanned struct {
 	meta
 	// Query to search for
 	Query string `json:"query"`
 }
 
+// MarshalJSON returns SupergroupMembersFilterBanned object as the JSON encoding of SupergroupMembersFilterBanned.
 func (entity *SupergroupMembersFilterBanned) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3548,23 +3845,27 @@ func (entity *SupergroupMembersFilterBanned) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SupergroupMembersFilterBanned) GetClass() string {
 	return ClassSupergroupMembersFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SupergroupMembersFilterBanned) GetType() string {
 	return TypeSupergroupMembersFilterBanned
 }
 
+// SupergroupMembersFilterType returns constant class type string of the class.
 func (*SupergroupMembersFilterBanned) SupergroupMembersFilterType() string {
 	return TypeSupergroupMembersFilterBanned
 }
 
-// Returns bot members of the supergroup or channel
+// SupergroupMembersFilterBots returns bot members of the supergroup or channel
 type SupergroupMembersFilterBots struct {
 	meta
 }
 
+// MarshalJSON returns SupergroupMembersFilterBots object as the JSON encoding of SupergroupMembersFilterBots.
 func (entity *SupergroupMembersFilterBots) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3573,23 +3874,26 @@ func (entity *SupergroupMembersFilterBots) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SupergroupMembersFilterBots) GetClass() string {
 	return ClassSupergroupMembersFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SupergroupMembersFilterBots) GetType() string {
 	return TypeSupergroupMembersFilterBots
 }
 
+// SupergroupMembersFilterType returns constant class type string of the class.
 func (*SupergroupMembersFilterBots) SupergroupMembersFilterType() string {
 	return TypeSupergroupMembersFilterBots
 }
 
-// Represents a basic group of 0-200 users (must be upgraded to a supergroup to accommodate more than 200 users)
+// BasicGroup represents a basic group of 0-200 users (must be upgraded to a supergroup to accommodate more than 200 users)
 type BasicGroup struct {
 	meta
 	// Group identifier
-	Id int32 `json:"id"`
+	ID int32 `json:"id"`
 	// Number of members in the group
 	MemberCount int32 `json:"member_count"`
 	// Status of the current user in the group
@@ -3599,9 +3903,10 @@ type BasicGroup struct {
 	// True, if the group is active
 	IsActive bool `json:"is_active"`
 	// Identifier of the supergroup to which this group was upgraded; 0 if none
-	UpgradedToSupergroupId int32 `json:"upgraded_to_supergroup_id"`
+	UpgradedToSupergroupID int32 `json:"upgraded_to_supergroup_id"`
 }
 
+// MarshalJSON returns BasicGroup object as the JSON encoding of BasicGroup.
 func (entity *BasicGroup) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3610,22 +3915,25 @@ func (entity *BasicGroup) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*BasicGroup) GetClass() string {
 	return ClassBasicGroup
 }
 
+// GetType returns constant class type string of the class.
 func (*BasicGroup) GetType() string {
 	return TypeBasicGroup
 }
 
-func (basicGroup *BasicGroup) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets BasicGroup object to a copy of JSON encoding of BasicGroup.
+func (entity *BasicGroup) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id                      int32           `json:"id"`
+		ID                      int32           `json:"id"`
 		MemberCount             int32           `json:"member_count"`
 		Status                  json.RawMessage `json:"status"`
 		EveryoneIsAdministrator bool            `json:"everyone_is_administrator"`
 		IsActive                bool            `json:"is_active"`
-		UpgradedToSupergroupId  int32           `json:"upgraded_to_supergroup_id"`
+		UpgradedToSupergroupID  int32           `json:"upgraded_to_supergroup_id"`
 	}
 
 	err := json.Unmarshal(data, &tmp)
@@ -3633,29 +3941,30 @@ func (basicGroup *BasicGroup) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	basicGroup.Id = tmp.Id
-	basicGroup.MemberCount = tmp.MemberCount
-	basicGroup.EveryoneIsAdministrator = tmp.EveryoneIsAdministrator
-	basicGroup.IsActive = tmp.IsActive
-	basicGroup.UpgradedToSupergroupId = tmp.UpgradedToSupergroupId
+	entity.ID = tmp.ID
+	entity.MemberCount = tmp.MemberCount
+	entity.EveryoneIsAdministrator = tmp.EveryoneIsAdministrator
+	entity.IsActive = tmp.IsActive
+	entity.UpgradedToSupergroupID = tmp.UpgradedToSupergroupID
 
 	fieldStatus, _ := UnmarshalChatMemberStatus(tmp.Status)
-	basicGroup.Status = fieldStatus
+	entity.Status = fieldStatus
 
 	return nil
 }
 
-// Contains full information about a basic group
+// BasicGroupFullInfo contains full information about a basic group
 type BasicGroupFullInfo struct {
 	meta
 	// User identifier of the creator of the group; 0 if unknown
-	CreatorUserId int32 `json:"creator_user_id"`
+	CreatorUserID int32 `json:"creator_user_id"`
 	// Group members
 	Members []*ChatMember `json:"members"`
 	// Invite link for this group; available only for the group creator and only after it has been generated at least once
 	InviteLink string `json:"invite_link"`
 }
 
+// MarshalJSON returns BasicGroupFullInfo object as the JSON encoding of BasicGroupFullInfo.
 func (entity *BasicGroupFullInfo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3664,19 +3973,21 @@ func (entity *BasicGroupFullInfo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*BasicGroupFullInfo) GetClass() string {
 	return ClassBasicGroupFullInfo
 }
 
+// GetType returns constant class type string of the class.
 func (*BasicGroupFullInfo) GetType() string {
 	return TypeBasicGroupFullInfo
 }
 
-// Represents a supergroup or channel with zero or more members (subscribers in the case of channels). From the point of view of the system, a channel is a special kind of a supergroup: only administrators can post and see the list of members, and posts from all administrators use the name and photo of the channel instead of individual names and profile photos. Unlike supergroups, channels can have an unlimited number of subscribers
+// Supergroup represents a supergroup or channel with zero or more members (subscribers in the case of channels). From the point of view of the system, a channel is a special kind of a supergroup: only administrators can post and see the list of members, and posts from all administrators use the name and photo of the channel instead of individual names and profile photos. Unlike supergroups, channels can have an unlimited number of subscribers
 type Supergroup struct {
 	meta
 	// Supergroup or channel identifier
-	Id int32 `json:"id"`
+	ID int32 `json:"id"`
 	// Username of the supergroup or channel; empty for private supergroups or channels
 	Username string `json:"username"`
 	// Point in time (Unix timestamp) when the current user joined, or the point in time when the supergroup or channel was created, in case the user is not a member
@@ -3697,6 +4008,7 @@ type Supergroup struct {
 	RestrictionReason string `json:"restriction_reason"`
 }
 
+// MarshalJSON returns Supergroup object as the JSON encoding of Supergroup.
 func (entity *Supergroup) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3705,17 +4017,20 @@ func (entity *Supergroup) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Supergroup) GetClass() string {
 	return ClassSupergroup
 }
 
+// GetType returns constant class type string of the class.
 func (*Supergroup) GetType() string {
 	return TypeSupergroup
 }
 
-func (supergroup *Supergroup) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets Supergroup object to a copy of JSON encoding of Supergroup.
+func (entity *Supergroup) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id                int32           `json:"id"`
+		ID                int32           `json:"id"`
 		Username          string          `json:"username"`
 		Date              int32           `json:"date"`
 		Status            json.RawMessage `json:"status"`
@@ -3732,23 +4047,23 @@ func (supergroup *Supergroup) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	supergroup.Id = tmp.Id
-	supergroup.Username = tmp.Username
-	supergroup.Date = tmp.Date
-	supergroup.MemberCount = tmp.MemberCount
-	supergroup.AnyoneCanInvite = tmp.AnyoneCanInvite
-	supergroup.SignMessages = tmp.SignMessages
-	supergroup.IsChannel = tmp.IsChannel
-	supergroup.IsVerified = tmp.IsVerified
-	supergroup.RestrictionReason = tmp.RestrictionReason
+	entity.ID = tmp.ID
+	entity.Username = tmp.Username
+	entity.Date = tmp.Date
+	entity.MemberCount = tmp.MemberCount
+	entity.AnyoneCanInvite = tmp.AnyoneCanInvite
+	entity.SignMessages = tmp.SignMessages
+	entity.IsChannel = tmp.IsChannel
+	entity.IsVerified = tmp.IsVerified
+	entity.RestrictionReason = tmp.RestrictionReason
 
 	fieldStatus, _ := UnmarshalChatMemberStatus(tmp.Status)
-	supergroup.Status = fieldStatus
+	entity.Status = fieldStatus
 
 	return nil
 }
 
-// Contains full information about a supergroup or channel
+// SupergroupFullInfo contains full information about a supergroup or channel
 type SupergroupFullInfo struct {
 	meta
 	// Supergroup or channel description
@@ -3770,17 +4085,18 @@ type SupergroupFullInfo struct {
 	// True, if new chat members will have access to old messages. In public supergroups and both public and private channels, old messages are always available, so this option affects only private supergroups. The value of this field is only available for chat administrators
 	IsAllHistoryAvailable bool `json:"is_all_history_available"`
 	// Identifier of the supergroup sticker set; 0 if none
-	StickerSetId JsonInt64 `json:"sticker_set_id"`
+	StickerSetID Int64JSON `json:"sticker_set_id"`
 	// Invite link for this chat
 	InviteLink string `json:"invite_link"`
 	// Identifier of the pinned message in the chat; 0 if none
-	PinnedMessageId int64 `json:"pinned_message_id"`
+	PinnedMessageID int64 `json:"pinned_message_id"`
 	// Identifier of the basic group from which supergroup was upgraded; 0 if none
-	UpgradedFromBasicGroupId int32 `json:"upgraded_from_basic_group_id"`
+	UpgradedFromBasicGroupID int32 `json:"upgraded_from_basic_group_id"`
 	// Identifier of the last message in the basic group from which supergroup was upgraded; 0 if none
-	UpgradedFromMaxMessageId int64 `json:"upgraded_from_max_message_id"`
+	UpgradedFromMaxMessageID int64 `json:"upgraded_from_max_message_id"`
 }
 
+// MarshalJSON returns SupergroupFullInfo object as the JSON encoding of SupergroupFullInfo.
 func (entity *SupergroupFullInfo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3789,19 +4105,22 @@ func (entity *SupergroupFullInfo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SupergroupFullInfo) GetClass() string {
 	return ClassSupergroupFullInfo
 }
 
+// GetType returns constant class type string of the class.
 func (*SupergroupFullInfo) GetType() string {
 	return TypeSupergroupFullInfo
 }
 
-// The secret chat is not yet created; waiting for the other user to get online
+// SecretChatStatePending the secret chat is not yet created; waiting for the other user to get online
 type SecretChatStatePending struct {
 	meta
 }
 
+// MarshalJSON returns SecretChatStatePending object as the JSON encoding of SecretChatStatePending.
 func (entity *SecretChatStatePending) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3810,23 +4129,27 @@ func (entity *SecretChatStatePending) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SecretChatStatePending) GetClass() string {
 	return ClassSecretChatState
 }
 
+// GetType returns constant class type string of the class.
 func (*SecretChatStatePending) GetType() string {
 	return TypeSecretChatStatePending
 }
 
+// SecretChatStateType returns constant class type string of the class.
 func (*SecretChatStatePending) SecretChatStateType() string {
 	return TypeSecretChatStatePending
 }
 
-// The secret chat is ready to use
+// SecretChatStateReady the secret chat is ready to use
 type SecretChatStateReady struct {
 	meta
 }
 
+// MarshalJSON returns SecretChatStateReady object as the JSON encoding of SecretChatStateReady.
 func (entity *SecretChatStateReady) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3835,23 +4158,27 @@ func (entity *SecretChatStateReady) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SecretChatStateReady) GetClass() string {
 	return ClassSecretChatState
 }
 
+// GetType returns constant class type string of the class.
 func (*SecretChatStateReady) GetType() string {
 	return TypeSecretChatStateReady
 }
 
+// SecretChatStateType returns constant class type string of the class.
 func (*SecretChatStateReady) SecretChatStateType() string {
 	return TypeSecretChatStateReady
 }
 
-// The secret chat is closed
+// SecretChatStateClosed the secret chat is closed
 type SecretChatStateClosed struct {
 	meta
 }
 
+// MarshalJSON returns SecretChatStateClosed object as the JSON encoding of SecretChatStateClosed.
 func (entity *SecretChatStateClosed) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3860,37 +4187,41 @@ func (entity *SecretChatStateClosed) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SecretChatStateClosed) GetClass() string {
 	return ClassSecretChatState
 }
 
+// GetType returns constant class type string of the class.
 func (*SecretChatStateClosed) GetType() string {
 	return TypeSecretChatStateClosed
 }
 
+// SecretChatStateType returns constant class type string of the class.
 func (*SecretChatStateClosed) SecretChatStateType() string {
 	return TypeSecretChatStateClosed
 }
 
-// Represents a secret chat
+// SecretChat represents a secret chat
 type SecretChat struct {
 	meta
 	// Secret chat identifier
-	Id int32 `json:"id"`
+	ID int32 `json:"id"`
 	// Identifier of the chat partner
-	UserId int32 `json:"user_id"`
+	UserID int32 `json:"user_id"`
 	// State of the secret chat
 	State SecretChatState `json:"state"`
 	// True, if the chat was created by the current user; otherwise false
 	IsOutbound bool `json:"is_outbound"`
 	// Current message Time To Live setting (self-destruct timer) for the chat, in seconds
-	Ttl int32 `json:"ttl"`
+	TTL int32 `json:"ttl"`
 	// Hash of the currently used key for comparison with the hash of the chat partner's key. This is a string of 36 bytes, which must be used to make a 12x12 square image with a color depth of 4. The first 16 bytes should be used to make a central 8x8 square, while the remaining 20 bytes should be used to construct a 2-pixel-wide border around that square. Alternatively, the first 32 bytes of the hash can be converted to the hexadecimal format and printed as 32 2-digit hex numbers
 	KeyHash []byte `json:"key_hash"`
 	// Secret chat layer; determines features supported by the other client. Video notes are supported if the layer >= 66
 	Layer int32 `json:"layer"`
 }
 
+// MarshalJSON returns SecretChat object as the JSON encoding of SecretChat.
 func (entity *SecretChat) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3899,21 +4230,24 @@ func (entity *SecretChat) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SecretChat) GetClass() string {
 	return ClassSecretChat
 }
 
+// GetType returns constant class type string of the class.
 func (*SecretChat) GetType() string {
 	return TypeSecretChat
 }
 
-func (secretChat *SecretChat) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets SecretChat object to a copy of JSON encoding of SecretChat.
+func (entity *SecretChat) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id         int32           `json:"id"`
-		UserId     int32           `json:"user_id"`
+		ID         int32           `json:"id"`
+		UserID     int32           `json:"user_id"`
 		State      json.RawMessage `json:"state"`
 		IsOutbound bool            `json:"is_outbound"`
-		Ttl        int32           `json:"ttl"`
+		TTL        int32           `json:"ttl"`
 		KeyHash    []byte          `json:"key_hash"`
 		Layer      int32           `json:"layer"`
 	}
@@ -3923,32 +4257,33 @@ func (secretChat *SecretChat) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	secretChat.Id = tmp.Id
-	secretChat.UserId = tmp.UserId
-	secretChat.IsOutbound = tmp.IsOutbound
-	secretChat.Ttl = tmp.Ttl
-	secretChat.KeyHash = tmp.KeyHash
-	secretChat.Layer = tmp.Layer
+	entity.ID = tmp.ID
+	entity.UserID = tmp.UserID
+	entity.IsOutbound = tmp.IsOutbound
+	entity.TTL = tmp.TTL
+	entity.KeyHash = tmp.KeyHash
+	entity.Layer = tmp.Layer
 
 	fieldState, _ := UnmarshalSecretChatState(tmp.State)
-	secretChat.State = fieldState
+	entity.State = fieldState
 
 	return nil
 }
 
-// The message was originally written by a known user
+// MessageForwardedFromUser the message was originally written by a known user
 type MessageForwardedFromUser struct {
 	meta
 	// Identifier of the user that originally sent this message
-	SenderUserId int32 `json:"sender_user_id"`
+	SenderUserID int32 `json:"sender_user_id"`
 	// Point in time (Unix timestamp) when the message was originally sent
 	Date int32 `json:"date"`
 	// For messages forwarded to the chat with the current user (saved messages), the identifier of the chat from which the message was forwarded; 0 if unknown
-	ForwardedFromChatId int64 `json:"forwarded_from_chat_id"`
+	ForwardedFromChatID int64 `json:"forwarded_from_chat_id"`
 	// For messages forwarded to the chat with the current user (saved messages) the identifier of the original message from which the new message was forwarded; 0 if unknown
-	ForwardedFromMessageId int64 `json:"forwarded_from_message_id"`
+	ForwardedFromMessageID int64 `json:"forwarded_from_message_id"`
 }
 
+// MarshalJSON returns MessageForwardedFromUser object as the JSON encoding of MessageForwardedFromUser.
 func (entity *MessageForwardedFromUser) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3957,35 +4292,39 @@ func (entity *MessageForwardedFromUser) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageForwardedFromUser) GetClass() string {
 	return ClassMessageForwardInfo
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageForwardedFromUser) GetType() string {
 	return TypeMessageForwardedFromUser
 }
 
+// MessageForwardInfoType returns constant class type string of the class.
 func (*MessageForwardedFromUser) MessageForwardInfoType() string {
 	return TypeMessageForwardedFromUser
 }
 
-// The message was originally a post in a channel
+// MessageForwardedPost the message was originally a post in a channel
 type MessageForwardedPost struct {
 	meta
 	// Identifier of the chat from which the message was forwarded
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// Post author signature
 	AuthorSignature string `json:"author_signature"`
 	// Point in time (Unix timestamp) when the message was originally sent
 	Date int32 `json:"date"`
 	// Message identifier of the original message from which the new message was forwarded; 0 if unknown
-	MessageId int64 `json:"message_id"`
+	MessageID int64 `json:"message_id"`
 	// For messages forwarded to the chat with the current user (saved messages), the identifier of the chat from which the message was forwarded; 0 if unknown
-	ForwardedFromChatId int64 `json:"forwarded_from_chat_id"`
+	ForwardedFromChatID int64 `json:"forwarded_from_chat_id"`
 	// For messages forwarded to the chat with the current user (saved messages), the identifier of the original message from which the new message was forwarded; 0 if unknown
-	ForwardedFromMessageId int64 `json:"forwarded_from_message_id"`
+	ForwardedFromMessageID int64 `json:"forwarded_from_message_id"`
 }
 
+// MarshalJSON returns MessageForwardedPost object as the JSON encoding of MessageForwardedPost.
 func (entity *MessageForwardedPost) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -3994,23 +4333,27 @@ func (entity *MessageForwardedPost) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageForwardedPost) GetClass() string {
 	return ClassMessageForwardInfo
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageForwardedPost) GetType() string {
 	return TypeMessageForwardedPost
 }
 
+// MessageForwardInfoType returns constant class type string of the class.
 func (*MessageForwardedPost) MessageForwardInfoType() string {
 	return TypeMessageForwardedPost
 }
 
-// The message is being sent now, but has not yet been delivered to the server
+// MessageSendingStatePending the message is being sent now, but has not yet been delivered to the server
 type MessageSendingStatePending struct {
 	meta
 }
 
+// MarshalJSON returns MessageSendingStatePending object as the JSON encoding of MessageSendingStatePending.
 func (entity *MessageSendingStatePending) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4019,23 +4362,27 @@ func (entity *MessageSendingStatePending) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageSendingStatePending) GetClass() string {
 	return ClassMessageSendingState
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageSendingStatePending) GetType() string {
 	return TypeMessageSendingStatePending
 }
 
+// MessageSendingStateType returns constant class type string of the class.
 func (*MessageSendingStatePending) MessageSendingStateType() string {
 	return TypeMessageSendingStatePending
 }
 
-// The message failed to be sent
+// MessageSendingStateFailed the message failed to be sent
 type MessageSendingStateFailed struct {
 	meta
 }
 
+// MarshalJSON returns MessageSendingStateFailed object as the JSON encoding of MessageSendingStateFailed.
 func (entity *MessageSendingStateFailed) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4044,27 +4391,30 @@ func (entity *MessageSendingStateFailed) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageSendingStateFailed) GetClass() string {
 	return ClassMessageSendingState
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageSendingStateFailed) GetType() string {
 	return TypeMessageSendingStateFailed
 }
 
+// MessageSendingStateType returns constant class type string of the class.
 func (*MessageSendingStateFailed) MessageSendingStateType() string {
 	return TypeMessageSendingStateFailed
 }
 
-// Describes a message
+// Message describes a message
 type Message struct {
 	meta
 	// Message identifier, unique for the chat to which the message belongs
-	Id int64 `json:"id"`
+	ID int64 `json:"id"`
 	// Identifier of the user who sent the message; 0 if unknown. It is unknown for channel posts
-	SenderUserId int32 `json:"sender_user_id"`
+	SenderUserID int32 `json:"sender_user_id"`
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// Information about the sending state of the message; may be null
 	SendingState MessageSendingState `json:"sending_state"`
 	// True, if the message is outgoing
@@ -4088,25 +4438,26 @@ type Message struct {
 	// Information about the initial message sender; may be null
 	ForwardInfo MessageForwardInfo `json:"forward_info"`
 	// If non-zero, the identifier of the message this message is replying to; can be the identifier of a deleted message
-	ReplyToMessageId int64 `json:"reply_to_message_id"`
+	ReplyToMessageID int64 `json:"reply_to_message_id"`
 	// For self-destructing messages, the message's TTL (Time To Live), in seconds; 0 if none. TDLib will send updateDeleteMessages or updateMessageContent once the TTL expires
-	Ttl int32 `json:"ttl"`
+	TTL int32 `json:"ttl"`
 	// Time left before the message expires, in seconds
-	TtlExpiresIn float64 `json:"ttl_expires_in"`
+	TTLExpiresIn float64 `json:"ttl_expires_in"`
 	// If non-zero, the user identifier of the bot through which this message was sent
-	ViaBotUserId int32 `json:"via_bot_user_id"`
+	ViaBotUserID int32 `json:"via_bot_user_id"`
 	// For channel posts, optional author signature
 	AuthorSignature string `json:"author_signature"`
 	// Number of times this message was viewed
 	Views int32 `json:"views"`
 	// Unique identifier of an album this message belongs to. Only photos and videos can be grouped together in albums
-	MediaAlbumId JsonInt64 `json:"media_album_id"`
+	MediaAlbumID Int64JSON `json:"media_album_id"`
 	// Content of the message
 	Content MessageContent `json:"content"`
 	// Reply markup for the message; may be null
 	ReplyMarkup ReplyMarkup `json:"reply_markup"`
 }
 
+// MarshalJSON returns Message object as the JSON encoding of Message.
 func (entity *Message) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4115,19 +4466,22 @@ func (entity *Message) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Message) GetClass() string {
 	return ClassMessage
 }
 
+// GetType returns constant class type string of the class.
 func (*Message) GetType() string {
 	return TypeMessage
 }
 
-func (message *Message) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets Message object to a copy of JSON encoding of Message.
+func (entity *Message) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id                      int64           `json:"id"`
-		SenderUserId            int32           `json:"sender_user_id"`
-		ChatId                  int64           `json:"chat_id"`
+		ID                      int64           `json:"id"`
+		SenderUserID            int32           `json:"sender_user_id"`
+		ChatID                  int64           `json:"chat_id"`
 		SendingState            json.RawMessage `json:"sending_state"`
 		IsOutgoing              bool            `json:"is_outgoing"`
 		CanBeEdited             bool            `json:"can_be_edited"`
@@ -4139,13 +4493,13 @@ func (message *Message) UnmarshalJSON(data []byte) error {
 		Date                    int32           `json:"date"`
 		EditDate                int32           `json:"edit_date"`
 		ForwardInfo             json.RawMessage `json:"forward_info"`
-		ReplyToMessageId        int64           `json:"reply_to_message_id"`
-		Ttl                     int32           `json:"ttl"`
-		TtlExpiresIn            float64         `json:"ttl_expires_in"`
-		ViaBotUserId            int32           `json:"via_bot_user_id"`
+		ReplyToMessageID        int64           `json:"reply_to_message_id"`
+		TTL                     int32           `json:"ttl"`
+		TTLExpiresIn            float64         `json:"ttl_expires_in"`
+		ViaBotUserID            int32           `json:"via_bot_user_id"`
 		AuthorSignature         string          `json:"author_signature"`
 		Views                   int32           `json:"views"`
-		MediaAlbumId            JsonInt64       `json:"media_album_id"`
+		MediaAlbumID            Int64JSON       `json:"media_album_id"`
 		Content                 json.RawMessage `json:"content"`
 		ReplyMarkup             json.RawMessage `json:"reply_markup"`
 	}
@@ -4155,42 +4509,42 @@ func (message *Message) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	message.Id = tmp.Id
-	message.SenderUserId = tmp.SenderUserId
-	message.ChatId = tmp.ChatId
-	message.IsOutgoing = tmp.IsOutgoing
-	message.CanBeEdited = tmp.CanBeEdited
-	message.CanBeForwarded = tmp.CanBeForwarded
-	message.CanBeDeletedOnlyForSelf = tmp.CanBeDeletedOnlyForSelf
-	message.CanBeDeletedForAllUsers = tmp.CanBeDeletedForAllUsers
-	message.IsChannelPost = tmp.IsChannelPost
-	message.ContainsUnreadMention = tmp.ContainsUnreadMention
-	message.Date = tmp.Date
-	message.EditDate = tmp.EditDate
-	message.ReplyToMessageId = tmp.ReplyToMessageId
-	message.Ttl = tmp.Ttl
-	message.TtlExpiresIn = tmp.TtlExpiresIn
-	message.ViaBotUserId = tmp.ViaBotUserId
-	message.AuthorSignature = tmp.AuthorSignature
-	message.Views = tmp.Views
-	message.MediaAlbumId = tmp.MediaAlbumId
+	entity.ID = tmp.ID
+	entity.SenderUserID = tmp.SenderUserID
+	entity.ChatID = tmp.ChatID
+	entity.IsOutgoing = tmp.IsOutgoing
+	entity.CanBeEdited = tmp.CanBeEdited
+	entity.CanBeForwarded = tmp.CanBeForwarded
+	entity.CanBeDeletedOnlyForSelf = tmp.CanBeDeletedOnlyForSelf
+	entity.CanBeDeletedForAllUsers = tmp.CanBeDeletedForAllUsers
+	entity.IsChannelPost = tmp.IsChannelPost
+	entity.ContainsUnreadMention = tmp.ContainsUnreadMention
+	entity.Date = tmp.Date
+	entity.EditDate = tmp.EditDate
+	entity.ReplyToMessageID = tmp.ReplyToMessageID
+	entity.TTL = tmp.TTL
+	entity.TTLExpiresIn = tmp.TTLExpiresIn
+	entity.ViaBotUserID = tmp.ViaBotUserID
+	entity.AuthorSignature = tmp.AuthorSignature
+	entity.Views = tmp.Views
+	entity.MediaAlbumID = tmp.MediaAlbumID
 
 	fieldSendingState, _ := UnmarshalMessageSendingState(tmp.SendingState)
-	message.SendingState = fieldSendingState
+	entity.SendingState = fieldSendingState
 
 	fieldForwardInfo, _ := UnmarshalMessageForwardInfo(tmp.ForwardInfo)
-	message.ForwardInfo = fieldForwardInfo
+	entity.ForwardInfo = fieldForwardInfo
 
 	fieldContent, _ := UnmarshalMessageContent(tmp.Content)
-	message.Content = fieldContent
+	entity.Content = fieldContent
 
 	fieldReplyMarkup, _ := UnmarshalReplyMarkup(tmp.ReplyMarkup)
-	message.ReplyMarkup = fieldReplyMarkup
+	entity.ReplyMarkup = fieldReplyMarkup
 
 	return nil
 }
 
-// Contains a list of messages
+// Messages contains a list of messages
 type Messages struct {
 	meta
 	// Approximate total count of messages found
@@ -4199,6 +4553,7 @@ type Messages struct {
 	Messages []*Message `json:"messages"`
 }
 
+// MarshalJSON returns Messages object as the JSON encoding of Messages.
 func (entity *Messages) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4207,23 +4562,26 @@ func (entity *Messages) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Messages) GetClass() string {
 	return ClassMessages
 }
 
+// GetType returns constant class type string of the class.
 func (*Messages) GetType() string {
 	return TypeMessages
 }
 
-// Contains a list of messages found by a search
+// FoundMessages contains a list of messages found by a search
 type FoundMessages struct {
 	meta
 	// List of messages
 	Messages []*Message `json:"messages"`
 	// Value to pass as from_search_id to get more results
-	NextFromSearchId JsonInt64 `json:"next_from_search_id"`
+	NextFromSearchID Int64JSON `json:"next_from_search_id"`
 }
 
+// MarshalJSON returns FoundMessages object as the JSON encoding of FoundMessages.
 func (entity *FoundMessages) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4232,19 +4590,22 @@ func (entity *FoundMessages) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*FoundMessages) GetClass() string {
 	return ClassFoundMessages
 }
 
+// GetType returns constant class type string of the class.
 func (*FoundMessages) GetType() string {
 	return TypeFoundMessages
 }
 
-// Notification settings applied to all private and secret chats when the corresponding chat setting has a default value
+// NotificationSettingsScopePrivateChats notification settings applied to all private and secret chats when the corresponding chat setting has a default value
 type NotificationSettingsScopePrivateChats struct {
 	meta
 }
 
+// MarshalJSON returns NotificationSettingsScopePrivateChats object as the JSON encoding of NotificationSettingsScopePrivateChats.
 func (entity *NotificationSettingsScopePrivateChats) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4253,23 +4614,27 @@ func (entity *NotificationSettingsScopePrivateChats) MarshalJSON() ([]byte, erro
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*NotificationSettingsScopePrivateChats) GetClass() string {
 	return ClassNotificationSettingsScope
 }
 
+// GetType returns constant class type string of the class.
 func (*NotificationSettingsScopePrivateChats) GetType() string {
 	return TypeNotificationSettingsScopePrivateChats
 }
 
+// NotificationSettingsScopeType returns constant class type string of the class.
 func (*NotificationSettingsScopePrivateChats) NotificationSettingsScopeType() string {
 	return TypeNotificationSettingsScopePrivateChats
 }
 
-// Notification settings applied to all basic groups, supergroups and channels when the corresponding chat setting has a default value
+// NotificationSettingsScopeGroupChats notification settings applied to all basic groups, supergroups and channels when the corresponding chat setting has a default value
 type NotificationSettingsScopeGroupChats struct {
 	meta
 }
 
+// MarshalJSON returns NotificationSettingsScopeGroupChats object as the JSON encoding of NotificationSettingsScopeGroupChats.
 func (entity *NotificationSettingsScopeGroupChats) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4278,19 +4643,22 @@ func (entity *NotificationSettingsScopeGroupChats) MarshalJSON() ([]byte, error)
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*NotificationSettingsScopeGroupChats) GetClass() string {
 	return ClassNotificationSettingsScope
 }
 
+// GetType returns constant class type string of the class.
 func (*NotificationSettingsScopeGroupChats) GetType() string {
 	return TypeNotificationSettingsScopeGroupChats
 }
 
+// NotificationSettingsScopeType returns constant class type string of the class.
 func (*NotificationSettingsScopeGroupChats) NotificationSettingsScopeType() string {
 	return TypeNotificationSettingsScopeGroupChats
 }
 
-// Contains information about notification settings for a chat
+// ChatNotificationSettings contains information about notification settings for a chat
 type ChatNotificationSettings struct {
 	meta
 	// If true, mute_for is ignored and the value for the relevant type of chat is used instead
@@ -4307,6 +4675,7 @@ type ChatNotificationSettings struct {
 	ShowPreview bool `json:"show_preview"`
 }
 
+// MarshalJSON returns ChatNotificationSettings object as the JSON encoding of ChatNotificationSettings.
 func (entity *ChatNotificationSettings) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4315,15 +4684,17 @@ func (entity *ChatNotificationSettings) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatNotificationSettings) GetClass() string {
 	return ClassChatNotificationSettings
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatNotificationSettings) GetType() string {
 	return TypeChatNotificationSettings
 }
 
-// Contains information about notification settings for several chats
+// ScopeNotificationSettings contains information about notification settings for several chats
 type ScopeNotificationSettings struct {
 	meta
 	// Time left before notifications will be unmuted, in seconds
@@ -4334,6 +4705,7 @@ type ScopeNotificationSettings struct {
 	ShowPreview bool `json:"show_preview"`
 }
 
+// MarshalJSON returns ScopeNotificationSettings object as the JSON encoding of ScopeNotificationSettings.
 func (entity *ScopeNotificationSettings) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4342,23 +4714,26 @@ func (entity *ScopeNotificationSettings) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ScopeNotificationSettings) GetClass() string {
 	return ClassScopeNotificationSettings
 }
 
+// GetType returns constant class type string of the class.
 func (*ScopeNotificationSettings) GetType() string {
 	return TypeScopeNotificationSettings
 }
 
-// Contains information about a message draft
+// DraftMessage contains information about a message draft
 type DraftMessage struct {
 	meta
 	// Identifier of the message to reply to; 0 if none
-	ReplyToMessageId int64 `json:"reply_to_message_id"`
+	ReplyToMessageID int64 `json:"reply_to_message_id"`
 	// Content of the message draft; this should always be of type inputMessageText
 	InputMessageText InputMessageContent `json:"input_message_text"`
 }
 
+// MarshalJSON returns DraftMessage object as the JSON encoding of DraftMessage.
 func (entity *DraftMessage) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4367,17 +4742,20 @@ func (entity *DraftMessage) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*DraftMessage) GetClass() string {
 	return ClassDraftMessage
 }
 
+// GetType returns constant class type string of the class.
 func (*DraftMessage) GetType() string {
 	return TypeDraftMessage
 }
 
-func (draftMessage *DraftMessage) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets DraftMessage object to a copy of JSON encoding of DraftMessage.
+func (entity *DraftMessage) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		ReplyToMessageId int64           `json:"reply_to_message_id"`
+		ReplyToMessageID int64           `json:"reply_to_message_id"`
 		InputMessageText json.RawMessage `json:"input_message_text"`
 	}
 
@@ -4386,21 +4764,22 @@ func (draftMessage *DraftMessage) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	draftMessage.ReplyToMessageId = tmp.ReplyToMessageId
+	entity.ReplyToMessageID = tmp.ReplyToMessageID
 
 	fieldInputMessageText, _ := UnmarshalInputMessageContent(tmp.InputMessageText)
-	draftMessage.InputMessageText = fieldInputMessageText
+	entity.InputMessageText = fieldInputMessageText
 
 	return nil
 }
 
-// An ordinary chat with a user
+// ChatTypePrivate an ordinary chat with a user
 type ChatTypePrivate struct {
 	meta
 	// User identifier
-	UserId int32 `json:"user_id"`
+	UserID int32 `json:"user_id"`
 }
 
+// MarshalJSON returns ChatTypePrivate object as the JSON encoding of ChatTypePrivate.
 func (entity *ChatTypePrivate) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4409,25 +4788,29 @@ func (entity *ChatTypePrivate) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatTypePrivate) GetClass() string {
 	return ClassChatType
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatTypePrivate) GetType() string {
 	return TypeChatTypePrivate
 }
 
+// ChatTypeType returns constant class type string of the class.
 func (*ChatTypePrivate) ChatTypeType() string {
 	return TypeChatTypePrivate
 }
 
-// A basic group (i.e., a chat with 0-200 other users)
+// ChatTypeBasicGroup a basic group (i.e., a chat with 0-200 other users)
 type ChatTypeBasicGroup struct {
 	meta
 	// Basic group identifier
-	BasicGroupId int32 `json:"basic_group_id"`
+	BasicGroupID int32 `json:"basic_group_id"`
 }
 
+// MarshalJSON returns ChatTypeBasicGroup object as the JSON encoding of ChatTypeBasicGroup.
 func (entity *ChatTypeBasicGroup) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4436,27 +4819,31 @@ func (entity *ChatTypeBasicGroup) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatTypeBasicGroup) GetClass() string {
 	return ClassChatType
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatTypeBasicGroup) GetType() string {
 	return TypeChatTypeBasicGroup
 }
 
+// ChatTypeType returns constant class type string of the class.
 func (*ChatTypeBasicGroup) ChatTypeType() string {
 	return TypeChatTypeBasicGroup
 }
 
-// A supergroup (i.e. a chat with up to GetOption("supergroup_max_size") other users), or channel (with unlimited members)
+// ChatTypeSupergroup a supergroup (i.e. a chat with up to GetOption("supergroup_max_size") other users), or channel (with unlimited members)
 type ChatTypeSupergroup struct {
 	meta
 	// Supergroup or channel identifier
-	SupergroupId int32 `json:"supergroup_id"`
+	SupergroupID int32 `json:"supergroup_id"`
 	// True, if the supergroup is a channel
 	IsChannel bool `json:"is_channel"`
 }
 
+// MarshalJSON returns ChatTypeSupergroup object as the JSON encoding of ChatTypeSupergroup.
 func (entity *ChatTypeSupergroup) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4465,27 +4852,31 @@ func (entity *ChatTypeSupergroup) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatTypeSupergroup) GetClass() string {
 	return ClassChatType
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatTypeSupergroup) GetType() string {
 	return TypeChatTypeSupergroup
 }
 
+// ChatTypeType returns constant class type string of the class.
 func (*ChatTypeSupergroup) ChatTypeType() string {
 	return TypeChatTypeSupergroup
 }
 
-// A secret chat with a user
+// ChatTypeSecret a secret chat with a user
 type ChatTypeSecret struct {
 	meta
 	// Secret chat identifier
-	SecretChatId int32 `json:"secret_chat_id"`
+	SecretChatID int32 `json:"secret_chat_id"`
 	// User identifier of the secret chat peer
-	UserId int32 `json:"user_id"`
+	UserID int32 `json:"user_id"`
 }
 
+// MarshalJSON returns ChatTypeSecret object as the JSON encoding of ChatTypeSecret.
 func (entity *ChatTypeSecret) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4494,23 +4885,26 @@ func (entity *ChatTypeSecret) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatTypeSecret) GetClass() string {
 	return ClassChatType
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatTypeSecret) GetType() string {
 	return TypeChatTypeSecret
 }
 
+// ChatTypeType returns constant class type string of the class.
 func (*ChatTypeSecret) ChatTypeType() string {
 	return TypeChatTypeSecret
 }
 
-// A chat. (Can be a private chat, basic group, supergroup, or secret chat)
+// Chat a chat. (Can be a private chat, basic group, supergroup, or secret chat)
 type Chat struct {
 	meta
 	// Chat unique identifier
-	Id int64 `json:"id"`
+	ID int64 `json:"id"`
 	// Type of the chat
 	Type ChatType `json:"type"`
 	// Chat title
@@ -4520,7 +4914,7 @@ type Chat struct {
 	// Last message in the chat; may be null
 	LastMessage *Message `json:"last_message"`
 	// Descending parameter by which chats are sorted in the main chat list. If the order number of two chats is the same, they must be sorted in descending order by ID. If 0, the position of the chat in the list is undetermined
-	Order JsonInt64 `json:"order"`
+	Order Int64JSON `json:"order"`
 	// True, if the chat is pinned
 	IsPinned bool `json:"is_pinned"`
 	// True, if the chat is marked as unread
@@ -4534,21 +4928,22 @@ type Chat struct {
 	// Number of unread messages in the chat
 	UnreadCount int32 `json:"unread_count"`
 	// Identifier of the last read incoming message
-	LastReadInboxMessageId int64 `json:"last_read_inbox_message_id"`
+	LastReadInboxMessageID int64 `json:"last_read_inbox_message_id"`
 	// Identifier of the last read outgoing message
-	LastReadOutboxMessageId int64 `json:"last_read_outbox_message_id"`
+	LastReadOutboxMessageID int64 `json:"last_read_outbox_message_id"`
 	// Number of unread messages with a mention/reply in the chat
 	UnreadMentionCount int32 `json:"unread_mention_count"`
 	// Notification settings for this chat
 	NotificationSettings *ChatNotificationSettings `json:"notification_settings"`
 	// Identifier of the message from which reply markup needs to be used; 0 if there is no default custom reply markup in the chat
-	ReplyMarkupMessageId int64 `json:"reply_markup_message_id"`
+	ReplyMarkupMessageID int64 `json:"reply_markup_message_id"`
 	// A draft of a message in the chat; may be null
 	DraftMessage *DraftMessage `json:"draft_message"`
 	// Contains client-specific data associated with the chat. (For example, the chat position or local chat notification settings can be stored here.) Persistent if a message database is used
 	ClientData string `json:"client_data"`
 }
 
+// MarshalJSON returns Chat object as the JSON encoding of Chat.
 func (entity *Chat) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4557,33 +4952,36 @@ func (entity *Chat) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Chat) GetClass() string {
 	return ClassChat
 }
 
+// GetType returns constant class type string of the class.
 func (*Chat) GetType() string {
 	return TypeChat
 }
 
-func (chat *Chat) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets Chat object to a copy of JSON encoding of Chat.
+func (entity *Chat) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id                         int64                     `json:"id"`
+		ID                         int64                     `json:"id"`
 		Type                       json.RawMessage           `json:"type"`
 		Title                      string                    `json:"title"`
 		Photo                      *ChatPhoto                `json:"photo"`
 		LastMessage                *Message                  `json:"last_message"`
-		Order                      JsonInt64                 `json:"order"`
+		Order                      Int64JSON                 `json:"order"`
 		IsPinned                   bool                      `json:"is_pinned"`
 		IsMarkedAsUnread           bool                      `json:"is_marked_as_unread"`
 		IsSponsored                bool                      `json:"is_sponsored"`
 		CanBeReported              bool                      `json:"can_be_reported"`
 		DefaultDisableNotification bool                      `json:"default_disable_notification"`
 		UnreadCount                int32                     `json:"unread_count"`
-		LastReadInboxMessageId     int64                     `json:"last_read_inbox_message_id"`
-		LastReadOutboxMessageId    int64                     `json:"last_read_outbox_message_id"`
+		LastReadInboxMessageID     int64                     `json:"last_read_inbox_message_id"`
+		LastReadOutboxMessageID    int64                     `json:"last_read_outbox_message_id"`
 		UnreadMentionCount         int32                     `json:"unread_mention_count"`
 		NotificationSettings       *ChatNotificationSettings `json:"notification_settings"`
-		ReplyMarkupMessageId       int64                     `json:"reply_markup_message_id"`
+		ReplyMarkupMessageID       int64                     `json:"reply_markup_message_id"`
 		DraftMessage               *DraftMessage             `json:"draft_message"`
 		ClientData                 string                    `json:"client_data"`
 	}
@@ -4593,38 +4991,39 @@ func (chat *Chat) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	chat.Id = tmp.Id
-	chat.Title = tmp.Title
-	chat.Photo = tmp.Photo
-	chat.LastMessage = tmp.LastMessage
-	chat.Order = tmp.Order
-	chat.IsPinned = tmp.IsPinned
-	chat.IsMarkedAsUnread = tmp.IsMarkedAsUnread
-	chat.IsSponsored = tmp.IsSponsored
-	chat.CanBeReported = tmp.CanBeReported
-	chat.DefaultDisableNotification = tmp.DefaultDisableNotification
-	chat.UnreadCount = tmp.UnreadCount
-	chat.LastReadInboxMessageId = tmp.LastReadInboxMessageId
-	chat.LastReadOutboxMessageId = tmp.LastReadOutboxMessageId
-	chat.UnreadMentionCount = tmp.UnreadMentionCount
-	chat.NotificationSettings = tmp.NotificationSettings
-	chat.ReplyMarkupMessageId = tmp.ReplyMarkupMessageId
-	chat.DraftMessage = tmp.DraftMessage
-	chat.ClientData = tmp.ClientData
+	entity.ID = tmp.ID
+	entity.Title = tmp.Title
+	entity.Photo = tmp.Photo
+	entity.LastMessage = tmp.LastMessage
+	entity.Order = tmp.Order
+	entity.IsPinned = tmp.IsPinned
+	entity.IsMarkedAsUnread = tmp.IsMarkedAsUnread
+	entity.IsSponsored = tmp.IsSponsored
+	entity.CanBeReported = tmp.CanBeReported
+	entity.DefaultDisableNotification = tmp.DefaultDisableNotification
+	entity.UnreadCount = tmp.UnreadCount
+	entity.LastReadInboxMessageID = tmp.LastReadInboxMessageID
+	entity.LastReadOutboxMessageID = tmp.LastReadOutboxMessageID
+	entity.UnreadMentionCount = tmp.UnreadMentionCount
+	entity.NotificationSettings = tmp.NotificationSettings
+	entity.ReplyMarkupMessageID = tmp.ReplyMarkupMessageID
+	entity.DraftMessage = tmp.DraftMessage
+	entity.ClientData = tmp.ClientData
 
 	fieldType, _ := UnmarshalChatType(tmp.Type)
-	chat.Type = fieldType
+	entity.Type = fieldType
 
 	return nil
 }
 
-// Represents a list of chats
+// Chats represents a list of chats
 type Chats struct {
 	meta
 	// List of chat identifiers
-	ChatIds []int64 `json:"chat_ids"`
+	ChatIDs []int64 `json:"chat_ids"`
 }
 
+// MarshalJSON returns Chats object as the JSON encoding of Chats.
 func (entity *Chats) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4633,21 +5032,24 @@ func (entity *Chats) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Chats) GetClass() string {
 	return ClassChats
 }
 
+// GetType returns constant class type string of the class.
 func (*Chats) GetType() string {
 	return TypeChats
 }
 
-// Contains a chat invite link
+// ChatInviteLink contains a chat invite link
 type ChatInviteLink struct {
 	meta
 	// Chat invite link
 	InviteLink string `json:"invite_link"`
 }
 
+// MarshalJSON returns ChatInviteLink object as the JSON encoding of ChatInviteLink.
 func (entity *ChatInviteLink) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4656,19 +5058,21 @@ func (entity *ChatInviteLink) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatInviteLink) GetClass() string {
 	return ClassChatInviteLink
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatInviteLink) GetType() string {
 	return TypeChatInviteLink
 }
 
-// Contains information about a chat invite link
+// ChatInviteLinkInfo contains information about a chat invite link
 type ChatInviteLinkInfo struct {
 	meta
 	// Chat identifier of the invite link; 0 if the user is not a member of this chat
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// Contains information about the type of the chat
 	Type ChatType `json:"type"`
 	// Title of the chat
@@ -4678,11 +5082,12 @@ type ChatInviteLinkInfo struct {
 	// Number of members
 	MemberCount int32 `json:"member_count"`
 	// User identifiers of some chat members that may be known to the current user
-	MemberUserIds []int32 `json:"member_user_ids"`
+	MemberUserIDs []int32 `json:"member_user_ids"`
 	// True, if the chat is a public supergroup or channel with a username
 	IsPublic bool `json:"is_public"`
 }
 
+// MarshalJSON returns ChatInviteLinkInfo object as the JSON encoding of ChatInviteLinkInfo.
 func (entity *ChatInviteLinkInfo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4691,22 +5096,25 @@ func (entity *ChatInviteLinkInfo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatInviteLinkInfo) GetClass() string {
 	return ClassChatInviteLinkInfo
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatInviteLinkInfo) GetType() string {
 	return TypeChatInviteLinkInfo
 }
 
-func (chatInviteLinkInfo *ChatInviteLinkInfo) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets ChatInviteLinkInfo object to a copy of JSON encoding of ChatInviteLinkInfo.
+func (entity *ChatInviteLinkInfo) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		ChatId        int64           `json:"chat_id"`
+		ChatID        int64           `json:"chat_id"`
 		Type          json.RawMessage `json:"type"`
 		Title         string          `json:"title"`
 		Photo         *ChatPhoto      `json:"photo"`
 		MemberCount   int32           `json:"member_count"`
-		MemberUserIds []int32         `json:"member_user_ids"`
+		MemberUserIDs []int32         `json:"member_user_ids"`
 		IsPublic      bool            `json:"is_public"`
 	}
 
@@ -4715,24 +5123,25 @@ func (chatInviteLinkInfo *ChatInviteLinkInfo) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	chatInviteLinkInfo.ChatId = tmp.ChatId
-	chatInviteLinkInfo.Title = tmp.Title
-	chatInviteLinkInfo.Photo = tmp.Photo
-	chatInviteLinkInfo.MemberCount = tmp.MemberCount
-	chatInviteLinkInfo.MemberUserIds = tmp.MemberUserIds
-	chatInviteLinkInfo.IsPublic = tmp.IsPublic
+	entity.ChatID = tmp.ChatID
+	entity.Title = tmp.Title
+	entity.Photo = tmp.Photo
+	entity.MemberCount = tmp.MemberCount
+	entity.MemberUserIDs = tmp.MemberUserIDs
+	entity.IsPublic = tmp.IsPublic
 
 	fieldType, _ := UnmarshalChatType(tmp.Type)
-	chatInviteLinkInfo.Type = fieldType
+	entity.Type = fieldType
 
 	return nil
 }
 
-// A simple button, with text that should be sent when the button is pressed
+// KeyboardButtonTypeText a simple button, with text that should be sent when the button is pressed
 type KeyboardButtonTypeText struct {
 	meta
 }
 
+// MarshalJSON returns KeyboardButtonTypeText object as the JSON encoding of KeyboardButtonTypeText.
 func (entity *KeyboardButtonTypeText) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4741,23 +5150,27 @@ func (entity *KeyboardButtonTypeText) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*KeyboardButtonTypeText) GetClass() string {
 	return ClassKeyboardButtonType
 }
 
+// GetType returns constant class type string of the class.
 func (*KeyboardButtonTypeText) GetType() string {
 	return TypeKeyboardButtonTypeText
 }
 
+// KeyboardButtonTypeType returns constant class type string of the class.
 func (*KeyboardButtonTypeText) KeyboardButtonTypeType() string {
 	return TypeKeyboardButtonTypeText
 }
 
-// A button that sends the user's phone number when pressed; available only in private chats
+// KeyboardButtonTypeRequestPhoneNumber a button that sends the user's phone number when pressed; available only in private chats
 type KeyboardButtonTypeRequestPhoneNumber struct {
 	meta
 }
 
+// MarshalJSON returns KeyboardButtonTypeRequestPhoneNumber object as the JSON encoding of KeyboardButtonTypeRequestPhoneNumber.
 func (entity *KeyboardButtonTypeRequestPhoneNumber) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4766,23 +5179,27 @@ func (entity *KeyboardButtonTypeRequestPhoneNumber) MarshalJSON() ([]byte, error
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*KeyboardButtonTypeRequestPhoneNumber) GetClass() string {
 	return ClassKeyboardButtonType
 }
 
+// GetType returns constant class type string of the class.
 func (*KeyboardButtonTypeRequestPhoneNumber) GetType() string {
 	return TypeKeyboardButtonTypeRequestPhoneNumber
 }
 
+// KeyboardButtonTypeType returns constant class type string of the class.
 func (*KeyboardButtonTypeRequestPhoneNumber) KeyboardButtonTypeType() string {
 	return TypeKeyboardButtonTypeRequestPhoneNumber
 }
 
-// A button that sends the user's location when pressed; available only in private chats
+// KeyboardButtonTypeRequestLocation a button that sends the user's location when pressed; available only in private chats
 type KeyboardButtonTypeRequestLocation struct {
 	meta
 }
 
+// MarshalJSON returns KeyboardButtonTypeRequestLocation object as the JSON encoding of KeyboardButtonTypeRequestLocation.
 func (entity *KeyboardButtonTypeRequestLocation) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4791,19 +5208,22 @@ func (entity *KeyboardButtonTypeRequestLocation) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*KeyboardButtonTypeRequestLocation) GetClass() string {
 	return ClassKeyboardButtonType
 }
 
+// GetType returns constant class type string of the class.
 func (*KeyboardButtonTypeRequestLocation) GetType() string {
 	return TypeKeyboardButtonTypeRequestLocation
 }
 
+// KeyboardButtonTypeType returns constant class type string of the class.
 func (*KeyboardButtonTypeRequestLocation) KeyboardButtonTypeType() string {
 	return TypeKeyboardButtonTypeRequestLocation
 }
 
-// Represents a single button in a bot keyboard
+// KeyboardButton represents a single button in a bot keyboard
 type KeyboardButton struct {
 	meta
 	// Text of the button
@@ -4812,6 +5232,7 @@ type KeyboardButton struct {
 	Type KeyboardButtonType `json:"type"`
 }
 
+// MarshalJSON returns KeyboardButton object as the JSON encoding of KeyboardButton.
 func (entity *KeyboardButton) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4820,15 +5241,18 @@ func (entity *KeyboardButton) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*KeyboardButton) GetClass() string {
 	return ClassKeyboardButton
 }
 
+// GetType returns constant class type string of the class.
 func (*KeyboardButton) GetType() string {
 	return TypeKeyboardButton
 }
 
-func (keyboardButton *KeyboardButton) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets KeyboardButton object to a copy of JSON encoding of KeyboardButton.
+func (entity *KeyboardButton) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Text string          `json:"text"`
 		Type json.RawMessage `json:"type"`
@@ -4839,48 +5263,53 @@ func (keyboardButton *KeyboardButton) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	keyboardButton.Text = tmp.Text
+	entity.Text = tmp.Text
 
 	fieldType, _ := UnmarshalKeyboardButtonType(tmp.Type)
-	keyboardButton.Type = fieldType
+	entity.Type = fieldType
 
 	return nil
 }
 
-// A button that opens a specified URL
-type InlineKeyboardButtonTypeUrl struct {
+// InlineKeyboardButtonTypeURL a button that opens a specified URL
+type InlineKeyboardButtonTypeURL struct {
 	meta
 	// HTTP or tg:// URL to open
-	Url string `json:"url"`
+	URL string `json:"url"`
 }
 
-func (entity *InlineKeyboardButtonTypeUrl) MarshalJSON() ([]byte, error) {
+// MarshalJSON returns InlineKeyboardButtonTypeURL object as the JSON encoding of InlineKeyboardButtonTypeURL.
+func (entity *InlineKeyboardButtonTypeURL) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
-	type stub InlineKeyboardButtonTypeUrl
+	type stub InlineKeyboardButtonTypeURL
 
 	return json.Marshal((*stub)(entity))
 }
 
-func (*InlineKeyboardButtonTypeUrl) GetClass() string {
+// GetClass returns constant class string of the class.
+func (*InlineKeyboardButtonTypeURL) GetClass() string {
 	return ClassInlineKeyboardButtonType
 }
 
-func (*InlineKeyboardButtonTypeUrl) GetType() string {
-	return TypeInlineKeyboardButtonTypeUrl
+// GetType returns constant class type string of the class.
+func (*InlineKeyboardButtonTypeURL) GetType() string {
+	return TypeInlineKeyboardButtonTypeURL
 }
 
-func (*InlineKeyboardButtonTypeUrl) InlineKeyboardButtonTypeType() string {
-	return TypeInlineKeyboardButtonTypeUrl
+// InlineKeyboardButtonTypeType returns constant class type string of the class.
+func (*InlineKeyboardButtonTypeURL) InlineKeyboardButtonTypeType() string {
+	return TypeInlineKeyboardButtonTypeURL
 }
 
-// A button that sends a special callback query to a bot
+// InlineKeyboardButtonTypeCallback a button that sends a special callback query to a bot
 type InlineKeyboardButtonTypeCallback struct {
 	meta
 	// Data to be sent to the bot via a callback query
 	Data []byte `json:"data"`
 }
 
+// MarshalJSON returns InlineKeyboardButtonTypeCallback object as the JSON encoding of InlineKeyboardButtonTypeCallback.
 func (entity *InlineKeyboardButtonTypeCallback) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4889,23 +5318,27 @@ func (entity *InlineKeyboardButtonTypeCallback) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InlineKeyboardButtonTypeCallback) GetClass() string {
 	return ClassInlineKeyboardButtonType
 }
 
+// GetType returns constant class type string of the class.
 func (*InlineKeyboardButtonTypeCallback) GetType() string {
 	return TypeInlineKeyboardButtonTypeCallback
 }
 
+// InlineKeyboardButtonTypeType returns constant class type string of the class.
 func (*InlineKeyboardButtonTypeCallback) InlineKeyboardButtonTypeType() string {
 	return TypeInlineKeyboardButtonTypeCallback
 }
 
-// A button with a game that sends a special callback query to a bot. This button must be in the first column and row of the keyboard and can be attached only to a message with content of the type messageGame
+// InlineKeyboardButtonTypeCallbackGame a button with a game that sends a special callback query to a bot. This button must be in the first column and row of the keyboard and can be attached only to a message with content of the type messageGame
 type InlineKeyboardButtonTypeCallbackGame struct {
 	meta
 }
 
+// MarshalJSON returns InlineKeyboardButtonTypeCallbackGame object as the JSON encoding of InlineKeyboardButtonTypeCallbackGame.
 func (entity *InlineKeyboardButtonTypeCallbackGame) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4914,19 +5347,22 @@ func (entity *InlineKeyboardButtonTypeCallbackGame) MarshalJSON() ([]byte, error
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InlineKeyboardButtonTypeCallbackGame) GetClass() string {
 	return ClassInlineKeyboardButtonType
 }
 
+// GetType returns constant class type string of the class.
 func (*InlineKeyboardButtonTypeCallbackGame) GetType() string {
 	return TypeInlineKeyboardButtonTypeCallbackGame
 }
 
+// InlineKeyboardButtonTypeType returns constant class type string of the class.
 func (*InlineKeyboardButtonTypeCallbackGame) InlineKeyboardButtonTypeType() string {
 	return TypeInlineKeyboardButtonTypeCallbackGame
 }
 
-// A button that forces an inline query to the bot to be inserted in the input field
+// InlineKeyboardButtonTypeSwitchInline a button that forces an inline query to the bot to be inserted in the input field
 type InlineKeyboardButtonTypeSwitchInline struct {
 	meta
 	// Inline query to be sent to the bot
@@ -4935,6 +5371,7 @@ type InlineKeyboardButtonTypeSwitchInline struct {
 	InCurrentChat bool `json:"in_current_chat"`
 }
 
+// MarshalJSON returns InlineKeyboardButtonTypeSwitchInline object as the JSON encoding of InlineKeyboardButtonTypeSwitchInline.
 func (entity *InlineKeyboardButtonTypeSwitchInline) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4943,23 +5380,27 @@ func (entity *InlineKeyboardButtonTypeSwitchInline) MarshalJSON() ([]byte, error
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InlineKeyboardButtonTypeSwitchInline) GetClass() string {
 	return ClassInlineKeyboardButtonType
 }
 
+// GetType returns constant class type string of the class.
 func (*InlineKeyboardButtonTypeSwitchInline) GetType() string {
 	return TypeInlineKeyboardButtonTypeSwitchInline
 }
 
+// InlineKeyboardButtonTypeType returns constant class type string of the class.
 func (*InlineKeyboardButtonTypeSwitchInline) InlineKeyboardButtonTypeType() string {
 	return TypeInlineKeyboardButtonTypeSwitchInline
 }
 
-// A button to buy something. This button must be in the first column and row of the keyboard and can be attached only to a message with content of the type messageInvoice
+// InlineKeyboardButtonTypeBuy a button to buy something. This button must be in the first column and row of the keyboard and can be attached only to a message with content of the type messageInvoice
 type InlineKeyboardButtonTypeBuy struct {
 	meta
 }
 
+// MarshalJSON returns InlineKeyboardButtonTypeBuy object as the JSON encoding of InlineKeyboardButtonTypeBuy.
 func (entity *InlineKeyboardButtonTypeBuy) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4968,19 +5409,22 @@ func (entity *InlineKeyboardButtonTypeBuy) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InlineKeyboardButtonTypeBuy) GetClass() string {
 	return ClassInlineKeyboardButtonType
 }
 
+// GetType returns constant class type string of the class.
 func (*InlineKeyboardButtonTypeBuy) GetType() string {
 	return TypeInlineKeyboardButtonTypeBuy
 }
 
+// InlineKeyboardButtonTypeType returns constant class type string of the class.
 func (*InlineKeyboardButtonTypeBuy) InlineKeyboardButtonTypeType() string {
 	return TypeInlineKeyboardButtonTypeBuy
 }
 
-// Represents a single button in an inline keyboard
+// InlineKeyboardButton represents a single button in an inline keyboard
 type InlineKeyboardButton struct {
 	meta
 	// Text of the button
@@ -4989,6 +5433,7 @@ type InlineKeyboardButton struct {
 	Type InlineKeyboardButtonType `json:"type"`
 }
 
+// MarshalJSON returns InlineKeyboardButton object as the JSON encoding of InlineKeyboardButton.
 func (entity *InlineKeyboardButton) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -4997,15 +5442,18 @@ func (entity *InlineKeyboardButton) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InlineKeyboardButton) GetClass() string {
 	return ClassInlineKeyboardButton
 }
 
+// GetType returns constant class type string of the class.
 func (*InlineKeyboardButton) GetType() string {
 	return TypeInlineKeyboardButton
 }
 
-func (inlineKeyboardButton *InlineKeyboardButton) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InlineKeyboardButton object to a copy of JSON encoding of InlineKeyboardButton.
+func (entity *InlineKeyboardButton) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Text string          `json:"text"`
 		Type json.RawMessage `json:"type"`
@@ -5016,21 +5464,22 @@ func (inlineKeyboardButton *InlineKeyboardButton) UnmarshalJSON(data []byte) err
 		return err
 	}
 
-	inlineKeyboardButton.Text = tmp.Text
+	entity.Text = tmp.Text
 
 	fieldType, _ := UnmarshalInlineKeyboardButtonType(tmp.Type)
-	inlineKeyboardButton.Type = fieldType
+	entity.Type = fieldType
 
 	return nil
 }
 
-// Instructs clients to remove the keyboard once this message has been received. This kind of keyboard can't be received in an incoming message; instead, UpdateChatReplyMarkup with message_id == 0 will be sent
+// ReplyMarkupRemoveKeyboard instructs clients to remove the keyboard once this message has been received. This kind of keyboard can't be received in an incoming message; instead, UpdateChatReplyMarkup with message_id == 0 will be sent
 type ReplyMarkupRemoveKeyboard struct {
 	meta
 	// True, if the keyboard is removed only for the mentioned users or the target user of a reply
 	IsPersonal bool `json:"is_personal"`
 }
 
+// MarshalJSON returns ReplyMarkupRemoveKeyboard object as the JSON encoding of ReplyMarkupRemoveKeyboard.
 func (entity *ReplyMarkupRemoveKeyboard) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5039,25 +5488,29 @@ func (entity *ReplyMarkupRemoveKeyboard) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ReplyMarkupRemoveKeyboard) GetClass() string {
 	return ClassReplyMarkup
 }
 
+// GetType returns constant class type string of the class.
 func (*ReplyMarkupRemoveKeyboard) GetType() string {
 	return TypeReplyMarkupRemoveKeyboard
 }
 
+// ReplyMarkupType returns constant class type string of the class.
 func (*ReplyMarkupRemoveKeyboard) ReplyMarkupType() string {
 	return TypeReplyMarkupRemoveKeyboard
 }
 
-// Instructs clients to force a reply to this message
+// ReplyMarkupForceReply instructs clients to force a reply to this message
 type ReplyMarkupForceReply struct {
 	meta
 	// True, if a forced reply must automatically be shown to the current user. For outgoing messages, specify true to show the forced reply only for the mentioned users and for the target user of a reply
 	IsPersonal bool `json:"is_personal"`
 }
 
+// MarshalJSON returns ReplyMarkupForceReply object as the JSON encoding of ReplyMarkupForceReply.
 func (entity *ReplyMarkupForceReply) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5066,19 +5519,22 @@ func (entity *ReplyMarkupForceReply) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ReplyMarkupForceReply) GetClass() string {
 	return ClassReplyMarkup
 }
 
+// GetType returns constant class type string of the class.
 func (*ReplyMarkupForceReply) GetType() string {
 	return TypeReplyMarkupForceReply
 }
 
+// ReplyMarkupType returns constant class type string of the class.
 func (*ReplyMarkupForceReply) ReplyMarkupType() string {
 	return TypeReplyMarkupForceReply
 }
 
-// Contains a custom keyboard layout to quickly reply to bots
+// ReplyMarkupShowKeyboard contains a custom keyboard layout to quickly reply to bots
 type ReplyMarkupShowKeyboard struct {
 	meta
 	// A list of rows of bot keyboard buttons
@@ -5091,6 +5547,7 @@ type ReplyMarkupShowKeyboard struct {
 	IsPersonal bool `json:"is_personal"`
 }
 
+// MarshalJSON returns ReplyMarkupShowKeyboard object as the JSON encoding of ReplyMarkupShowKeyboard.
 func (entity *ReplyMarkupShowKeyboard) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5099,25 +5556,29 @@ func (entity *ReplyMarkupShowKeyboard) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ReplyMarkupShowKeyboard) GetClass() string {
 	return ClassReplyMarkup
 }
 
+// GetType returns constant class type string of the class.
 func (*ReplyMarkupShowKeyboard) GetType() string {
 	return TypeReplyMarkupShowKeyboard
 }
 
+// ReplyMarkupType returns constant class type string of the class.
 func (*ReplyMarkupShowKeyboard) ReplyMarkupType() string {
 	return TypeReplyMarkupShowKeyboard
 }
 
-// Contains an inline keyboard layout
+// ReplyMarkupInlineKeyboard contains an inline keyboard layout
 type ReplyMarkupInlineKeyboard struct {
 	meta
 	// A list of rows of inline keyboard buttons
 	Rows [][]*InlineKeyboardButton `json:"rows"`
 }
 
+// MarshalJSON returns ReplyMarkupInlineKeyboard object as the JSON encoding of ReplyMarkupInlineKeyboard.
 func (entity *ReplyMarkupInlineKeyboard) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5126,25 +5587,29 @@ func (entity *ReplyMarkupInlineKeyboard) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ReplyMarkupInlineKeyboard) GetClass() string {
 	return ClassReplyMarkup
 }
 
+// GetType returns constant class type string of the class.
 func (*ReplyMarkupInlineKeyboard) GetType() string {
 	return TypeReplyMarkupInlineKeyboard
 }
 
+// ReplyMarkupType returns constant class type string of the class.
 func (*ReplyMarkupInlineKeyboard) ReplyMarkupType() string {
 	return TypeReplyMarkupInlineKeyboard
 }
 
-// A plain text
+// RichTextPlain a plain text
 type RichTextPlain struct {
 	meta
 	// Text
 	Text string `json:"text"`
 }
 
+// MarshalJSON returns RichTextPlain object as the JSON encoding of RichTextPlain.
 func (entity *RichTextPlain) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5153,25 +5618,29 @@ func (entity *RichTextPlain) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*RichTextPlain) GetClass() string {
 	return ClassRichText
 }
 
+// GetType returns constant class type string of the class.
 func (*RichTextPlain) GetType() string {
 	return TypeRichTextPlain
 }
 
+// RichTextType returns constant class type string of the class.
 func (*RichTextPlain) RichTextType() string {
 	return TypeRichTextPlain
 }
 
-// A bold rich text
+// RichTextBold a bold rich text
 type RichTextBold struct {
 	meta
 	// Text
 	Text RichText `json:"text"`
 }
 
+// MarshalJSON returns RichTextBold object as the JSON encoding of RichTextBold.
 func (entity *RichTextBold) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5180,19 +5649,23 @@ func (entity *RichTextBold) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*RichTextBold) GetClass() string {
 	return ClassRichText
 }
 
+// GetType returns constant class type string of the class.
 func (*RichTextBold) GetType() string {
 	return TypeRichTextBold
 }
 
+// RichTextType returns constant class type string of the class.
 func (*RichTextBold) RichTextType() string {
 	return TypeRichTextBold
 }
 
-func (richTextBold *RichTextBold) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets RichTextBold object to a copy of JSON encoding of RichTextBold.
+func (entity *RichTextBold) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Text json.RawMessage `json:"text"`
 	}
@@ -5203,18 +5676,19 @@ func (richTextBold *RichTextBold) UnmarshalJSON(data []byte) error {
 	}
 
 	fieldText, _ := UnmarshalRichText(tmp.Text)
-	richTextBold.Text = fieldText
+	entity.Text = fieldText
 
 	return nil
 }
 
-// An italicized rich text
+// RichTextItalic an italicized rich text
 type RichTextItalic struct {
 	meta
 	// Text
 	Text RichText `json:"text"`
 }
 
+// MarshalJSON returns RichTextItalic object as the JSON encoding of RichTextItalic.
 func (entity *RichTextItalic) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5223,19 +5697,23 @@ func (entity *RichTextItalic) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*RichTextItalic) GetClass() string {
 	return ClassRichText
 }
 
+// GetType returns constant class type string of the class.
 func (*RichTextItalic) GetType() string {
 	return TypeRichTextItalic
 }
 
+// RichTextType returns constant class type string of the class.
 func (*RichTextItalic) RichTextType() string {
 	return TypeRichTextItalic
 }
 
-func (richTextItalic *RichTextItalic) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets RichTextItalic object to a copy of JSON encoding of RichTextItalic.
+func (entity *RichTextItalic) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Text json.RawMessage `json:"text"`
 	}
@@ -5246,18 +5724,19 @@ func (richTextItalic *RichTextItalic) UnmarshalJSON(data []byte) error {
 	}
 
 	fieldText, _ := UnmarshalRichText(tmp.Text)
-	richTextItalic.Text = fieldText
+	entity.Text = fieldText
 
 	return nil
 }
 
-// An underlined rich text
+// RichTextUnderline an underlined rich text
 type RichTextUnderline struct {
 	meta
 	// Text
 	Text RichText `json:"text"`
 }
 
+// MarshalJSON returns RichTextUnderline object as the JSON encoding of RichTextUnderline.
 func (entity *RichTextUnderline) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5266,19 +5745,23 @@ func (entity *RichTextUnderline) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*RichTextUnderline) GetClass() string {
 	return ClassRichText
 }
 
+// GetType returns constant class type string of the class.
 func (*RichTextUnderline) GetType() string {
 	return TypeRichTextUnderline
 }
 
+// RichTextType returns constant class type string of the class.
 func (*RichTextUnderline) RichTextType() string {
 	return TypeRichTextUnderline
 }
 
-func (richTextUnderline *RichTextUnderline) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets RichTextUnderline object to a copy of JSON encoding of RichTextUnderline.
+func (entity *RichTextUnderline) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Text json.RawMessage `json:"text"`
 	}
@@ -5289,18 +5772,19 @@ func (richTextUnderline *RichTextUnderline) UnmarshalJSON(data []byte) error {
 	}
 
 	fieldText, _ := UnmarshalRichText(tmp.Text)
-	richTextUnderline.Text = fieldText
+	entity.Text = fieldText
 
 	return nil
 }
 
-// A strike-through rich text
+// RichTextStrikethrough a strike-through rich text
 type RichTextStrikethrough struct {
 	meta
 	// Text
 	Text RichText `json:"text"`
 }
 
+// MarshalJSON returns RichTextStrikethrough object as the JSON encoding of RichTextStrikethrough.
 func (entity *RichTextStrikethrough) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5309,19 +5793,23 @@ func (entity *RichTextStrikethrough) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*RichTextStrikethrough) GetClass() string {
 	return ClassRichText
 }
 
+// GetType returns constant class type string of the class.
 func (*RichTextStrikethrough) GetType() string {
 	return TypeRichTextStrikethrough
 }
 
+// RichTextType returns constant class type string of the class.
 func (*RichTextStrikethrough) RichTextType() string {
 	return TypeRichTextStrikethrough
 }
 
-func (richTextStrikethrough *RichTextStrikethrough) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets RichTextStrikethrough object to a copy of JSON encoding of RichTextStrikethrough.
+func (entity *RichTextStrikethrough) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Text json.RawMessage `json:"text"`
 	}
@@ -5332,18 +5820,19 @@ func (richTextStrikethrough *RichTextStrikethrough) UnmarshalJSON(data []byte) e
 	}
 
 	fieldText, _ := UnmarshalRichText(tmp.Text)
-	richTextStrikethrough.Text = fieldText
+	entity.Text = fieldText
 
 	return nil
 }
 
-// A fixed-width rich text
+// RichTextFixed a fixed-width rich text
 type RichTextFixed struct {
 	meta
 	// Text
 	Text RichText `json:"text"`
 }
 
+// MarshalJSON returns RichTextFixed object as the JSON encoding of RichTextFixed.
 func (entity *RichTextFixed) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5352,19 +5841,23 @@ func (entity *RichTextFixed) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*RichTextFixed) GetClass() string {
 	return ClassRichText
 }
 
+// GetType returns constant class type string of the class.
 func (*RichTextFixed) GetType() string {
 	return TypeRichTextFixed
 }
 
+// RichTextType returns constant class type string of the class.
 func (*RichTextFixed) RichTextType() string {
 	return TypeRichTextFixed
 }
 
-func (richTextFixed *RichTextFixed) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets RichTextFixed object to a copy of JSON encoding of RichTextFixed.
+func (entity *RichTextFixed) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Text json.RawMessage `json:"text"`
 	}
@@ -5375,44 +5868,49 @@ func (richTextFixed *RichTextFixed) UnmarshalJSON(data []byte) error {
 	}
 
 	fieldText, _ := UnmarshalRichText(tmp.Text)
-	richTextFixed.Text = fieldText
+	entity.Text = fieldText
 
 	return nil
 }
 
-// A rich text URL link
-type RichTextUrl struct {
+// RichTextURL a rich text URL link
+type RichTextURL struct {
 	meta
 	// Text
 	Text RichText `json:"text"`
 	// URL
-	Url string `json:"url"`
+	URL string `json:"url"`
 }
 
-func (entity *RichTextUrl) MarshalJSON() ([]byte, error) {
+// MarshalJSON returns RichTextURL object as the JSON encoding of RichTextURL.
+func (entity *RichTextURL) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
-	type stub RichTextUrl
+	type stub RichTextURL
 
 	return json.Marshal((*stub)(entity))
 }
 
-func (*RichTextUrl) GetClass() string {
+// GetClass returns constant class string of the class.
+func (*RichTextURL) GetClass() string {
 	return ClassRichText
 }
 
-func (*RichTextUrl) GetType() string {
-	return TypeRichTextUrl
+// GetType returns constant class type string of the class.
+func (*RichTextURL) GetType() string {
+	return TypeRichTextURL
 }
 
-func (*RichTextUrl) RichTextType() string {
-	return TypeRichTextUrl
+// RichTextType returns constant class type string of the class.
+func (*RichTextURL) RichTextType() string {
+	return TypeRichTextURL
 }
 
-func (richTextUrl *RichTextUrl) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets RichTextURL object to a copy of JSON encoding of RichTextURL.
+func (entity *RichTextURL) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Text json.RawMessage `json:"text"`
-		Url  string          `json:"url"`
+		URL  string          `json:"url"`
 	}
 
 	err := json.Unmarshal(data, &tmp)
@@ -5420,15 +5918,15 @@ func (richTextUrl *RichTextUrl) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	richTextUrl.Url = tmp.Url
+	entity.URL = tmp.URL
 
 	fieldText, _ := UnmarshalRichText(tmp.Text)
-	richTextUrl.Text = fieldText
+	entity.Text = fieldText
 
 	return nil
 }
 
-// A rich text email link
+// RichTextEmailAddress a rich text email link
 type RichTextEmailAddress struct {
 	meta
 	// Text
@@ -5437,6 +5935,7 @@ type RichTextEmailAddress struct {
 	EmailAddress string `json:"email_address"`
 }
 
+// MarshalJSON returns RichTextEmailAddress object as the JSON encoding of RichTextEmailAddress.
 func (entity *RichTextEmailAddress) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5445,19 +5944,23 @@ func (entity *RichTextEmailAddress) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*RichTextEmailAddress) GetClass() string {
 	return ClassRichText
 }
 
+// GetType returns constant class type string of the class.
 func (*RichTextEmailAddress) GetType() string {
 	return TypeRichTextEmailAddress
 }
 
+// RichTextType returns constant class type string of the class.
 func (*RichTextEmailAddress) RichTextType() string {
 	return TypeRichTextEmailAddress
 }
 
-func (richTextEmailAddress *RichTextEmailAddress) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets RichTextEmailAddress object to a copy of JSON encoding of RichTextEmailAddress.
+func (entity *RichTextEmailAddress) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Text         json.RawMessage `json:"text"`
 		EmailAddress string          `json:"email_address"`
@@ -5468,21 +5971,22 @@ func (richTextEmailAddress *RichTextEmailAddress) UnmarshalJSON(data []byte) err
 		return err
 	}
 
-	richTextEmailAddress.EmailAddress = tmp.EmailAddress
+	entity.EmailAddress = tmp.EmailAddress
 
 	fieldText, _ := UnmarshalRichText(tmp.Text)
-	richTextEmailAddress.Text = fieldText
+	entity.Text = fieldText
 
 	return nil
 }
 
-// A concatenation of rich texts
+// RichTexts a concatenation of rich texts
 type RichTexts struct {
 	meta
 	// Texts
 	Texts []RichText `json:"texts"`
 }
 
+// MarshalJSON returns RichTexts object as the JSON encoding of RichTexts.
 func (entity *RichTexts) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5491,25 +5995,29 @@ func (entity *RichTexts) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*RichTexts) GetClass() string {
 	return ClassRichText
 }
 
+// GetType returns constant class type string of the class.
 func (*RichTexts) GetType() string {
 	return TypeRichTexts
 }
 
+// RichTextType returns constant class type string of the class.
 func (*RichTexts) RichTextType() string {
 	return TypeRichTexts
 }
 
-// The title of a page
+// PageBlockTitle the title of a page
 type PageBlockTitle struct {
 	meta
 	// Title
 	Title RichText `json:"title"`
 }
 
+// MarshalJSON returns PageBlockTitle object as the JSON encoding of PageBlockTitle.
 func (entity *PageBlockTitle) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5518,19 +6026,23 @@ func (entity *PageBlockTitle) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockTitle) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockTitle) GetType() string {
 	return TypePageBlockTitle
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockTitle) PageBlockType() string {
 	return TypePageBlockTitle
 }
 
-func (pageBlockTitle *PageBlockTitle) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PageBlockTitle object to a copy of JSON encoding of PageBlockTitle.
+func (entity *PageBlockTitle) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Title json.RawMessage `json:"title"`
 	}
@@ -5541,18 +6053,19 @@ func (pageBlockTitle *PageBlockTitle) UnmarshalJSON(data []byte) error {
 	}
 
 	fieldTitle, _ := UnmarshalRichText(tmp.Title)
-	pageBlockTitle.Title = fieldTitle
+	entity.Title = fieldTitle
 
 	return nil
 }
 
-// The subtitle of a page
+// PageBlockSubtitle the subtitle of a page
 type PageBlockSubtitle struct {
 	meta
 	// Subtitle
 	Subtitle RichText `json:"subtitle"`
 }
 
+// MarshalJSON returns PageBlockSubtitle object as the JSON encoding of PageBlockSubtitle.
 func (entity *PageBlockSubtitle) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5561,19 +6074,23 @@ func (entity *PageBlockSubtitle) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockSubtitle) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockSubtitle) GetType() string {
 	return TypePageBlockSubtitle
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockSubtitle) PageBlockType() string {
 	return TypePageBlockSubtitle
 }
 
-func (pageBlockSubtitle *PageBlockSubtitle) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PageBlockSubtitle object to a copy of JSON encoding of PageBlockSubtitle.
+func (entity *PageBlockSubtitle) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Subtitle json.RawMessage `json:"subtitle"`
 	}
@@ -5584,12 +6101,12 @@ func (pageBlockSubtitle *PageBlockSubtitle) UnmarshalJSON(data []byte) error {
 	}
 
 	fieldSubtitle, _ := UnmarshalRichText(tmp.Subtitle)
-	pageBlockSubtitle.Subtitle = fieldSubtitle
+	entity.Subtitle = fieldSubtitle
 
 	return nil
 }
 
-// The author and publishing date of a page
+// PageBlockAuthorDate the author and publishing date of a page
 type PageBlockAuthorDate struct {
 	meta
 	// Author
@@ -5598,6 +6115,7 @@ type PageBlockAuthorDate struct {
 	PublishDate int32 `json:"publish_date"`
 }
 
+// MarshalJSON returns PageBlockAuthorDate object as the JSON encoding of PageBlockAuthorDate.
 func (entity *PageBlockAuthorDate) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5606,19 +6124,23 @@ func (entity *PageBlockAuthorDate) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockAuthorDate) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockAuthorDate) GetType() string {
 	return TypePageBlockAuthorDate
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockAuthorDate) PageBlockType() string {
 	return TypePageBlockAuthorDate
 }
 
-func (pageBlockAuthorDate *PageBlockAuthorDate) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PageBlockAuthorDate object to a copy of JSON encoding of PageBlockAuthorDate.
+func (entity *PageBlockAuthorDate) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Author      json.RawMessage `json:"author"`
 		PublishDate int32           `json:"publish_date"`
@@ -5629,21 +6151,22 @@ func (pageBlockAuthorDate *PageBlockAuthorDate) UnmarshalJSON(data []byte) error
 		return err
 	}
 
-	pageBlockAuthorDate.PublishDate = tmp.PublishDate
+	entity.PublishDate = tmp.PublishDate
 
 	fieldAuthor, _ := UnmarshalRichText(tmp.Author)
-	pageBlockAuthorDate.Author = fieldAuthor
+	entity.Author = fieldAuthor
 
 	return nil
 }
 
-// A header
+// PageBlockHeader a header
 type PageBlockHeader struct {
 	meta
 	// Header
 	Header RichText `json:"header"`
 }
 
+// MarshalJSON returns PageBlockHeader object as the JSON encoding of PageBlockHeader.
 func (entity *PageBlockHeader) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5652,19 +6175,23 @@ func (entity *PageBlockHeader) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockHeader) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockHeader) GetType() string {
 	return TypePageBlockHeader
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockHeader) PageBlockType() string {
 	return TypePageBlockHeader
 }
 
-func (pageBlockHeader *PageBlockHeader) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PageBlockHeader object to a copy of JSON encoding of PageBlockHeader.
+func (entity *PageBlockHeader) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Header json.RawMessage `json:"header"`
 	}
@@ -5675,18 +6202,19 @@ func (pageBlockHeader *PageBlockHeader) UnmarshalJSON(data []byte) error {
 	}
 
 	fieldHeader, _ := UnmarshalRichText(tmp.Header)
-	pageBlockHeader.Header = fieldHeader
+	entity.Header = fieldHeader
 
 	return nil
 }
 
-// A subheader
+// PageBlockSubheader a subheader
 type PageBlockSubheader struct {
 	meta
 	// Subheader
 	Subheader RichText `json:"subheader"`
 }
 
+// MarshalJSON returns PageBlockSubheader object as the JSON encoding of PageBlockSubheader.
 func (entity *PageBlockSubheader) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5695,19 +6223,23 @@ func (entity *PageBlockSubheader) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockSubheader) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockSubheader) GetType() string {
 	return TypePageBlockSubheader
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockSubheader) PageBlockType() string {
 	return TypePageBlockSubheader
 }
 
-func (pageBlockSubheader *PageBlockSubheader) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PageBlockSubheader object to a copy of JSON encoding of PageBlockSubheader.
+func (entity *PageBlockSubheader) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Subheader json.RawMessage `json:"subheader"`
 	}
@@ -5718,18 +6250,19 @@ func (pageBlockSubheader *PageBlockSubheader) UnmarshalJSON(data []byte) error {
 	}
 
 	fieldSubheader, _ := UnmarshalRichText(tmp.Subheader)
-	pageBlockSubheader.Subheader = fieldSubheader
+	entity.Subheader = fieldSubheader
 
 	return nil
 }
 
-// A text paragraph
+// PageBlockParagraph a text paragraph
 type PageBlockParagraph struct {
 	meta
 	// Paragraph text
 	Text RichText `json:"text"`
 }
 
+// MarshalJSON returns PageBlockParagraph object as the JSON encoding of PageBlockParagraph.
 func (entity *PageBlockParagraph) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5738,19 +6271,23 @@ func (entity *PageBlockParagraph) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockParagraph) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockParagraph) GetType() string {
 	return TypePageBlockParagraph
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockParagraph) PageBlockType() string {
 	return TypePageBlockParagraph
 }
 
-func (pageBlockParagraph *PageBlockParagraph) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PageBlockParagraph object to a copy of JSON encoding of PageBlockParagraph.
+func (entity *PageBlockParagraph) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Text json.RawMessage `json:"text"`
 	}
@@ -5761,12 +6298,12 @@ func (pageBlockParagraph *PageBlockParagraph) UnmarshalJSON(data []byte) error {
 	}
 
 	fieldText, _ := UnmarshalRichText(tmp.Text)
-	pageBlockParagraph.Text = fieldText
+	entity.Text = fieldText
 
 	return nil
 }
 
-// A preformatted text paragraph
+// PageBlockPreformatted a preformatted text paragraph
 type PageBlockPreformatted struct {
 	meta
 	// Paragraph text
@@ -5775,6 +6312,7 @@ type PageBlockPreformatted struct {
 	Language string `json:"language"`
 }
 
+// MarshalJSON returns PageBlockPreformatted object as the JSON encoding of PageBlockPreformatted.
 func (entity *PageBlockPreformatted) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5783,19 +6321,23 @@ func (entity *PageBlockPreformatted) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockPreformatted) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockPreformatted) GetType() string {
 	return TypePageBlockPreformatted
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockPreformatted) PageBlockType() string {
 	return TypePageBlockPreformatted
 }
 
-func (pageBlockPreformatted *PageBlockPreformatted) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PageBlockPreformatted object to a copy of JSON encoding of PageBlockPreformatted.
+func (entity *PageBlockPreformatted) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Text     json.RawMessage `json:"text"`
 		Language string          `json:"language"`
@@ -5806,21 +6348,22 @@ func (pageBlockPreformatted *PageBlockPreformatted) UnmarshalJSON(data []byte) e
 		return err
 	}
 
-	pageBlockPreformatted.Language = tmp.Language
+	entity.Language = tmp.Language
 
 	fieldText, _ := UnmarshalRichText(tmp.Text)
-	pageBlockPreformatted.Text = fieldText
+	entity.Text = fieldText
 
 	return nil
 }
 
-// The footer of a page
+// PageBlockFooter the footer of a page
 type PageBlockFooter struct {
 	meta
 	// Footer
 	Footer RichText `json:"footer"`
 }
 
+// MarshalJSON returns PageBlockFooter object as the JSON encoding of PageBlockFooter.
 func (entity *PageBlockFooter) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5829,19 +6372,23 @@ func (entity *PageBlockFooter) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockFooter) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockFooter) GetType() string {
 	return TypePageBlockFooter
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockFooter) PageBlockType() string {
 	return TypePageBlockFooter
 }
 
-func (pageBlockFooter *PageBlockFooter) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PageBlockFooter object to a copy of JSON encoding of PageBlockFooter.
+func (entity *PageBlockFooter) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Footer json.RawMessage `json:"footer"`
 	}
@@ -5852,16 +6399,17 @@ func (pageBlockFooter *PageBlockFooter) UnmarshalJSON(data []byte) error {
 	}
 
 	fieldFooter, _ := UnmarshalRichText(tmp.Footer)
-	pageBlockFooter.Footer = fieldFooter
+	entity.Footer = fieldFooter
 
 	return nil
 }
 
-// An empty block separating a page
+// PageBlockDivider an empty block separating a page
 type PageBlockDivider struct {
 	meta
 }
 
+// MarshalJSON returns PageBlockDivider object as the JSON encoding of PageBlockDivider.
 func (entity *PageBlockDivider) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5870,25 +6418,29 @@ func (entity *PageBlockDivider) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockDivider) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockDivider) GetType() string {
 	return TypePageBlockDivider
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockDivider) PageBlockType() string {
 	return TypePageBlockDivider
 }
 
-// An invisible anchor on a page, which can be used in a URL to open the page from the specified anchor
+// PageBlockAnchor an invisible anchor on a page, which can be used in a URL to open the page from the specified anchor
 type PageBlockAnchor struct {
 	meta
 	// Name of the anchor
 	Name string `json:"name"`
 }
 
+// MarshalJSON returns PageBlockAnchor object as the JSON encoding of PageBlockAnchor.
 func (entity *PageBlockAnchor) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5897,19 +6449,22 @@ func (entity *PageBlockAnchor) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockAnchor) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockAnchor) GetType() string {
 	return TypePageBlockAnchor
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockAnchor) PageBlockType() string {
 	return TypePageBlockAnchor
 }
 
-// A list of texts
+// PageBlockList a list of texts
 type PageBlockList struct {
 	meta
 	// Texts
@@ -5918,6 +6473,7 @@ type PageBlockList struct {
 	IsOrdered bool `json:"is_ordered"`
 }
 
+// MarshalJSON returns PageBlockList object as the JSON encoding of PageBlockList.
 func (entity *PageBlockList) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5926,19 +6482,22 @@ func (entity *PageBlockList) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockList) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockList) GetType() string {
 	return TypePageBlockList
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockList) PageBlockType() string {
 	return TypePageBlockList
 }
 
-// A block quote
+// PageBlockBlockQuote a block quote
 type PageBlockBlockQuote struct {
 	meta
 	// Quote text
@@ -5947,6 +6506,7 @@ type PageBlockBlockQuote struct {
 	Caption RichText `json:"caption"`
 }
 
+// MarshalJSON returns PageBlockBlockQuote object as the JSON encoding of PageBlockBlockQuote.
 func (entity *PageBlockBlockQuote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -5955,19 +6515,23 @@ func (entity *PageBlockBlockQuote) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockBlockQuote) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockBlockQuote) GetType() string {
 	return TypePageBlockBlockQuote
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockBlockQuote) PageBlockType() string {
 	return TypePageBlockBlockQuote
 }
 
-func (pageBlockBlockQuote *PageBlockBlockQuote) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PageBlockBlockQuote object to a copy of JSON encoding of PageBlockBlockQuote.
+func (entity *PageBlockBlockQuote) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Text    json.RawMessage `json:"text"`
 		Caption json.RawMessage `json:"caption"`
@@ -5979,15 +6543,15 @@ func (pageBlockBlockQuote *PageBlockBlockQuote) UnmarshalJSON(data []byte) error
 	}
 
 	fieldText, _ := UnmarshalRichText(tmp.Text)
-	pageBlockBlockQuote.Text = fieldText
+	entity.Text = fieldText
 
 	fieldCaption, _ := UnmarshalRichText(tmp.Caption)
-	pageBlockBlockQuote.Caption = fieldCaption
+	entity.Caption = fieldCaption
 
 	return nil
 }
 
-// A pull quote
+// PageBlockPullQuote a pull quote
 type PageBlockPullQuote struct {
 	meta
 	// Quote text
@@ -5996,6 +6560,7 @@ type PageBlockPullQuote struct {
 	Caption RichText `json:"caption"`
 }
 
+// MarshalJSON returns PageBlockPullQuote object as the JSON encoding of PageBlockPullQuote.
 func (entity *PageBlockPullQuote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6004,19 +6569,23 @@ func (entity *PageBlockPullQuote) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockPullQuote) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockPullQuote) GetType() string {
 	return TypePageBlockPullQuote
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockPullQuote) PageBlockType() string {
 	return TypePageBlockPullQuote
 }
 
-func (pageBlockPullQuote *PageBlockPullQuote) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PageBlockPullQuote object to a copy of JSON encoding of PageBlockPullQuote.
+func (entity *PageBlockPullQuote) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Text    json.RawMessage `json:"text"`
 		Caption json.RawMessage `json:"caption"`
@@ -6028,15 +6597,15 @@ func (pageBlockPullQuote *PageBlockPullQuote) UnmarshalJSON(data []byte) error {
 	}
 
 	fieldText, _ := UnmarshalRichText(tmp.Text)
-	pageBlockPullQuote.Text = fieldText
+	entity.Text = fieldText
 
 	fieldCaption, _ := UnmarshalRichText(tmp.Caption)
-	pageBlockPullQuote.Caption = fieldCaption
+	entity.Caption = fieldCaption
 
 	return nil
 }
 
-// An animation
+// PageBlockAnimation an animation
 type PageBlockAnimation struct {
 	meta
 	// Animation file; may be null
@@ -6047,6 +6616,7 @@ type PageBlockAnimation struct {
 	NeedAutoplay bool `json:"need_autoplay"`
 }
 
+// MarshalJSON returns PageBlockAnimation object as the JSON encoding of PageBlockAnimation.
 func (entity *PageBlockAnimation) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6055,19 +6625,23 @@ func (entity *PageBlockAnimation) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockAnimation) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockAnimation) GetType() string {
 	return TypePageBlockAnimation
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockAnimation) PageBlockType() string {
 	return TypePageBlockAnimation
 }
 
-func (pageBlockAnimation *PageBlockAnimation) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PageBlockAnimation object to a copy of JSON encoding of PageBlockAnimation.
+func (entity *PageBlockAnimation) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Animation    *Animation      `json:"animation"`
 		Caption      json.RawMessage `json:"caption"`
@@ -6079,16 +6653,16 @@ func (pageBlockAnimation *PageBlockAnimation) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	pageBlockAnimation.Animation = tmp.Animation
-	pageBlockAnimation.NeedAutoplay = tmp.NeedAutoplay
+	entity.Animation = tmp.Animation
+	entity.NeedAutoplay = tmp.NeedAutoplay
 
 	fieldCaption, _ := UnmarshalRichText(tmp.Caption)
-	pageBlockAnimation.Caption = fieldCaption
+	entity.Caption = fieldCaption
 
 	return nil
 }
 
-// An audio file
+// PageBlockAudio an audio file
 type PageBlockAudio struct {
 	meta
 	// Audio file; may be null
@@ -6097,6 +6671,7 @@ type PageBlockAudio struct {
 	Caption RichText `json:"caption"`
 }
 
+// MarshalJSON returns PageBlockAudio object as the JSON encoding of PageBlockAudio.
 func (entity *PageBlockAudio) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6105,19 +6680,23 @@ func (entity *PageBlockAudio) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockAudio) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockAudio) GetType() string {
 	return TypePageBlockAudio
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockAudio) PageBlockType() string {
 	return TypePageBlockAudio
 }
 
-func (pageBlockAudio *PageBlockAudio) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PageBlockAudio object to a copy of JSON encoding of PageBlockAudio.
+func (entity *PageBlockAudio) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Audio   *Audio          `json:"audio"`
 		Caption json.RawMessage `json:"caption"`
@@ -6128,15 +6707,15 @@ func (pageBlockAudio *PageBlockAudio) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	pageBlockAudio.Audio = tmp.Audio
+	entity.Audio = tmp.Audio
 
 	fieldCaption, _ := UnmarshalRichText(tmp.Caption)
-	pageBlockAudio.Caption = fieldCaption
+	entity.Caption = fieldCaption
 
 	return nil
 }
 
-// A photo
+// PageBlockPhoto a photo
 type PageBlockPhoto struct {
 	meta
 	// Photo file; may be null
@@ -6145,6 +6724,7 @@ type PageBlockPhoto struct {
 	Caption RichText `json:"caption"`
 }
 
+// MarshalJSON returns PageBlockPhoto object as the JSON encoding of PageBlockPhoto.
 func (entity *PageBlockPhoto) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6153,19 +6733,23 @@ func (entity *PageBlockPhoto) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockPhoto) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockPhoto) GetType() string {
 	return TypePageBlockPhoto
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockPhoto) PageBlockType() string {
 	return TypePageBlockPhoto
 }
 
-func (pageBlockPhoto *PageBlockPhoto) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PageBlockPhoto object to a copy of JSON encoding of PageBlockPhoto.
+func (entity *PageBlockPhoto) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Photo   *Photo          `json:"photo"`
 		Caption json.RawMessage `json:"caption"`
@@ -6176,15 +6760,15 @@ func (pageBlockPhoto *PageBlockPhoto) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	pageBlockPhoto.Photo = tmp.Photo
+	entity.Photo = tmp.Photo
 
 	fieldCaption, _ := UnmarshalRichText(tmp.Caption)
-	pageBlockPhoto.Caption = fieldCaption
+	entity.Caption = fieldCaption
 
 	return nil
 }
 
-// A video
+// PageBlockVideo a video
 type PageBlockVideo struct {
 	meta
 	// Video file; may be null
@@ -6197,6 +6781,7 @@ type PageBlockVideo struct {
 	IsLooped bool `json:"is_looped"`
 }
 
+// MarshalJSON returns PageBlockVideo object as the JSON encoding of PageBlockVideo.
 func (entity *PageBlockVideo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6205,19 +6790,23 @@ func (entity *PageBlockVideo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockVideo) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockVideo) GetType() string {
 	return TypePageBlockVideo
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockVideo) PageBlockType() string {
 	return TypePageBlockVideo
 }
 
-func (pageBlockVideo *PageBlockVideo) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PageBlockVideo object to a copy of JSON encoding of PageBlockVideo.
+func (entity *PageBlockVideo) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Video        *Video          `json:"video"`
 		Caption      json.RawMessage `json:"caption"`
@@ -6230,23 +6819,24 @@ func (pageBlockVideo *PageBlockVideo) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	pageBlockVideo.Video = tmp.Video
-	pageBlockVideo.NeedAutoplay = tmp.NeedAutoplay
-	pageBlockVideo.IsLooped = tmp.IsLooped
+	entity.Video = tmp.Video
+	entity.NeedAutoplay = tmp.NeedAutoplay
+	entity.IsLooped = tmp.IsLooped
 
 	fieldCaption, _ := UnmarshalRichText(tmp.Caption)
-	pageBlockVideo.Caption = fieldCaption
+	entity.Caption = fieldCaption
 
 	return nil
 }
 
-// A page cover
+// PageBlockCover a page cover
 type PageBlockCover struct {
 	meta
 	// Cover
 	Cover PageBlock `json:"cover"`
 }
 
+// MarshalJSON returns PageBlockCover object as the JSON encoding of PageBlockCover.
 func (entity *PageBlockCover) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6255,19 +6845,23 @@ func (entity *PageBlockCover) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockCover) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockCover) GetType() string {
 	return TypePageBlockCover
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockCover) PageBlockType() string {
 	return TypePageBlockCover
 }
 
-func (pageBlockCover *PageBlockCover) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PageBlockCover object to a copy of JSON encoding of PageBlockCover.
+func (entity *PageBlockCover) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Cover json.RawMessage `json:"cover"`
 	}
@@ -6278,18 +6872,18 @@ func (pageBlockCover *PageBlockCover) UnmarshalJSON(data []byte) error {
 	}
 
 	fieldCover, _ := UnmarshalPageBlock(tmp.Cover)
-	pageBlockCover.Cover = fieldCover
+	entity.Cover = fieldCover
 
 	return nil
 }
 
-// An embedded web page
+// PageBlockEmbedded an embedded web page
 type PageBlockEmbedded struct {
 	meta
 	// Web page URL, if available
-	Url string `json:"url"`
+	URL string `json:"url"`
 	// HTML-markup of the embedded page
-	Html string `json:"html"`
+	HTML string `json:"html"`
 	// Poster photo, if available; may be null
 	PosterPhoto *Photo `json:"poster_photo"`
 	// Block width
@@ -6304,6 +6898,7 @@ type PageBlockEmbedded struct {
 	AllowScrolling bool `json:"allow_scrolling"`
 }
 
+// MarshalJSON returns PageBlockEmbedded object as the JSON encoding of PageBlockEmbedded.
 func (entity *PageBlockEmbedded) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6312,22 +6907,26 @@ func (entity *PageBlockEmbedded) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockEmbedded) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockEmbedded) GetType() string {
 	return TypePageBlockEmbedded
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockEmbedded) PageBlockType() string {
 	return TypePageBlockEmbedded
 }
 
-func (pageBlockEmbedded *PageBlockEmbedded) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PageBlockEmbedded object to a copy of JSON encoding of PageBlockEmbedded.
+func (entity *PageBlockEmbedded) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Url            string          `json:"url"`
-		Html           string          `json:"html"`
+		URL            string          `json:"url"`
+		HTML           string          `json:"html"`
 		PosterPhoto    *Photo          `json:"poster_photo"`
 		Width          int32           `json:"width"`
 		Height         int32           `json:"height"`
@@ -6341,25 +6940,25 @@ func (pageBlockEmbedded *PageBlockEmbedded) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	pageBlockEmbedded.Url = tmp.Url
-	pageBlockEmbedded.Html = tmp.Html
-	pageBlockEmbedded.PosterPhoto = tmp.PosterPhoto
-	pageBlockEmbedded.Width = tmp.Width
-	pageBlockEmbedded.Height = tmp.Height
-	pageBlockEmbedded.IsFullWidth = tmp.IsFullWidth
-	pageBlockEmbedded.AllowScrolling = tmp.AllowScrolling
+	entity.URL = tmp.URL
+	entity.HTML = tmp.HTML
+	entity.PosterPhoto = tmp.PosterPhoto
+	entity.Width = tmp.Width
+	entity.Height = tmp.Height
+	entity.IsFullWidth = tmp.IsFullWidth
+	entity.AllowScrolling = tmp.AllowScrolling
 
 	fieldCaption, _ := UnmarshalRichText(tmp.Caption)
-	pageBlockEmbedded.Caption = fieldCaption
+	entity.Caption = fieldCaption
 
 	return nil
 }
 
-// An embedded post
+// PageBlockEmbeddedPost an embedded post
 type PageBlockEmbeddedPost struct {
 	meta
 	// Web page URL
-	Url string `json:"url"`
+	URL string `json:"url"`
 	// Post author
 	Author string `json:"author"`
 	// Post author photo
@@ -6372,6 +6971,7 @@ type PageBlockEmbeddedPost struct {
 	Caption RichText `json:"caption"`
 }
 
+// MarshalJSON returns PageBlockEmbeddedPost object as the JSON encoding of PageBlockEmbeddedPost.
 func (entity *PageBlockEmbeddedPost) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6380,21 +6980,25 @@ func (entity *PageBlockEmbeddedPost) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockEmbeddedPost) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockEmbeddedPost) GetType() string {
 	return TypePageBlockEmbeddedPost
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockEmbeddedPost) PageBlockType() string {
 	return TypePageBlockEmbeddedPost
 }
 
-func (pageBlockEmbeddedPost *PageBlockEmbeddedPost) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PageBlockEmbeddedPost object to a copy of JSON encoding of PageBlockEmbeddedPost.
+func (entity *PageBlockEmbeddedPost) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Url         string          `json:"url"`
+		URL         string          `json:"url"`
 		Author      string          `json:"author"`
 		AuthorPhoto *Photo          `json:"author_photo"`
 		Date        int32           `json:"date"`
@@ -6407,19 +7011,19 @@ func (pageBlockEmbeddedPost *PageBlockEmbeddedPost) UnmarshalJSON(data []byte) e
 		return err
 	}
 
-	pageBlockEmbeddedPost.Url = tmp.Url
-	pageBlockEmbeddedPost.Author = tmp.Author
-	pageBlockEmbeddedPost.AuthorPhoto = tmp.AuthorPhoto
-	pageBlockEmbeddedPost.Date = tmp.Date
-	pageBlockEmbeddedPost.PageBlocks = tmp.PageBlocks
+	entity.URL = tmp.URL
+	entity.Author = tmp.Author
+	entity.AuthorPhoto = tmp.AuthorPhoto
+	entity.Date = tmp.Date
+	entity.PageBlocks = tmp.PageBlocks
 
 	fieldCaption, _ := UnmarshalRichText(tmp.Caption)
-	pageBlockEmbeddedPost.Caption = fieldCaption
+	entity.Caption = fieldCaption
 
 	return nil
 }
 
-// A collage
+// PageBlockCollage a collage
 type PageBlockCollage struct {
 	meta
 	// Collage item contents
@@ -6428,6 +7032,7 @@ type PageBlockCollage struct {
 	Caption RichText `json:"caption"`
 }
 
+// MarshalJSON returns PageBlockCollage object as the JSON encoding of PageBlockCollage.
 func (entity *PageBlockCollage) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6436,19 +7041,23 @@ func (entity *PageBlockCollage) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockCollage) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockCollage) GetType() string {
 	return TypePageBlockCollage
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockCollage) PageBlockType() string {
 	return TypePageBlockCollage
 }
 
-func (pageBlockCollage *PageBlockCollage) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PageBlockCollage object to a copy of JSON encoding of PageBlockCollage.
+func (entity *PageBlockCollage) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		PageBlocks []PageBlock     `json:"page_blocks"`
 		Caption    json.RawMessage `json:"caption"`
@@ -6459,15 +7068,15 @@ func (pageBlockCollage *PageBlockCollage) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	pageBlockCollage.PageBlocks = tmp.PageBlocks
+	entity.PageBlocks = tmp.PageBlocks
 
 	fieldCaption, _ := UnmarshalRichText(tmp.Caption)
-	pageBlockCollage.Caption = fieldCaption
+	entity.Caption = fieldCaption
 
 	return nil
 }
 
-// A slideshow
+// PageBlockSlideshow a slideshow
 type PageBlockSlideshow struct {
 	meta
 	// Slideshow item contents
@@ -6476,6 +7085,7 @@ type PageBlockSlideshow struct {
 	Caption RichText `json:"caption"`
 }
 
+// MarshalJSON returns PageBlockSlideshow object as the JSON encoding of PageBlockSlideshow.
 func (entity *PageBlockSlideshow) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6484,19 +7094,23 @@ func (entity *PageBlockSlideshow) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockSlideshow) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockSlideshow) GetType() string {
 	return TypePageBlockSlideshow
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockSlideshow) PageBlockType() string {
 	return TypePageBlockSlideshow
 }
 
-func (pageBlockSlideshow *PageBlockSlideshow) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PageBlockSlideshow object to a copy of JSON encoding of PageBlockSlideshow.
+func (entity *PageBlockSlideshow) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		PageBlocks []PageBlock     `json:"page_blocks"`
 		Caption    json.RawMessage `json:"caption"`
@@ -6507,15 +7121,15 @@ func (pageBlockSlideshow *PageBlockSlideshow) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	pageBlockSlideshow.PageBlocks = tmp.PageBlocks
+	entity.PageBlocks = tmp.PageBlocks
 
 	fieldCaption, _ := UnmarshalRichText(tmp.Caption)
-	pageBlockSlideshow.Caption = fieldCaption
+	entity.Caption = fieldCaption
 
 	return nil
 }
 
-// A link to a chat
+// PageBlockChatLink a link to a chat
 type PageBlockChatLink struct {
 	meta
 	// Chat title
@@ -6526,6 +7140,7 @@ type PageBlockChatLink struct {
 	Username string `json:"username"`
 }
 
+// MarshalJSON returns PageBlockChatLink object as the JSON encoding of PageBlockChatLink.
 func (entity *PageBlockChatLink) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6534,19 +7149,22 @@ func (entity *PageBlockChatLink) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PageBlockChatLink) GetClass() string {
 	return ClassPageBlock
 }
 
+// GetType returns constant class type string of the class.
 func (*PageBlockChatLink) GetType() string {
 	return TypePageBlockChatLink
 }
 
+// PageBlockType returns constant class type string of the class.
 func (*PageBlockChatLink) PageBlockType() string {
 	return TypePageBlockChatLink
 }
 
-// Describes an instant view page for a web page
+// WebPageInstantView describes an instant view page for a web page
 type WebPageInstantView struct {
 	meta
 	// Content of the web page
@@ -6555,6 +7173,7 @@ type WebPageInstantView struct {
 	IsFull bool `json:"is_full"`
 }
 
+// MarshalJSON returns WebPageInstantView object as the JSON encoding of WebPageInstantView.
 func (entity *WebPageInstantView) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6563,21 +7182,23 @@ func (entity *WebPageInstantView) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*WebPageInstantView) GetClass() string {
 	return ClassWebPageInstantView
 }
 
+// GetType returns constant class type string of the class.
 func (*WebPageInstantView) GetType() string {
 	return TypeWebPageInstantView
 }
 
-// Describes a web page preview
+// WebPage describes a web page preview
 type WebPage struct {
 	meta
 	// Original URL of the link
-	Url string `json:"url"`
+	URL string `json:"url"`
 	// URL to display
-	DisplayUrl string `json:"display_url"`
+	DisplayURL string `json:"display_url"`
 	// Type of the web page. Can be: article, photo, audio, video, document, profile, app, or something else
 	Type string `json:"type"`
 	// Short name of the site (e.g., Google Docs, App Store)
@@ -6589,7 +7210,7 @@ type WebPage struct {
 	// Image representing the content; may be null
 	Photo *Photo `json:"photo"`
 	// URL to show in the embedded preview
-	EmbedUrl string `json:"embed_url"`
+	EmbedURL string `json:"embed_url"`
 	// MIME type of the embedded preview, (e.g., text/html or video/mp4)
 	EmbedType string `json:"embed_type"`
 	// Width of the embedded preview
@@ -6618,6 +7239,7 @@ type WebPage struct {
 	HasInstantView bool `json:"has_instant_view"`
 }
 
+// MarshalJSON returns WebPage object as the JSON encoding of WebPage.
 func (entity *WebPage) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6626,15 +7248,17 @@ func (entity *WebPage) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*WebPage) GetClass() string {
 	return ClassWebPage
 }
 
+// GetType returns constant class type string of the class.
 func (*WebPage) GetType() string {
 	return TypeWebPage
 }
 
-// Describes an address
+// Address describes an address
 type Address struct {
 	meta
 	// A two-letter ISO 3166-1 alpha-2 country code
@@ -6651,6 +7275,7 @@ type Address struct {
 	PostalCode string `json:"postal_code"`
 }
 
+// MarshalJSON returns Address object as the JSON encoding of Address.
 func (entity *Address) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6659,15 +7284,17 @@ func (entity *Address) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Address) GetClass() string {
 	return ClassAddress
 }
 
+// GetType returns constant class type string of the class.
 func (*Address) GetType() string {
 	return TypeAddress
 }
 
-// Portion of the price of a product (e.g., "delivery cost", "tax amount")
+// LabeledPricePart portion of the price of a product (e.g., "delivery cost", "tax amount")
 type LabeledPricePart struct {
 	meta
 	// Label for this portion of the product price
@@ -6676,6 +7303,7 @@ type LabeledPricePart struct {
 	Amount int64 `json:"amount"`
 }
 
+// MarshalJSON returns LabeledPricePart object as the JSON encoding of LabeledPricePart.
 func (entity *LabeledPricePart) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6684,15 +7312,17 @@ func (entity *LabeledPricePart) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*LabeledPricePart) GetClass() string {
 	return ClassLabeledPricePart
 }
 
+// GetType returns constant class type string of the class.
 func (*LabeledPricePart) GetType() string {
 	return TypeLabeledPricePart
 }
 
-// Product invoice
+// Invoice product invoice
 type Invoice struct {
 	meta
 	// ISO 4217 currency code
@@ -6717,6 +7347,7 @@ type Invoice struct {
 	IsFlexible bool `json:"is_flexible"`
 }
 
+// MarshalJSON returns Invoice object as the JSON encoding of Invoice.
 func (entity *Invoice) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6725,15 +7356,17 @@ func (entity *Invoice) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Invoice) GetClass() string {
 	return ClassInvoice
 }
 
+// GetType returns constant class type string of the class.
 func (*Invoice) GetType() string {
 	return TypeInvoice
 }
 
-// Order information
+// OrderInfo order information
 type OrderInfo struct {
 	meta
 	// Name of the user
@@ -6746,6 +7379,7 @@ type OrderInfo struct {
 	ShippingAddress *Address `json:"shipping_address"`
 }
 
+// MarshalJSON returns OrderInfo object as the JSON encoding of OrderInfo.
 func (entity *OrderInfo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6754,25 +7388,28 @@ func (entity *OrderInfo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*OrderInfo) GetClass() string {
 	return ClassOrderInfo
 }
 
+// GetType returns constant class type string of the class.
 func (*OrderInfo) GetType() string {
 	return TypeOrderInfo
 }
 
-// One shipping option
+// ShippingOption one shipping option
 type ShippingOption struct {
 	meta
 	// Shipping option identifier
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Option title
 	Title string `json:"title"`
 	// A list of objects used to calculate the total shipping costs
 	PriceParts []*LabeledPricePart `json:"price_parts"`
 }
 
+// MarshalJSON returns ShippingOption object as the JSON encoding of ShippingOption.
 func (entity *ShippingOption) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6781,23 +7418,26 @@ func (entity *ShippingOption) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ShippingOption) GetClass() string {
 	return ClassShippingOption
 }
 
+// GetType returns constant class type string of the class.
 func (*ShippingOption) GetType() string {
 	return TypeShippingOption
 }
 
-// Contains information about saved card credentials
+// SavedCredentials contains information about saved card credentials
 type SavedCredentials struct {
 	meta
 	// Unique identifier of the saved credentials
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Title of the saved credentials
 	Title string `json:"title"`
 }
 
+// MarshalJSON returns SavedCredentials object as the JSON encoding of SavedCredentials.
 func (entity *SavedCredentials) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6806,21 +7446,24 @@ func (entity *SavedCredentials) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SavedCredentials) GetClass() string {
 	return ClassSavedCredentials
 }
 
+// GetType returns constant class type string of the class.
 func (*SavedCredentials) GetType() string {
 	return TypeSavedCredentials
 }
 
-// Applies if a user chooses some previously saved payment credentials. To use their previously saved credentials, the user must have a valid temporary password
+// InputCredentialsSaved applies if a user chooses some previously saved payment credentials. To use their previously saved credentials, the user must have a valid temporary password
 type InputCredentialsSaved struct {
 	meta
 	// Identifier of the saved credentials
-	SavedCredentialsId string `json:"saved_credentials_id"`
+	SavedCredentialsID string `json:"saved_credentials_id"`
 }
 
+// MarshalJSON returns InputCredentialsSaved object as the JSON encoding of InputCredentialsSaved.
 func (entity *InputCredentialsSaved) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6829,19 +7472,22 @@ func (entity *InputCredentialsSaved) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputCredentialsSaved) GetClass() string {
 	return ClassInputCredentials
 }
 
+// GetType returns constant class type string of the class.
 func (*InputCredentialsSaved) GetType() string {
 	return TypeInputCredentialsSaved
 }
 
+// InputCredentialsType returns constant class type string of the class.
 func (*InputCredentialsSaved) InputCredentialsType() string {
 	return TypeInputCredentialsSaved
 }
 
-// Applies if a user enters new credentials on a payment provider website
+// InputCredentialsNew applies if a user enters new credentials on a payment provider website
 type InputCredentialsNew struct {
 	meta
 	// Contains JSON-encoded data with a credential identifier from the payment provider
@@ -6850,6 +7496,7 @@ type InputCredentialsNew struct {
 	AllowSave bool `json:"allow_save"`
 }
 
+// MarshalJSON returns InputCredentialsNew object as the JSON encoding of InputCredentialsNew.
 func (entity *InputCredentialsNew) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6858,25 +7505,29 @@ func (entity *InputCredentialsNew) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputCredentialsNew) GetClass() string {
 	return ClassInputCredentials
 }
 
+// GetType returns constant class type string of the class.
 func (*InputCredentialsNew) GetType() string {
 	return TypeInputCredentialsNew
 }
 
+// InputCredentialsType returns constant class type string of the class.
 func (*InputCredentialsNew) InputCredentialsType() string {
 	return TypeInputCredentialsNew
 }
 
-// Applies if a user enters new credentials using Android Pay
+// InputCredentialsAndroidPay applies if a user enters new credentials using Android Pay
 type InputCredentialsAndroidPay struct {
 	meta
 	// JSON-encoded data with the credential identifier
 	Data string `json:"data"`
 }
 
+// MarshalJSON returns InputCredentialsAndroidPay object as the JSON encoding of InputCredentialsAndroidPay.
 func (entity *InputCredentialsAndroidPay) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6885,25 +7536,29 @@ func (entity *InputCredentialsAndroidPay) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputCredentialsAndroidPay) GetClass() string {
 	return ClassInputCredentials
 }
 
+// GetType returns constant class type string of the class.
 func (*InputCredentialsAndroidPay) GetType() string {
 	return TypeInputCredentialsAndroidPay
 }
 
+// InputCredentialsType returns constant class type string of the class.
 func (*InputCredentialsAndroidPay) InputCredentialsType() string {
 	return TypeInputCredentialsAndroidPay
 }
 
-// Applies if a user enters new credentials using Apple Pay
+// InputCredentialsApplePay applies if a user enters new credentials using Apple Pay
 type InputCredentialsApplePay struct {
 	meta
 	// JSON-encoded data with the credential identifier
 	Data string `json:"data"`
 }
 
+// MarshalJSON returns InputCredentialsApplePay object as the JSON encoding of InputCredentialsApplePay.
 func (entity *InputCredentialsApplePay) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6912,19 +7567,22 @@ func (entity *InputCredentialsApplePay) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputCredentialsApplePay) GetClass() string {
 	return ClassInputCredentials
 }
 
+// GetType returns constant class type string of the class.
 func (*InputCredentialsApplePay) GetType() string {
 	return TypeInputCredentialsApplePay
 }
 
+// InputCredentialsType returns constant class type string of the class.
 func (*InputCredentialsApplePay) InputCredentialsType() string {
 	return TypeInputCredentialsApplePay
 }
 
-// Stripe payment provider
+// PaymentsProviderStripe stripe payment provider
 type PaymentsProviderStripe struct {
 	meta
 	// Stripe API publishable key
@@ -6937,6 +7595,7 @@ type PaymentsProviderStripe struct {
 	NeedCardholderName bool `json:"need_cardholder_name"`
 }
 
+// MarshalJSON returns PaymentsProviderStripe object as the JSON encoding of PaymentsProviderStripe.
 func (entity *PaymentsProviderStripe) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6945,21 +7604,23 @@ func (entity *PaymentsProviderStripe) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PaymentsProviderStripe) GetClass() string {
 	return ClassPaymentsProviderStripe
 }
 
+// GetType returns constant class type string of the class.
 func (*PaymentsProviderStripe) GetType() string {
 	return TypePaymentsProviderStripe
 }
 
-// Contains information about an invoice payment form
+// PaymentForm contains information about an invoice payment form
 type PaymentForm struct {
 	meta
 	// Full information of the invoice
 	Invoice *Invoice `json:"invoice"`
 	// Payment form URL
-	Url string `json:"url"`
+	URL string `json:"url"`
 	// Contains information about the payment provider, if available, to support it natively without the need for opening the URL; may be null
 	PaymentsProvider *PaymentsProviderStripe `json:"payments_provider"`
 	// Saved server-side order information; may be null
@@ -6972,6 +7633,7 @@ type PaymentForm struct {
 	NeedPassword bool `json:"need_password"`
 }
 
+// MarshalJSON returns PaymentForm object as the JSON encoding of PaymentForm.
 func (entity *PaymentForm) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -6980,23 +7642,26 @@ func (entity *PaymentForm) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PaymentForm) GetClass() string {
 	return ClassPaymentForm
 }
 
+// GetType returns constant class type string of the class.
 func (*PaymentForm) GetType() string {
 	return TypePaymentForm
 }
 
-// Contains a temporary identifier of validated order information, which is stored for one hour. Also contains the available shipping options
+// ValidatedOrderInfo contains a temporary identifier of validated order information, which is stored for one hour. Also contains the available shipping options
 type ValidatedOrderInfo struct {
 	meta
 	// Temporary identifier of the order information
-	OrderInfoId string `json:"order_info_id"`
+	OrderInfoID string `json:"order_info_id"`
 	// Available shipping options
 	ShippingOptions []*ShippingOption `json:"shipping_options"`
 }
 
+// MarshalJSON returns ValidatedOrderInfo object as the JSON encoding of ValidatedOrderInfo.
 func (entity *ValidatedOrderInfo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7005,23 +7670,26 @@ func (entity *ValidatedOrderInfo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ValidatedOrderInfo) GetClass() string {
 	return ClassValidatedOrderInfo
 }
 
+// GetType returns constant class type string of the class.
 func (*ValidatedOrderInfo) GetType() string {
 	return TypeValidatedOrderInfo
 }
 
-// Contains the result of a payment request
+// PaymentResult contains the result of a payment request
 type PaymentResult struct {
 	meta
 	// True, if the payment request was successful; otherwise the verification_url will be not empty
 	Success bool `json:"success"`
 	// URL for additional payment credentials verification
-	VerificationUrl string `json:"verification_url"`
+	VerificationURL string `json:"verification_url"`
 }
 
+// MarshalJSON returns PaymentResult object as the JSON encoding of PaymentResult.
 func (entity *PaymentResult) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7030,21 +7698,23 @@ func (entity *PaymentResult) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PaymentResult) GetClass() string {
 	return ClassPaymentResult
 }
 
+// GetType returns constant class type string of the class.
 func (*PaymentResult) GetType() string {
 	return TypePaymentResult
 }
 
-// Contains information about a successful payment
+// PaymentReceipt contains information about a successful payment
 type PaymentReceipt struct {
 	meta
 	// Point in time (Unix timestamp) when the payment was made
 	Date int32 `json:"date"`
 	// User identifier of the payment provider bot
-	PaymentsProviderUserId int32 `json:"payments_provider_user_id"`
+	PaymentsProviderUserID int32 `json:"payments_provider_user_id"`
 	// Contains information about the invoice
 	Invoice *Invoice `json:"invoice"`
 	// Contains order information; may be null
@@ -7055,6 +7725,7 @@ type PaymentReceipt struct {
 	CredentialsTitle string `json:"credentials_title"`
 }
 
+// MarshalJSON returns PaymentReceipt object as the JSON encoding of PaymentReceipt.
 func (entity *PaymentReceipt) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7063,15 +7734,17 @@ func (entity *PaymentReceipt) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PaymentReceipt) GetClass() string {
 	return ClassPaymentReceipt
 }
 
+// GetType returns constant class type string of the class.
 func (*PaymentReceipt) GetType() string {
 	return TypePaymentReceipt
 }
 
-// File with the date it was uploaded
+// DatedFile file with the date it was uploaded
 type DatedFile struct {
 	meta
 	// The file
@@ -7080,6 +7753,7 @@ type DatedFile struct {
 	Date int32 `json:"date"`
 }
 
+// MarshalJSON returns DatedFile object as the JSON encoding of DatedFile.
 func (entity *DatedFile) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7088,19 +7762,22 @@ func (entity *DatedFile) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*DatedFile) GetClass() string {
 	return ClassDatedFile
 }
 
+// GetType returns constant class type string of the class.
 func (*DatedFile) GetType() string {
 	return TypeDatedFile
 }
 
-// A Telegram Passport element containing the user's personal details
+// PassportElementTypePersonalDetails a Telegram Passport element containing the user's personal details
 type PassportElementTypePersonalDetails struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementTypePersonalDetails object as the JSON encoding of PassportElementTypePersonalDetails.
 func (entity *PassportElementTypePersonalDetails) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7109,23 +7786,27 @@ func (entity *PassportElementTypePersonalDetails) MarshalJSON() ([]byte, error) 
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementTypePersonalDetails) GetClass() string {
 	return ClassPassportElementType
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementTypePersonalDetails) GetType() string {
 	return TypePassportElementTypePersonalDetails
 }
 
+// PassportElementTypeType returns constant class type string of the class.
 func (*PassportElementTypePersonalDetails) PassportElementTypeType() string {
 	return TypePassportElementTypePersonalDetails
 }
 
-// A Telegram Passport element containing the user's passport
+// PassportElementTypePassport a Telegram Passport element containing the user's passport
 type PassportElementTypePassport struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementTypePassport object as the JSON encoding of PassportElementTypePassport.
 func (entity *PassportElementTypePassport) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7134,23 +7815,27 @@ func (entity *PassportElementTypePassport) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementTypePassport) GetClass() string {
 	return ClassPassportElementType
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementTypePassport) GetType() string {
 	return TypePassportElementTypePassport
 }
 
+// PassportElementTypeType returns constant class type string of the class.
 func (*PassportElementTypePassport) PassportElementTypeType() string {
 	return TypePassportElementTypePassport
 }
 
-// A Telegram Passport element containing the user's driver license
+// PassportElementTypeDriverLicense a Telegram Passport element containing the user's driver license
 type PassportElementTypeDriverLicense struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementTypeDriverLicense object as the JSON encoding of PassportElementTypeDriverLicense.
 func (entity *PassportElementTypeDriverLicense) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7159,23 +7844,27 @@ func (entity *PassportElementTypeDriverLicense) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementTypeDriverLicense) GetClass() string {
 	return ClassPassportElementType
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementTypeDriverLicense) GetType() string {
 	return TypePassportElementTypeDriverLicense
 }
 
+// PassportElementTypeType returns constant class type string of the class.
 func (*PassportElementTypeDriverLicense) PassportElementTypeType() string {
 	return TypePassportElementTypeDriverLicense
 }
 
-// A Telegram Passport element containing the user's identity card
+// PassportElementTypeIdentityCard a Telegram Passport element containing the user's identity card
 type PassportElementTypeIdentityCard struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementTypeIdentityCard object as the JSON encoding of PassportElementTypeIdentityCard.
 func (entity *PassportElementTypeIdentityCard) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7184,23 +7873,27 @@ func (entity *PassportElementTypeIdentityCard) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementTypeIdentityCard) GetClass() string {
 	return ClassPassportElementType
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementTypeIdentityCard) GetType() string {
 	return TypePassportElementTypeIdentityCard
 }
 
+// PassportElementTypeType returns constant class type string of the class.
 func (*PassportElementTypeIdentityCard) PassportElementTypeType() string {
 	return TypePassportElementTypeIdentityCard
 }
 
-// A Telegram Passport element containing the user's internal passport
+// PassportElementTypeInternalPassport a Telegram Passport element containing the user's internal passport
 type PassportElementTypeInternalPassport struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementTypeInternalPassport object as the JSON encoding of PassportElementTypeInternalPassport.
 func (entity *PassportElementTypeInternalPassport) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7209,23 +7902,27 @@ func (entity *PassportElementTypeInternalPassport) MarshalJSON() ([]byte, error)
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementTypeInternalPassport) GetClass() string {
 	return ClassPassportElementType
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementTypeInternalPassport) GetType() string {
 	return TypePassportElementTypeInternalPassport
 }
 
+// PassportElementTypeType returns constant class type string of the class.
 func (*PassportElementTypeInternalPassport) PassportElementTypeType() string {
 	return TypePassportElementTypeInternalPassport
 }
 
-// A Telegram Passport element containing the user's address
+// PassportElementTypeAddress a Telegram Passport element containing the user's address
 type PassportElementTypeAddress struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementTypeAddress object as the JSON encoding of PassportElementTypeAddress.
 func (entity *PassportElementTypeAddress) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7234,23 +7931,27 @@ func (entity *PassportElementTypeAddress) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementTypeAddress) GetClass() string {
 	return ClassPassportElementType
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementTypeAddress) GetType() string {
 	return TypePassportElementTypeAddress
 }
 
+// PassportElementTypeType returns constant class type string of the class.
 func (*PassportElementTypeAddress) PassportElementTypeType() string {
 	return TypePassportElementTypeAddress
 }
 
-// A Telegram Passport element containing the user's utility bill
+// PassportElementTypeUtilityBill a Telegram Passport element containing the user's utility bill
 type PassportElementTypeUtilityBill struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementTypeUtilityBill object as the JSON encoding of PassportElementTypeUtilityBill.
 func (entity *PassportElementTypeUtilityBill) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7259,23 +7960,27 @@ func (entity *PassportElementTypeUtilityBill) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementTypeUtilityBill) GetClass() string {
 	return ClassPassportElementType
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementTypeUtilityBill) GetType() string {
 	return TypePassportElementTypeUtilityBill
 }
 
+// PassportElementTypeType returns constant class type string of the class.
 func (*PassportElementTypeUtilityBill) PassportElementTypeType() string {
 	return TypePassportElementTypeUtilityBill
 }
 
-// A Telegram Passport element containing the user's bank statement
+// PassportElementTypeBankStatement a Telegram Passport element containing the user's bank statement
 type PassportElementTypeBankStatement struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementTypeBankStatement object as the JSON encoding of PassportElementTypeBankStatement.
 func (entity *PassportElementTypeBankStatement) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7284,23 +7989,27 @@ func (entity *PassportElementTypeBankStatement) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementTypeBankStatement) GetClass() string {
 	return ClassPassportElementType
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementTypeBankStatement) GetType() string {
 	return TypePassportElementTypeBankStatement
 }
 
+// PassportElementTypeType returns constant class type string of the class.
 func (*PassportElementTypeBankStatement) PassportElementTypeType() string {
 	return TypePassportElementTypeBankStatement
 }
 
-// A Telegram Passport element containing the user's rental agreement
+// PassportElementTypeRentalAgreement a Telegram Passport element containing the user's rental agreement
 type PassportElementTypeRentalAgreement struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementTypeRentalAgreement object as the JSON encoding of PassportElementTypeRentalAgreement.
 func (entity *PassportElementTypeRentalAgreement) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7309,23 +8018,27 @@ func (entity *PassportElementTypeRentalAgreement) MarshalJSON() ([]byte, error) 
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementTypeRentalAgreement) GetClass() string {
 	return ClassPassportElementType
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementTypeRentalAgreement) GetType() string {
 	return TypePassportElementTypeRentalAgreement
 }
 
+// PassportElementTypeType returns constant class type string of the class.
 func (*PassportElementTypeRentalAgreement) PassportElementTypeType() string {
 	return TypePassportElementTypeRentalAgreement
 }
 
-// A Telegram Passport element containing the registration page of the user's passport
+// PassportElementTypePassportRegistration a Telegram Passport element containing the registration page of the user's passport
 type PassportElementTypePassportRegistration struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementTypePassportRegistration object as the JSON encoding of PassportElementTypePassportRegistration.
 func (entity *PassportElementTypePassportRegistration) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7334,23 +8047,27 @@ func (entity *PassportElementTypePassportRegistration) MarshalJSON() ([]byte, er
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementTypePassportRegistration) GetClass() string {
 	return ClassPassportElementType
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementTypePassportRegistration) GetType() string {
 	return TypePassportElementTypePassportRegistration
 }
 
+// PassportElementTypeType returns constant class type string of the class.
 func (*PassportElementTypePassportRegistration) PassportElementTypeType() string {
 	return TypePassportElementTypePassportRegistration
 }
 
-// A Telegram Passport element containing the user's temporary registration
+// PassportElementTypeTemporaryRegistration a Telegram Passport element containing the user's temporary registration
 type PassportElementTypeTemporaryRegistration struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementTypeTemporaryRegistration object as the JSON encoding of PassportElementTypeTemporaryRegistration.
 func (entity *PassportElementTypeTemporaryRegistration) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7359,23 +8076,27 @@ func (entity *PassportElementTypeTemporaryRegistration) MarshalJSON() ([]byte, e
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementTypeTemporaryRegistration) GetClass() string {
 	return ClassPassportElementType
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementTypeTemporaryRegistration) GetType() string {
 	return TypePassportElementTypeTemporaryRegistration
 }
 
+// PassportElementTypeType returns constant class type string of the class.
 func (*PassportElementTypeTemporaryRegistration) PassportElementTypeType() string {
 	return TypePassportElementTypeTemporaryRegistration
 }
 
-// A Telegram Passport element containing the user's phone number
+// PassportElementTypePhoneNumber a Telegram Passport element containing the user's phone number
 type PassportElementTypePhoneNumber struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementTypePhoneNumber object as the JSON encoding of PassportElementTypePhoneNumber.
 func (entity *PassportElementTypePhoneNumber) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7384,23 +8105,27 @@ func (entity *PassportElementTypePhoneNumber) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementTypePhoneNumber) GetClass() string {
 	return ClassPassportElementType
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementTypePhoneNumber) GetType() string {
 	return TypePassportElementTypePhoneNumber
 }
 
+// PassportElementTypeType returns constant class type string of the class.
 func (*PassportElementTypePhoneNumber) PassportElementTypeType() string {
 	return TypePassportElementTypePhoneNumber
 }
 
-// A Telegram Passport element containing the user's email address
+// PassportElementTypeEmailAddress a Telegram Passport element containing the user's email address
 type PassportElementTypeEmailAddress struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementTypeEmailAddress object as the JSON encoding of PassportElementTypeEmailAddress.
 func (entity *PassportElementTypeEmailAddress) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7409,19 +8134,22 @@ func (entity *PassportElementTypeEmailAddress) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementTypeEmailAddress) GetClass() string {
 	return ClassPassportElementType
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementTypeEmailAddress) GetType() string {
 	return TypePassportElementTypeEmailAddress
 }
 
+// PassportElementTypeType returns constant class type string of the class.
 func (*PassportElementTypeEmailAddress) PassportElementTypeType() string {
 	return TypePassportElementTypeEmailAddress
 }
 
-// Represents a date according to the Gregorian calendar
+// Date represents a date according to the Gregorian calendar
 type Date struct {
 	meta
 	// Day of the month, 1-31
@@ -7432,6 +8160,7 @@ type Date struct {
 	Year int32 `json:"year"`
 }
 
+// MarshalJSON returns Date object as the JSON encoding of Date.
 func (entity *Date) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7440,15 +8169,17 @@ func (entity *Date) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Date) GetClass() string {
 	return ClassDate
 }
 
+// GetType returns constant class type string of the class.
 func (*Date) GetType() string {
 	return TypeDate
 }
 
-// Contains the user's personal details
+// PersonalDetails contains the user's personal details
 type PersonalDetails struct {
 	meta
 	// First name of the user written in English; 1-255 characters
@@ -7473,6 +8204,7 @@ type PersonalDetails struct {
 	ResidenceCountryCode string `json:"residence_country_code"`
 }
 
+// MarshalJSON returns PersonalDetails object as the JSON encoding of PersonalDetails.
 func (entity *PersonalDetails) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7481,15 +8213,17 @@ func (entity *PersonalDetails) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PersonalDetails) GetClass() string {
 	return ClassPersonalDetails
 }
 
+// GetType returns constant class type string of the class.
 func (*PersonalDetails) GetType() string {
 	return TypePersonalDetails
 }
 
-// An identity document
+// IdentityDocument an identity document
 type IdentityDocument struct {
 	meta
 	// Document number; 1-24 characters
@@ -7506,6 +8240,7 @@ type IdentityDocument struct {
 	Translation []*DatedFile `json:"translation"`
 }
 
+// MarshalJSON returns IdentityDocument object as the JSON encoding of IdentityDocument.
 func (entity *IdentityDocument) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7514,15 +8249,17 @@ func (entity *IdentityDocument) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*IdentityDocument) GetClass() string {
 	return ClassIdentityDocument
 }
 
+// GetType returns constant class type string of the class.
 func (*IdentityDocument) GetType() string {
 	return TypeIdentityDocument
 }
 
-// An identity document to be saved to Telegram Passport
+// InputIdentityDocument an identity document to be saved to Telegram Passport
 type InputIdentityDocument struct {
 	meta
 	// Document number; 1-24 characters
@@ -7539,6 +8276,7 @@ type InputIdentityDocument struct {
 	Translation []InputFile `json:"translation"`
 }
 
+// MarshalJSON returns InputIdentityDocument object as the JSON encoding of InputIdentityDocument.
 func (entity *InputIdentityDocument) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7547,15 +8285,18 @@ func (entity *InputIdentityDocument) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputIdentityDocument) GetClass() string {
 	return ClassInputIdentityDocument
 }
 
+// GetType returns constant class type string of the class.
 func (*InputIdentityDocument) GetType() string {
 	return TypeInputIdentityDocument
 }
 
-func (inputIdentityDocument *InputIdentityDocument) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputIdentityDocument object to a copy of JSON encoding of InputIdentityDocument.
+func (entity *InputIdentityDocument) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Number      string          `json:"number"`
 		ExpiryDate  *Date           `json:"expiry_date"`
@@ -7570,23 +8311,23 @@ func (inputIdentityDocument *InputIdentityDocument) UnmarshalJSON(data []byte) e
 		return err
 	}
 
-	inputIdentityDocument.Number = tmp.Number
-	inputIdentityDocument.ExpiryDate = tmp.ExpiryDate
-	inputIdentityDocument.Translation = tmp.Translation
+	entity.Number = tmp.Number
+	entity.ExpiryDate = tmp.ExpiryDate
+	entity.Translation = tmp.Translation
 
 	fieldFrontSide, _ := UnmarshalInputFile(tmp.FrontSide)
-	inputIdentityDocument.FrontSide = fieldFrontSide
+	entity.FrontSide = fieldFrontSide
 
 	fieldReverseSide, _ := UnmarshalInputFile(tmp.ReverseSide)
-	inputIdentityDocument.ReverseSide = fieldReverseSide
+	entity.ReverseSide = fieldReverseSide
 
 	fieldSelfie, _ := UnmarshalInputFile(tmp.Selfie)
-	inputIdentityDocument.Selfie = fieldSelfie
+	entity.Selfie = fieldSelfie
 
 	return nil
 }
 
-// A personal document, containing some information about a user
+// PersonalDocument a personal document, containing some information about a user
 type PersonalDocument struct {
 	meta
 	// List of files containing the pages of the document
@@ -7595,6 +8336,7 @@ type PersonalDocument struct {
 	Translation []*DatedFile `json:"translation"`
 }
 
+// MarshalJSON returns PersonalDocument object as the JSON encoding of PersonalDocument.
 func (entity *PersonalDocument) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7603,15 +8345,17 @@ func (entity *PersonalDocument) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PersonalDocument) GetClass() string {
 	return ClassPersonalDocument
 }
 
+// GetType returns constant class type string of the class.
 func (*PersonalDocument) GetType() string {
 	return TypePersonalDocument
 }
 
-// A personal document to be saved to Telegram Passport
+// InputPersonalDocument a personal document to be saved to Telegram Passport
 type InputPersonalDocument struct {
 	meta
 	// List of files containing the pages of the document
@@ -7620,6 +8364,7 @@ type InputPersonalDocument struct {
 	Translation []InputFile `json:"translation"`
 }
 
+// MarshalJSON returns InputPersonalDocument object as the JSON encoding of InputPersonalDocument.
 func (entity *InputPersonalDocument) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7628,21 +8373,24 @@ func (entity *InputPersonalDocument) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPersonalDocument) GetClass() string {
 	return ClassInputPersonalDocument
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPersonalDocument) GetType() string {
 	return TypeInputPersonalDocument
 }
 
-// A Telegram Passport element containing the user's personal details
+// PassportElementPersonalDetails a Telegram Passport element containing the user's personal details
 type PassportElementPersonalDetails struct {
 	meta
 	// Personal details of the user
 	PersonalDetails *PersonalDetails `json:"personal_details"`
 }
 
+// MarshalJSON returns PassportElementPersonalDetails object as the JSON encoding of PassportElementPersonalDetails.
 func (entity *PassportElementPersonalDetails) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7651,25 +8399,29 @@ func (entity *PassportElementPersonalDetails) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementPersonalDetails) GetClass() string {
 	return ClassPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementPersonalDetails) GetType() string {
 	return TypePassportElementPersonalDetails
 }
 
+// PassportElementType returns constant class type string of the class.
 func (*PassportElementPersonalDetails) PassportElementType() string {
 	return TypePassportElementPersonalDetails
 }
 
-// A Telegram Passport element containing the user's passport
+// PassportElementPassport a Telegram Passport element containing the user's passport
 type PassportElementPassport struct {
 	meta
 	// Passport
 	Passport *IdentityDocument `json:"passport"`
 }
 
+// MarshalJSON returns PassportElementPassport object as the JSON encoding of PassportElementPassport.
 func (entity *PassportElementPassport) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7678,25 +8430,29 @@ func (entity *PassportElementPassport) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementPassport) GetClass() string {
 	return ClassPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementPassport) GetType() string {
 	return TypePassportElementPassport
 }
 
+// PassportElementType returns constant class type string of the class.
 func (*PassportElementPassport) PassportElementType() string {
 	return TypePassportElementPassport
 }
 
-// A Telegram Passport element containing the user's driver license
+// PassportElementDriverLicense a Telegram Passport element containing the user's driver license
 type PassportElementDriverLicense struct {
 	meta
 	// Driver license
 	DriverLicense *IdentityDocument `json:"driver_license"`
 }
 
+// MarshalJSON returns PassportElementDriverLicense object as the JSON encoding of PassportElementDriverLicense.
 func (entity *PassportElementDriverLicense) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7705,25 +8461,29 @@ func (entity *PassportElementDriverLicense) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementDriverLicense) GetClass() string {
 	return ClassPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementDriverLicense) GetType() string {
 	return TypePassportElementDriverLicense
 }
 
+// PassportElementType returns constant class type string of the class.
 func (*PassportElementDriverLicense) PassportElementType() string {
 	return TypePassportElementDriverLicense
 }
 
-// A Telegram Passport element containing the user's identity card
+// PassportElementIdentityCard a Telegram Passport element containing the user's identity card
 type PassportElementIdentityCard struct {
 	meta
 	// Identity card
 	IdentityCard *IdentityDocument `json:"identity_card"`
 }
 
+// MarshalJSON returns PassportElementIdentityCard object as the JSON encoding of PassportElementIdentityCard.
 func (entity *PassportElementIdentityCard) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7732,25 +8492,29 @@ func (entity *PassportElementIdentityCard) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementIdentityCard) GetClass() string {
 	return ClassPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementIdentityCard) GetType() string {
 	return TypePassportElementIdentityCard
 }
 
+// PassportElementType returns constant class type string of the class.
 func (*PassportElementIdentityCard) PassportElementType() string {
 	return TypePassportElementIdentityCard
 }
 
-// A Telegram Passport element containing the user's internal passport
+// PassportElementInternalPassport a Telegram Passport element containing the user's internal passport
 type PassportElementInternalPassport struct {
 	meta
 	// Internal passport
 	InternalPassport *IdentityDocument `json:"internal_passport"`
 }
 
+// MarshalJSON returns PassportElementInternalPassport object as the JSON encoding of PassportElementInternalPassport.
 func (entity *PassportElementInternalPassport) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7759,25 +8523,29 @@ func (entity *PassportElementInternalPassport) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementInternalPassport) GetClass() string {
 	return ClassPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementInternalPassport) GetType() string {
 	return TypePassportElementInternalPassport
 }
 
+// PassportElementType returns constant class type string of the class.
 func (*PassportElementInternalPassport) PassportElementType() string {
 	return TypePassportElementInternalPassport
 }
 
-// A Telegram Passport element containing the user's address
+// PassportElementAddress a Telegram Passport element containing the user's address
 type PassportElementAddress struct {
 	meta
 	// Address
 	Address *Address `json:"address"`
 }
 
+// MarshalJSON returns PassportElementAddress object as the JSON encoding of PassportElementAddress.
 func (entity *PassportElementAddress) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7786,25 +8554,29 @@ func (entity *PassportElementAddress) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementAddress) GetClass() string {
 	return ClassPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementAddress) GetType() string {
 	return TypePassportElementAddress
 }
 
+// PassportElementType returns constant class type string of the class.
 func (*PassportElementAddress) PassportElementType() string {
 	return TypePassportElementAddress
 }
 
-// A Telegram Passport element containing the user's utility bill
+// PassportElementUtilityBill a Telegram Passport element containing the user's utility bill
 type PassportElementUtilityBill struct {
 	meta
 	// Utility bill
 	UtilityBill *PersonalDocument `json:"utility_bill"`
 }
 
+// MarshalJSON returns PassportElementUtilityBill object as the JSON encoding of PassportElementUtilityBill.
 func (entity *PassportElementUtilityBill) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7813,25 +8585,29 @@ func (entity *PassportElementUtilityBill) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementUtilityBill) GetClass() string {
 	return ClassPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementUtilityBill) GetType() string {
 	return TypePassportElementUtilityBill
 }
 
+// PassportElementType returns constant class type string of the class.
 func (*PassportElementUtilityBill) PassportElementType() string {
 	return TypePassportElementUtilityBill
 }
 
-// A Telegram Passport element containing the user's bank statement
+// PassportElementBankStatement a Telegram Passport element containing the user's bank statement
 type PassportElementBankStatement struct {
 	meta
 	// Bank statement
 	BankStatement *PersonalDocument `json:"bank_statement"`
 }
 
+// MarshalJSON returns PassportElementBankStatement object as the JSON encoding of PassportElementBankStatement.
 func (entity *PassportElementBankStatement) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7840,25 +8616,29 @@ func (entity *PassportElementBankStatement) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementBankStatement) GetClass() string {
 	return ClassPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementBankStatement) GetType() string {
 	return TypePassportElementBankStatement
 }
 
+// PassportElementType returns constant class type string of the class.
 func (*PassportElementBankStatement) PassportElementType() string {
 	return TypePassportElementBankStatement
 }
 
-// A Telegram Passport element containing the user's rental agreement
+// PassportElementRentalAgreement a Telegram Passport element containing the user's rental agreement
 type PassportElementRentalAgreement struct {
 	meta
 	// Rental agreement
 	RentalAgreement *PersonalDocument `json:"rental_agreement"`
 }
 
+// MarshalJSON returns PassportElementRentalAgreement object as the JSON encoding of PassportElementRentalAgreement.
 func (entity *PassportElementRentalAgreement) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7867,25 +8647,29 @@ func (entity *PassportElementRentalAgreement) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementRentalAgreement) GetClass() string {
 	return ClassPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementRentalAgreement) GetType() string {
 	return TypePassportElementRentalAgreement
 }
 
+// PassportElementType returns constant class type string of the class.
 func (*PassportElementRentalAgreement) PassportElementType() string {
 	return TypePassportElementRentalAgreement
 }
 
-// A Telegram Passport element containing the user's passport registration pages
+// PassportElementPassportRegistration a Telegram Passport element containing the user's passport registration pages
 type PassportElementPassportRegistration struct {
 	meta
 	// Passport registration pages
 	PassportRegistration *PersonalDocument `json:"passport_registration"`
 }
 
+// MarshalJSON returns PassportElementPassportRegistration object as the JSON encoding of PassportElementPassportRegistration.
 func (entity *PassportElementPassportRegistration) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7894,25 +8678,29 @@ func (entity *PassportElementPassportRegistration) MarshalJSON() ([]byte, error)
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementPassportRegistration) GetClass() string {
 	return ClassPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementPassportRegistration) GetType() string {
 	return TypePassportElementPassportRegistration
 }
 
+// PassportElementType returns constant class type string of the class.
 func (*PassportElementPassportRegistration) PassportElementType() string {
 	return TypePassportElementPassportRegistration
 }
 
-// A Telegram Passport element containing the user's temporary registration
+// PassportElementTemporaryRegistration a Telegram Passport element containing the user's temporary registration
 type PassportElementTemporaryRegistration struct {
 	meta
 	// Temporary registration
 	TemporaryRegistration *PersonalDocument `json:"temporary_registration"`
 }
 
+// MarshalJSON returns PassportElementTemporaryRegistration object as the JSON encoding of PassportElementTemporaryRegistration.
 func (entity *PassportElementTemporaryRegistration) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7921,25 +8709,29 @@ func (entity *PassportElementTemporaryRegistration) MarshalJSON() ([]byte, error
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementTemporaryRegistration) GetClass() string {
 	return ClassPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementTemporaryRegistration) GetType() string {
 	return TypePassportElementTemporaryRegistration
 }
 
+// PassportElementType returns constant class type string of the class.
 func (*PassportElementTemporaryRegistration) PassportElementType() string {
 	return TypePassportElementTemporaryRegistration
 }
 
-// A Telegram Passport element containing the user's phone number
+// PassportElementPhoneNumber a Telegram Passport element containing the user's phone number
 type PassportElementPhoneNumber struct {
 	meta
 	// Phone number
 	PhoneNumber string `json:"phone_number"`
 }
 
+// MarshalJSON returns PassportElementPhoneNumber object as the JSON encoding of PassportElementPhoneNumber.
 func (entity *PassportElementPhoneNumber) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7948,25 +8740,29 @@ func (entity *PassportElementPhoneNumber) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementPhoneNumber) GetClass() string {
 	return ClassPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementPhoneNumber) GetType() string {
 	return TypePassportElementPhoneNumber
 }
 
+// PassportElementType returns constant class type string of the class.
 func (*PassportElementPhoneNumber) PassportElementType() string {
 	return TypePassportElementPhoneNumber
 }
 
-// A Telegram Passport element containing the user's email address
+// PassportElementEmailAddress a Telegram Passport element containing the user's email address
 type PassportElementEmailAddress struct {
 	meta
 	// Email address
 	EmailAddress string `json:"email_address"`
 }
 
+// MarshalJSON returns PassportElementEmailAddress object as the JSON encoding of PassportElementEmailAddress.
 func (entity *PassportElementEmailAddress) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -7975,25 +8771,29 @@ func (entity *PassportElementEmailAddress) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementEmailAddress) GetClass() string {
 	return ClassPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementEmailAddress) GetType() string {
 	return TypePassportElementEmailAddress
 }
 
+// PassportElementType returns constant class type string of the class.
 func (*PassportElementEmailAddress) PassportElementType() string {
 	return TypePassportElementEmailAddress
 }
 
-// A Telegram Passport element to be saved containing the user's personal details
+// InputPassportElementPersonalDetails a Telegram Passport element to be saved containing the user's personal details
 type InputPassportElementPersonalDetails struct {
 	meta
 	// Personal details of the user
 	PersonalDetails *PersonalDetails `json:"personal_details"`
 }
 
+// MarshalJSON returns InputPassportElementPersonalDetails object as the JSON encoding of InputPassportElementPersonalDetails.
 func (entity *InputPassportElementPersonalDetails) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8002,25 +8802,29 @@ func (entity *InputPassportElementPersonalDetails) MarshalJSON() ([]byte, error)
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementPersonalDetails) GetClass() string {
 	return ClassInputPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementPersonalDetails) GetType() string {
 	return TypeInputPassportElementPersonalDetails
 }
 
+// InputPassportElementType returns constant class type string of the class.
 func (*InputPassportElementPersonalDetails) InputPassportElementType() string {
 	return TypeInputPassportElementPersonalDetails
 }
 
-// A Telegram Passport element to be saved containing the user's passport
+// InputPassportElementPassport a Telegram Passport element to be saved containing the user's passport
 type InputPassportElementPassport struct {
 	meta
 	// The passport to be saved
 	Passport *InputIdentityDocument `json:"passport"`
 }
 
+// MarshalJSON returns InputPassportElementPassport object as the JSON encoding of InputPassportElementPassport.
 func (entity *InputPassportElementPassport) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8029,25 +8833,29 @@ func (entity *InputPassportElementPassport) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementPassport) GetClass() string {
 	return ClassInputPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementPassport) GetType() string {
 	return TypeInputPassportElementPassport
 }
 
+// InputPassportElementType returns constant class type string of the class.
 func (*InputPassportElementPassport) InputPassportElementType() string {
 	return TypeInputPassportElementPassport
 }
 
-// A Telegram Passport element to be saved containing the user's driver license
+// InputPassportElementDriverLicense a Telegram Passport element to be saved containing the user's driver license
 type InputPassportElementDriverLicense struct {
 	meta
 	// The driver license to be saved
 	DriverLicense *InputIdentityDocument `json:"driver_license"`
 }
 
+// MarshalJSON returns InputPassportElementDriverLicense object as the JSON encoding of InputPassportElementDriverLicense.
 func (entity *InputPassportElementDriverLicense) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8056,25 +8864,29 @@ func (entity *InputPassportElementDriverLicense) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementDriverLicense) GetClass() string {
 	return ClassInputPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementDriverLicense) GetType() string {
 	return TypeInputPassportElementDriverLicense
 }
 
+// InputPassportElementType returns constant class type string of the class.
 func (*InputPassportElementDriverLicense) InputPassportElementType() string {
 	return TypeInputPassportElementDriverLicense
 }
 
-// A Telegram Passport element to be saved containing the user's identity card
+// InputPassportElementIdentityCard a Telegram Passport element to be saved containing the user's identity card
 type InputPassportElementIdentityCard struct {
 	meta
 	// The identity card to be saved
 	IdentityCard *InputIdentityDocument `json:"identity_card"`
 }
 
+// MarshalJSON returns InputPassportElementIdentityCard object as the JSON encoding of InputPassportElementIdentityCard.
 func (entity *InputPassportElementIdentityCard) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8083,25 +8895,29 @@ func (entity *InputPassportElementIdentityCard) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementIdentityCard) GetClass() string {
 	return ClassInputPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementIdentityCard) GetType() string {
 	return TypeInputPassportElementIdentityCard
 }
 
+// InputPassportElementType returns constant class type string of the class.
 func (*InputPassportElementIdentityCard) InputPassportElementType() string {
 	return TypeInputPassportElementIdentityCard
 }
 
-// A Telegram Passport element to be saved containing the user's internal passport
+// InputPassportElementInternalPassport a Telegram Passport element to be saved containing the user's internal passport
 type InputPassportElementInternalPassport struct {
 	meta
 	// The internal passport to be saved
 	InternalPassport *InputIdentityDocument `json:"internal_passport"`
 }
 
+// MarshalJSON returns InputPassportElementInternalPassport object as the JSON encoding of InputPassportElementInternalPassport.
 func (entity *InputPassportElementInternalPassport) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8110,25 +8926,29 @@ func (entity *InputPassportElementInternalPassport) MarshalJSON() ([]byte, error
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementInternalPassport) GetClass() string {
 	return ClassInputPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementInternalPassport) GetType() string {
 	return TypeInputPassportElementInternalPassport
 }
 
+// InputPassportElementType returns constant class type string of the class.
 func (*InputPassportElementInternalPassport) InputPassportElementType() string {
 	return TypeInputPassportElementInternalPassport
 }
 
-// A Telegram Passport element to be saved containing the user's address
+// InputPassportElementAddress a Telegram Passport element to be saved containing the user's address
 type InputPassportElementAddress struct {
 	meta
 	// The address to be saved
 	Address *Address `json:"address"`
 }
 
+// MarshalJSON returns InputPassportElementAddress object as the JSON encoding of InputPassportElementAddress.
 func (entity *InputPassportElementAddress) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8137,25 +8957,29 @@ func (entity *InputPassportElementAddress) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementAddress) GetClass() string {
 	return ClassInputPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementAddress) GetType() string {
 	return TypeInputPassportElementAddress
 }
 
+// InputPassportElementType returns constant class type string of the class.
 func (*InputPassportElementAddress) InputPassportElementType() string {
 	return TypeInputPassportElementAddress
 }
 
-// A Telegram Passport element to be saved containing the user's utility bill
+// InputPassportElementUtilityBill a Telegram Passport element to be saved containing the user's utility bill
 type InputPassportElementUtilityBill struct {
 	meta
 	// The utility bill to be saved
 	UtilityBill *InputPersonalDocument `json:"utility_bill"`
 }
 
+// MarshalJSON returns InputPassportElementUtilityBill object as the JSON encoding of InputPassportElementUtilityBill.
 func (entity *InputPassportElementUtilityBill) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8164,25 +8988,29 @@ func (entity *InputPassportElementUtilityBill) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementUtilityBill) GetClass() string {
 	return ClassInputPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementUtilityBill) GetType() string {
 	return TypeInputPassportElementUtilityBill
 }
 
+// InputPassportElementType returns constant class type string of the class.
 func (*InputPassportElementUtilityBill) InputPassportElementType() string {
 	return TypeInputPassportElementUtilityBill
 }
 
-// A Telegram Passport element to be saved containing the user's bank statement
+// InputPassportElementBankStatement a Telegram Passport element to be saved containing the user's bank statement
 type InputPassportElementBankStatement struct {
 	meta
 	// The bank statement to be saved
 	BankStatement *InputPersonalDocument `json:"bank_statement"`
 }
 
+// MarshalJSON returns InputPassportElementBankStatement object as the JSON encoding of InputPassportElementBankStatement.
 func (entity *InputPassportElementBankStatement) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8191,25 +9019,29 @@ func (entity *InputPassportElementBankStatement) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementBankStatement) GetClass() string {
 	return ClassInputPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementBankStatement) GetType() string {
 	return TypeInputPassportElementBankStatement
 }
 
+// InputPassportElementType returns constant class type string of the class.
 func (*InputPassportElementBankStatement) InputPassportElementType() string {
 	return TypeInputPassportElementBankStatement
 }
 
-// A Telegram Passport element to be saved containing the user's rental agreement
+// InputPassportElementRentalAgreement a Telegram Passport element to be saved containing the user's rental agreement
 type InputPassportElementRentalAgreement struct {
 	meta
 	// The rental agreement to be saved
 	RentalAgreement *InputPersonalDocument `json:"rental_agreement"`
 }
 
+// MarshalJSON returns InputPassportElementRentalAgreement object as the JSON encoding of InputPassportElementRentalAgreement.
 func (entity *InputPassportElementRentalAgreement) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8218,25 +9050,29 @@ func (entity *InputPassportElementRentalAgreement) MarshalJSON() ([]byte, error)
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementRentalAgreement) GetClass() string {
 	return ClassInputPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementRentalAgreement) GetType() string {
 	return TypeInputPassportElementRentalAgreement
 }
 
+// InputPassportElementType returns constant class type string of the class.
 func (*InputPassportElementRentalAgreement) InputPassportElementType() string {
 	return TypeInputPassportElementRentalAgreement
 }
 
-// A Telegram Passport element to be saved containing the user's passport registration
+// InputPassportElementPassportRegistration a Telegram Passport element to be saved containing the user's passport registration
 type InputPassportElementPassportRegistration struct {
 	meta
 	// The passport registration page to be saved
 	PassportRegistration *InputPersonalDocument `json:"passport_registration"`
 }
 
+// MarshalJSON returns InputPassportElementPassportRegistration object as the JSON encoding of InputPassportElementPassportRegistration.
 func (entity *InputPassportElementPassportRegistration) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8245,25 +9081,29 @@ func (entity *InputPassportElementPassportRegistration) MarshalJSON() ([]byte, e
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementPassportRegistration) GetClass() string {
 	return ClassInputPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementPassportRegistration) GetType() string {
 	return TypeInputPassportElementPassportRegistration
 }
 
+// InputPassportElementType returns constant class type string of the class.
 func (*InputPassportElementPassportRegistration) InputPassportElementType() string {
 	return TypeInputPassportElementPassportRegistration
 }
 
-// A Telegram Passport element to be saved containing the user's temporary registration
+// InputPassportElementTemporaryRegistration a Telegram Passport element to be saved containing the user's temporary registration
 type InputPassportElementTemporaryRegistration struct {
 	meta
 	// The temporary registration document to be saved
 	TemporaryRegistration *InputPersonalDocument `json:"temporary_registration"`
 }
 
+// MarshalJSON returns InputPassportElementTemporaryRegistration object as the JSON encoding of InputPassportElementTemporaryRegistration.
 func (entity *InputPassportElementTemporaryRegistration) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8272,25 +9112,29 @@ func (entity *InputPassportElementTemporaryRegistration) MarshalJSON() ([]byte, 
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementTemporaryRegistration) GetClass() string {
 	return ClassInputPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementTemporaryRegistration) GetType() string {
 	return TypeInputPassportElementTemporaryRegistration
 }
 
+// InputPassportElementType returns constant class type string of the class.
 func (*InputPassportElementTemporaryRegistration) InputPassportElementType() string {
 	return TypeInputPassportElementTemporaryRegistration
 }
 
-// A Telegram Passport element to be saved containing the user's phone number
+// InputPassportElementPhoneNumber a Telegram Passport element to be saved containing the user's phone number
 type InputPassportElementPhoneNumber struct {
 	meta
 	// The phone number to be saved
 	PhoneNumber string `json:"phone_number"`
 }
 
+// MarshalJSON returns InputPassportElementPhoneNumber object as the JSON encoding of InputPassportElementPhoneNumber.
 func (entity *InputPassportElementPhoneNumber) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8299,25 +9143,29 @@ func (entity *InputPassportElementPhoneNumber) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementPhoneNumber) GetClass() string {
 	return ClassInputPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementPhoneNumber) GetType() string {
 	return TypeInputPassportElementPhoneNumber
 }
 
+// InputPassportElementType returns constant class type string of the class.
 func (*InputPassportElementPhoneNumber) InputPassportElementType() string {
 	return TypeInputPassportElementPhoneNumber
 }
 
-// A Telegram Passport element to be saved containing the user's email address
+// InputPassportElementEmailAddress a Telegram Passport element to be saved containing the user's email address
 type InputPassportElementEmailAddress struct {
 	meta
 	// The email address to be saved
 	EmailAddress string `json:"email_address"`
 }
 
+// MarshalJSON returns InputPassportElementEmailAddress object as the JSON encoding of InputPassportElementEmailAddress.
 func (entity *InputPassportElementEmailAddress) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8326,25 +9174,29 @@ func (entity *InputPassportElementEmailAddress) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementEmailAddress) GetClass() string {
 	return ClassInputPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementEmailAddress) GetType() string {
 	return TypeInputPassportElementEmailAddress
 }
 
+// InputPassportElementType returns constant class type string of the class.
 func (*InputPassportElementEmailAddress) InputPassportElementType() string {
 	return TypeInputPassportElementEmailAddress
 }
 
-// Contains information about saved Telegram Passport elements
+// PassportElements contains information about saved Telegram Passport elements
 type PassportElements struct {
 	meta
 	// Telegram Passport elements
 	Elements []PassportElement `json:"elements"`
 }
 
+// MarshalJSON returns PassportElements object as the JSON encoding of PassportElements.
 func (entity *PassportElements) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8353,19 +9205,22 @@ func (entity *PassportElements) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElements) GetClass() string {
 	return ClassPassportElements
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElements) GetType() string {
 	return TypePassportElements
 }
 
-// The element contains an error in an unspecified place. The error will be considered resolved when new data is added
+// PassportElementErrorSourceUnspecified the element contains an error in an unspecified place. The error will be considered resolved when new data is added
 type PassportElementErrorSourceUnspecified struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementErrorSourceUnspecified object as the JSON encoding of PassportElementErrorSourceUnspecified.
 func (entity *PassportElementErrorSourceUnspecified) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8374,25 +9229,29 @@ func (entity *PassportElementErrorSourceUnspecified) MarshalJSON() ([]byte, erro
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementErrorSourceUnspecified) GetClass() string {
 	return ClassPassportElementErrorSource
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementErrorSourceUnspecified) GetType() string {
 	return TypePassportElementErrorSourceUnspecified
 }
 
+// PassportElementErrorSourceType returns constant class type string of the class.
 func (*PassportElementErrorSourceUnspecified) PassportElementErrorSourceType() string {
 	return TypePassportElementErrorSourceUnspecified
 }
 
-// One of the data fields contains an error. The error will be considered resolved when the value of the field changes
+// PassportElementErrorSourceDataField one of the data fields contains an error. The error will be considered resolved when the value of the field changes
 type PassportElementErrorSourceDataField struct {
 	meta
 	// Field name
 	FieldName string `json:"field_name"`
 }
 
+// MarshalJSON returns PassportElementErrorSourceDataField object as the JSON encoding of PassportElementErrorSourceDataField.
 func (entity *PassportElementErrorSourceDataField) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8401,23 +9260,27 @@ func (entity *PassportElementErrorSourceDataField) MarshalJSON() ([]byte, error)
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementErrorSourceDataField) GetClass() string {
 	return ClassPassportElementErrorSource
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementErrorSourceDataField) GetType() string {
 	return TypePassportElementErrorSourceDataField
 }
 
+// PassportElementErrorSourceType returns constant class type string of the class.
 func (*PassportElementErrorSourceDataField) PassportElementErrorSourceType() string {
 	return TypePassportElementErrorSourceDataField
 }
 
-// The front side of the document contains an error. The error will be considered resolved when the file with the front side changes
+// PassportElementErrorSourceFrontSide the front side of the document contains an error. The error will be considered resolved when the file with the front side changes
 type PassportElementErrorSourceFrontSide struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementErrorSourceFrontSide object as the JSON encoding of PassportElementErrorSourceFrontSide.
 func (entity *PassportElementErrorSourceFrontSide) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8426,23 +9289,27 @@ func (entity *PassportElementErrorSourceFrontSide) MarshalJSON() ([]byte, error)
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementErrorSourceFrontSide) GetClass() string {
 	return ClassPassportElementErrorSource
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementErrorSourceFrontSide) GetType() string {
 	return TypePassportElementErrorSourceFrontSide
 }
 
+// PassportElementErrorSourceType returns constant class type string of the class.
 func (*PassportElementErrorSourceFrontSide) PassportElementErrorSourceType() string {
 	return TypePassportElementErrorSourceFrontSide
 }
 
-// The reverse side of the document contains an error. The error will be considered resolved when the file with the reverse side changes
+// PassportElementErrorSourceReverseSide the reverse side of the document contains an error. The error will be considered resolved when the file with the reverse side changes
 type PassportElementErrorSourceReverseSide struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementErrorSourceReverseSide object as the JSON encoding of PassportElementErrorSourceReverseSide.
 func (entity *PassportElementErrorSourceReverseSide) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8451,23 +9318,27 @@ func (entity *PassportElementErrorSourceReverseSide) MarshalJSON() ([]byte, erro
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementErrorSourceReverseSide) GetClass() string {
 	return ClassPassportElementErrorSource
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementErrorSourceReverseSide) GetType() string {
 	return TypePassportElementErrorSourceReverseSide
 }
 
+// PassportElementErrorSourceType returns constant class type string of the class.
 func (*PassportElementErrorSourceReverseSide) PassportElementErrorSourceType() string {
 	return TypePassportElementErrorSourceReverseSide
 }
 
-// The selfie with the document contains an error. The error will be considered resolved when the file with the selfie changes
+// PassportElementErrorSourceSelfie the selfie with the document contains an error. The error will be considered resolved when the file with the selfie changes
 type PassportElementErrorSourceSelfie struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementErrorSourceSelfie object as the JSON encoding of PassportElementErrorSourceSelfie.
 func (entity *PassportElementErrorSourceSelfie) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8476,23 +9347,27 @@ func (entity *PassportElementErrorSourceSelfie) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementErrorSourceSelfie) GetClass() string {
 	return ClassPassportElementErrorSource
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementErrorSourceSelfie) GetType() string {
 	return TypePassportElementErrorSourceSelfie
 }
 
+// PassportElementErrorSourceType returns constant class type string of the class.
 func (*PassportElementErrorSourceSelfie) PassportElementErrorSourceType() string {
 	return TypePassportElementErrorSourceSelfie
 }
 
-// One of files with the translation of the document contains an error. The error will be considered resolved when the file changes
+// PassportElementErrorSourceTranslationFile one of files with the translation of the document contains an error. The error will be considered resolved when the file changes
 type PassportElementErrorSourceTranslationFile struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementErrorSourceTranslationFile object as the JSON encoding of PassportElementErrorSourceTranslationFile.
 func (entity *PassportElementErrorSourceTranslationFile) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8501,23 +9376,27 @@ func (entity *PassportElementErrorSourceTranslationFile) MarshalJSON() ([]byte, 
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementErrorSourceTranslationFile) GetClass() string {
 	return ClassPassportElementErrorSource
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementErrorSourceTranslationFile) GetType() string {
 	return TypePassportElementErrorSourceTranslationFile
 }
 
+// PassportElementErrorSourceType returns constant class type string of the class.
 func (*PassportElementErrorSourceTranslationFile) PassportElementErrorSourceType() string {
 	return TypePassportElementErrorSourceTranslationFile
 }
 
-// The translation of the document contains an error. The error will be considered resolved when the list of translation files changes
+// PassportElementErrorSourceTranslationFiles the translation of the document contains an error. The error will be considered resolved when the list of translation files changes
 type PassportElementErrorSourceTranslationFiles struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementErrorSourceTranslationFiles object as the JSON encoding of PassportElementErrorSourceTranslationFiles.
 func (entity *PassportElementErrorSourceTranslationFiles) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8526,23 +9405,27 @@ func (entity *PassportElementErrorSourceTranslationFiles) MarshalJSON() ([]byte,
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementErrorSourceTranslationFiles) GetClass() string {
 	return ClassPassportElementErrorSource
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementErrorSourceTranslationFiles) GetType() string {
 	return TypePassportElementErrorSourceTranslationFiles
 }
 
+// PassportElementErrorSourceType returns constant class type string of the class.
 func (*PassportElementErrorSourceTranslationFiles) PassportElementErrorSourceType() string {
 	return TypePassportElementErrorSourceTranslationFiles
 }
 
-// The file contains an error. The error will be considered resolved when the file changes
+// PassportElementErrorSourceFile the file contains an error. The error will be considered resolved when the file changes
 type PassportElementErrorSourceFile struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementErrorSourceFile object as the JSON encoding of PassportElementErrorSourceFile.
 func (entity *PassportElementErrorSourceFile) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8551,23 +9434,27 @@ func (entity *PassportElementErrorSourceFile) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementErrorSourceFile) GetClass() string {
 	return ClassPassportElementErrorSource
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementErrorSourceFile) GetType() string {
 	return TypePassportElementErrorSourceFile
 }
 
+// PassportElementErrorSourceType returns constant class type string of the class.
 func (*PassportElementErrorSourceFile) PassportElementErrorSourceType() string {
 	return TypePassportElementErrorSourceFile
 }
 
-// The list of attached files contains an error. The error will be considered resolved when the list of files changes
+// PassportElementErrorSourceFiles the list of attached files contains an error. The error will be considered resolved when the list of files changes
 type PassportElementErrorSourceFiles struct {
 	meta
 }
 
+// MarshalJSON returns PassportElementErrorSourceFiles object as the JSON encoding of PassportElementErrorSourceFiles.
 func (entity *PassportElementErrorSourceFiles) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8576,19 +9463,22 @@ func (entity *PassportElementErrorSourceFiles) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementErrorSourceFiles) GetClass() string {
 	return ClassPassportElementErrorSource
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementErrorSourceFiles) GetType() string {
 	return TypePassportElementErrorSourceFiles
 }
 
+// PassportElementErrorSourceType returns constant class type string of the class.
 func (*PassportElementErrorSourceFiles) PassportElementErrorSourceType() string {
 	return TypePassportElementErrorSourceFiles
 }
 
-// Contains the description of an error in a Telegram Passport element
+// PassportElementError contains the description of an error in a Telegram Passport element
 type PassportElementError struct {
 	meta
 	// Type of the Telegram Passport element which has the error
@@ -8599,6 +9489,7 @@ type PassportElementError struct {
 	Source PassportElementErrorSource `json:"source"`
 }
 
+// MarshalJSON returns PassportElementError object as the JSON encoding of PassportElementError.
 func (entity *PassportElementError) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8607,15 +9498,18 @@ func (entity *PassportElementError) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportElementError) GetClass() string {
 	return ClassPassportElementError
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportElementError) GetType() string {
 	return TypePassportElementError
 }
 
-func (passportElementError *PassportElementError) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PassportElementError object to a copy of JSON encoding of PassportElementError.
+func (entity *PassportElementError) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Type    json.RawMessage `json:"type"`
 		Message string          `json:"message"`
@@ -8627,18 +9521,18 @@ func (passportElementError *PassportElementError) UnmarshalJSON(data []byte) err
 		return err
 	}
 
-	passportElementError.Message = tmp.Message
+	entity.Message = tmp.Message
 
 	fieldType, _ := UnmarshalPassportElementType(tmp.Type)
-	passportElementError.Type = fieldType
+	entity.Type = fieldType
 
 	fieldSource, _ := UnmarshalPassportElementErrorSource(tmp.Source)
-	passportElementError.Source = fieldSource
+	entity.Source = fieldSource
 
 	return nil
 }
 
-// Contains information about a Telegram Passport element that was requested by a service
+// PassportSuitableElement contains information about a Telegram Passport element that was requested by a service
 type PassportSuitableElement struct {
 	meta
 	// Type of the element
@@ -8651,6 +9545,7 @@ type PassportSuitableElement struct {
 	IsNativeNameRequired bool `json:"is_native_name_required"`
 }
 
+// MarshalJSON returns PassportSuitableElement object as the JSON encoding of PassportSuitableElement.
 func (entity *PassportSuitableElement) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8659,15 +9554,18 @@ func (entity *PassportSuitableElement) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportSuitableElement) GetClass() string {
 	return ClassPassportSuitableElement
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportSuitableElement) GetType() string {
 	return TypePassportSuitableElement
 }
 
-func (passportSuitableElement *PassportSuitableElement) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets PassportSuitableElement object to a copy of JSON encoding of PassportSuitableElement.
+func (entity *PassportSuitableElement) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Type                  json.RawMessage `json:"type"`
 		IsSelfieRequired      bool            `json:"is_selfie_required"`
@@ -8680,23 +9578,24 @@ func (passportSuitableElement *PassportSuitableElement) UnmarshalJSON(data []byt
 		return err
 	}
 
-	passportSuitableElement.IsSelfieRequired = tmp.IsSelfieRequired
-	passportSuitableElement.IsTranslationRequired = tmp.IsTranslationRequired
-	passportSuitableElement.IsNativeNameRequired = tmp.IsNativeNameRequired
+	entity.IsSelfieRequired = tmp.IsSelfieRequired
+	entity.IsTranslationRequired = tmp.IsTranslationRequired
+	entity.IsNativeNameRequired = tmp.IsNativeNameRequired
 
 	fieldType, _ := UnmarshalPassportElementType(tmp.Type)
-	passportSuitableElement.Type = fieldType
+	entity.Type = fieldType
 
 	return nil
 }
 
-// Contains a description of the required Telegram Passport element that was requested by a service
+// PassportRequiredElement contains a description of the required Telegram Passport element that was requested by a service
 type PassportRequiredElement struct {
 	meta
 	// List of Telegram Passport elements any of which is enough to provide
 	SuitableElements []*PassportSuitableElement `json:"suitable_elements"`
 }
 
+// MarshalJSON returns PassportRequiredElement object as the JSON encoding of PassportRequiredElement.
 func (entity *PassportRequiredElement) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8705,19 +9604,21 @@ func (entity *PassportRequiredElement) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportRequiredElement) GetClass() string {
 	return ClassPassportRequiredElement
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportRequiredElement) GetType() string {
 	return TypePassportRequiredElement
 }
 
-// Contains information about a Telegram Passport authorization form that was requested
+// PassportAuthorizationForm contains information about a Telegram Passport authorization form that was requested
 type PassportAuthorizationForm struct {
 	meta
 	// Unique identifier of the authorization form
-	Id int32 `json:"id"`
+	ID int32 `json:"id"`
 	// Information about the Telegram Passport elements that need to be provided to complete the form
 	RequiredElements []*PassportRequiredElement `json:"required_elements"`
 	// Already available Telegram Passport elements
@@ -8725,9 +9626,10 @@ type PassportAuthorizationForm struct {
 	// Errors in the elements that are already available
 	Errors []*PassportElementError `json:"errors"`
 	// URL for the privacy policy of the service; can be empty
-	PrivacyPolicyUrl string `json:"privacy_policy_url"`
+	PrivacyPolicyURL string `json:"privacy_policy_url"`
 }
 
+// MarshalJSON returns PassportAuthorizationForm object as the JSON encoding of PassportAuthorizationForm.
 func (entity *PassportAuthorizationForm) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8736,15 +9638,17 @@ func (entity *PassportAuthorizationForm) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PassportAuthorizationForm) GetClass() string {
 	return ClassPassportAuthorizationForm
 }
 
+// GetType returns constant class type string of the class.
 func (*PassportAuthorizationForm) GetType() string {
 	return TypePassportAuthorizationForm
 }
 
-// Contains encrypted Telegram Passport data credentials
+// EncryptedCredentials contains encrypted Telegram Passport data credentials
 type EncryptedCredentials struct {
 	meta
 	// The encrypted credentials
@@ -8755,6 +9659,7 @@ type EncryptedCredentials struct {
 	Secret []byte `json:"secret"`
 }
 
+// MarshalJSON returns EncryptedCredentials object as the JSON encoding of EncryptedCredentials.
 func (entity *EncryptedCredentials) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8763,15 +9668,17 @@ func (entity *EncryptedCredentials) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*EncryptedCredentials) GetClass() string {
 	return ClassEncryptedCredentials
 }
 
+// GetType returns constant class type string of the class.
 func (*EncryptedCredentials) GetType() string {
 	return TypeEncryptedCredentials
 }
 
-// Contains information about an encrypted Telegram Passport element; for bots only
+// EncryptedPassportElement contains information about an encrypted Telegram Passport element; for bots only
 type EncryptedPassportElement struct {
 	meta
 	// Type of Telegram Passport element
@@ -8794,6 +9701,7 @@ type EncryptedPassportElement struct {
 	Hash string `json:"hash"`
 }
 
+// MarshalJSON returns EncryptedPassportElement object as the JSON encoding of EncryptedPassportElement.
 func (entity *EncryptedPassportElement) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8802,15 +9710,18 @@ func (entity *EncryptedPassportElement) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*EncryptedPassportElement) GetClass() string {
 	return ClassEncryptedPassportElement
 }
 
+// GetType returns constant class type string of the class.
 func (*EncryptedPassportElement) GetType() string {
 	return TypeEncryptedPassportElement
 }
 
-func (encryptedPassportElement *EncryptedPassportElement) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets EncryptedPassportElement object to a copy of JSON encoding of EncryptedPassportElement.
+func (entity *EncryptedPassportElement) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Type        json.RawMessage `json:"type"`
 		Data        []byte          `json:"data"`
@@ -8828,28 +9739,29 @@ func (encryptedPassportElement *EncryptedPassportElement) UnmarshalJSON(data []b
 		return err
 	}
 
-	encryptedPassportElement.Data = tmp.Data
-	encryptedPassportElement.FrontSide = tmp.FrontSide
-	encryptedPassportElement.ReverseSide = tmp.ReverseSide
-	encryptedPassportElement.Selfie = tmp.Selfie
-	encryptedPassportElement.Translation = tmp.Translation
-	encryptedPassportElement.Files = tmp.Files
-	encryptedPassportElement.Value = tmp.Value
-	encryptedPassportElement.Hash = tmp.Hash
+	entity.Data = tmp.Data
+	entity.FrontSide = tmp.FrontSide
+	entity.ReverseSide = tmp.ReverseSide
+	entity.Selfie = tmp.Selfie
+	entity.Translation = tmp.Translation
+	entity.Files = tmp.Files
+	entity.Value = tmp.Value
+	entity.Hash = tmp.Hash
 
 	fieldType, _ := UnmarshalPassportElementType(tmp.Type)
-	encryptedPassportElement.Type = fieldType
+	entity.Type = fieldType
 
 	return nil
 }
 
-// The element contains an error in an unspecified place. The error will be considered resolved when new data is added
+// InputPassportElementErrorSourceUnspecified the element contains an error in an unspecified place. The error will be considered resolved when new data is added
 type InputPassportElementErrorSourceUnspecified struct {
 	meta
 	// Current hash of the entire element
 	ElementHash []byte `json:"element_hash"`
 }
 
+// MarshalJSON returns InputPassportElementErrorSourceUnspecified object as the JSON encoding of InputPassportElementErrorSourceUnspecified.
 func (entity *InputPassportElementErrorSourceUnspecified) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8858,19 +9770,22 @@ func (entity *InputPassportElementErrorSourceUnspecified) MarshalJSON() ([]byte,
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementErrorSourceUnspecified) GetClass() string {
 	return ClassInputPassportElementErrorSource
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementErrorSourceUnspecified) GetType() string {
 	return TypeInputPassportElementErrorSourceUnspecified
 }
 
+// InputPassportElementErrorSourceType returns constant class type string of the class.
 func (*InputPassportElementErrorSourceUnspecified) InputPassportElementErrorSourceType() string {
 	return TypeInputPassportElementErrorSourceUnspecified
 }
 
-// A data field contains an error. The error is considered resolved when the field's value changes
+// InputPassportElementErrorSourceDataField a data field contains an error. The error is considered resolved when the field's value changes
 type InputPassportElementErrorSourceDataField struct {
 	meta
 	// Field name
@@ -8879,6 +9794,7 @@ type InputPassportElementErrorSourceDataField struct {
 	DataHash []byte `json:"data_hash"`
 }
 
+// MarshalJSON returns InputPassportElementErrorSourceDataField object as the JSON encoding of InputPassportElementErrorSourceDataField.
 func (entity *InputPassportElementErrorSourceDataField) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8887,25 +9803,29 @@ func (entity *InputPassportElementErrorSourceDataField) MarshalJSON() ([]byte, e
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementErrorSourceDataField) GetClass() string {
 	return ClassInputPassportElementErrorSource
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementErrorSourceDataField) GetType() string {
 	return TypeInputPassportElementErrorSourceDataField
 }
 
+// InputPassportElementErrorSourceType returns constant class type string of the class.
 func (*InputPassportElementErrorSourceDataField) InputPassportElementErrorSourceType() string {
 	return TypeInputPassportElementErrorSourceDataField
 }
 
-// The front side of the document contains an error. The error is considered resolved when the file with the front side of the document changes
+// InputPassportElementErrorSourceFrontSide the front side of the document contains an error. The error is considered resolved when the file with the front side of the document changes
 type InputPassportElementErrorSourceFrontSide struct {
 	meta
 	// Current hash of the file containing the front side
 	FileHash []byte `json:"file_hash"`
 }
 
+// MarshalJSON returns InputPassportElementErrorSourceFrontSide object as the JSON encoding of InputPassportElementErrorSourceFrontSide.
 func (entity *InputPassportElementErrorSourceFrontSide) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8914,25 +9834,29 @@ func (entity *InputPassportElementErrorSourceFrontSide) MarshalJSON() ([]byte, e
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementErrorSourceFrontSide) GetClass() string {
 	return ClassInputPassportElementErrorSource
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementErrorSourceFrontSide) GetType() string {
 	return TypeInputPassportElementErrorSourceFrontSide
 }
 
+// InputPassportElementErrorSourceType returns constant class type string of the class.
 func (*InputPassportElementErrorSourceFrontSide) InputPassportElementErrorSourceType() string {
 	return TypeInputPassportElementErrorSourceFrontSide
 }
 
-// The reverse side of the document contains an error. The error is considered resolved when the file with the reverse side of the document changes
+// InputPassportElementErrorSourceReverseSide the reverse side of the document contains an error. The error is considered resolved when the file with the reverse side of the document changes
 type InputPassportElementErrorSourceReverseSide struct {
 	meta
 	// Current hash of the file containing the reverse side
 	FileHash []byte `json:"file_hash"`
 }
 
+// MarshalJSON returns InputPassportElementErrorSourceReverseSide object as the JSON encoding of InputPassportElementErrorSourceReverseSide.
 func (entity *InputPassportElementErrorSourceReverseSide) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8941,25 +9865,29 @@ func (entity *InputPassportElementErrorSourceReverseSide) MarshalJSON() ([]byte,
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementErrorSourceReverseSide) GetClass() string {
 	return ClassInputPassportElementErrorSource
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementErrorSourceReverseSide) GetType() string {
 	return TypeInputPassportElementErrorSourceReverseSide
 }
 
+// InputPassportElementErrorSourceType returns constant class type string of the class.
 func (*InputPassportElementErrorSourceReverseSide) InputPassportElementErrorSourceType() string {
 	return TypeInputPassportElementErrorSourceReverseSide
 }
 
-// The selfie contains an error. The error is considered resolved when the file with the selfie changes
+// InputPassportElementErrorSourceSelfie the selfie contains an error. The error is considered resolved when the file with the selfie changes
 type InputPassportElementErrorSourceSelfie struct {
 	meta
 	// Current hash of the file containing the selfie
 	FileHash []byte `json:"file_hash"`
 }
 
+// MarshalJSON returns InputPassportElementErrorSourceSelfie object as the JSON encoding of InputPassportElementErrorSourceSelfie.
 func (entity *InputPassportElementErrorSourceSelfie) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8968,25 +9896,29 @@ func (entity *InputPassportElementErrorSourceSelfie) MarshalJSON() ([]byte, erro
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementErrorSourceSelfie) GetClass() string {
 	return ClassInputPassportElementErrorSource
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementErrorSourceSelfie) GetType() string {
 	return TypeInputPassportElementErrorSourceSelfie
 }
 
+// InputPassportElementErrorSourceType returns constant class type string of the class.
 func (*InputPassportElementErrorSourceSelfie) InputPassportElementErrorSourceType() string {
 	return TypeInputPassportElementErrorSourceSelfie
 }
 
-// One of the files containing the translation of the document contains an error. The error is considered resolved when the file with the translation changes
+// InputPassportElementErrorSourceTranslationFile one of the files containing the translation of the document contains an error. The error is considered resolved when the file with the translation changes
 type InputPassportElementErrorSourceTranslationFile struct {
 	meta
 	// Current hash of the file containing the translation
 	FileHash []byte `json:"file_hash"`
 }
 
+// MarshalJSON returns InputPassportElementErrorSourceTranslationFile object as the JSON encoding of InputPassportElementErrorSourceTranslationFile.
 func (entity *InputPassportElementErrorSourceTranslationFile) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -8995,25 +9927,29 @@ func (entity *InputPassportElementErrorSourceTranslationFile) MarshalJSON() ([]b
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementErrorSourceTranslationFile) GetClass() string {
 	return ClassInputPassportElementErrorSource
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementErrorSourceTranslationFile) GetType() string {
 	return TypeInputPassportElementErrorSourceTranslationFile
 }
 
+// InputPassportElementErrorSourceType returns constant class type string of the class.
 func (*InputPassportElementErrorSourceTranslationFile) InputPassportElementErrorSourceType() string {
 	return TypeInputPassportElementErrorSourceTranslationFile
 }
 
-// The translation of the document contains an error. The error is considered resolved when the list of files changes
+// InputPassportElementErrorSourceTranslationFiles the translation of the document contains an error. The error is considered resolved when the list of files changes
 type InputPassportElementErrorSourceTranslationFiles struct {
 	meta
 	// Current hashes of all files with the translation
 	FileHashes [][]byte `json:"file_hashes"`
 }
 
+// MarshalJSON returns InputPassportElementErrorSourceTranslationFiles object as the JSON encoding of InputPassportElementErrorSourceTranslationFiles.
 func (entity *InputPassportElementErrorSourceTranslationFiles) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9022,25 +9958,29 @@ func (entity *InputPassportElementErrorSourceTranslationFiles) MarshalJSON() ([]
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementErrorSourceTranslationFiles) GetClass() string {
 	return ClassInputPassportElementErrorSource
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementErrorSourceTranslationFiles) GetType() string {
 	return TypeInputPassportElementErrorSourceTranslationFiles
 }
 
+// InputPassportElementErrorSourceType returns constant class type string of the class.
 func (*InputPassportElementErrorSourceTranslationFiles) InputPassportElementErrorSourceType() string {
 	return TypeInputPassportElementErrorSourceTranslationFiles
 }
 
-// The file contains an error. The error is considered resolved when the file changes
+// InputPassportElementErrorSourceFile the file contains an error. The error is considered resolved when the file changes
 type InputPassportElementErrorSourceFile struct {
 	meta
 	// Current hash of the file which has the error
 	FileHash []byte `json:"file_hash"`
 }
 
+// MarshalJSON returns InputPassportElementErrorSourceFile object as the JSON encoding of InputPassportElementErrorSourceFile.
 func (entity *InputPassportElementErrorSourceFile) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9049,25 +9989,29 @@ func (entity *InputPassportElementErrorSourceFile) MarshalJSON() ([]byte, error)
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementErrorSourceFile) GetClass() string {
 	return ClassInputPassportElementErrorSource
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementErrorSourceFile) GetType() string {
 	return TypeInputPassportElementErrorSourceFile
 }
 
+// InputPassportElementErrorSourceType returns constant class type string of the class.
 func (*InputPassportElementErrorSourceFile) InputPassportElementErrorSourceType() string {
 	return TypeInputPassportElementErrorSourceFile
 }
 
-// The list of attached files contains an error. The error is considered resolved when the file list changes
+// InputPassportElementErrorSourceFiles the list of attached files contains an error. The error is considered resolved when the file list changes
 type InputPassportElementErrorSourceFiles struct {
 	meta
 	// Current hashes of all attached files
 	FileHashes [][]byte `json:"file_hashes"`
 }
 
+// MarshalJSON returns InputPassportElementErrorSourceFiles object as the JSON encoding of InputPassportElementErrorSourceFiles.
 func (entity *InputPassportElementErrorSourceFiles) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9076,19 +10020,22 @@ func (entity *InputPassportElementErrorSourceFiles) MarshalJSON() ([]byte, error
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementErrorSourceFiles) GetClass() string {
 	return ClassInputPassportElementErrorSource
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementErrorSourceFiles) GetType() string {
 	return TypeInputPassportElementErrorSourceFiles
 }
 
+// InputPassportElementErrorSourceType returns constant class type string of the class.
 func (*InputPassportElementErrorSourceFiles) InputPassportElementErrorSourceType() string {
 	return TypeInputPassportElementErrorSourceFiles
 }
 
-// Contains the description of an error in a Telegram Passport element; for bots only
+// InputPassportElementError contains the description of an error in a Telegram Passport element; for bots only
 type InputPassportElementError struct {
 	meta
 	// Type of Telegram Passport element that has the error
@@ -9099,6 +10046,7 @@ type InputPassportElementError struct {
 	Source InputPassportElementErrorSource `json:"source"`
 }
 
+// MarshalJSON returns InputPassportElementError object as the JSON encoding of InputPassportElementError.
 func (entity *InputPassportElementError) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9107,15 +10055,18 @@ func (entity *InputPassportElementError) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputPassportElementError) GetClass() string {
 	return ClassInputPassportElementError
 }
 
+// GetType returns constant class type string of the class.
 func (*InputPassportElementError) GetType() string {
 	return TypeInputPassportElementError
 }
 
-func (inputPassportElementError *InputPassportElementError) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputPassportElementError object to a copy of JSON encoding of InputPassportElementError.
+func (entity *InputPassportElementError) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Type    json.RawMessage `json:"type"`
 		Message string          `json:"message"`
@@ -9127,18 +10078,18 @@ func (inputPassportElementError *InputPassportElementError) UnmarshalJSON(data [
 		return err
 	}
 
-	inputPassportElementError.Message = tmp.Message
+	entity.Message = tmp.Message
 
 	fieldType, _ := UnmarshalPassportElementType(tmp.Type)
-	inputPassportElementError.Type = fieldType
+	entity.Type = fieldType
 
 	fieldSource, _ := UnmarshalInputPassportElementErrorSource(tmp.Source)
-	inputPassportElementError.Source = fieldSource
+	entity.Source = fieldSource
 
 	return nil
 }
 
-// A text message
+// MessageText a text message
 type MessageText struct {
 	meta
 	// Text of the message
@@ -9147,6 +10098,7 @@ type MessageText struct {
 	WebPage *WebPage `json:"web_page"`
 }
 
+// MarshalJSON returns MessageText object as the JSON encoding of MessageText.
 func (entity *MessageText) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9155,19 +10107,22 @@ func (entity *MessageText) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageText) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageText) GetType() string {
 	return TypeMessageText
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageText) MessageContentType() string {
 	return TypeMessageText
 }
 
-// An animation message (GIF-style).
+// MessageAnimation an animation message (GIF-style).
 type MessageAnimation struct {
 	meta
 	// Message content
@@ -9178,6 +10133,7 @@ type MessageAnimation struct {
 	IsSecret bool `json:"is_secret"`
 }
 
+// MarshalJSON returns MessageAnimation object as the JSON encoding of MessageAnimation.
 func (entity *MessageAnimation) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9186,19 +10142,22 @@ func (entity *MessageAnimation) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageAnimation) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageAnimation) GetType() string {
 	return TypeMessageAnimation
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageAnimation) MessageContentType() string {
 	return TypeMessageAnimation
 }
 
-// An audio message
+// MessageAudio an audio message
 type MessageAudio struct {
 	meta
 	// Message content
@@ -9207,6 +10166,7 @@ type MessageAudio struct {
 	Caption *FormattedText `json:"caption"`
 }
 
+// MarshalJSON returns MessageAudio object as the JSON encoding of MessageAudio.
 func (entity *MessageAudio) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9215,19 +10175,22 @@ func (entity *MessageAudio) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageAudio) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageAudio) GetType() string {
 	return TypeMessageAudio
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageAudio) MessageContentType() string {
 	return TypeMessageAudio
 }
 
-// A document message (general file)
+// MessageDocument a document message (general file)
 type MessageDocument struct {
 	meta
 	// Message content
@@ -9236,6 +10199,7 @@ type MessageDocument struct {
 	Caption *FormattedText `json:"caption"`
 }
 
+// MarshalJSON returns MessageDocument object as the JSON encoding of MessageDocument.
 func (entity *MessageDocument) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9244,19 +10208,22 @@ func (entity *MessageDocument) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageDocument) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageDocument) GetType() string {
 	return TypeMessageDocument
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageDocument) MessageContentType() string {
 	return TypeMessageDocument
 }
 
-// A photo message
+// MessagePhoto a photo message
 type MessagePhoto struct {
 	meta
 	// Message content
@@ -9267,6 +10234,7 @@ type MessagePhoto struct {
 	IsSecret bool `json:"is_secret"`
 }
 
+// MarshalJSON returns MessagePhoto object as the JSON encoding of MessagePhoto.
 func (entity *MessagePhoto) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9275,23 +10243,27 @@ func (entity *MessagePhoto) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessagePhoto) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessagePhoto) GetType() string {
 	return TypeMessagePhoto
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessagePhoto) MessageContentType() string {
 	return TypeMessagePhoto
 }
 
-// An expired photo message (self-destructed after TTL has elapsed)
+// MessageExpiredPhoto an expired photo message (self-destructed after TTL has elapsed)
 type MessageExpiredPhoto struct {
 	meta
 }
 
+// MarshalJSON returns MessageExpiredPhoto object as the JSON encoding of MessageExpiredPhoto.
 func (entity *MessageExpiredPhoto) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9300,25 +10272,29 @@ func (entity *MessageExpiredPhoto) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageExpiredPhoto) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageExpiredPhoto) GetType() string {
 	return TypeMessageExpiredPhoto
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageExpiredPhoto) MessageContentType() string {
 	return TypeMessageExpiredPhoto
 }
 
-// A sticker message
+// MessageSticker a sticker message
 type MessageSticker struct {
 	meta
 	// Message content
 	Sticker *Sticker `json:"sticker"`
 }
 
+// MarshalJSON returns MessageSticker object as the JSON encoding of MessageSticker.
 func (entity *MessageSticker) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9327,19 +10303,22 @@ func (entity *MessageSticker) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageSticker) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageSticker) GetType() string {
 	return TypeMessageSticker
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageSticker) MessageContentType() string {
 	return TypeMessageSticker
 }
 
-// A video message
+// MessageVideo a video message
 type MessageVideo struct {
 	meta
 	// Message content
@@ -9350,6 +10329,7 @@ type MessageVideo struct {
 	IsSecret bool `json:"is_secret"`
 }
 
+// MarshalJSON returns MessageVideo object as the JSON encoding of MessageVideo.
 func (entity *MessageVideo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9358,23 +10338,27 @@ func (entity *MessageVideo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageVideo) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageVideo) GetType() string {
 	return TypeMessageVideo
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageVideo) MessageContentType() string {
 	return TypeMessageVideo
 }
 
-// An expired video message (self-destructed after TTL has elapsed)
+// MessageExpiredVideo an expired video message (self-destructed after TTL has elapsed)
 type MessageExpiredVideo struct {
 	meta
 }
 
+// MarshalJSON returns MessageExpiredVideo object as the JSON encoding of MessageExpiredVideo.
 func (entity *MessageExpiredVideo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9383,19 +10367,22 @@ func (entity *MessageExpiredVideo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageExpiredVideo) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageExpiredVideo) GetType() string {
 	return TypeMessageExpiredVideo
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageExpiredVideo) MessageContentType() string {
 	return TypeMessageExpiredVideo
 }
 
-// A video note message
+// MessageVideoNote a video note message
 type MessageVideoNote struct {
 	meta
 	// Message content
@@ -9406,6 +10393,7 @@ type MessageVideoNote struct {
 	IsSecret bool `json:"is_secret"`
 }
 
+// MarshalJSON returns MessageVideoNote object as the JSON encoding of MessageVideoNote.
 func (entity *MessageVideoNote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9414,19 +10402,22 @@ func (entity *MessageVideoNote) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageVideoNote) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageVideoNote) GetType() string {
 	return TypeMessageVideoNote
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageVideoNote) MessageContentType() string {
 	return TypeMessageVideoNote
 }
 
-// A voice note message
+// MessageVoiceNote a voice note message
 type MessageVoiceNote struct {
 	meta
 	// Message content
@@ -9437,6 +10428,7 @@ type MessageVoiceNote struct {
 	IsListened bool `json:"is_listened"`
 }
 
+// MarshalJSON returns MessageVoiceNote object as the JSON encoding of MessageVoiceNote.
 func (entity *MessageVoiceNote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9445,19 +10437,22 @@ func (entity *MessageVoiceNote) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageVoiceNote) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageVoiceNote) GetType() string {
 	return TypeMessageVoiceNote
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageVoiceNote) MessageContentType() string {
 	return TypeMessageVoiceNote
 }
 
-// A message with a location
+// MessageLocation a message with a location
 type MessageLocation struct {
 	meta
 	// Message content
@@ -9468,6 +10463,7 @@ type MessageLocation struct {
 	ExpiresIn int32 `json:"expires_in"`
 }
 
+// MarshalJSON returns MessageLocation object as the JSON encoding of MessageLocation.
 func (entity *MessageLocation) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9476,25 +10472,29 @@ func (entity *MessageLocation) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageLocation) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageLocation) GetType() string {
 	return TypeMessageLocation
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageLocation) MessageContentType() string {
 	return TypeMessageLocation
 }
 
-// A message with information about a venue
+// MessageVenue a message with information about a venue
 type MessageVenue struct {
 	meta
 	// Message content
 	Venue *Venue `json:"venue"`
 }
 
+// MarshalJSON returns MessageVenue object as the JSON encoding of MessageVenue.
 func (entity *MessageVenue) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9503,25 +10503,29 @@ func (entity *MessageVenue) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageVenue) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageVenue) GetType() string {
 	return TypeMessageVenue
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageVenue) MessageContentType() string {
 	return TypeMessageVenue
 }
 
-// A message with a user contact
+// MessageContact a message with a user contact
 type MessageContact struct {
 	meta
 	// Message content
 	Contact *Contact `json:"contact"`
 }
 
+// MarshalJSON returns MessageContact object as the JSON encoding of MessageContact.
 func (entity *MessageContact) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9530,25 +10534,29 @@ func (entity *MessageContact) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageContact) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageContact) GetType() string {
 	return TypeMessageContact
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageContact) MessageContentType() string {
 	return TypeMessageContact
 }
 
-// A message with a game
+// MessageGame a message with a game
 type MessageGame struct {
 	meta
 	// Game
 	Game *Game `json:"game"`
 }
 
+// MarshalJSON returns MessageGame object as the JSON encoding of MessageGame.
 func (entity *MessageGame) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9557,19 +10565,22 @@ func (entity *MessageGame) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageGame) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageGame) GetType() string {
 	return TypeMessageGame
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageGame) MessageContentType() string {
 	return TypeMessageGame
 }
 
-// A message with an invoice from a bot
+// MessageInvoice a message with an invoice from a bot
 type MessageInvoice struct {
 	meta
 	// Product title
@@ -9589,9 +10600,10 @@ type MessageInvoice struct {
 	// True, if the shipping address should be specified
 	NeedShippingAddress bool `json:"need_shipping_address"`
 	// The identifier of the message with the receipt, after the product has been purchased
-	ReceiptMessageId int64 `json:"receipt_message_id"`
+	ReceiptMessageID int64 `json:"receipt_message_id"`
 }
 
+// MarshalJSON returns MessageInvoice object as the JSON encoding of MessageInvoice.
 func (entity *MessageInvoice) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9600,19 +10612,22 @@ func (entity *MessageInvoice) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageInvoice) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageInvoice) GetType() string {
 	return TypeMessageInvoice
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageInvoice) MessageContentType() string {
 	return TypeMessageInvoice
 }
 
-// A message with information about an ended call
+// MessageCall a message with information about an ended call
 type MessageCall struct {
 	meta
 	// Reason why the call was discarded
@@ -9621,6 +10636,7 @@ type MessageCall struct {
 	Duration int32 `json:"duration"`
 }
 
+// MarshalJSON returns MessageCall object as the JSON encoding of MessageCall.
 func (entity *MessageCall) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9629,19 +10645,23 @@ func (entity *MessageCall) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageCall) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageCall) GetType() string {
 	return TypeMessageCall
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageCall) MessageContentType() string {
 	return TypeMessageCall
 }
 
-func (messageCall *MessageCall) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets MessageCall object to a copy of JSON encoding of MessageCall.
+func (entity *MessageCall) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		DiscardReason json.RawMessage `json:"discard_reason"`
 		Duration      int32           `json:"duration"`
@@ -9652,23 +10672,24 @@ func (messageCall *MessageCall) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	messageCall.Duration = tmp.Duration
+	entity.Duration = tmp.Duration
 
 	fieldDiscardReason, _ := UnmarshalCallDiscardReason(tmp.DiscardReason)
-	messageCall.DiscardReason = fieldDiscardReason
+	entity.DiscardReason = fieldDiscardReason
 
 	return nil
 }
 
-// A newly created basic group
+// MessageBasicGroupChatCreate a newly created basic group
 type MessageBasicGroupChatCreate struct {
 	meta
 	// Title of the basic group
 	Title string `json:"title"`
 	// User identifiers of members in the basic group
-	MemberUserIds []int32 `json:"member_user_ids"`
+	MemberUserIDs []int32 `json:"member_user_ids"`
 }
 
+// MarshalJSON returns MessageBasicGroupChatCreate object as the JSON encoding of MessageBasicGroupChatCreate.
 func (entity *MessageBasicGroupChatCreate) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9677,25 +10698,29 @@ func (entity *MessageBasicGroupChatCreate) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageBasicGroupChatCreate) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageBasicGroupChatCreate) GetType() string {
 	return TypeMessageBasicGroupChatCreate
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageBasicGroupChatCreate) MessageContentType() string {
 	return TypeMessageBasicGroupChatCreate
 }
 
-// A newly created supergroup or channel
+// MessageSupergroupChatCreate a newly created supergroup or channel
 type MessageSupergroupChatCreate struct {
 	meta
 	// Title of the supergroup or channel
 	Title string `json:"title"`
 }
 
+// MarshalJSON returns MessageSupergroupChatCreate object as the JSON encoding of MessageSupergroupChatCreate.
 func (entity *MessageSupergroupChatCreate) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9704,25 +10729,29 @@ func (entity *MessageSupergroupChatCreate) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageSupergroupChatCreate) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageSupergroupChatCreate) GetType() string {
 	return TypeMessageSupergroupChatCreate
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageSupergroupChatCreate) MessageContentType() string {
 	return TypeMessageSupergroupChatCreate
 }
 
-// An updated chat title
+// MessageChatChangeTitle an updated chat title
 type MessageChatChangeTitle struct {
 	meta
 	// New chat title
 	Title string `json:"title"`
 }
 
+// MarshalJSON returns MessageChatChangeTitle object as the JSON encoding of MessageChatChangeTitle.
 func (entity *MessageChatChangeTitle) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9731,25 +10760,29 @@ func (entity *MessageChatChangeTitle) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageChatChangeTitle) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageChatChangeTitle) GetType() string {
 	return TypeMessageChatChangeTitle
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageChatChangeTitle) MessageContentType() string {
 	return TypeMessageChatChangeTitle
 }
 
-// An updated chat photo
+// MessageChatChangePhoto an updated chat photo
 type MessageChatChangePhoto struct {
 	meta
 	// New chat photo
 	Photo *Photo `json:"photo"`
 }
 
+// MarshalJSON returns MessageChatChangePhoto object as the JSON encoding of MessageChatChangePhoto.
 func (entity *MessageChatChangePhoto) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9758,23 +10791,27 @@ func (entity *MessageChatChangePhoto) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageChatChangePhoto) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageChatChangePhoto) GetType() string {
 	return TypeMessageChatChangePhoto
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageChatChangePhoto) MessageContentType() string {
 	return TypeMessageChatChangePhoto
 }
 
-// A deleted chat photo
+// MessageChatDeletePhoto a deleted chat photo
 type MessageChatDeletePhoto struct {
 	meta
 }
 
+// MarshalJSON returns MessageChatDeletePhoto object as the JSON encoding of MessageChatDeletePhoto.
 func (entity *MessageChatDeletePhoto) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9783,25 +10820,29 @@ func (entity *MessageChatDeletePhoto) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageChatDeletePhoto) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageChatDeletePhoto) GetType() string {
 	return TypeMessageChatDeletePhoto
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageChatDeletePhoto) MessageContentType() string {
 	return TypeMessageChatDeletePhoto
 }
 
-// New chat members were added
+// MessageChatAddMembers new chat members were added
 type MessageChatAddMembers struct {
 	meta
 	// User identifiers of the new members
-	MemberUserIds []int32 `json:"member_user_ids"`
+	MemberUserIDs []int32 `json:"member_user_ids"`
 }
 
+// MarshalJSON returns MessageChatAddMembers object as the JSON encoding of MessageChatAddMembers.
 func (entity *MessageChatAddMembers) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9810,23 +10851,27 @@ func (entity *MessageChatAddMembers) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageChatAddMembers) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageChatAddMembers) GetType() string {
 	return TypeMessageChatAddMembers
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageChatAddMembers) MessageContentType() string {
 	return TypeMessageChatAddMembers
 }
 
-// A new member joined the chat by invite link
+// MessageChatJoinByLink a new member joined the chat by invite link
 type MessageChatJoinByLink struct {
 	meta
 }
 
+// MarshalJSON returns MessageChatJoinByLink object as the JSON encoding of MessageChatJoinByLink.
 func (entity *MessageChatJoinByLink) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9835,25 +10880,29 @@ func (entity *MessageChatJoinByLink) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageChatJoinByLink) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageChatJoinByLink) GetType() string {
 	return TypeMessageChatJoinByLink
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageChatJoinByLink) MessageContentType() string {
 	return TypeMessageChatJoinByLink
 }
 
-// A chat member was deleted
+// MessageChatDeleteMember a chat member was deleted
 type MessageChatDeleteMember struct {
 	meta
 	// User identifier of the deleted chat member
-	UserId int32 `json:"user_id"`
+	UserID int32 `json:"user_id"`
 }
 
+// MarshalJSON returns MessageChatDeleteMember object as the JSON encoding of MessageChatDeleteMember.
 func (entity *MessageChatDeleteMember) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9862,25 +10911,29 @@ func (entity *MessageChatDeleteMember) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageChatDeleteMember) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageChatDeleteMember) GetType() string {
 	return TypeMessageChatDeleteMember
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageChatDeleteMember) MessageContentType() string {
 	return TypeMessageChatDeleteMember
 }
 
-// A basic group was upgraded to a supergroup and was deactivated as the result
+// MessageChatUpgradeTo a basic group was upgraded to a supergroup and was deactivated as the result
 type MessageChatUpgradeTo struct {
 	meta
 	// Identifier of the supergroup to which the basic group was upgraded
-	SupergroupId int32 `json:"supergroup_id"`
+	SupergroupID int32 `json:"supergroup_id"`
 }
 
+// MarshalJSON returns MessageChatUpgradeTo object as the JSON encoding of MessageChatUpgradeTo.
 func (entity *MessageChatUpgradeTo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9889,27 +10942,31 @@ func (entity *MessageChatUpgradeTo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageChatUpgradeTo) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageChatUpgradeTo) GetType() string {
 	return TypeMessageChatUpgradeTo
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageChatUpgradeTo) MessageContentType() string {
 	return TypeMessageChatUpgradeTo
 }
 
-// A supergroup has been created from a basic group
+// MessageChatUpgradeFrom a supergroup has been created from a basic group
 type MessageChatUpgradeFrom struct {
 	meta
 	// Title of the newly created supergroup
 	Title string `json:"title"`
 	// The identifier of the original basic group
-	BasicGroupId int32 `json:"basic_group_id"`
+	BasicGroupID int32 `json:"basic_group_id"`
 }
 
+// MarshalJSON returns MessageChatUpgradeFrom object as the JSON encoding of MessageChatUpgradeFrom.
 func (entity *MessageChatUpgradeFrom) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9918,25 +10975,29 @@ func (entity *MessageChatUpgradeFrom) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageChatUpgradeFrom) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageChatUpgradeFrom) GetType() string {
 	return TypeMessageChatUpgradeFrom
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageChatUpgradeFrom) MessageContentType() string {
 	return TypeMessageChatUpgradeFrom
 }
 
-// A message has been pinned
+// MessagePinMessage a message has been pinned
 type MessagePinMessage struct {
 	meta
 	// Identifier of the pinned message, can be an identifier of a deleted message
-	MessageId int64 `json:"message_id"`
+	MessageID int64 `json:"message_id"`
 }
 
+// MarshalJSON returns MessagePinMessage object as the JSON encoding of MessagePinMessage.
 func (entity *MessagePinMessage) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9945,23 +11006,27 @@ func (entity *MessagePinMessage) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessagePinMessage) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessagePinMessage) GetType() string {
 	return TypeMessagePinMessage
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessagePinMessage) MessageContentType() string {
 	return TypeMessagePinMessage
 }
 
-// A screenshot of a message in the chat has been taken
+// MessageScreenshotTaken a screenshot of a message in the chat has been taken
 type MessageScreenshotTaken struct {
 	meta
 }
 
+// MarshalJSON returns MessageScreenshotTaken object as the JSON encoding of MessageScreenshotTaken.
 func (entity *MessageScreenshotTaken) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -9970,52 +11035,60 @@ func (entity *MessageScreenshotTaken) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageScreenshotTaken) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageScreenshotTaken) GetType() string {
 	return TypeMessageScreenshotTaken
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageScreenshotTaken) MessageContentType() string {
 	return TypeMessageScreenshotTaken
 }
 
-// The TTL (Time To Live) setting messages in a secret chat has been changed
-type MessageChatSetTtl struct {
+// MessageChatSetTTL the TTL (Time To Live) setting messages in a secret chat has been changed
+type MessageChatSetTTL struct {
 	meta
 	// New TTL
-	Ttl int32 `json:"ttl"`
+	TTL int32 `json:"ttl"`
 }
 
-func (entity *MessageChatSetTtl) MarshalJSON() ([]byte, error) {
+// MarshalJSON returns MessageChatSetTTL object as the JSON encoding of MessageChatSetTTL.
+func (entity *MessageChatSetTTL) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
-	type stub MessageChatSetTtl
+	type stub MessageChatSetTTL
 
 	return json.Marshal((*stub)(entity))
 }
 
-func (*MessageChatSetTtl) GetClass() string {
+// GetClass returns constant class string of the class.
+func (*MessageChatSetTTL) GetClass() string {
 	return ClassMessageContent
 }
 
-func (*MessageChatSetTtl) GetType() string {
-	return TypeMessageChatSetTtl
+// GetType returns constant class type string of the class.
+func (*MessageChatSetTTL) GetType() string {
+	return TypeMessageChatSetTTL
 }
 
-func (*MessageChatSetTtl) MessageContentType() string {
-	return TypeMessageChatSetTtl
+// MessageContentType returns constant class type string of the class.
+func (*MessageChatSetTTL) MessageContentType() string {
+	return TypeMessageChatSetTTL
 }
 
-// A non-standard action has happened in the chat
+// MessageCustomServiceAction a non-standard action has happened in the chat
 type MessageCustomServiceAction struct {
 	meta
 	// Message text to be shown in the chat
 	Text string `json:"text"`
 }
 
+// MarshalJSON returns MessageCustomServiceAction object as the JSON encoding of MessageCustomServiceAction.
 func (entity *MessageCustomServiceAction) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10024,29 +11097,33 @@ func (entity *MessageCustomServiceAction) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageCustomServiceAction) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageCustomServiceAction) GetType() string {
 	return TypeMessageCustomServiceAction
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageCustomServiceAction) MessageContentType() string {
 	return TypeMessageCustomServiceAction
 }
 
-// A new high score was achieved in a game
+// MessageGameScore a new high score was achieved in a game
 type MessageGameScore struct {
 	meta
 	// Identifier of the message with the game, can be an identifier of a deleted message
-	GameMessageId int64 `json:"game_message_id"`
+	GameMessageID int64 `json:"game_message_id"`
 	// Identifier of the game, may be different from the games presented in the message with the game
-	GameId JsonInt64 `json:"game_id"`
+	GameID Int64JSON `json:"game_id"`
 	// New score
 	Score int32 `json:"score"`
 }
 
+// MarshalJSON returns MessageGameScore object as the JSON encoding of MessageGameScore.
 func (entity *MessageGameScore) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10055,29 +11132,33 @@ func (entity *MessageGameScore) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageGameScore) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageGameScore) GetType() string {
 	return TypeMessageGameScore
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageGameScore) MessageContentType() string {
 	return TypeMessageGameScore
 }
 
-// A payment has been completed
+// MessagePaymentSuccessful a payment has been completed
 type MessagePaymentSuccessful struct {
 	meta
 	// Identifier of the message with the corresponding invoice; can be an identifier of a deleted message
-	InvoiceMessageId int64 `json:"invoice_message_id"`
+	InvoiceMessageID int64 `json:"invoice_message_id"`
 	// Currency for the price of the product
 	Currency string `json:"currency"`
 	// Total price for the product, in the minimal quantity of the currency
 	TotalAmount int64 `json:"total_amount"`
 }
 
+// MarshalJSON returns MessagePaymentSuccessful object as the JSON encoding of MessagePaymentSuccessful.
 func (entity *MessagePaymentSuccessful) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10086,23 +11167,26 @@ func (entity *MessagePaymentSuccessful) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessagePaymentSuccessful) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessagePaymentSuccessful) GetType() string {
 	return TypeMessagePaymentSuccessful
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessagePaymentSuccessful) MessageContentType() string {
 	return TypeMessagePaymentSuccessful
 }
 
-// A payment has been completed; for bots only
+// MessagePaymentSuccessfulBot a payment has been completed; for bots only
 type MessagePaymentSuccessfulBot struct {
 	meta
 	// Identifier of the message with the corresponding invoice; can be an identifier of a deleted message
-	InvoiceMessageId int64 `json:"invoice_message_id"`
+	InvoiceMessageID int64 `json:"invoice_message_id"`
 	// Currency for price of the product
 	Currency string `json:"currency"`
 	// Total price for the product, in the minimal quantity of the currency
@@ -10110,15 +11194,16 @@ type MessagePaymentSuccessfulBot struct {
 	// Invoice payload
 	InvoicePayload []byte `json:"invoice_payload"`
 	// Identifier of the shipping option chosen by the user; may be empty if not applicable
-	ShippingOptionId string `json:"shipping_option_id"`
+	ShippingOptionID string `json:"shipping_option_id"`
 	// Information about the order; may be null
 	OrderInfo *OrderInfo `json:"order_info"`
 	// Telegram payment identifier
-	TelegramPaymentChargeId string `json:"telegram_payment_charge_id"`
+	TelegramPaymentChargeID string `json:"telegram_payment_charge_id"`
 	// Provider payment identifier
-	ProviderPaymentChargeId string `json:"provider_payment_charge_id"`
+	ProviderPaymentChargeID string `json:"provider_payment_charge_id"`
 }
 
+// MarshalJSON returns MessagePaymentSuccessfulBot object as the JSON encoding of MessagePaymentSuccessfulBot.
 func (entity *MessagePaymentSuccessfulBot) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10127,23 +11212,27 @@ func (entity *MessagePaymentSuccessfulBot) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessagePaymentSuccessfulBot) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessagePaymentSuccessfulBot) GetType() string {
 	return TypeMessagePaymentSuccessfulBot
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessagePaymentSuccessfulBot) MessageContentType() string {
 	return TypeMessagePaymentSuccessfulBot
 }
 
-// A contact has registered with Telegram
+// MessageContactRegistered a contact has registered with Telegram
 type MessageContactRegistered struct {
 	meta
 }
 
+// MarshalJSON returns MessageContactRegistered object as the JSON encoding of MessageContactRegistered.
 func (entity *MessageContactRegistered) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10152,25 +11241,29 @@ func (entity *MessageContactRegistered) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageContactRegistered) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageContactRegistered) GetType() string {
 	return TypeMessageContactRegistered
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageContactRegistered) MessageContentType() string {
 	return TypeMessageContactRegistered
 }
 
-// The current user has connected a website by logging in using Telegram Login Widget on it
+// MessageWebsiteConnected the current user has connected a website by logging in using Telegram Login Widget on it
 type MessageWebsiteConnected struct {
 	meta
 	// Domain name of the connected website
 	DomainName string `json:"domain_name"`
 }
 
+// MarshalJSON returns MessageWebsiteConnected object as the JSON encoding of MessageWebsiteConnected.
 func (entity *MessageWebsiteConnected) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10179,25 +11272,29 @@ func (entity *MessageWebsiteConnected) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageWebsiteConnected) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageWebsiteConnected) GetType() string {
 	return TypeMessageWebsiteConnected
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageWebsiteConnected) MessageContentType() string {
 	return TypeMessageWebsiteConnected
 }
 
-// Telegram Passport data has been sent
+// MessagePassportDataSent telegram Passport data has been sent
 type MessagePassportDataSent struct {
 	meta
 	// List of Telegram Passport element types sent
 	Types []PassportElementType `json:"types"`
 }
 
+// MarshalJSON returns MessagePassportDataSent object as the JSON encoding of MessagePassportDataSent.
 func (entity *MessagePassportDataSent) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10206,19 +11303,22 @@ func (entity *MessagePassportDataSent) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessagePassportDataSent) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessagePassportDataSent) GetType() string {
 	return TypeMessagePassportDataSent
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessagePassportDataSent) MessageContentType() string {
 	return TypeMessagePassportDataSent
 }
 
-// Telegram Passport data has been received; for bots only
+// MessagePassportDataReceived telegram Passport data has been received; for bots only
 type MessagePassportDataReceived struct {
 	meta
 	// List of received Telegram Passport elements
@@ -10227,6 +11327,7 @@ type MessagePassportDataReceived struct {
 	Credentials *EncryptedCredentials `json:"credentials"`
 }
 
+// MarshalJSON returns MessagePassportDataReceived object as the JSON encoding of MessagePassportDataReceived.
 func (entity *MessagePassportDataReceived) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10235,23 +11336,27 @@ func (entity *MessagePassportDataReceived) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessagePassportDataReceived) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessagePassportDataReceived) GetType() string {
 	return TypeMessagePassportDataReceived
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessagePassportDataReceived) MessageContentType() string {
 	return TypeMessagePassportDataReceived
 }
 
-// Message content that is not supported by the client
+// MessageUnsupported message content that is not supported by the client
 type MessageUnsupported struct {
 	meta
 }
 
+// MarshalJSON returns MessageUnsupported object as the JSON encoding of MessageUnsupported.
 func (entity *MessageUnsupported) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10260,23 +11365,27 @@ func (entity *MessageUnsupported) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*MessageUnsupported) GetClass() string {
 	return ClassMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*MessageUnsupported) GetType() string {
 	return TypeMessageUnsupported
 }
 
+// MessageContentType returns constant class type string of the class.
 func (*MessageUnsupported) MessageContentType() string {
 	return TypeMessageUnsupported
 }
 
-// A mention of a user by their username
+// TextEntityTypeMention a mention of a user by their username
 type TextEntityTypeMention struct {
 	meta
 }
 
+// MarshalJSON returns TextEntityTypeMention object as the JSON encoding of TextEntityTypeMention.
 func (entity *TextEntityTypeMention) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10285,23 +11394,27 @@ func (entity *TextEntityTypeMention) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TextEntityTypeMention) GetClass() string {
 	return ClassTextEntityType
 }
 
+// GetType returns constant class type string of the class.
 func (*TextEntityTypeMention) GetType() string {
 	return TypeTextEntityTypeMention
 }
 
+// TextEntityTypeType returns constant class type string of the class.
 func (*TextEntityTypeMention) TextEntityTypeType() string {
 	return TypeTextEntityTypeMention
 }
 
-// A hashtag text, beginning with "#"
+// TextEntityTypeHashtag a hashtag text, beginning with "#"
 type TextEntityTypeHashtag struct {
 	meta
 }
 
+// MarshalJSON returns TextEntityTypeHashtag object as the JSON encoding of TextEntityTypeHashtag.
 func (entity *TextEntityTypeHashtag) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10310,23 +11423,27 @@ func (entity *TextEntityTypeHashtag) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TextEntityTypeHashtag) GetClass() string {
 	return ClassTextEntityType
 }
 
+// GetType returns constant class type string of the class.
 func (*TextEntityTypeHashtag) GetType() string {
 	return TypeTextEntityTypeHashtag
 }
 
+// TextEntityTypeType returns constant class type string of the class.
 func (*TextEntityTypeHashtag) TextEntityTypeType() string {
 	return TypeTextEntityTypeHashtag
 }
 
-// A cashtag text, beginning with "$" and consisting of capital english letters (i.e. "$USD")
+// TextEntityTypeCashtag a cashtag text, beginning with "$" and consisting of capital english letters (i.e. "$USD")
 type TextEntityTypeCashtag struct {
 	meta
 }
 
+// MarshalJSON returns TextEntityTypeCashtag object as the JSON encoding of TextEntityTypeCashtag.
 func (entity *TextEntityTypeCashtag) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10335,23 +11452,27 @@ func (entity *TextEntityTypeCashtag) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TextEntityTypeCashtag) GetClass() string {
 	return ClassTextEntityType
 }
 
+// GetType returns constant class type string of the class.
 func (*TextEntityTypeCashtag) GetType() string {
 	return TypeTextEntityTypeCashtag
 }
 
+// TextEntityTypeType returns constant class type string of the class.
 func (*TextEntityTypeCashtag) TextEntityTypeType() string {
 	return TypeTextEntityTypeCashtag
 }
 
-// A bot command, beginning with "/". This shouldn't be highlighted if there are no bots in the chat
+// TextEntityTypeBotCommand a bot command, beginning with "/". This shouldn't be highlighted if there are no bots in the chat
 type TextEntityTypeBotCommand struct {
 	meta
 }
 
+// MarshalJSON returns TextEntityTypeBotCommand object as the JSON encoding of TextEntityTypeBotCommand.
 func (entity *TextEntityTypeBotCommand) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10360,48 +11481,56 @@ func (entity *TextEntityTypeBotCommand) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TextEntityTypeBotCommand) GetClass() string {
 	return ClassTextEntityType
 }
 
+// GetType returns constant class type string of the class.
 func (*TextEntityTypeBotCommand) GetType() string {
 	return TypeTextEntityTypeBotCommand
 }
 
+// TextEntityTypeType returns constant class type string of the class.
 func (*TextEntityTypeBotCommand) TextEntityTypeType() string {
 	return TypeTextEntityTypeBotCommand
 }
 
-// An HTTP URL
-type TextEntityTypeUrl struct {
+// TextEntityTypeURL an HTTP URL
+type TextEntityTypeURL struct {
 	meta
 }
 
-func (entity *TextEntityTypeUrl) MarshalJSON() ([]byte, error) {
+// MarshalJSON returns TextEntityTypeURL object as the JSON encoding of TextEntityTypeURL.
+func (entity *TextEntityTypeURL) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
-	type stub TextEntityTypeUrl
+	type stub TextEntityTypeURL
 
 	return json.Marshal((*stub)(entity))
 }
 
-func (*TextEntityTypeUrl) GetClass() string {
+// GetClass returns constant class string of the class.
+func (*TextEntityTypeURL) GetClass() string {
 	return ClassTextEntityType
 }
 
-func (*TextEntityTypeUrl) GetType() string {
-	return TypeTextEntityTypeUrl
+// GetType returns constant class type string of the class.
+func (*TextEntityTypeURL) GetType() string {
+	return TypeTextEntityTypeURL
 }
 
-func (*TextEntityTypeUrl) TextEntityTypeType() string {
-	return TypeTextEntityTypeUrl
+// TextEntityTypeType returns constant class type string of the class.
+func (*TextEntityTypeURL) TextEntityTypeType() string {
+	return TypeTextEntityTypeURL
 }
 
-// An email address
+// TextEntityTypeEmailAddress an email address
 type TextEntityTypeEmailAddress struct {
 	meta
 }
 
+// MarshalJSON returns TextEntityTypeEmailAddress object as the JSON encoding of TextEntityTypeEmailAddress.
 func (entity *TextEntityTypeEmailAddress) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10410,23 +11539,27 @@ func (entity *TextEntityTypeEmailAddress) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TextEntityTypeEmailAddress) GetClass() string {
 	return ClassTextEntityType
 }
 
+// GetType returns constant class type string of the class.
 func (*TextEntityTypeEmailAddress) GetType() string {
 	return TypeTextEntityTypeEmailAddress
 }
 
+// TextEntityTypeType returns constant class type string of the class.
 func (*TextEntityTypeEmailAddress) TextEntityTypeType() string {
 	return TypeTextEntityTypeEmailAddress
 }
 
-// A bold text
+// TextEntityTypeBold a bold text
 type TextEntityTypeBold struct {
 	meta
 }
 
+// MarshalJSON returns TextEntityTypeBold object as the JSON encoding of TextEntityTypeBold.
 func (entity *TextEntityTypeBold) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10435,23 +11568,27 @@ func (entity *TextEntityTypeBold) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TextEntityTypeBold) GetClass() string {
 	return ClassTextEntityType
 }
 
+// GetType returns constant class type string of the class.
 func (*TextEntityTypeBold) GetType() string {
 	return TypeTextEntityTypeBold
 }
 
+// TextEntityTypeType returns constant class type string of the class.
 func (*TextEntityTypeBold) TextEntityTypeType() string {
 	return TypeTextEntityTypeBold
 }
 
-// An italic text
+// TextEntityTypeItalic an italic text
 type TextEntityTypeItalic struct {
 	meta
 }
 
+// MarshalJSON returns TextEntityTypeItalic object as the JSON encoding of TextEntityTypeItalic.
 func (entity *TextEntityTypeItalic) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10460,23 +11597,27 @@ func (entity *TextEntityTypeItalic) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TextEntityTypeItalic) GetClass() string {
 	return ClassTextEntityType
 }
 
+// GetType returns constant class type string of the class.
 func (*TextEntityTypeItalic) GetType() string {
 	return TypeTextEntityTypeItalic
 }
 
+// TextEntityTypeType returns constant class type string of the class.
 func (*TextEntityTypeItalic) TextEntityTypeType() string {
 	return TypeTextEntityTypeItalic
 }
 
-// Text that must be formatted as if inside a code HTML tag
+// TextEntityTypeCode text that must be formatted as if inside a code HTML tag
 type TextEntityTypeCode struct {
 	meta
 }
 
+// MarshalJSON returns TextEntityTypeCode object as the JSON encoding of TextEntityTypeCode.
 func (entity *TextEntityTypeCode) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10485,23 +11626,27 @@ func (entity *TextEntityTypeCode) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TextEntityTypeCode) GetClass() string {
 	return ClassTextEntityType
 }
 
+// GetType returns constant class type string of the class.
 func (*TextEntityTypeCode) GetType() string {
 	return TypeTextEntityTypeCode
 }
 
+// TextEntityTypeType returns constant class type string of the class.
 func (*TextEntityTypeCode) TextEntityTypeType() string {
 	return TypeTextEntityTypeCode
 }
 
-// Text that must be formatted as if inside a pre HTML tag
+// TextEntityTypePre text that must be formatted as if inside a pre HTML tag
 type TextEntityTypePre struct {
 	meta
 }
 
+// MarshalJSON returns TextEntityTypePre object as the JSON encoding of TextEntityTypePre.
 func (entity *TextEntityTypePre) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10510,25 +11655,29 @@ func (entity *TextEntityTypePre) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TextEntityTypePre) GetClass() string {
 	return ClassTextEntityType
 }
 
+// GetType returns constant class type string of the class.
 func (*TextEntityTypePre) GetType() string {
 	return TypeTextEntityTypePre
 }
 
+// TextEntityTypeType returns constant class type string of the class.
 func (*TextEntityTypePre) TextEntityTypeType() string {
 	return TypeTextEntityTypePre
 }
 
-// Text that must be formatted as if inside pre, and code HTML tags
+// TextEntityTypePreCode text that must be formatted as if inside pre, and code HTML tags
 type TextEntityTypePreCode struct {
 	meta
 	// Programming language of the code; as defined by the sender
 	Language string `json:"language"`
 }
 
+// MarshalJSON returns TextEntityTypePreCode object as the JSON encoding of TextEntityTypePreCode.
 func (entity *TextEntityTypePreCode) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10537,52 +11686,60 @@ func (entity *TextEntityTypePreCode) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TextEntityTypePreCode) GetClass() string {
 	return ClassTextEntityType
 }
 
+// GetType returns constant class type string of the class.
 func (*TextEntityTypePreCode) GetType() string {
 	return TypeTextEntityTypePreCode
 }
 
+// TextEntityTypeType returns constant class type string of the class.
 func (*TextEntityTypePreCode) TextEntityTypeType() string {
 	return TypeTextEntityTypePreCode
 }
 
-// A text description shown instead of a raw URL
-type TextEntityTypeTextUrl struct {
+// TextEntityTypeTextURL a text description shown instead of a raw URL
+type TextEntityTypeTextURL struct {
 	meta
 	// HTTP or tg:// URL to be opened when the link is clicked
-	Url string `json:"url"`
+	URL string `json:"url"`
 }
 
-func (entity *TextEntityTypeTextUrl) MarshalJSON() ([]byte, error) {
+// MarshalJSON returns TextEntityTypeTextURL object as the JSON encoding of TextEntityTypeTextURL.
+func (entity *TextEntityTypeTextURL) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
-	type stub TextEntityTypeTextUrl
+	type stub TextEntityTypeTextURL
 
 	return json.Marshal((*stub)(entity))
 }
 
-func (*TextEntityTypeTextUrl) GetClass() string {
+// GetClass returns constant class string of the class.
+func (*TextEntityTypeTextURL) GetClass() string {
 	return ClassTextEntityType
 }
 
-func (*TextEntityTypeTextUrl) GetType() string {
-	return TypeTextEntityTypeTextUrl
+// GetType returns constant class type string of the class.
+func (*TextEntityTypeTextURL) GetType() string {
+	return TypeTextEntityTypeTextURL
 }
 
-func (*TextEntityTypeTextUrl) TextEntityTypeType() string {
-	return TypeTextEntityTypeTextUrl
+// TextEntityTypeType returns constant class type string of the class.
+func (*TextEntityTypeTextURL) TextEntityTypeType() string {
+	return TypeTextEntityTypeTextURL
 }
 
-// A text shows instead of a raw mention of the user (e.g., when the user has no username)
+// TextEntityTypeMentionName a text shows instead of a raw mention of the user (e.g., when the user has no username)
 type TextEntityTypeMentionName struct {
 	meta
 	// Identifier of the mentioned user
-	UserId int32 `json:"user_id"`
+	UserID int32 `json:"user_id"`
 }
 
+// MarshalJSON returns TextEntityTypeMentionName object as the JSON encoding of TextEntityTypeMentionName.
 func (entity *TextEntityTypeMentionName) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10591,23 +11748,27 @@ func (entity *TextEntityTypeMentionName) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TextEntityTypeMentionName) GetClass() string {
 	return ClassTextEntityType
 }
 
+// GetType returns constant class type string of the class.
 func (*TextEntityTypeMentionName) GetType() string {
 	return TypeTextEntityTypeMentionName
 }
 
+// TextEntityTypeType returns constant class type string of the class.
 func (*TextEntityTypeMentionName) TextEntityTypeType() string {
 	return TypeTextEntityTypeMentionName
 }
 
-// A phone number
+// TextEntityTypePhoneNumber a phone number
 type TextEntityTypePhoneNumber struct {
 	meta
 }
 
+// MarshalJSON returns TextEntityTypePhoneNumber object as the JSON encoding of TextEntityTypePhoneNumber.
 func (entity *TextEntityTypePhoneNumber) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10616,19 +11777,22 @@ func (entity *TextEntityTypePhoneNumber) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TextEntityTypePhoneNumber) GetClass() string {
 	return ClassTextEntityType
 }
 
+// GetType returns constant class type string of the class.
 func (*TextEntityTypePhoneNumber) GetType() string {
 	return TypeTextEntityTypePhoneNumber
 }
 
+// TextEntityTypeType returns constant class type string of the class.
 func (*TextEntityTypePhoneNumber) TextEntityTypeType() string {
 	return TypeTextEntityTypePhoneNumber
 }
 
-// A thumbnail to be sent along with a file; should be in JPEG or WEBP format for stickers, and less than 200 kB in size
+// InputThumbnail a thumbnail to be sent along with a file; should be in JPEG or WEBP format for stickers, and less than 200 kB in size
 type InputThumbnail struct {
 	meta
 	// Thumbnail file to send. Sending thumbnails by file_id is currently not supported
@@ -10639,6 +11803,7 @@ type InputThumbnail struct {
 	Height int32 `json:"height"`
 }
 
+// MarshalJSON returns InputThumbnail object as the JSON encoding of InputThumbnail.
 func (entity *InputThumbnail) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10647,15 +11812,18 @@ func (entity *InputThumbnail) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputThumbnail) GetClass() string {
 	return ClassInputThumbnail
 }
 
+// GetType returns constant class type string of the class.
 func (*InputThumbnail) GetType() string {
 	return TypeInputThumbnail
 }
 
-func (inputThumbnail *InputThumbnail) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputThumbnail object to a copy of JSON encoding of InputThumbnail.
+func (entity *InputThumbnail) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Thumbnail json.RawMessage `json:"thumbnail"`
 		Width     int32           `json:"width"`
@@ -10667,19 +11835,19 @@ func (inputThumbnail *InputThumbnail) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	inputThumbnail.Width = tmp.Width
-	inputThumbnail.Height = tmp.Height
+	entity.Width = tmp.Width
+	entity.Height = tmp.Height
 
 	fieldThumbnail, _ := UnmarshalInputFile(tmp.Thumbnail)
-	inputThumbnail.Thumbnail = fieldThumbnail
+	entity.Thumbnail = fieldThumbnail
 
 	return nil
 }
 
-// A text message
+// InputMessageText a text message
 type InputMessageText struct {
 	meta
-	// Formatted text to be sent; 1-GetOption("message_text_length_max") characters. Only Bold, Italic, Code, Pre, PreCode and TextUrl entities are allowed to be specified manually
+	// Formatted text to be sent; 1-GetOption("message_text_length_max") characters. Only Bold, Italic, Code, Pre, PreCode and TextURL entities are allowed to be specified manually
 	Text *FormattedText `json:"text"`
 	// True, if rich web page previews for URLs in the message text should be disabled
 	DisableWebPagePreview bool `json:"disable_web_page_preview"`
@@ -10687,6 +11855,7 @@ type InputMessageText struct {
 	ClearDraft bool `json:"clear_draft"`
 }
 
+// MarshalJSON returns InputMessageText object as the JSON encoding of InputMessageText.
 func (entity *InputMessageText) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10695,19 +11864,22 @@ func (entity *InputMessageText) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputMessageText) GetClass() string {
 	return ClassInputMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*InputMessageText) GetType() string {
 	return TypeInputMessageText
 }
 
+// InputMessageContentType returns constant class type string of the class.
 func (*InputMessageText) InputMessageContentType() string {
 	return TypeInputMessageText
 }
 
-// An animation message (GIF-style).
+// InputMessageAnimation an animation message (GIF-style).
 type InputMessageAnimation struct {
 	meta
 	// Animation file to be sent
@@ -10724,6 +11896,7 @@ type InputMessageAnimation struct {
 	Caption *FormattedText `json:"caption"`
 }
 
+// MarshalJSON returns InputMessageAnimation object as the JSON encoding of InputMessageAnimation.
 func (entity *InputMessageAnimation) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10732,19 +11905,23 @@ func (entity *InputMessageAnimation) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputMessageAnimation) GetClass() string {
 	return ClassInputMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*InputMessageAnimation) GetType() string {
 	return TypeInputMessageAnimation
 }
 
+// InputMessageContentType returns constant class type string of the class.
 func (*InputMessageAnimation) InputMessageContentType() string {
 	return TypeInputMessageAnimation
 }
 
-func (inputMessageAnimation *InputMessageAnimation) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputMessageAnimation object to a copy of JSON encoding of InputMessageAnimation.
+func (entity *InputMessageAnimation) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Animation json.RawMessage `json:"animation"`
 		Thumbnail *InputThumbnail `json:"thumbnail"`
@@ -10759,19 +11936,19 @@ func (inputMessageAnimation *InputMessageAnimation) UnmarshalJSON(data []byte) e
 		return err
 	}
 
-	inputMessageAnimation.Thumbnail = tmp.Thumbnail
-	inputMessageAnimation.Duration = tmp.Duration
-	inputMessageAnimation.Width = tmp.Width
-	inputMessageAnimation.Height = tmp.Height
-	inputMessageAnimation.Caption = tmp.Caption
+	entity.Thumbnail = tmp.Thumbnail
+	entity.Duration = tmp.Duration
+	entity.Width = tmp.Width
+	entity.Height = tmp.Height
+	entity.Caption = tmp.Caption
 
 	fieldAnimation, _ := UnmarshalInputFile(tmp.Animation)
-	inputMessageAnimation.Animation = fieldAnimation
+	entity.Animation = fieldAnimation
 
 	return nil
 }
 
-// An audio message
+// InputMessageAudio an audio message
 type InputMessageAudio struct {
 	meta
 	// Audio file to be sent
@@ -10788,6 +11965,7 @@ type InputMessageAudio struct {
 	Caption *FormattedText `json:"caption"`
 }
 
+// MarshalJSON returns InputMessageAudio object as the JSON encoding of InputMessageAudio.
 func (entity *InputMessageAudio) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10796,19 +11974,23 @@ func (entity *InputMessageAudio) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputMessageAudio) GetClass() string {
 	return ClassInputMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*InputMessageAudio) GetType() string {
 	return TypeInputMessageAudio
 }
 
+// InputMessageContentType returns constant class type string of the class.
 func (*InputMessageAudio) InputMessageContentType() string {
 	return TypeInputMessageAudio
 }
 
-func (inputMessageAudio *InputMessageAudio) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputMessageAudio object to a copy of JSON encoding of InputMessageAudio.
+func (entity *InputMessageAudio) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Audio               json.RawMessage `json:"audio"`
 		AlbumCoverThumbnail *InputThumbnail `json:"album_cover_thumbnail"`
@@ -10823,19 +12005,19 @@ func (inputMessageAudio *InputMessageAudio) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	inputMessageAudio.AlbumCoverThumbnail = tmp.AlbumCoverThumbnail
-	inputMessageAudio.Duration = tmp.Duration
-	inputMessageAudio.Title = tmp.Title
-	inputMessageAudio.Performer = tmp.Performer
-	inputMessageAudio.Caption = tmp.Caption
+	entity.AlbumCoverThumbnail = tmp.AlbumCoverThumbnail
+	entity.Duration = tmp.Duration
+	entity.Title = tmp.Title
+	entity.Performer = tmp.Performer
+	entity.Caption = tmp.Caption
 
 	fieldAudio, _ := UnmarshalInputFile(tmp.Audio)
-	inputMessageAudio.Audio = fieldAudio
+	entity.Audio = fieldAudio
 
 	return nil
 }
 
-// A document message (general file)
+// InputMessageDocument a document message (general file)
 type InputMessageDocument struct {
 	meta
 	// Document to be sent
@@ -10846,6 +12028,7 @@ type InputMessageDocument struct {
 	Caption *FormattedText `json:"caption"`
 }
 
+// MarshalJSON returns InputMessageDocument object as the JSON encoding of InputMessageDocument.
 func (entity *InputMessageDocument) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10854,19 +12037,23 @@ func (entity *InputMessageDocument) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputMessageDocument) GetClass() string {
 	return ClassInputMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*InputMessageDocument) GetType() string {
 	return TypeInputMessageDocument
 }
 
+// InputMessageContentType returns constant class type string of the class.
 func (*InputMessageDocument) InputMessageContentType() string {
 	return TypeInputMessageDocument
 }
 
-func (inputMessageDocument *InputMessageDocument) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputMessageDocument object to a copy of JSON encoding of InputMessageDocument.
+func (entity *InputMessageDocument) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Document  json.RawMessage `json:"document"`
 		Thumbnail *InputThumbnail `json:"thumbnail"`
@@ -10878,16 +12065,16 @@ func (inputMessageDocument *InputMessageDocument) UnmarshalJSON(data []byte) err
 		return err
 	}
 
-	inputMessageDocument.Thumbnail = tmp.Thumbnail
-	inputMessageDocument.Caption = tmp.Caption
+	entity.Thumbnail = tmp.Thumbnail
+	entity.Caption = tmp.Caption
 
 	fieldDocument, _ := UnmarshalInputFile(tmp.Document)
-	inputMessageDocument.Document = fieldDocument
+	entity.Document = fieldDocument
 
 	return nil
 }
 
-// A photo message
+// InputMessagePhoto a photo message
 type InputMessagePhoto struct {
 	meta
 	// Photo to send
@@ -10895,7 +12082,7 @@ type InputMessagePhoto struct {
 	// Photo thumbnail to be sent, this is sent to the other party in secret chats only
 	Thumbnail *InputThumbnail `json:"thumbnail"`
 	// File identifiers of the stickers added to the photo, if applicable
-	AddedStickerFileIds []int32 `json:"added_sticker_file_ids"`
+	AddedStickerFileIDs []int32 `json:"added_sticker_file_ids"`
 	// Photo width
 	Width int32 `json:"width"`
 	// Photo height
@@ -10903,9 +12090,10 @@ type InputMessagePhoto struct {
 	// Photo caption; 0-GetOption("message_caption_length_max") characters
 	Caption *FormattedText `json:"caption"`
 	// Photo TTL (Time To Live), in seconds (0-60). A non-zero TTL can be specified only in private chats
-	Ttl int32 `json:"ttl"`
+	TTL int32 `json:"ttl"`
 }
 
+// MarshalJSON returns InputMessagePhoto object as the JSON encoding of InputMessagePhoto.
 func (entity *InputMessagePhoto) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10914,27 +12102,31 @@ func (entity *InputMessagePhoto) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputMessagePhoto) GetClass() string {
 	return ClassInputMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*InputMessagePhoto) GetType() string {
 	return TypeInputMessagePhoto
 }
 
+// InputMessageContentType returns constant class type string of the class.
 func (*InputMessagePhoto) InputMessageContentType() string {
 	return TypeInputMessagePhoto
 }
 
-func (inputMessagePhoto *InputMessagePhoto) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputMessagePhoto object to a copy of JSON encoding of InputMessagePhoto.
+func (entity *InputMessagePhoto) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Photo               json.RawMessage `json:"photo"`
 		Thumbnail           *InputThumbnail `json:"thumbnail"`
-		AddedStickerFileIds []int32         `json:"added_sticker_file_ids"`
+		AddedStickerFileIDs []int32         `json:"added_sticker_file_ids"`
 		Width               int32           `json:"width"`
 		Height              int32           `json:"height"`
 		Caption             *FormattedText  `json:"caption"`
-		Ttl                 int32           `json:"ttl"`
+		TTL                 int32           `json:"ttl"`
 	}
 
 	err := json.Unmarshal(data, &tmp)
@@ -10942,20 +12134,20 @@ func (inputMessagePhoto *InputMessagePhoto) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	inputMessagePhoto.Thumbnail = tmp.Thumbnail
-	inputMessagePhoto.AddedStickerFileIds = tmp.AddedStickerFileIds
-	inputMessagePhoto.Width = tmp.Width
-	inputMessagePhoto.Height = tmp.Height
-	inputMessagePhoto.Caption = tmp.Caption
-	inputMessagePhoto.Ttl = tmp.Ttl
+	entity.Thumbnail = tmp.Thumbnail
+	entity.AddedStickerFileIDs = tmp.AddedStickerFileIDs
+	entity.Width = tmp.Width
+	entity.Height = tmp.Height
+	entity.Caption = tmp.Caption
+	entity.TTL = tmp.TTL
 
 	fieldPhoto, _ := UnmarshalInputFile(tmp.Photo)
-	inputMessagePhoto.Photo = fieldPhoto
+	entity.Photo = fieldPhoto
 
 	return nil
 }
 
-// A sticker message
+// InputMessageSticker a sticker message
 type InputMessageSticker struct {
 	meta
 	// Sticker to be sent
@@ -10968,6 +12160,7 @@ type InputMessageSticker struct {
 	Height int32 `json:"height"`
 }
 
+// MarshalJSON returns InputMessageSticker object as the JSON encoding of InputMessageSticker.
 func (entity *InputMessageSticker) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -10976,19 +12169,23 @@ func (entity *InputMessageSticker) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputMessageSticker) GetClass() string {
 	return ClassInputMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*InputMessageSticker) GetType() string {
 	return TypeInputMessageSticker
 }
 
+// InputMessageContentType returns constant class type string of the class.
 func (*InputMessageSticker) InputMessageContentType() string {
 	return TypeInputMessageSticker
 }
 
-func (inputMessageSticker *InputMessageSticker) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputMessageSticker object to a copy of JSON encoding of InputMessageSticker.
+func (entity *InputMessageSticker) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Sticker   json.RawMessage `json:"sticker"`
 		Thumbnail *InputThumbnail `json:"thumbnail"`
@@ -11001,17 +12198,17 @@ func (inputMessageSticker *InputMessageSticker) UnmarshalJSON(data []byte) error
 		return err
 	}
 
-	inputMessageSticker.Thumbnail = tmp.Thumbnail
-	inputMessageSticker.Width = tmp.Width
-	inputMessageSticker.Height = tmp.Height
+	entity.Thumbnail = tmp.Thumbnail
+	entity.Width = tmp.Width
+	entity.Height = tmp.Height
 
 	fieldSticker, _ := UnmarshalInputFile(tmp.Sticker)
-	inputMessageSticker.Sticker = fieldSticker
+	entity.Sticker = fieldSticker
 
 	return nil
 }
 
-// A video message
+// InputMessageVideo a video message
 type InputMessageVideo struct {
 	meta
 	// Video to be sent
@@ -11019,7 +12216,7 @@ type InputMessageVideo struct {
 	// Video thumbnail, if available
 	Thumbnail *InputThumbnail `json:"thumbnail"`
 	// File identifiers of the stickers added to the video, if applicable
-	AddedStickerFileIds []int32 `json:"added_sticker_file_ids"`
+	AddedStickerFileIDs []int32 `json:"added_sticker_file_ids"`
 	// Duration of the video, in seconds
 	Duration int32 `json:"duration"`
 	// Video width
@@ -11031,9 +12228,10 @@ type InputMessageVideo struct {
 	// Video caption; 0-GetOption("message_caption_length_max") characters
 	Caption *FormattedText `json:"caption"`
 	// Video TTL (Time To Live), in seconds (0-60). A non-zero TTL can be specified only in private chats
-	Ttl int32 `json:"ttl"`
+	TTL int32 `json:"ttl"`
 }
 
+// MarshalJSON returns InputMessageVideo object as the JSON encoding of InputMessageVideo.
 func (entity *InputMessageVideo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11042,29 +12240,33 @@ func (entity *InputMessageVideo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputMessageVideo) GetClass() string {
 	return ClassInputMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*InputMessageVideo) GetType() string {
 	return TypeInputMessageVideo
 }
 
+// InputMessageContentType returns constant class type string of the class.
 func (*InputMessageVideo) InputMessageContentType() string {
 	return TypeInputMessageVideo
 }
 
-func (inputMessageVideo *InputMessageVideo) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputMessageVideo object to a copy of JSON encoding of InputMessageVideo.
+func (entity *InputMessageVideo) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Video               json.RawMessage `json:"video"`
 		Thumbnail           *InputThumbnail `json:"thumbnail"`
-		AddedStickerFileIds []int32         `json:"added_sticker_file_ids"`
+		AddedStickerFileIDs []int32         `json:"added_sticker_file_ids"`
 		Duration            int32           `json:"duration"`
 		Width               int32           `json:"width"`
 		Height              int32           `json:"height"`
 		SupportsStreaming   bool            `json:"supports_streaming"`
 		Caption             *FormattedText  `json:"caption"`
-		Ttl                 int32           `json:"ttl"`
+		TTL                 int32           `json:"ttl"`
 	}
 
 	err := json.Unmarshal(data, &tmp)
@@ -11072,22 +12274,22 @@ func (inputMessageVideo *InputMessageVideo) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	inputMessageVideo.Thumbnail = tmp.Thumbnail
-	inputMessageVideo.AddedStickerFileIds = tmp.AddedStickerFileIds
-	inputMessageVideo.Duration = tmp.Duration
-	inputMessageVideo.Width = tmp.Width
-	inputMessageVideo.Height = tmp.Height
-	inputMessageVideo.SupportsStreaming = tmp.SupportsStreaming
-	inputMessageVideo.Caption = tmp.Caption
-	inputMessageVideo.Ttl = tmp.Ttl
+	entity.Thumbnail = tmp.Thumbnail
+	entity.AddedStickerFileIDs = tmp.AddedStickerFileIDs
+	entity.Duration = tmp.Duration
+	entity.Width = tmp.Width
+	entity.Height = tmp.Height
+	entity.SupportsStreaming = tmp.SupportsStreaming
+	entity.Caption = tmp.Caption
+	entity.TTL = tmp.TTL
 
 	fieldVideo, _ := UnmarshalInputFile(tmp.Video)
-	inputMessageVideo.Video = fieldVideo
+	entity.Video = fieldVideo
 
 	return nil
 }
 
-// A video note message
+// InputMessageVideoNote a video note message
 type InputMessageVideoNote struct {
 	meta
 	// Video note to be sent
@@ -11100,6 +12302,7 @@ type InputMessageVideoNote struct {
 	Length int32 `json:"length"`
 }
 
+// MarshalJSON returns InputMessageVideoNote object as the JSON encoding of InputMessageVideoNote.
 func (entity *InputMessageVideoNote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11108,19 +12311,23 @@ func (entity *InputMessageVideoNote) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputMessageVideoNote) GetClass() string {
 	return ClassInputMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*InputMessageVideoNote) GetType() string {
 	return TypeInputMessageVideoNote
 }
 
+// InputMessageContentType returns constant class type string of the class.
 func (*InputMessageVideoNote) InputMessageContentType() string {
 	return TypeInputMessageVideoNote
 }
 
-func (inputMessageVideoNote *InputMessageVideoNote) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputMessageVideoNote object to a copy of JSON encoding of InputMessageVideoNote.
+func (entity *InputMessageVideoNote) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		VideoNote json.RawMessage `json:"video_note"`
 		Thumbnail *InputThumbnail `json:"thumbnail"`
@@ -11133,17 +12340,17 @@ func (inputMessageVideoNote *InputMessageVideoNote) UnmarshalJSON(data []byte) e
 		return err
 	}
 
-	inputMessageVideoNote.Thumbnail = tmp.Thumbnail
-	inputMessageVideoNote.Duration = tmp.Duration
-	inputMessageVideoNote.Length = tmp.Length
+	entity.Thumbnail = tmp.Thumbnail
+	entity.Duration = tmp.Duration
+	entity.Length = tmp.Length
 
 	fieldVideoNote, _ := UnmarshalInputFile(tmp.VideoNote)
-	inputMessageVideoNote.VideoNote = fieldVideoNote
+	entity.VideoNote = fieldVideoNote
 
 	return nil
 }
 
-// A voice note message
+// InputMessageVoiceNote a voice note message
 type InputMessageVoiceNote struct {
 	meta
 	// Voice note to be sent
@@ -11156,6 +12363,7 @@ type InputMessageVoiceNote struct {
 	Caption *FormattedText `json:"caption"`
 }
 
+// MarshalJSON returns InputMessageVoiceNote object as the JSON encoding of InputMessageVoiceNote.
 func (entity *InputMessageVoiceNote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11164,19 +12372,23 @@ func (entity *InputMessageVoiceNote) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputMessageVoiceNote) GetClass() string {
 	return ClassInputMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*InputMessageVoiceNote) GetType() string {
 	return TypeInputMessageVoiceNote
 }
 
+// InputMessageContentType returns constant class type string of the class.
 func (*InputMessageVoiceNote) InputMessageContentType() string {
 	return TypeInputMessageVoiceNote
 }
 
-func (inputMessageVoiceNote *InputMessageVoiceNote) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputMessageVoiceNote object to a copy of JSON encoding of InputMessageVoiceNote.
+func (entity *InputMessageVoiceNote) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		VoiceNote json.RawMessage `json:"voice_note"`
 		Duration  int32           `json:"duration"`
@@ -11189,17 +12401,17 @@ func (inputMessageVoiceNote *InputMessageVoiceNote) UnmarshalJSON(data []byte) e
 		return err
 	}
 
-	inputMessageVoiceNote.Duration = tmp.Duration
-	inputMessageVoiceNote.Waveform = tmp.Waveform
-	inputMessageVoiceNote.Caption = tmp.Caption
+	entity.Duration = tmp.Duration
+	entity.Waveform = tmp.Waveform
+	entity.Caption = tmp.Caption
 
 	fieldVoiceNote, _ := UnmarshalInputFile(tmp.VoiceNote)
-	inputMessageVoiceNote.VoiceNote = fieldVoiceNote
+	entity.VoiceNote = fieldVoiceNote
 
 	return nil
 }
 
-// A message with a location
+// InputMessageLocation a message with a location
 type InputMessageLocation struct {
 	meta
 	// Location to be sent
@@ -11208,6 +12420,7 @@ type InputMessageLocation struct {
 	LivePeriod int32 `json:"live_period"`
 }
 
+// MarshalJSON returns InputMessageLocation object as the JSON encoding of InputMessageLocation.
 func (entity *InputMessageLocation) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11216,25 +12429,29 @@ func (entity *InputMessageLocation) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputMessageLocation) GetClass() string {
 	return ClassInputMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*InputMessageLocation) GetType() string {
 	return TypeInputMessageLocation
 }
 
+// InputMessageContentType returns constant class type string of the class.
 func (*InputMessageLocation) InputMessageContentType() string {
 	return TypeInputMessageLocation
 }
 
-// A message with information about a venue
+// InputMessageVenue a message with information about a venue
 type InputMessageVenue struct {
 	meta
 	// Venue to send
 	Venue *Venue `json:"venue"`
 }
 
+// MarshalJSON returns InputMessageVenue object as the JSON encoding of InputMessageVenue.
 func (entity *InputMessageVenue) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11243,25 +12460,29 @@ func (entity *InputMessageVenue) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputMessageVenue) GetClass() string {
 	return ClassInputMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*InputMessageVenue) GetType() string {
 	return TypeInputMessageVenue
 }
 
+// InputMessageContentType returns constant class type string of the class.
 func (*InputMessageVenue) InputMessageContentType() string {
 	return TypeInputMessageVenue
 }
 
-// A message containing a user contact
+// InputMessageContact a message containing a user contact
 type InputMessageContact struct {
 	meta
 	// Contact to send
 	Contact *Contact `json:"contact"`
 }
 
+// MarshalJSON returns InputMessageContact object as the JSON encoding of InputMessageContact.
 func (entity *InputMessageContact) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11270,27 +12491,31 @@ func (entity *InputMessageContact) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputMessageContact) GetClass() string {
 	return ClassInputMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*InputMessageContact) GetType() string {
 	return TypeInputMessageContact
 }
 
+// InputMessageContentType returns constant class type string of the class.
 func (*InputMessageContact) InputMessageContentType() string {
 	return TypeInputMessageContact
 }
 
-// A message with a game; not supported for channels or secret chats
+// InputMessageGame a message with a game; not supported for channels or secret chats
 type InputMessageGame struct {
 	meta
 	// User identifier of the bot that owns the game
-	BotUserId int32 `json:"bot_user_id"`
+	BotUserID int32 `json:"bot_user_id"`
 	// Short name of the game
 	GameShortName string `json:"game_short_name"`
 }
 
+// MarshalJSON returns InputMessageGame object as the JSON encoding of InputMessageGame.
 func (entity *InputMessageGame) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11299,19 +12524,22 @@ func (entity *InputMessageGame) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputMessageGame) GetClass() string {
 	return ClassInputMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*InputMessageGame) GetType() string {
 	return TypeInputMessageGame
 }
 
+// InputMessageContentType returns constant class type string of the class.
 func (*InputMessageGame) InputMessageContentType() string {
 	return TypeInputMessageGame
 }
 
-// A message with an invoice; can be used only by bots and only in private chats
+// InputMessageInvoice a message with an invoice; can be used only by bots and only in private chats
 type InputMessageInvoice struct {
 	meta
 	// Invoice
@@ -11321,7 +12549,7 @@ type InputMessageInvoice struct {
 	// Product description; 0-255 characters
 	Description string `json:"description"`
 	// Product photo URL; optional
-	PhotoUrl string `json:"photo_url"`
+	PhotoURL string `json:"photo_url"`
 	// Product photo size
 	PhotoSize int32 `json:"photo_size"`
 	// Product photo width
@@ -11338,6 +12566,7 @@ type InputMessageInvoice struct {
 	StartParameter string `json:"start_parameter"`
 }
 
+// MarshalJSON returns InputMessageInvoice object as the JSON encoding of InputMessageInvoice.
 func (entity *InputMessageInvoice) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11346,29 +12575,33 @@ func (entity *InputMessageInvoice) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputMessageInvoice) GetClass() string {
 	return ClassInputMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*InputMessageInvoice) GetType() string {
 	return TypeInputMessageInvoice
 }
 
+// InputMessageContentType returns constant class type string of the class.
 func (*InputMessageInvoice) InputMessageContentType() string {
 	return TypeInputMessageInvoice
 }
 
-// A forwarded message
+// InputMessageForwarded a forwarded message
 type InputMessageForwarded struct {
 	meta
 	// Identifier for the chat this forwarded message came from
-	FromChatId int64 `json:"from_chat_id"`
+	FromChatID int64 `json:"from_chat_id"`
 	// Identifier of the message to forward
-	MessageId int64 `json:"message_id"`
+	MessageID int64 `json:"message_id"`
 	// True, if a game message should be shared within a launched game; applies only to game messages
 	InGameShare bool `json:"in_game_share"`
 }
 
+// MarshalJSON returns InputMessageForwarded object as the JSON encoding of InputMessageForwarded.
 func (entity *InputMessageForwarded) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11377,23 +12610,27 @@ func (entity *InputMessageForwarded) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputMessageForwarded) GetClass() string {
 	return ClassInputMessageContent
 }
 
+// GetType returns constant class type string of the class.
 func (*InputMessageForwarded) GetType() string {
 	return TypeInputMessageForwarded
 }
 
+// InputMessageContentType returns constant class type string of the class.
 func (*InputMessageForwarded) InputMessageContentType() string {
 	return TypeInputMessageForwarded
 }
 
-// Returns all found messages, no filter is applied
+// SearchMessagesFilterEmpty returns all found messages, no filter is applied
 type SearchMessagesFilterEmpty struct {
 	meta
 }
 
+// MarshalJSON returns SearchMessagesFilterEmpty object as the JSON encoding of SearchMessagesFilterEmpty.
 func (entity *SearchMessagesFilterEmpty) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11402,23 +12639,27 @@ func (entity *SearchMessagesFilterEmpty) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SearchMessagesFilterEmpty) GetClass() string {
 	return ClassSearchMessagesFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SearchMessagesFilterEmpty) GetType() string {
 	return TypeSearchMessagesFilterEmpty
 }
 
+// SearchMessagesFilterType returns constant class type string of the class.
 func (*SearchMessagesFilterEmpty) SearchMessagesFilterType() string {
 	return TypeSearchMessagesFilterEmpty
 }
 
-// Returns only animation messages
+// SearchMessagesFilterAnimation returns only animation messages
 type SearchMessagesFilterAnimation struct {
 	meta
 }
 
+// MarshalJSON returns SearchMessagesFilterAnimation object as the JSON encoding of SearchMessagesFilterAnimation.
 func (entity *SearchMessagesFilterAnimation) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11427,23 +12668,27 @@ func (entity *SearchMessagesFilterAnimation) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SearchMessagesFilterAnimation) GetClass() string {
 	return ClassSearchMessagesFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SearchMessagesFilterAnimation) GetType() string {
 	return TypeSearchMessagesFilterAnimation
 }
 
+// SearchMessagesFilterType returns constant class type string of the class.
 func (*SearchMessagesFilterAnimation) SearchMessagesFilterType() string {
 	return TypeSearchMessagesFilterAnimation
 }
 
-// Returns only audio messages
+// SearchMessagesFilterAudio returns only audio messages
 type SearchMessagesFilterAudio struct {
 	meta
 }
 
+// MarshalJSON returns SearchMessagesFilterAudio object as the JSON encoding of SearchMessagesFilterAudio.
 func (entity *SearchMessagesFilterAudio) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11452,23 +12697,27 @@ func (entity *SearchMessagesFilterAudio) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SearchMessagesFilterAudio) GetClass() string {
 	return ClassSearchMessagesFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SearchMessagesFilterAudio) GetType() string {
 	return TypeSearchMessagesFilterAudio
 }
 
+// SearchMessagesFilterType returns constant class type string of the class.
 func (*SearchMessagesFilterAudio) SearchMessagesFilterType() string {
 	return TypeSearchMessagesFilterAudio
 }
 
-// Returns only document messages
+// SearchMessagesFilterDocument returns only document messages
 type SearchMessagesFilterDocument struct {
 	meta
 }
 
+// MarshalJSON returns SearchMessagesFilterDocument object as the JSON encoding of SearchMessagesFilterDocument.
 func (entity *SearchMessagesFilterDocument) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11477,23 +12726,27 @@ func (entity *SearchMessagesFilterDocument) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SearchMessagesFilterDocument) GetClass() string {
 	return ClassSearchMessagesFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SearchMessagesFilterDocument) GetType() string {
 	return TypeSearchMessagesFilterDocument
 }
 
+// SearchMessagesFilterType returns constant class type string of the class.
 func (*SearchMessagesFilterDocument) SearchMessagesFilterType() string {
 	return TypeSearchMessagesFilterDocument
 }
 
-// Returns only photo messages
+// SearchMessagesFilterPhoto returns only photo messages
 type SearchMessagesFilterPhoto struct {
 	meta
 }
 
+// MarshalJSON returns SearchMessagesFilterPhoto object as the JSON encoding of SearchMessagesFilterPhoto.
 func (entity *SearchMessagesFilterPhoto) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11502,23 +12755,27 @@ func (entity *SearchMessagesFilterPhoto) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SearchMessagesFilterPhoto) GetClass() string {
 	return ClassSearchMessagesFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SearchMessagesFilterPhoto) GetType() string {
 	return TypeSearchMessagesFilterPhoto
 }
 
+// SearchMessagesFilterType returns constant class type string of the class.
 func (*SearchMessagesFilterPhoto) SearchMessagesFilterType() string {
 	return TypeSearchMessagesFilterPhoto
 }
 
-// Returns only video messages
+// SearchMessagesFilterVideo returns only video messages
 type SearchMessagesFilterVideo struct {
 	meta
 }
 
+// MarshalJSON returns SearchMessagesFilterVideo object as the JSON encoding of SearchMessagesFilterVideo.
 func (entity *SearchMessagesFilterVideo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11527,23 +12784,27 @@ func (entity *SearchMessagesFilterVideo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SearchMessagesFilterVideo) GetClass() string {
 	return ClassSearchMessagesFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SearchMessagesFilterVideo) GetType() string {
 	return TypeSearchMessagesFilterVideo
 }
 
+// SearchMessagesFilterType returns constant class type string of the class.
 func (*SearchMessagesFilterVideo) SearchMessagesFilterType() string {
 	return TypeSearchMessagesFilterVideo
 }
 
-// Returns only voice note messages
+// SearchMessagesFilterVoiceNote returns only voice note messages
 type SearchMessagesFilterVoiceNote struct {
 	meta
 }
 
+// MarshalJSON returns SearchMessagesFilterVoiceNote object as the JSON encoding of SearchMessagesFilterVoiceNote.
 func (entity *SearchMessagesFilterVoiceNote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11552,23 +12813,27 @@ func (entity *SearchMessagesFilterVoiceNote) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SearchMessagesFilterVoiceNote) GetClass() string {
 	return ClassSearchMessagesFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SearchMessagesFilterVoiceNote) GetType() string {
 	return TypeSearchMessagesFilterVoiceNote
 }
 
+// SearchMessagesFilterType returns constant class type string of the class.
 func (*SearchMessagesFilterVoiceNote) SearchMessagesFilterType() string {
 	return TypeSearchMessagesFilterVoiceNote
 }
 
-// Returns only photo and video messages
+// SearchMessagesFilterPhotoAndVideo returns only photo and video messages
 type SearchMessagesFilterPhotoAndVideo struct {
 	meta
 }
 
+// MarshalJSON returns SearchMessagesFilterPhotoAndVideo object as the JSON encoding of SearchMessagesFilterPhotoAndVideo.
 func (entity *SearchMessagesFilterPhotoAndVideo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11577,48 +12842,56 @@ func (entity *SearchMessagesFilterPhotoAndVideo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SearchMessagesFilterPhotoAndVideo) GetClass() string {
 	return ClassSearchMessagesFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SearchMessagesFilterPhotoAndVideo) GetType() string {
 	return TypeSearchMessagesFilterPhotoAndVideo
 }
 
+// SearchMessagesFilterType returns constant class type string of the class.
 func (*SearchMessagesFilterPhotoAndVideo) SearchMessagesFilterType() string {
 	return TypeSearchMessagesFilterPhotoAndVideo
 }
 
-// Returns only messages containing URLs
-type SearchMessagesFilterUrl struct {
+// SearchMessagesFilterURL returns only messages containing URLs
+type SearchMessagesFilterURL struct {
 	meta
 }
 
-func (entity *SearchMessagesFilterUrl) MarshalJSON() ([]byte, error) {
+// MarshalJSON returns SearchMessagesFilterURL object as the JSON encoding of SearchMessagesFilterURL.
+func (entity *SearchMessagesFilterURL) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
-	type stub SearchMessagesFilterUrl
+	type stub SearchMessagesFilterURL
 
 	return json.Marshal((*stub)(entity))
 }
 
-func (*SearchMessagesFilterUrl) GetClass() string {
+// GetClass returns constant class string of the class.
+func (*SearchMessagesFilterURL) GetClass() string {
 	return ClassSearchMessagesFilter
 }
 
-func (*SearchMessagesFilterUrl) GetType() string {
-	return TypeSearchMessagesFilterUrl
+// GetType returns constant class type string of the class.
+func (*SearchMessagesFilterURL) GetType() string {
+	return TypeSearchMessagesFilterURL
 }
 
-func (*SearchMessagesFilterUrl) SearchMessagesFilterType() string {
-	return TypeSearchMessagesFilterUrl
+// SearchMessagesFilterType returns constant class type string of the class.
+func (*SearchMessagesFilterURL) SearchMessagesFilterType() string {
+	return TypeSearchMessagesFilterURL
 }
 
-// Returns only messages containing chat photos
+// SearchMessagesFilterChatPhoto returns only messages containing chat photos
 type SearchMessagesFilterChatPhoto struct {
 	meta
 }
 
+// MarshalJSON returns SearchMessagesFilterChatPhoto object as the JSON encoding of SearchMessagesFilterChatPhoto.
 func (entity *SearchMessagesFilterChatPhoto) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11627,23 +12900,27 @@ func (entity *SearchMessagesFilterChatPhoto) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SearchMessagesFilterChatPhoto) GetClass() string {
 	return ClassSearchMessagesFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SearchMessagesFilterChatPhoto) GetType() string {
 	return TypeSearchMessagesFilterChatPhoto
 }
 
+// SearchMessagesFilterType returns constant class type string of the class.
 func (*SearchMessagesFilterChatPhoto) SearchMessagesFilterType() string {
 	return TypeSearchMessagesFilterChatPhoto
 }
 
-// Returns only call messages
+// SearchMessagesFilterCall returns only call messages
 type SearchMessagesFilterCall struct {
 	meta
 }
 
+// MarshalJSON returns SearchMessagesFilterCall object as the JSON encoding of SearchMessagesFilterCall.
 func (entity *SearchMessagesFilterCall) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11652,23 +12929,27 @@ func (entity *SearchMessagesFilterCall) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SearchMessagesFilterCall) GetClass() string {
 	return ClassSearchMessagesFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SearchMessagesFilterCall) GetType() string {
 	return TypeSearchMessagesFilterCall
 }
 
+// SearchMessagesFilterType returns constant class type string of the class.
 func (*SearchMessagesFilterCall) SearchMessagesFilterType() string {
 	return TypeSearchMessagesFilterCall
 }
 
-// Returns only incoming call messages with missed/declined discard reasons
+// SearchMessagesFilterMissedCall returns only incoming call messages with missed/declined discard reasons
 type SearchMessagesFilterMissedCall struct {
 	meta
 }
 
+// MarshalJSON returns SearchMessagesFilterMissedCall object as the JSON encoding of SearchMessagesFilterMissedCall.
 func (entity *SearchMessagesFilterMissedCall) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11677,23 +12958,27 @@ func (entity *SearchMessagesFilterMissedCall) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SearchMessagesFilterMissedCall) GetClass() string {
 	return ClassSearchMessagesFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SearchMessagesFilterMissedCall) GetType() string {
 	return TypeSearchMessagesFilterMissedCall
 }
 
+// SearchMessagesFilterType returns constant class type string of the class.
 func (*SearchMessagesFilterMissedCall) SearchMessagesFilterType() string {
 	return TypeSearchMessagesFilterMissedCall
 }
 
-// Returns only video note messages
+// SearchMessagesFilterVideoNote returns only video note messages
 type SearchMessagesFilterVideoNote struct {
 	meta
 }
 
+// MarshalJSON returns SearchMessagesFilterVideoNote object as the JSON encoding of SearchMessagesFilterVideoNote.
 func (entity *SearchMessagesFilterVideoNote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11702,23 +12987,27 @@ func (entity *SearchMessagesFilterVideoNote) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SearchMessagesFilterVideoNote) GetClass() string {
 	return ClassSearchMessagesFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SearchMessagesFilterVideoNote) GetType() string {
 	return TypeSearchMessagesFilterVideoNote
 }
 
+// SearchMessagesFilterType returns constant class type string of the class.
 func (*SearchMessagesFilterVideoNote) SearchMessagesFilterType() string {
 	return TypeSearchMessagesFilterVideoNote
 }
 
-// Returns only voice and video note messages
+// SearchMessagesFilterVoiceAndVideoNote returns only voice and video note messages
 type SearchMessagesFilterVoiceAndVideoNote struct {
 	meta
 }
 
+// MarshalJSON returns SearchMessagesFilterVoiceAndVideoNote object as the JSON encoding of SearchMessagesFilterVoiceAndVideoNote.
 func (entity *SearchMessagesFilterVoiceAndVideoNote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11727,23 +13016,27 @@ func (entity *SearchMessagesFilterVoiceAndVideoNote) MarshalJSON() ([]byte, erro
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SearchMessagesFilterVoiceAndVideoNote) GetClass() string {
 	return ClassSearchMessagesFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SearchMessagesFilterVoiceAndVideoNote) GetType() string {
 	return TypeSearchMessagesFilterVoiceAndVideoNote
 }
 
+// SearchMessagesFilterType returns constant class type string of the class.
 func (*SearchMessagesFilterVoiceAndVideoNote) SearchMessagesFilterType() string {
 	return TypeSearchMessagesFilterVoiceAndVideoNote
 }
 
-// Returns only messages with mentions of the current user, or messages that are replies to their messages
+// SearchMessagesFilterMention returns only messages with mentions of the current user, or messages that are replies to their messages
 type SearchMessagesFilterMention struct {
 	meta
 }
 
+// MarshalJSON returns SearchMessagesFilterMention object as the JSON encoding of SearchMessagesFilterMention.
 func (entity *SearchMessagesFilterMention) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11752,23 +13045,27 @@ func (entity *SearchMessagesFilterMention) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SearchMessagesFilterMention) GetClass() string {
 	return ClassSearchMessagesFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SearchMessagesFilterMention) GetType() string {
 	return TypeSearchMessagesFilterMention
 }
 
+// SearchMessagesFilterType returns constant class type string of the class.
 func (*SearchMessagesFilterMention) SearchMessagesFilterType() string {
 	return TypeSearchMessagesFilterMention
 }
 
-// Returns only messages with unread mentions of the current user or messages that are replies to their messages. When using this filter the results can't be additionally filtered by a query or by the sending user
+// SearchMessagesFilterUnreadMention returns only messages with unread mentions of the current user or messages that are replies to their messages. When using this filter the results can't be additionally filtered by a query or by the sending user
 type SearchMessagesFilterUnreadMention struct {
 	meta
 }
 
+// MarshalJSON returns SearchMessagesFilterUnreadMention object as the JSON encoding of SearchMessagesFilterUnreadMention.
 func (entity *SearchMessagesFilterUnreadMention) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11777,23 +13074,27 @@ func (entity *SearchMessagesFilterUnreadMention) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*SearchMessagesFilterUnreadMention) GetClass() string {
 	return ClassSearchMessagesFilter
 }
 
+// GetType returns constant class type string of the class.
 func (*SearchMessagesFilterUnreadMention) GetType() string {
 	return TypeSearchMessagesFilterUnreadMention
 }
 
+// SearchMessagesFilterType returns constant class type string of the class.
 func (*SearchMessagesFilterUnreadMention) SearchMessagesFilterType() string {
 	return TypeSearchMessagesFilterUnreadMention
 }
 
-// The user is typing a message
+// ChatActionTyping the user is typing a message
 type ChatActionTyping struct {
 	meta
 }
 
+// MarshalJSON returns ChatActionTyping object as the JSON encoding of ChatActionTyping.
 func (entity *ChatActionTyping) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11802,23 +13103,27 @@ func (entity *ChatActionTyping) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatActionTyping) GetClass() string {
 	return ClassChatAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatActionTyping) GetType() string {
 	return TypeChatActionTyping
 }
 
+// ChatActionType returns constant class type string of the class.
 func (*ChatActionTyping) ChatActionType() string {
 	return TypeChatActionTyping
 }
 
-// The user is recording a video
+// ChatActionRecordingVideo the user is recording a video
 type ChatActionRecordingVideo struct {
 	meta
 }
 
+// MarshalJSON returns ChatActionRecordingVideo object as the JSON encoding of ChatActionRecordingVideo.
 func (entity *ChatActionRecordingVideo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11827,25 +13132,29 @@ func (entity *ChatActionRecordingVideo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatActionRecordingVideo) GetClass() string {
 	return ClassChatAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatActionRecordingVideo) GetType() string {
 	return TypeChatActionRecordingVideo
 }
 
+// ChatActionType returns constant class type string of the class.
 func (*ChatActionRecordingVideo) ChatActionType() string {
 	return TypeChatActionRecordingVideo
 }
 
-// The user is uploading a video
+// ChatActionUploadingVideo the user is uploading a video
 type ChatActionUploadingVideo struct {
 	meta
 	// Upload progress, as a percentage
 	Progress int32 `json:"progress"`
 }
 
+// MarshalJSON returns ChatActionUploadingVideo object as the JSON encoding of ChatActionUploadingVideo.
 func (entity *ChatActionUploadingVideo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11854,23 +13163,27 @@ func (entity *ChatActionUploadingVideo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatActionUploadingVideo) GetClass() string {
 	return ClassChatAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatActionUploadingVideo) GetType() string {
 	return TypeChatActionUploadingVideo
 }
 
+// ChatActionType returns constant class type string of the class.
 func (*ChatActionUploadingVideo) ChatActionType() string {
 	return TypeChatActionUploadingVideo
 }
 
-// The user is recording a voice note
+// ChatActionRecordingVoiceNote the user is recording a voice note
 type ChatActionRecordingVoiceNote struct {
 	meta
 }
 
+// MarshalJSON returns ChatActionRecordingVoiceNote object as the JSON encoding of ChatActionRecordingVoiceNote.
 func (entity *ChatActionRecordingVoiceNote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11879,25 +13192,29 @@ func (entity *ChatActionRecordingVoiceNote) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatActionRecordingVoiceNote) GetClass() string {
 	return ClassChatAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatActionRecordingVoiceNote) GetType() string {
 	return TypeChatActionRecordingVoiceNote
 }
 
+// ChatActionType returns constant class type string of the class.
 func (*ChatActionRecordingVoiceNote) ChatActionType() string {
 	return TypeChatActionRecordingVoiceNote
 }
 
-// The user is uploading a voice note
+// ChatActionUploadingVoiceNote the user is uploading a voice note
 type ChatActionUploadingVoiceNote struct {
 	meta
 	// Upload progress, as a percentage
 	Progress int32 `json:"progress"`
 }
 
+// MarshalJSON returns ChatActionUploadingVoiceNote object as the JSON encoding of ChatActionUploadingVoiceNote.
 func (entity *ChatActionUploadingVoiceNote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11906,25 +13223,29 @@ func (entity *ChatActionUploadingVoiceNote) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatActionUploadingVoiceNote) GetClass() string {
 	return ClassChatAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatActionUploadingVoiceNote) GetType() string {
 	return TypeChatActionUploadingVoiceNote
 }
 
+// ChatActionType returns constant class type string of the class.
 func (*ChatActionUploadingVoiceNote) ChatActionType() string {
 	return TypeChatActionUploadingVoiceNote
 }
 
-// The user is uploading a photo
+// ChatActionUploadingPhoto the user is uploading a photo
 type ChatActionUploadingPhoto struct {
 	meta
 	// Upload progress, as a percentage
 	Progress int32 `json:"progress"`
 }
 
+// MarshalJSON returns ChatActionUploadingPhoto object as the JSON encoding of ChatActionUploadingPhoto.
 func (entity *ChatActionUploadingPhoto) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11933,25 +13254,29 @@ func (entity *ChatActionUploadingPhoto) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatActionUploadingPhoto) GetClass() string {
 	return ClassChatAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatActionUploadingPhoto) GetType() string {
 	return TypeChatActionUploadingPhoto
 }
 
+// ChatActionType returns constant class type string of the class.
 func (*ChatActionUploadingPhoto) ChatActionType() string {
 	return TypeChatActionUploadingPhoto
 }
 
-// The user is uploading a document
+// ChatActionUploadingDocument the user is uploading a document
 type ChatActionUploadingDocument struct {
 	meta
 	// Upload progress, as a percentage
 	Progress int32 `json:"progress"`
 }
 
+// MarshalJSON returns ChatActionUploadingDocument object as the JSON encoding of ChatActionUploadingDocument.
 func (entity *ChatActionUploadingDocument) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11960,23 +13285,27 @@ func (entity *ChatActionUploadingDocument) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatActionUploadingDocument) GetClass() string {
 	return ClassChatAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatActionUploadingDocument) GetType() string {
 	return TypeChatActionUploadingDocument
 }
 
+// ChatActionType returns constant class type string of the class.
 func (*ChatActionUploadingDocument) ChatActionType() string {
 	return TypeChatActionUploadingDocument
 }
 
-// The user is picking a location or venue to send
+// ChatActionChoosingLocation the user is picking a location or venue to send
 type ChatActionChoosingLocation struct {
 	meta
 }
 
+// MarshalJSON returns ChatActionChoosingLocation object as the JSON encoding of ChatActionChoosingLocation.
 func (entity *ChatActionChoosingLocation) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -11985,23 +13314,27 @@ func (entity *ChatActionChoosingLocation) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatActionChoosingLocation) GetClass() string {
 	return ClassChatAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatActionChoosingLocation) GetType() string {
 	return TypeChatActionChoosingLocation
 }
 
+// ChatActionType returns constant class type string of the class.
 func (*ChatActionChoosingLocation) ChatActionType() string {
 	return TypeChatActionChoosingLocation
 }
 
-// The user is picking a contact to send
+// ChatActionChoosingContact the user is picking a contact to send
 type ChatActionChoosingContact struct {
 	meta
 }
 
+// MarshalJSON returns ChatActionChoosingContact object as the JSON encoding of ChatActionChoosingContact.
 func (entity *ChatActionChoosingContact) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12010,23 +13343,27 @@ func (entity *ChatActionChoosingContact) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatActionChoosingContact) GetClass() string {
 	return ClassChatAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatActionChoosingContact) GetType() string {
 	return TypeChatActionChoosingContact
 }
 
+// ChatActionType returns constant class type string of the class.
 func (*ChatActionChoosingContact) ChatActionType() string {
 	return TypeChatActionChoosingContact
 }
 
-// The user has started to play a game
+// ChatActionStartPlayingGame the user has started to play a game
 type ChatActionStartPlayingGame struct {
 	meta
 }
 
+// MarshalJSON returns ChatActionStartPlayingGame object as the JSON encoding of ChatActionStartPlayingGame.
 func (entity *ChatActionStartPlayingGame) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12035,23 +13372,27 @@ func (entity *ChatActionStartPlayingGame) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatActionStartPlayingGame) GetClass() string {
 	return ClassChatAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatActionStartPlayingGame) GetType() string {
 	return TypeChatActionStartPlayingGame
 }
 
+// ChatActionType returns constant class type string of the class.
 func (*ChatActionStartPlayingGame) ChatActionType() string {
 	return TypeChatActionStartPlayingGame
 }
 
-// The user is recording a video note
+// ChatActionRecordingVideoNote the user is recording a video note
 type ChatActionRecordingVideoNote struct {
 	meta
 }
 
+// MarshalJSON returns ChatActionRecordingVideoNote object as the JSON encoding of ChatActionRecordingVideoNote.
 func (entity *ChatActionRecordingVideoNote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12060,25 +13401,29 @@ func (entity *ChatActionRecordingVideoNote) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatActionRecordingVideoNote) GetClass() string {
 	return ClassChatAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatActionRecordingVideoNote) GetType() string {
 	return TypeChatActionRecordingVideoNote
 }
 
+// ChatActionType returns constant class type string of the class.
 func (*ChatActionRecordingVideoNote) ChatActionType() string {
 	return TypeChatActionRecordingVideoNote
 }
 
-// The user is uploading a video note
+// ChatActionUploadingVideoNote the user is uploading a video note
 type ChatActionUploadingVideoNote struct {
 	meta
 	// Upload progress, as a percentage
 	Progress int32 `json:"progress"`
 }
 
+// MarshalJSON returns ChatActionUploadingVideoNote object as the JSON encoding of ChatActionUploadingVideoNote.
 func (entity *ChatActionUploadingVideoNote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12087,23 +13432,27 @@ func (entity *ChatActionUploadingVideoNote) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatActionUploadingVideoNote) GetClass() string {
 	return ClassChatAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatActionUploadingVideoNote) GetType() string {
 	return TypeChatActionUploadingVideoNote
 }
 
+// ChatActionType returns constant class type string of the class.
 func (*ChatActionUploadingVideoNote) ChatActionType() string {
 	return TypeChatActionUploadingVideoNote
 }
 
-// The user has cancelled the previous action
+// ChatActionCancel the user has cancelled the previous action
 type ChatActionCancel struct {
 	meta
 }
 
+// MarshalJSON returns ChatActionCancel object as the JSON encoding of ChatActionCancel.
 func (entity *ChatActionCancel) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12112,23 +13461,27 @@ func (entity *ChatActionCancel) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatActionCancel) GetClass() string {
 	return ClassChatAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatActionCancel) GetType() string {
 	return TypeChatActionCancel
 }
 
+// ChatActionType returns constant class type string of the class.
 func (*ChatActionCancel) ChatActionType() string {
 	return TypeChatActionCancel
 }
 
-// The user status was never changed
+// UserStatusEmpty the user status was never changed
 type UserStatusEmpty struct {
 	meta
 }
 
+// MarshalJSON returns UserStatusEmpty object as the JSON encoding of UserStatusEmpty.
 func (entity *UserStatusEmpty) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12137,25 +13490,29 @@ func (entity *UserStatusEmpty) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserStatusEmpty) GetClass() string {
 	return ClassUserStatus
 }
 
+// GetType returns constant class type string of the class.
 func (*UserStatusEmpty) GetType() string {
 	return TypeUserStatusEmpty
 }
 
+// UserStatusType returns constant class type string of the class.
 func (*UserStatusEmpty) UserStatusType() string {
 	return TypeUserStatusEmpty
 }
 
-// The user is online
+// UserStatusOnline the user is online
 type UserStatusOnline struct {
 	meta
 	// Point in time (Unix timestamp) when the user's online status will expire
 	Expires int32 `json:"expires"`
 }
 
+// MarshalJSON returns UserStatusOnline object as the JSON encoding of UserStatusOnline.
 func (entity *UserStatusOnline) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12164,25 +13521,29 @@ func (entity *UserStatusOnline) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserStatusOnline) GetClass() string {
 	return ClassUserStatus
 }
 
+// GetType returns constant class type string of the class.
 func (*UserStatusOnline) GetType() string {
 	return TypeUserStatusOnline
 }
 
+// UserStatusType returns constant class type string of the class.
 func (*UserStatusOnline) UserStatusType() string {
 	return TypeUserStatusOnline
 }
 
-// The user is offline
+// UserStatusOffline the user is offline
 type UserStatusOffline struct {
 	meta
 	// Point in time (Unix timestamp) when the user was last online
 	WasOnline int32 `json:"was_online"`
 }
 
+// MarshalJSON returns UserStatusOffline object as the JSON encoding of UserStatusOffline.
 func (entity *UserStatusOffline) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12191,23 +13552,27 @@ func (entity *UserStatusOffline) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserStatusOffline) GetClass() string {
 	return ClassUserStatus
 }
 
+// GetType returns constant class type string of the class.
 func (*UserStatusOffline) GetType() string {
 	return TypeUserStatusOffline
 }
 
+// UserStatusType returns constant class type string of the class.
 func (*UserStatusOffline) UserStatusType() string {
 	return TypeUserStatusOffline
 }
 
-// The user was online recently
+// UserStatusRecently the user was online recently
 type UserStatusRecently struct {
 	meta
 }
 
+// MarshalJSON returns UserStatusRecently object as the JSON encoding of UserStatusRecently.
 func (entity *UserStatusRecently) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12216,23 +13581,27 @@ func (entity *UserStatusRecently) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserStatusRecently) GetClass() string {
 	return ClassUserStatus
 }
 
+// GetType returns constant class type string of the class.
 func (*UserStatusRecently) GetType() string {
 	return TypeUserStatusRecently
 }
 
+// UserStatusType returns constant class type string of the class.
 func (*UserStatusRecently) UserStatusType() string {
 	return TypeUserStatusRecently
 }
 
-// The user is offline, but was online last week
+// UserStatusLastWeek the user is offline, but was online last week
 type UserStatusLastWeek struct {
 	meta
 }
 
+// MarshalJSON returns UserStatusLastWeek object as the JSON encoding of UserStatusLastWeek.
 func (entity *UserStatusLastWeek) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12241,23 +13610,27 @@ func (entity *UserStatusLastWeek) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserStatusLastWeek) GetClass() string {
 	return ClassUserStatus
 }
 
+// GetType returns constant class type string of the class.
 func (*UserStatusLastWeek) GetType() string {
 	return TypeUserStatusLastWeek
 }
 
+// UserStatusType returns constant class type string of the class.
 func (*UserStatusLastWeek) UserStatusType() string {
 	return TypeUserStatusLastWeek
 }
 
-// The user is offline, but was online last month
+// UserStatusLastMonth the user is offline, but was online last month
 type UserStatusLastMonth struct {
 	meta
 }
 
+// MarshalJSON returns UserStatusLastMonth object as the JSON encoding of UserStatusLastMonth.
 func (entity *UserStatusLastMonth) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12266,25 +13639,29 @@ func (entity *UserStatusLastMonth) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserStatusLastMonth) GetClass() string {
 	return ClassUserStatus
 }
 
+// GetType returns constant class type string of the class.
 func (*UserStatusLastMonth) GetType() string {
 	return TypeUserStatusLastMonth
 }
 
+// UserStatusType returns constant class type string of the class.
 func (*UserStatusLastMonth) UserStatusType() string {
 	return TypeUserStatusLastMonth
 }
 
-// Represents a list of stickers
+// Stickers represents a list of stickers
 type Stickers struct {
 	meta
 	// List of stickers
 	Stickers []*Sticker `json:"stickers"`
 }
 
+// MarshalJSON returns Stickers object as the JSON encoding of Stickers.
 func (entity *Stickers) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12293,21 +13670,24 @@ func (entity *Stickers) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Stickers) GetClass() string {
 	return ClassStickers
 }
 
+// GetType returns constant class type string of the class.
 func (*Stickers) GetType() string {
 	return TypeStickers
 }
 
-// Represents a list of all emoji corresponding to a sticker in a sticker set. The list is only for informational purposes, because a sticker is always sent with a fixed emoji from the corresponding Sticker object
+// StickerEmojis represents a list of all emoji corresponding to a sticker in a sticker set. The list is only for informational purposes, because a sticker is always sent with a fixed emoji from the corresponding Sticker object
 type StickerEmojis struct {
 	meta
 	// List of emojis
 	Emojis []string `json:"emojis"`
 }
 
+// MarshalJSON returns StickerEmojis object as the JSON encoding of StickerEmojis.
 func (entity *StickerEmojis) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12316,19 +13696,21 @@ func (entity *StickerEmojis) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*StickerEmojis) GetClass() string {
 	return ClassStickerEmojis
 }
 
+// GetType returns constant class type string of the class.
 func (*StickerEmojis) GetType() string {
 	return TypeStickerEmojis
 }
 
-// Represents a sticker set
+// StickerSet represents a sticker set
 type StickerSet struct {
 	meta
 	// Identifier of the sticker set
-	Id JsonInt64 `json:"id"`
+	ID Int64JSON `json:"id"`
 	// Title of the sticker set
 	Title string `json:"title"`
 	// Name of the sticker set
@@ -12349,6 +13731,7 @@ type StickerSet struct {
 	Emojis []*StickerEmojis `json:"emojis"`
 }
 
+// MarshalJSON returns StickerSet object as the JSON encoding of StickerSet.
 func (entity *StickerSet) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12357,19 +13740,21 @@ func (entity *StickerSet) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*StickerSet) GetClass() string {
 	return ClassStickerSet
 }
 
+// GetType returns constant class type string of the class.
 func (*StickerSet) GetType() string {
 	return TypeStickerSet
 }
 
-// Represents short information about a sticker set
+// StickerSetInfo represents short information about a sticker set
 type StickerSetInfo struct {
 	meta
 	// Identifier of the sticker set
-	Id JsonInt64 `json:"id"`
+	ID Int64JSON `json:"id"`
 	// Title of the sticker set
 	Title string `json:"title"`
 	// Name of the sticker set
@@ -12390,6 +13775,7 @@ type StickerSetInfo struct {
 	Covers []*Sticker `json:"covers"`
 }
 
+// MarshalJSON returns StickerSetInfo object as the JSON encoding of StickerSetInfo.
 func (entity *StickerSetInfo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12398,15 +13784,17 @@ func (entity *StickerSetInfo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*StickerSetInfo) GetClass() string {
 	return ClassStickerSetInfo
 }
 
+// GetType returns constant class type string of the class.
 func (*StickerSetInfo) GetType() string {
 	return TypeStickerSetInfo
 }
 
-// Represents a list of sticker sets
+// StickerSets represents a list of sticker sets
 type StickerSets struct {
 	meta
 	// Approximate total number of sticker sets found
@@ -12415,6 +13803,7 @@ type StickerSets struct {
 	Sets []*StickerSetInfo `json:"sets"`
 }
 
+// MarshalJSON returns StickerSets object as the JSON encoding of StickerSets.
 func (entity *StickerSets) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12423,19 +13812,22 @@ func (entity *StickerSets) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*StickerSets) GetClass() string {
 	return ClassStickerSets
 }
 
+// GetType returns constant class type string of the class.
 func (*StickerSets) GetType() string {
 	return TypeStickerSets
 }
 
-// The call wasn't discarded, or the reason is unknown
+// CallDiscardReasonEmpty the call wasn't discarded, or the reason is unknown
 type CallDiscardReasonEmpty struct {
 	meta
 }
 
+// MarshalJSON returns CallDiscardReasonEmpty object as the JSON encoding of CallDiscardReasonEmpty.
 func (entity *CallDiscardReasonEmpty) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12444,23 +13836,27 @@ func (entity *CallDiscardReasonEmpty) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CallDiscardReasonEmpty) GetClass() string {
 	return ClassCallDiscardReason
 }
 
+// GetType returns constant class type string of the class.
 func (*CallDiscardReasonEmpty) GetType() string {
 	return TypeCallDiscardReasonEmpty
 }
 
+// CallDiscardReasonType returns constant class type string of the class.
 func (*CallDiscardReasonEmpty) CallDiscardReasonType() string {
 	return TypeCallDiscardReasonEmpty
 }
 
-// The call was ended before the conversation started. It was cancelled by the caller or missed by the other party
+// CallDiscardReasonMissed the call was ended before the conversation started. It was cancelled by the caller or missed by the other party
 type CallDiscardReasonMissed struct {
 	meta
 }
 
+// MarshalJSON returns CallDiscardReasonMissed object as the JSON encoding of CallDiscardReasonMissed.
 func (entity *CallDiscardReasonMissed) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12469,23 +13865,27 @@ func (entity *CallDiscardReasonMissed) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CallDiscardReasonMissed) GetClass() string {
 	return ClassCallDiscardReason
 }
 
+// GetType returns constant class type string of the class.
 func (*CallDiscardReasonMissed) GetType() string {
 	return TypeCallDiscardReasonMissed
 }
 
+// CallDiscardReasonType returns constant class type string of the class.
 func (*CallDiscardReasonMissed) CallDiscardReasonType() string {
 	return TypeCallDiscardReasonMissed
 }
 
-// The call was ended before the conversation started. It was declined by the other party
+// CallDiscardReasonDeclined the call was ended before the conversation started. It was declined by the other party
 type CallDiscardReasonDeclined struct {
 	meta
 }
 
+// MarshalJSON returns CallDiscardReasonDeclined object as the JSON encoding of CallDiscardReasonDeclined.
 func (entity *CallDiscardReasonDeclined) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12494,23 +13894,27 @@ func (entity *CallDiscardReasonDeclined) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CallDiscardReasonDeclined) GetClass() string {
 	return ClassCallDiscardReason
 }
 
+// GetType returns constant class type string of the class.
 func (*CallDiscardReasonDeclined) GetType() string {
 	return TypeCallDiscardReasonDeclined
 }
 
+// CallDiscardReasonType returns constant class type string of the class.
 func (*CallDiscardReasonDeclined) CallDiscardReasonType() string {
 	return TypeCallDiscardReasonDeclined
 }
 
-// The call was ended during the conversation because the users were disconnected
+// CallDiscardReasonDisconnected the call was ended during the conversation because the users were disconnected
 type CallDiscardReasonDisconnected struct {
 	meta
 }
 
+// MarshalJSON returns CallDiscardReasonDisconnected object as the JSON encoding of CallDiscardReasonDisconnected.
 func (entity *CallDiscardReasonDisconnected) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12519,23 +13923,27 @@ func (entity *CallDiscardReasonDisconnected) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CallDiscardReasonDisconnected) GetClass() string {
 	return ClassCallDiscardReason
 }
 
+// GetType returns constant class type string of the class.
 func (*CallDiscardReasonDisconnected) GetType() string {
 	return TypeCallDiscardReasonDisconnected
 }
 
+// CallDiscardReasonType returns constant class type string of the class.
 func (*CallDiscardReasonDisconnected) CallDiscardReasonType() string {
 	return TypeCallDiscardReasonDisconnected
 }
 
-// The call was ended because one of the parties hung up
+// CallDiscardReasonHungUp the call was ended because one of the parties hung up
 type CallDiscardReasonHungUp struct {
 	meta
 }
 
+// MarshalJSON returns CallDiscardReasonHungUp object as the JSON encoding of CallDiscardReasonHungUp.
 func (entity *CallDiscardReasonHungUp) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12544,31 +13952,35 @@ func (entity *CallDiscardReasonHungUp) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CallDiscardReasonHungUp) GetClass() string {
 	return ClassCallDiscardReason
 }
 
+// GetType returns constant class type string of the class.
 func (*CallDiscardReasonHungUp) GetType() string {
 	return TypeCallDiscardReasonHungUp
 }
 
+// CallDiscardReasonType returns constant class type string of the class.
 func (*CallDiscardReasonHungUp) CallDiscardReasonType() string {
 	return TypeCallDiscardReasonHungUp
 }
 
-// Specifies the supported call protocols
+// CallProtocol specifies the supported call protocols
 type CallProtocol struct {
 	meta
 	// True, if UDP peer-to-peer connections are supported
-	UdpP2p bool `json:"udp_p2p"`
+	UDPP2p bool `json:"udp_p2p"`
 	// True, if connection through UDP reflectors is supported
-	UdpReflector bool `json:"udp_reflector"`
+	UDPReflector bool `json:"udp_reflector"`
 	// Minimum supported API layer; use 65
 	MinLayer int32 `json:"min_layer"`
 	// Maximum supported API layer; use 65
 	MaxLayer int32 `json:"max_layer"`
 }
 
+// MarshalJSON returns CallProtocol object as the JSON encoding of CallProtocol.
 func (entity *CallProtocol) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12577,29 +13989,32 @@ func (entity *CallProtocol) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CallProtocol) GetClass() string {
 	return ClassCallProtocol
 }
 
+// GetType returns constant class type string of the class.
 func (*CallProtocol) GetType() string {
 	return TypeCallProtocol
 }
 
-// Describes the address of UDP reflectors
+// CallConnection describes the address of UDP reflectors
 type CallConnection struct {
 	meta
 	// Reflector identifier
-	Id JsonInt64 `json:"id"`
+	ID Int64JSON `json:"id"`
 	// IPv4 reflector address
-	Ip string `json:"ip"`
+	IP string `json:"ip"`
 	// IPv6 reflector address
-	Ipv6 string `json:"ipv6"`
+	IPv6 string `json:"ipv6"`
 	// Reflector port number
 	Port int32 `json:"port"`
 	// Connection peer tag
 	PeerTag []byte `json:"peer_tag"`
 }
 
+// MarshalJSON returns CallConnection object as the JSON encoding of CallConnection.
 func (entity *CallConnection) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12608,38 +14023,43 @@ func (entity *CallConnection) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CallConnection) GetClass() string {
 	return ClassCallConnection
 }
 
+// GetType returns constant class type string of the class.
 func (*CallConnection) GetType() string {
 	return TypeCallConnection
 }
 
-// Contains the call identifier
-type CallId struct {
+// CallID contains the call identifier
+type CallID struct {
 	meta
 	// Call identifier
-	Id int32 `json:"id"`
+	ID int32 `json:"id"`
 }
 
-func (entity *CallId) MarshalJSON() ([]byte, error) {
+// MarshalJSON returns CallID object as the JSON encoding of CallID.
+func (entity *CallID) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
-	type stub CallId
+	type stub CallID
 
 	return json.Marshal((*stub)(entity))
 }
 
-func (*CallId) GetClass() string {
-	return ClassCallId
+// GetClass returns constant class string of the class.
+func (*CallID) GetClass() string {
+	return ClassCallID
 }
 
-func (*CallId) GetType() string {
-	return TypeCallId
+// GetType returns constant class type string of the class.
+func (*CallID) GetType() string {
+	return TypeCallID
 }
 
-// The call is pending, waiting to be accepted by a user
+// CallStatePending the call is pending, waiting to be accepted by a user
 type CallStatePending struct {
 	meta
 	// True, if the call has already been created by the server
@@ -12648,6 +14068,7 @@ type CallStatePending struct {
 	IsReceived bool `json:"is_received"`
 }
 
+// MarshalJSON returns CallStatePending object as the JSON encoding of CallStatePending.
 func (entity *CallStatePending) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12656,23 +14077,27 @@ func (entity *CallStatePending) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CallStatePending) GetClass() string {
 	return ClassCallState
 }
 
+// GetType returns constant class type string of the class.
 func (*CallStatePending) GetType() string {
 	return TypeCallStatePending
 }
 
+// CallStateType returns constant class type string of the class.
 func (*CallStatePending) CallStateType() string {
 	return TypeCallStatePending
 }
 
-// The call has been answered and encryption keys are being exchanged
+// CallStateExchangingKeys the call has been answered and encryption keys are being exchanged
 type CallStateExchangingKeys struct {
 	meta
 }
 
+// MarshalJSON returns CallStateExchangingKeys object as the JSON encoding of CallStateExchangingKeys.
 func (entity *CallStateExchangingKeys) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12681,19 +14106,22 @@ func (entity *CallStateExchangingKeys) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CallStateExchangingKeys) GetClass() string {
 	return ClassCallState
 }
 
+// GetType returns constant class type string of the class.
 func (*CallStateExchangingKeys) GetType() string {
 	return TypeCallStateExchangingKeys
 }
 
+// CallStateType returns constant class type string of the class.
 func (*CallStateExchangingKeys) CallStateType() string {
 	return TypeCallStateExchangingKeys
 }
 
-// The call is ready to use
+// CallStateReady the call is ready to use
 type CallStateReady struct {
 	meta
 	// Call protocols supported by the peer
@@ -12708,6 +14136,7 @@ type CallStateReady struct {
 	Emojis []string `json:"emojis"`
 }
 
+// MarshalJSON returns CallStateReady object as the JSON encoding of CallStateReady.
 func (entity *CallStateReady) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12716,23 +14145,27 @@ func (entity *CallStateReady) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CallStateReady) GetClass() string {
 	return ClassCallState
 }
 
+// GetType returns constant class type string of the class.
 func (*CallStateReady) GetType() string {
 	return TypeCallStateReady
 }
 
+// CallStateType returns constant class type string of the class.
 func (*CallStateReady) CallStateType() string {
 	return TypeCallStateReady
 }
 
-// The call is hanging up after discardCall has been called
+// CallStateHangingUp the call is hanging up after discardCall has been called
 type CallStateHangingUp struct {
 	meta
 }
 
+// MarshalJSON returns CallStateHangingUp object as the JSON encoding of CallStateHangingUp.
 func (entity *CallStateHangingUp) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12741,19 +14174,22 @@ func (entity *CallStateHangingUp) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CallStateHangingUp) GetClass() string {
 	return ClassCallState
 }
 
+// GetType returns constant class type string of the class.
 func (*CallStateHangingUp) GetType() string {
 	return TypeCallStateHangingUp
 }
 
+// CallStateType returns constant class type string of the class.
 func (*CallStateHangingUp) CallStateType() string {
 	return TypeCallStateHangingUp
 }
 
-// The call has ended successfully
+// CallStateDiscarded the call has ended successfully
 type CallStateDiscarded struct {
 	meta
 	// The reason, why the call has ended
@@ -12764,6 +14200,7 @@ type CallStateDiscarded struct {
 	NeedDebugInformation bool `json:"need_debug_information"`
 }
 
+// MarshalJSON returns CallStateDiscarded object as the JSON encoding of CallStateDiscarded.
 func (entity *CallStateDiscarded) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12772,19 +14209,23 @@ func (entity *CallStateDiscarded) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CallStateDiscarded) GetClass() string {
 	return ClassCallState
 }
 
+// GetType returns constant class type string of the class.
 func (*CallStateDiscarded) GetType() string {
 	return TypeCallStateDiscarded
 }
 
+// CallStateType returns constant class type string of the class.
 func (*CallStateDiscarded) CallStateType() string {
 	return TypeCallStateDiscarded
 }
 
-func (callStateDiscarded *CallStateDiscarded) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets CallStateDiscarded object to a copy of JSON encoding of CallStateDiscarded.
+func (entity *CallStateDiscarded) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Reason               json.RawMessage `json:"reason"`
 		NeedRating           bool            `json:"need_rating"`
@@ -12796,22 +14237,23 @@ func (callStateDiscarded *CallStateDiscarded) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	callStateDiscarded.NeedRating = tmp.NeedRating
-	callStateDiscarded.NeedDebugInformation = tmp.NeedDebugInformation
+	entity.NeedRating = tmp.NeedRating
+	entity.NeedDebugInformation = tmp.NeedDebugInformation
 
 	fieldReason, _ := UnmarshalCallDiscardReason(tmp.Reason)
-	callStateDiscarded.Reason = fieldReason
+	entity.Reason = fieldReason
 
 	return nil
 }
 
-// The call has ended with an error
+// CallStateError the call has ended with an error
 type CallStateError struct {
 	meta
 	// Error. An error with the code 4005000 will be returned if an outgoing call is missed because of an expired timeout
 	Error *Error `json:"error"`
 }
 
+// MarshalJSON returns CallStateError object as the JSON encoding of CallStateError.
 func (entity *CallStateError) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12820,31 +14262,35 @@ func (entity *CallStateError) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CallStateError) GetClass() string {
 	return ClassCallState
 }
 
+// GetType returns constant class type string of the class.
 func (*CallStateError) GetType() string {
 	return TypeCallStateError
 }
 
+// CallStateType returns constant class type string of the class.
 func (*CallStateError) CallStateType() string {
 	return TypeCallStateError
 }
 
-// Describes a call
+// Call describes a call
 type Call struct {
 	meta
 	// Call identifier, not persistent
-	Id int32 `json:"id"`
+	ID int32 `json:"id"`
 	// Peer user identifier
-	UserId int32 `json:"user_id"`
+	UserID int32 `json:"user_id"`
 	// True, if the call is outgoing
 	IsOutgoing bool `json:"is_outgoing"`
 	// Call state
 	State CallState `json:"state"`
 }
 
+// MarshalJSON returns Call object as the JSON encoding of Call.
 func (entity *Call) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12853,18 +14299,21 @@ func (entity *Call) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Call) GetClass() string {
 	return ClassCall
 }
 
+// GetType returns constant class type string of the class.
 func (*Call) GetType() string {
 	return TypeCall
 }
 
-func (call *Call) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets Call object to a copy of JSON encoding of Call.
+func (entity *Call) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id         int32           `json:"id"`
-		UserId     int32           `json:"user_id"`
+		ID         int32           `json:"id"`
+		UserID     int32           `json:"user_id"`
 		IsOutgoing bool            `json:"is_outgoing"`
 		State      json.RawMessage `json:"state"`
 	}
@@ -12874,23 +14323,24 @@ func (call *Call) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	call.Id = tmp.Id
-	call.UserId = tmp.UserId
-	call.IsOutgoing = tmp.IsOutgoing
+	entity.ID = tmp.ID
+	entity.UserID = tmp.UserID
+	entity.IsOutgoing = tmp.IsOutgoing
 
 	fieldState, _ := UnmarshalCallState(tmp.State)
-	call.State = fieldState
+	entity.State = fieldState
 
 	return nil
 }
 
-// Represents a list of animations
+// Animations represents a list of animations
 type Animations struct {
 	meta
 	// List of animations
 	Animations []*Animation `json:"animations"`
 }
 
+// MarshalJSON returns Animations object as the JSON encoding of Animations.
 func (entity *Animations) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12899,23 +14349,26 @@ func (entity *Animations) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Animations) GetClass() string {
 	return ClassAnimations
 }
 
+// GetType returns constant class type string of the class.
 func (*Animations) GetType() string {
 	return TypeAnimations
 }
 
-// Represents the result of an ImportContacts request
+// ImportedContacts represents the result of an ImportContacts request
 type ImportedContacts struct {
 	meta
 	// User identifiers of the imported contacts in the same order as they were specified in the request; 0 if the contact is not yet a registered user
-	UserIds []int32 `json:"user_ids"`
+	UserIDs []int32 `json:"user_ids"`
 	// The number of users that imported the corresponding contact; 0 for already registered users or if unavailable
 	ImporterCount []int32 `json:"importer_count"`
 }
 
+// MarshalJSON returns ImportedContacts object as the JSON encoding of ImportedContacts.
 func (entity *ImportedContacts) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12924,25 +14377,27 @@ func (entity *ImportedContacts) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ImportedContacts) GetClass() string {
 	return ClassImportedContacts
 }
 
+// GetType returns constant class type string of the class.
 func (*ImportedContacts) GetType() string {
 	return TypeImportedContacts
 }
 
-// Represents a link to an animated GIF
+// InputInlineQueryResultAnimatedGif represents a link to an animated GIF
 type InputInlineQueryResultAnimatedGif struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Title of the query result
 	Title string `json:"title"`
 	// URL of the static result thumbnail (JPEG or GIF), if it exists
-	ThumbnailUrl string `json:"thumbnail_url"`
+	ThumbnailURL string `json:"thumbnail_url"`
 	// The URL of the GIF-file (file size must not exceed 1MB)
-	GifUrl string `json:"gif_url"`
+	GifURL string `json:"gif_url"`
 	// Duration of the GIF, in seconds
 	GifDuration int32 `json:"gif_duration"`
 	// Width of the GIF
@@ -12955,6 +14410,7 @@ type InputInlineQueryResultAnimatedGif struct {
 	InputMessageContent InputMessageContent `json:"input_message_content"`
 }
 
+// MarshalJSON returns InputInlineQueryResultAnimatedGif object as the JSON encoding of InputInlineQueryResultAnimatedGif.
 func (entity *InputInlineQueryResultAnimatedGif) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -12963,24 +14419,28 @@ func (entity *InputInlineQueryResultAnimatedGif) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputInlineQueryResultAnimatedGif) GetClass() string {
 	return ClassInputInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InputInlineQueryResultAnimatedGif) GetType() string {
 	return TypeInputInlineQueryResultAnimatedGif
 }
 
+// InputInlineQueryResultType returns constant class type string of the class.
 func (*InputInlineQueryResultAnimatedGif) InputInlineQueryResultType() string {
 	return TypeInputInlineQueryResultAnimatedGif
 }
 
-func (inputInlineQueryResultAnimatedGif *InputInlineQueryResultAnimatedGif) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputInlineQueryResultAnimatedGif object to a copy of JSON encoding of InputInlineQueryResultAnimatedGif.
+func (entity *InputInlineQueryResultAnimatedGif) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id                  string          `json:"id"`
+		ID                  string          `json:"id"`
 		Title               string          `json:"title"`
-		ThumbnailUrl        string          `json:"thumbnail_url"`
-		GifUrl              string          `json:"gif_url"`
+		ThumbnailURL        string          `json:"thumbnail_url"`
+		GifURL              string          `json:"gif_url"`
 		GifDuration         int32           `json:"gif_duration"`
 		GifWidth            int32           `json:"gif_width"`
 		GifHeight           int32           `json:"gif_height"`
@@ -12993,34 +14453,34 @@ func (inputInlineQueryResultAnimatedGif *InputInlineQueryResultAnimatedGif) Unma
 		return err
 	}
 
-	inputInlineQueryResultAnimatedGif.Id = tmp.Id
-	inputInlineQueryResultAnimatedGif.Title = tmp.Title
-	inputInlineQueryResultAnimatedGif.ThumbnailUrl = tmp.ThumbnailUrl
-	inputInlineQueryResultAnimatedGif.GifUrl = tmp.GifUrl
-	inputInlineQueryResultAnimatedGif.GifDuration = tmp.GifDuration
-	inputInlineQueryResultAnimatedGif.GifWidth = tmp.GifWidth
-	inputInlineQueryResultAnimatedGif.GifHeight = tmp.GifHeight
+	entity.ID = tmp.ID
+	entity.Title = tmp.Title
+	entity.ThumbnailURL = tmp.ThumbnailURL
+	entity.GifURL = tmp.GifURL
+	entity.GifDuration = tmp.GifDuration
+	entity.GifWidth = tmp.GifWidth
+	entity.GifHeight = tmp.GifHeight
 
 	fieldReplyMarkup, _ := UnmarshalReplyMarkup(tmp.ReplyMarkup)
-	inputInlineQueryResultAnimatedGif.ReplyMarkup = fieldReplyMarkup
+	entity.ReplyMarkup = fieldReplyMarkup
 
 	fieldInputMessageContent, _ := UnmarshalInputMessageContent(tmp.InputMessageContent)
-	inputInlineQueryResultAnimatedGif.InputMessageContent = fieldInputMessageContent
+	entity.InputMessageContent = fieldInputMessageContent
 
 	return nil
 }
 
-// Represents a link to an animated (i.e. without sound) H.264/MPEG-4 AVC video
+// InputInlineQueryResultAnimatedMpeg4 represents a link to an animated (i.e. without sound) H.264/MPEG-4 AVC video
 type InputInlineQueryResultAnimatedMpeg4 struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Title of the result
 	Title string `json:"title"`
 	// URL of the static result thumbnail (JPEG or GIF), if it exists
-	ThumbnailUrl string `json:"thumbnail_url"`
+	ThumbnailURL string `json:"thumbnail_url"`
 	// The URL of the MPEG4-file (file size must not exceed 1MB)
-	Mpeg4Url string `json:"mpeg4_url"`
+	Mpeg4URL string `json:"mpeg4_url"`
 	// Duration of the video, in seconds
 	Mpeg4Duration int32 `json:"mpeg4_duration"`
 	// Width of the video
@@ -13033,6 +14493,7 @@ type InputInlineQueryResultAnimatedMpeg4 struct {
 	InputMessageContent InputMessageContent `json:"input_message_content"`
 }
 
+// MarshalJSON returns InputInlineQueryResultAnimatedMpeg4 object as the JSON encoding of InputInlineQueryResultAnimatedMpeg4.
 func (entity *InputInlineQueryResultAnimatedMpeg4) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -13041,24 +14502,28 @@ func (entity *InputInlineQueryResultAnimatedMpeg4) MarshalJSON() ([]byte, error)
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputInlineQueryResultAnimatedMpeg4) GetClass() string {
 	return ClassInputInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InputInlineQueryResultAnimatedMpeg4) GetType() string {
 	return TypeInputInlineQueryResultAnimatedMpeg4
 }
 
+// InputInlineQueryResultType returns constant class type string of the class.
 func (*InputInlineQueryResultAnimatedMpeg4) InputInlineQueryResultType() string {
 	return TypeInputInlineQueryResultAnimatedMpeg4
 }
 
-func (inputInlineQueryResultAnimatedMpeg4 *InputInlineQueryResultAnimatedMpeg4) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputInlineQueryResultAnimatedMpeg4 object to a copy of JSON encoding of InputInlineQueryResultAnimatedMpeg4.
+func (entity *InputInlineQueryResultAnimatedMpeg4) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id                  string          `json:"id"`
+		ID                  string          `json:"id"`
 		Title               string          `json:"title"`
-		ThumbnailUrl        string          `json:"thumbnail_url"`
-		Mpeg4Url            string          `json:"mpeg4_url"`
+		ThumbnailURL        string          `json:"thumbnail_url"`
+		Mpeg4URL            string          `json:"mpeg4_url"`
 		Mpeg4Duration       int32           `json:"mpeg4_duration"`
 		Mpeg4Width          int32           `json:"mpeg4_width"`
 		Mpeg4Height         int32           `json:"mpeg4_height"`
@@ -13071,38 +14536,38 @@ func (inputInlineQueryResultAnimatedMpeg4 *InputInlineQueryResultAnimatedMpeg4) 
 		return err
 	}
 
-	inputInlineQueryResultAnimatedMpeg4.Id = tmp.Id
-	inputInlineQueryResultAnimatedMpeg4.Title = tmp.Title
-	inputInlineQueryResultAnimatedMpeg4.ThumbnailUrl = tmp.ThumbnailUrl
-	inputInlineQueryResultAnimatedMpeg4.Mpeg4Url = tmp.Mpeg4Url
-	inputInlineQueryResultAnimatedMpeg4.Mpeg4Duration = tmp.Mpeg4Duration
-	inputInlineQueryResultAnimatedMpeg4.Mpeg4Width = tmp.Mpeg4Width
-	inputInlineQueryResultAnimatedMpeg4.Mpeg4Height = tmp.Mpeg4Height
+	entity.ID = tmp.ID
+	entity.Title = tmp.Title
+	entity.ThumbnailURL = tmp.ThumbnailURL
+	entity.Mpeg4URL = tmp.Mpeg4URL
+	entity.Mpeg4Duration = tmp.Mpeg4Duration
+	entity.Mpeg4Width = tmp.Mpeg4Width
+	entity.Mpeg4Height = tmp.Mpeg4Height
 
 	fieldReplyMarkup, _ := UnmarshalReplyMarkup(tmp.ReplyMarkup)
-	inputInlineQueryResultAnimatedMpeg4.ReplyMarkup = fieldReplyMarkup
+	entity.ReplyMarkup = fieldReplyMarkup
 
 	fieldInputMessageContent, _ := UnmarshalInputMessageContent(tmp.InputMessageContent)
-	inputInlineQueryResultAnimatedMpeg4.InputMessageContent = fieldInputMessageContent
+	entity.InputMessageContent = fieldInputMessageContent
 
 	return nil
 }
 
-// Represents a link to an article or web page
+// InputInlineQueryResultArticle represents a link to an article or web page
 type InputInlineQueryResultArticle struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// URL of the result, if it exists
-	Url string `json:"url"`
+	URL string `json:"url"`
 	// True, if the URL must be not shown
-	HideUrl bool `json:"hide_url"`
+	HideURL bool `json:"hide_url"`
 	// Title of the result
 	Title string `json:"title"`
 	// A short description of the result
 	Description string `json:"description"`
 	// URL of the result thumbnail, if it exists
-	ThumbnailUrl string `json:"thumbnail_url"`
+	ThumbnailURL string `json:"thumbnail_url"`
 	// Thumbnail width, if known
 	ThumbnailWidth int32 `json:"thumbnail_width"`
 	// Thumbnail height, if known
@@ -13113,6 +14578,7 @@ type InputInlineQueryResultArticle struct {
 	InputMessageContent InputMessageContent `json:"input_message_content"`
 }
 
+// MarshalJSON returns InputInlineQueryResultArticle object as the JSON encoding of InputInlineQueryResultArticle.
 func (entity *InputInlineQueryResultArticle) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -13121,26 +14587,30 @@ func (entity *InputInlineQueryResultArticle) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputInlineQueryResultArticle) GetClass() string {
 	return ClassInputInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InputInlineQueryResultArticle) GetType() string {
 	return TypeInputInlineQueryResultArticle
 }
 
+// InputInlineQueryResultType returns constant class type string of the class.
 func (*InputInlineQueryResultArticle) InputInlineQueryResultType() string {
 	return TypeInputInlineQueryResultArticle
 }
 
-func (inputInlineQueryResultArticle *InputInlineQueryResultArticle) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputInlineQueryResultArticle object to a copy of JSON encoding of InputInlineQueryResultArticle.
+func (entity *InputInlineQueryResultArticle) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id                  string          `json:"id"`
-		Url                 string          `json:"url"`
-		HideUrl             bool            `json:"hide_url"`
+		ID                  string          `json:"id"`
+		URL                 string          `json:"url"`
+		HideURL             bool            `json:"hide_url"`
 		Title               string          `json:"title"`
 		Description         string          `json:"description"`
-		ThumbnailUrl        string          `json:"thumbnail_url"`
+		ThumbnailURL        string          `json:"thumbnail_url"`
 		ThumbnailWidth      int32           `json:"thumbnail_width"`
 		ThumbnailHeight     int32           `json:"thumbnail_height"`
 		ReplyMarkup         json.RawMessage `json:"reply_markup"`
@@ -13152,35 +14622,35 @@ func (inputInlineQueryResultArticle *InputInlineQueryResultArticle) UnmarshalJSO
 		return err
 	}
 
-	inputInlineQueryResultArticle.Id = tmp.Id
-	inputInlineQueryResultArticle.Url = tmp.Url
-	inputInlineQueryResultArticle.HideUrl = tmp.HideUrl
-	inputInlineQueryResultArticle.Title = tmp.Title
-	inputInlineQueryResultArticle.Description = tmp.Description
-	inputInlineQueryResultArticle.ThumbnailUrl = tmp.ThumbnailUrl
-	inputInlineQueryResultArticle.ThumbnailWidth = tmp.ThumbnailWidth
-	inputInlineQueryResultArticle.ThumbnailHeight = tmp.ThumbnailHeight
+	entity.ID = tmp.ID
+	entity.URL = tmp.URL
+	entity.HideURL = tmp.HideURL
+	entity.Title = tmp.Title
+	entity.Description = tmp.Description
+	entity.ThumbnailURL = tmp.ThumbnailURL
+	entity.ThumbnailWidth = tmp.ThumbnailWidth
+	entity.ThumbnailHeight = tmp.ThumbnailHeight
 
 	fieldReplyMarkup, _ := UnmarshalReplyMarkup(tmp.ReplyMarkup)
-	inputInlineQueryResultArticle.ReplyMarkup = fieldReplyMarkup
+	entity.ReplyMarkup = fieldReplyMarkup
 
 	fieldInputMessageContent, _ := UnmarshalInputMessageContent(tmp.InputMessageContent)
-	inputInlineQueryResultArticle.InputMessageContent = fieldInputMessageContent
+	entity.InputMessageContent = fieldInputMessageContent
 
 	return nil
 }
 
-// Represents a link to an MP3 audio file
+// InputInlineQueryResultAudio represents a link to an MP3 audio file
 type InputInlineQueryResultAudio struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Title of the audio file
 	Title string `json:"title"`
 	// Performer of the audio file
 	Performer string `json:"performer"`
 	// The URL of the audio file
-	AudioUrl string `json:"audio_url"`
+	AudioURL string `json:"audio_url"`
 	// Audio file duration, in seconds
 	AudioDuration int32 `json:"audio_duration"`
 	// The message reply markup. Must be of type replyMarkupInlineKeyboard or null
@@ -13189,6 +14659,7 @@ type InputInlineQueryResultAudio struct {
 	InputMessageContent InputMessageContent `json:"input_message_content"`
 }
 
+// MarshalJSON returns InputInlineQueryResultAudio object as the JSON encoding of InputInlineQueryResultAudio.
 func (entity *InputInlineQueryResultAudio) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -13197,24 +14668,28 @@ func (entity *InputInlineQueryResultAudio) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputInlineQueryResultAudio) GetClass() string {
 	return ClassInputInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InputInlineQueryResultAudio) GetType() string {
 	return TypeInputInlineQueryResultAudio
 }
 
+// InputInlineQueryResultType returns constant class type string of the class.
 func (*InputInlineQueryResultAudio) InputInlineQueryResultType() string {
 	return TypeInputInlineQueryResultAudio
 }
 
-func (inputInlineQueryResultAudio *InputInlineQueryResultAudio) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputInlineQueryResultAudio object to a copy of JSON encoding of InputInlineQueryResultAudio.
+func (entity *InputInlineQueryResultAudio) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id                  string          `json:"id"`
+		ID                  string          `json:"id"`
 		Title               string          `json:"title"`
 		Performer           string          `json:"performer"`
-		AudioUrl            string          `json:"audio_url"`
+		AudioURL            string          `json:"audio_url"`
 		AudioDuration       int32           `json:"audio_duration"`
 		ReplyMarkup         json.RawMessage `json:"reply_markup"`
 		InputMessageContent json.RawMessage `json:"input_message_content"`
@@ -13225,30 +14700,30 @@ func (inputInlineQueryResultAudio *InputInlineQueryResultAudio) UnmarshalJSON(da
 		return err
 	}
 
-	inputInlineQueryResultAudio.Id = tmp.Id
-	inputInlineQueryResultAudio.Title = tmp.Title
-	inputInlineQueryResultAudio.Performer = tmp.Performer
-	inputInlineQueryResultAudio.AudioUrl = tmp.AudioUrl
-	inputInlineQueryResultAudio.AudioDuration = tmp.AudioDuration
+	entity.ID = tmp.ID
+	entity.Title = tmp.Title
+	entity.Performer = tmp.Performer
+	entity.AudioURL = tmp.AudioURL
+	entity.AudioDuration = tmp.AudioDuration
 
 	fieldReplyMarkup, _ := UnmarshalReplyMarkup(tmp.ReplyMarkup)
-	inputInlineQueryResultAudio.ReplyMarkup = fieldReplyMarkup
+	entity.ReplyMarkup = fieldReplyMarkup
 
 	fieldInputMessageContent, _ := UnmarshalInputMessageContent(tmp.InputMessageContent)
-	inputInlineQueryResultAudio.InputMessageContent = fieldInputMessageContent
+	entity.InputMessageContent = fieldInputMessageContent
 
 	return nil
 }
 
-// Represents a user contact
+// InputInlineQueryResultContact represents a user contact
 type InputInlineQueryResultContact struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// User contact
 	Contact *Contact `json:"contact"`
 	// URL of the result thumbnail, if it exists
-	ThumbnailUrl string `json:"thumbnail_url"`
+	ThumbnailURL string `json:"thumbnail_url"`
 	// Thumbnail width, if known
 	ThumbnailWidth int32 `json:"thumbnail_width"`
 	// Thumbnail height, if known
@@ -13259,6 +14734,7 @@ type InputInlineQueryResultContact struct {
 	InputMessageContent InputMessageContent `json:"input_message_content"`
 }
 
+// MarshalJSON returns InputInlineQueryResultContact object as the JSON encoding of InputInlineQueryResultContact.
 func (entity *InputInlineQueryResultContact) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -13267,23 +14743,27 @@ func (entity *InputInlineQueryResultContact) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputInlineQueryResultContact) GetClass() string {
 	return ClassInputInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InputInlineQueryResultContact) GetType() string {
 	return TypeInputInlineQueryResultContact
 }
 
+// InputInlineQueryResultType returns constant class type string of the class.
 func (*InputInlineQueryResultContact) InputInlineQueryResultType() string {
 	return TypeInputInlineQueryResultContact
 }
 
-func (inputInlineQueryResultContact *InputInlineQueryResultContact) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputInlineQueryResultContact object to a copy of JSON encoding of InputInlineQueryResultContact.
+func (entity *InputInlineQueryResultContact) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id                  string          `json:"id"`
+		ID                  string          `json:"id"`
 		Contact             *Contact        `json:"contact"`
-		ThumbnailUrl        string          `json:"thumbnail_url"`
+		ThumbnailURL        string          `json:"thumbnail_url"`
 		ThumbnailWidth      int32           `json:"thumbnail_width"`
 		ThumbnailHeight     int32           `json:"thumbnail_height"`
 		ReplyMarkup         json.RawMessage `json:"reply_markup"`
@@ -13295,36 +14775,36 @@ func (inputInlineQueryResultContact *InputInlineQueryResultContact) UnmarshalJSO
 		return err
 	}
 
-	inputInlineQueryResultContact.Id = tmp.Id
-	inputInlineQueryResultContact.Contact = tmp.Contact
-	inputInlineQueryResultContact.ThumbnailUrl = tmp.ThumbnailUrl
-	inputInlineQueryResultContact.ThumbnailWidth = tmp.ThumbnailWidth
-	inputInlineQueryResultContact.ThumbnailHeight = tmp.ThumbnailHeight
+	entity.ID = tmp.ID
+	entity.Contact = tmp.Contact
+	entity.ThumbnailURL = tmp.ThumbnailURL
+	entity.ThumbnailWidth = tmp.ThumbnailWidth
+	entity.ThumbnailHeight = tmp.ThumbnailHeight
 
 	fieldReplyMarkup, _ := UnmarshalReplyMarkup(tmp.ReplyMarkup)
-	inputInlineQueryResultContact.ReplyMarkup = fieldReplyMarkup
+	entity.ReplyMarkup = fieldReplyMarkup
 
 	fieldInputMessageContent, _ := UnmarshalInputMessageContent(tmp.InputMessageContent)
-	inputInlineQueryResultContact.InputMessageContent = fieldInputMessageContent
+	entity.InputMessageContent = fieldInputMessageContent
 
 	return nil
 }
 
-// Represents a link to a file
+// InputInlineQueryResultDocument represents a link to a file
 type InputInlineQueryResultDocument struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Title of the resulting file
 	Title string `json:"title"`
 	// Short description of the result, if known
 	Description string `json:"description"`
 	// URL of the file
-	DocumentUrl string `json:"document_url"`
+	DocumentURL string `json:"document_url"`
 	// MIME type of the file content; only "application/pdf" and "application/zip" are currently allowed
 	MimeType string `json:"mime_type"`
 	// The URL of the file thumbnail, if it exists
-	ThumbnailUrl string `json:"thumbnail_url"`
+	ThumbnailURL string `json:"thumbnail_url"`
 	// Width of the thumbnail
 	ThumbnailWidth int32 `json:"thumbnail_width"`
 	// Height of the thumbnail
@@ -13335,6 +14815,7 @@ type InputInlineQueryResultDocument struct {
 	InputMessageContent InputMessageContent `json:"input_message_content"`
 }
 
+// MarshalJSON returns InputInlineQueryResultDocument object as the JSON encoding of InputInlineQueryResultDocument.
 func (entity *InputInlineQueryResultDocument) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -13343,26 +14824,30 @@ func (entity *InputInlineQueryResultDocument) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputInlineQueryResultDocument) GetClass() string {
 	return ClassInputInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InputInlineQueryResultDocument) GetType() string {
 	return TypeInputInlineQueryResultDocument
 }
 
+// InputInlineQueryResultType returns constant class type string of the class.
 func (*InputInlineQueryResultDocument) InputInlineQueryResultType() string {
 	return TypeInputInlineQueryResultDocument
 }
 
-func (inputInlineQueryResultDocument *InputInlineQueryResultDocument) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputInlineQueryResultDocument object to a copy of JSON encoding of InputInlineQueryResultDocument.
+func (entity *InputInlineQueryResultDocument) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id                  string          `json:"id"`
+		ID                  string          `json:"id"`
 		Title               string          `json:"title"`
 		Description         string          `json:"description"`
-		DocumentUrl         string          `json:"document_url"`
+		DocumentURL         string          `json:"document_url"`
 		MimeType            string          `json:"mime_type"`
-		ThumbnailUrl        string          `json:"thumbnail_url"`
+		ThumbnailURL        string          `json:"thumbnail_url"`
 		ThumbnailWidth      int32           `json:"thumbnail_width"`
 		ThumbnailHeight     int32           `json:"thumbnail_height"`
 		ReplyMarkup         json.RawMessage `json:"reply_markup"`
@@ -13374,35 +14859,36 @@ func (inputInlineQueryResultDocument *InputInlineQueryResultDocument) UnmarshalJ
 		return err
 	}
 
-	inputInlineQueryResultDocument.Id = tmp.Id
-	inputInlineQueryResultDocument.Title = tmp.Title
-	inputInlineQueryResultDocument.Description = tmp.Description
-	inputInlineQueryResultDocument.DocumentUrl = tmp.DocumentUrl
-	inputInlineQueryResultDocument.MimeType = tmp.MimeType
-	inputInlineQueryResultDocument.ThumbnailUrl = tmp.ThumbnailUrl
-	inputInlineQueryResultDocument.ThumbnailWidth = tmp.ThumbnailWidth
-	inputInlineQueryResultDocument.ThumbnailHeight = tmp.ThumbnailHeight
+	entity.ID = tmp.ID
+	entity.Title = tmp.Title
+	entity.Description = tmp.Description
+	entity.DocumentURL = tmp.DocumentURL
+	entity.MimeType = tmp.MimeType
+	entity.ThumbnailURL = tmp.ThumbnailURL
+	entity.ThumbnailWidth = tmp.ThumbnailWidth
+	entity.ThumbnailHeight = tmp.ThumbnailHeight
 
 	fieldReplyMarkup, _ := UnmarshalReplyMarkup(tmp.ReplyMarkup)
-	inputInlineQueryResultDocument.ReplyMarkup = fieldReplyMarkup
+	entity.ReplyMarkup = fieldReplyMarkup
 
 	fieldInputMessageContent, _ := UnmarshalInputMessageContent(tmp.InputMessageContent)
-	inputInlineQueryResultDocument.InputMessageContent = fieldInputMessageContent
+	entity.InputMessageContent = fieldInputMessageContent
 
 	return nil
 }
 
-// Represents a game
+// InputInlineQueryResultGame represents a game
 type InputInlineQueryResultGame struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Short name of the game
 	GameShortName string `json:"game_short_name"`
 	// Message reply markup. Must be of type replyMarkupInlineKeyboard or null
 	ReplyMarkup ReplyMarkup `json:"reply_markup"`
 }
 
+// MarshalJSON returns InputInlineQueryResultGame object as the JSON encoding of InputInlineQueryResultGame.
 func (entity *InputInlineQueryResultGame) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -13411,21 +14897,25 @@ func (entity *InputInlineQueryResultGame) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputInlineQueryResultGame) GetClass() string {
 	return ClassInputInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InputInlineQueryResultGame) GetType() string {
 	return TypeInputInlineQueryResultGame
 }
 
+// InputInlineQueryResultType returns constant class type string of the class.
 func (*InputInlineQueryResultGame) InputInlineQueryResultType() string {
 	return TypeInputInlineQueryResultGame
 }
 
-func (inputInlineQueryResultGame *InputInlineQueryResultGame) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputInlineQueryResultGame object to a copy of JSON encoding of InputInlineQueryResultGame.
+func (entity *InputInlineQueryResultGame) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id            string          `json:"id"`
+		ID            string          `json:"id"`
 		GameShortName string          `json:"game_short_name"`
 		ReplyMarkup   json.RawMessage `json:"reply_markup"`
 	}
@@ -13435,20 +14925,20 @@ func (inputInlineQueryResultGame *InputInlineQueryResultGame) UnmarshalJSON(data
 		return err
 	}
 
-	inputInlineQueryResultGame.Id = tmp.Id
-	inputInlineQueryResultGame.GameShortName = tmp.GameShortName
+	entity.ID = tmp.ID
+	entity.GameShortName = tmp.GameShortName
 
 	fieldReplyMarkup, _ := UnmarshalReplyMarkup(tmp.ReplyMarkup)
-	inputInlineQueryResultGame.ReplyMarkup = fieldReplyMarkup
+	entity.ReplyMarkup = fieldReplyMarkup
 
 	return nil
 }
 
-// Represents a point on the map
+// InputInlineQueryResultLocation represents a point on the map
 type InputInlineQueryResultLocation struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Location result
 	Location *Location `json:"location"`
 	// Amount of time relative to the message sent time until the location can be updated, in seconds
@@ -13456,7 +14946,7 @@ type InputInlineQueryResultLocation struct {
 	// Title of the result
 	Title string `json:"title"`
 	// URL of the result thumbnail, if it exists
-	ThumbnailUrl string `json:"thumbnail_url"`
+	ThumbnailURL string `json:"thumbnail_url"`
 	// Thumbnail width, if known
 	ThumbnailWidth int32 `json:"thumbnail_width"`
 	// Thumbnail height, if known
@@ -13467,6 +14957,7 @@ type InputInlineQueryResultLocation struct {
 	InputMessageContent InputMessageContent `json:"input_message_content"`
 }
 
+// MarshalJSON returns InputInlineQueryResultLocation object as the JSON encoding of InputInlineQueryResultLocation.
 func (entity *InputInlineQueryResultLocation) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -13475,25 +14966,29 @@ func (entity *InputInlineQueryResultLocation) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputInlineQueryResultLocation) GetClass() string {
 	return ClassInputInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InputInlineQueryResultLocation) GetType() string {
 	return TypeInputInlineQueryResultLocation
 }
 
+// InputInlineQueryResultType returns constant class type string of the class.
 func (*InputInlineQueryResultLocation) InputInlineQueryResultType() string {
 	return TypeInputInlineQueryResultLocation
 }
 
-func (inputInlineQueryResultLocation *InputInlineQueryResultLocation) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputInlineQueryResultLocation object to a copy of JSON encoding of InputInlineQueryResultLocation.
+func (entity *InputInlineQueryResultLocation) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id                  string          `json:"id"`
+		ID                  string          `json:"id"`
 		Location            *Location       `json:"location"`
 		LivePeriod          int32           `json:"live_period"`
 		Title               string          `json:"title"`
-		ThumbnailUrl        string          `json:"thumbnail_url"`
+		ThumbnailURL        string          `json:"thumbnail_url"`
 		ThumbnailWidth      int32           `json:"thumbnail_width"`
 		ThumbnailHeight     int32           `json:"thumbnail_height"`
 		ReplyMarkup         json.RawMessage `json:"reply_markup"`
@@ -13505,36 +15000,36 @@ func (inputInlineQueryResultLocation *InputInlineQueryResultLocation) UnmarshalJ
 		return err
 	}
 
-	inputInlineQueryResultLocation.Id = tmp.Id
-	inputInlineQueryResultLocation.Location = tmp.Location
-	inputInlineQueryResultLocation.LivePeriod = tmp.LivePeriod
-	inputInlineQueryResultLocation.Title = tmp.Title
-	inputInlineQueryResultLocation.ThumbnailUrl = tmp.ThumbnailUrl
-	inputInlineQueryResultLocation.ThumbnailWidth = tmp.ThumbnailWidth
-	inputInlineQueryResultLocation.ThumbnailHeight = tmp.ThumbnailHeight
+	entity.ID = tmp.ID
+	entity.Location = tmp.Location
+	entity.LivePeriod = tmp.LivePeriod
+	entity.Title = tmp.Title
+	entity.ThumbnailURL = tmp.ThumbnailURL
+	entity.ThumbnailWidth = tmp.ThumbnailWidth
+	entity.ThumbnailHeight = tmp.ThumbnailHeight
 
 	fieldReplyMarkup, _ := UnmarshalReplyMarkup(tmp.ReplyMarkup)
-	inputInlineQueryResultLocation.ReplyMarkup = fieldReplyMarkup
+	entity.ReplyMarkup = fieldReplyMarkup
 
 	fieldInputMessageContent, _ := UnmarshalInputMessageContent(tmp.InputMessageContent)
-	inputInlineQueryResultLocation.InputMessageContent = fieldInputMessageContent
+	entity.InputMessageContent = fieldInputMessageContent
 
 	return nil
 }
 
-// Represents link to a JPEG image
+// InputInlineQueryResultPhoto represents link to a JPEG image
 type InputInlineQueryResultPhoto struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Title of the result, if known
 	Title string `json:"title"`
 	// A short description of the result, if known
 	Description string `json:"description"`
 	// URL of the photo thumbnail, if it exists
-	ThumbnailUrl string `json:"thumbnail_url"`
+	ThumbnailURL string `json:"thumbnail_url"`
 	// The URL of the JPEG photo (photo size must not exceed 5MB)
-	PhotoUrl string `json:"photo_url"`
+	PhotoURL string `json:"photo_url"`
 	// Width of the photo
 	PhotoWidth int32 `json:"photo_width"`
 	// Height of the photo
@@ -13545,6 +15040,7 @@ type InputInlineQueryResultPhoto struct {
 	InputMessageContent InputMessageContent `json:"input_message_content"`
 }
 
+// MarshalJSON returns InputInlineQueryResultPhoto object as the JSON encoding of InputInlineQueryResultPhoto.
 func (entity *InputInlineQueryResultPhoto) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -13553,25 +15049,29 @@ func (entity *InputInlineQueryResultPhoto) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputInlineQueryResultPhoto) GetClass() string {
 	return ClassInputInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InputInlineQueryResultPhoto) GetType() string {
 	return TypeInputInlineQueryResultPhoto
 }
 
+// InputInlineQueryResultType returns constant class type string of the class.
 func (*InputInlineQueryResultPhoto) InputInlineQueryResultType() string {
 	return TypeInputInlineQueryResultPhoto
 }
 
-func (inputInlineQueryResultPhoto *InputInlineQueryResultPhoto) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputInlineQueryResultPhoto object to a copy of JSON encoding of InputInlineQueryResultPhoto.
+func (entity *InputInlineQueryResultPhoto) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id                  string          `json:"id"`
+		ID                  string          `json:"id"`
 		Title               string          `json:"title"`
 		Description         string          `json:"description"`
-		ThumbnailUrl        string          `json:"thumbnail_url"`
-		PhotoUrl            string          `json:"photo_url"`
+		ThumbnailURL        string          `json:"thumbnail_url"`
+		PhotoURL            string          `json:"photo_url"`
 		PhotoWidth          int32           `json:"photo_width"`
 		PhotoHeight         int32           `json:"photo_height"`
 		ReplyMarkup         json.RawMessage `json:"reply_markup"`
@@ -13583,32 +15083,32 @@ func (inputInlineQueryResultPhoto *InputInlineQueryResultPhoto) UnmarshalJSON(da
 		return err
 	}
 
-	inputInlineQueryResultPhoto.Id = tmp.Id
-	inputInlineQueryResultPhoto.Title = tmp.Title
-	inputInlineQueryResultPhoto.Description = tmp.Description
-	inputInlineQueryResultPhoto.ThumbnailUrl = tmp.ThumbnailUrl
-	inputInlineQueryResultPhoto.PhotoUrl = tmp.PhotoUrl
-	inputInlineQueryResultPhoto.PhotoWidth = tmp.PhotoWidth
-	inputInlineQueryResultPhoto.PhotoHeight = tmp.PhotoHeight
+	entity.ID = tmp.ID
+	entity.Title = tmp.Title
+	entity.Description = tmp.Description
+	entity.ThumbnailURL = tmp.ThumbnailURL
+	entity.PhotoURL = tmp.PhotoURL
+	entity.PhotoWidth = tmp.PhotoWidth
+	entity.PhotoHeight = tmp.PhotoHeight
 
 	fieldReplyMarkup, _ := UnmarshalReplyMarkup(tmp.ReplyMarkup)
-	inputInlineQueryResultPhoto.ReplyMarkup = fieldReplyMarkup
+	entity.ReplyMarkup = fieldReplyMarkup
 
 	fieldInputMessageContent, _ := UnmarshalInputMessageContent(tmp.InputMessageContent)
-	inputInlineQueryResultPhoto.InputMessageContent = fieldInputMessageContent
+	entity.InputMessageContent = fieldInputMessageContent
 
 	return nil
 }
 
-// Represents a link to a WEBP sticker
+// InputInlineQueryResultSticker represents a link to a WEBP sticker
 type InputInlineQueryResultSticker struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// URL of the sticker thumbnail, if it exists
-	ThumbnailUrl string `json:"thumbnail_url"`
+	ThumbnailURL string `json:"thumbnail_url"`
 	// The URL of the WEBP sticker (sticker file size must not exceed 5MB)
-	StickerUrl string `json:"sticker_url"`
+	StickerURL string `json:"sticker_url"`
 	// Width of the sticker
 	StickerWidth int32 `json:"sticker_width"`
 	// Height of the sticker
@@ -13619,6 +15119,7 @@ type InputInlineQueryResultSticker struct {
 	InputMessageContent InputMessageContent `json:"input_message_content"`
 }
 
+// MarshalJSON returns InputInlineQueryResultSticker object as the JSON encoding of InputInlineQueryResultSticker.
 func (entity *InputInlineQueryResultSticker) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -13627,23 +15128,27 @@ func (entity *InputInlineQueryResultSticker) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputInlineQueryResultSticker) GetClass() string {
 	return ClassInputInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InputInlineQueryResultSticker) GetType() string {
 	return TypeInputInlineQueryResultSticker
 }
 
+// InputInlineQueryResultType returns constant class type string of the class.
 func (*InputInlineQueryResultSticker) InputInlineQueryResultType() string {
 	return TypeInputInlineQueryResultSticker
 }
 
-func (inputInlineQueryResultSticker *InputInlineQueryResultSticker) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputInlineQueryResultSticker object to a copy of JSON encoding of InputInlineQueryResultSticker.
+func (entity *InputInlineQueryResultSticker) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id                  string          `json:"id"`
-		ThumbnailUrl        string          `json:"thumbnail_url"`
-		StickerUrl          string          `json:"sticker_url"`
+		ID                  string          `json:"id"`
+		ThumbnailURL        string          `json:"thumbnail_url"`
+		StickerURL          string          `json:"sticker_url"`
 		StickerWidth        int32           `json:"sticker_width"`
 		StickerHeight       int32           `json:"sticker_height"`
 		ReplyMarkup         json.RawMessage `json:"reply_markup"`
@@ -13655,30 +15160,30 @@ func (inputInlineQueryResultSticker *InputInlineQueryResultSticker) UnmarshalJSO
 		return err
 	}
 
-	inputInlineQueryResultSticker.Id = tmp.Id
-	inputInlineQueryResultSticker.ThumbnailUrl = tmp.ThumbnailUrl
-	inputInlineQueryResultSticker.StickerUrl = tmp.StickerUrl
-	inputInlineQueryResultSticker.StickerWidth = tmp.StickerWidth
-	inputInlineQueryResultSticker.StickerHeight = tmp.StickerHeight
+	entity.ID = tmp.ID
+	entity.ThumbnailURL = tmp.ThumbnailURL
+	entity.StickerURL = tmp.StickerURL
+	entity.StickerWidth = tmp.StickerWidth
+	entity.StickerHeight = tmp.StickerHeight
 
 	fieldReplyMarkup, _ := UnmarshalReplyMarkup(tmp.ReplyMarkup)
-	inputInlineQueryResultSticker.ReplyMarkup = fieldReplyMarkup
+	entity.ReplyMarkup = fieldReplyMarkup
 
 	fieldInputMessageContent, _ := UnmarshalInputMessageContent(tmp.InputMessageContent)
-	inputInlineQueryResultSticker.InputMessageContent = fieldInputMessageContent
+	entity.InputMessageContent = fieldInputMessageContent
 
 	return nil
 }
 
-// Represents information about a venue
+// InputInlineQueryResultVenue represents information about a venue
 type InputInlineQueryResultVenue struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Venue result
 	Venue *Venue `json:"venue"`
 	// URL of the result thumbnail, if it exists
-	ThumbnailUrl string `json:"thumbnail_url"`
+	ThumbnailURL string `json:"thumbnail_url"`
 	// Thumbnail width, if known
 	ThumbnailWidth int32 `json:"thumbnail_width"`
 	// Thumbnail height, if known
@@ -13689,6 +15194,7 @@ type InputInlineQueryResultVenue struct {
 	InputMessageContent InputMessageContent `json:"input_message_content"`
 }
 
+// MarshalJSON returns InputInlineQueryResultVenue object as the JSON encoding of InputInlineQueryResultVenue.
 func (entity *InputInlineQueryResultVenue) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -13697,23 +15203,27 @@ func (entity *InputInlineQueryResultVenue) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputInlineQueryResultVenue) GetClass() string {
 	return ClassInputInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InputInlineQueryResultVenue) GetType() string {
 	return TypeInputInlineQueryResultVenue
 }
 
+// InputInlineQueryResultType returns constant class type string of the class.
 func (*InputInlineQueryResultVenue) InputInlineQueryResultType() string {
 	return TypeInputInlineQueryResultVenue
 }
 
-func (inputInlineQueryResultVenue *InputInlineQueryResultVenue) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputInlineQueryResultVenue object to a copy of JSON encoding of InputInlineQueryResultVenue.
+func (entity *InputInlineQueryResultVenue) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id                  string          `json:"id"`
+		ID                  string          `json:"id"`
 		Venue               *Venue          `json:"venue"`
-		ThumbnailUrl        string          `json:"thumbnail_url"`
+		ThumbnailURL        string          `json:"thumbnail_url"`
 		ThumbnailWidth      int32           `json:"thumbnail_width"`
 		ThumbnailHeight     int32           `json:"thumbnail_height"`
 		ReplyMarkup         json.RawMessage `json:"reply_markup"`
@@ -13725,34 +15235,34 @@ func (inputInlineQueryResultVenue *InputInlineQueryResultVenue) UnmarshalJSON(da
 		return err
 	}
 
-	inputInlineQueryResultVenue.Id = tmp.Id
-	inputInlineQueryResultVenue.Venue = tmp.Venue
-	inputInlineQueryResultVenue.ThumbnailUrl = tmp.ThumbnailUrl
-	inputInlineQueryResultVenue.ThumbnailWidth = tmp.ThumbnailWidth
-	inputInlineQueryResultVenue.ThumbnailHeight = tmp.ThumbnailHeight
+	entity.ID = tmp.ID
+	entity.Venue = tmp.Venue
+	entity.ThumbnailURL = tmp.ThumbnailURL
+	entity.ThumbnailWidth = tmp.ThumbnailWidth
+	entity.ThumbnailHeight = tmp.ThumbnailHeight
 
 	fieldReplyMarkup, _ := UnmarshalReplyMarkup(tmp.ReplyMarkup)
-	inputInlineQueryResultVenue.ReplyMarkup = fieldReplyMarkup
+	entity.ReplyMarkup = fieldReplyMarkup
 
 	fieldInputMessageContent, _ := UnmarshalInputMessageContent(tmp.InputMessageContent)
-	inputInlineQueryResultVenue.InputMessageContent = fieldInputMessageContent
+	entity.InputMessageContent = fieldInputMessageContent
 
 	return nil
 }
 
-// Represents a link to a page containing an embedded video player or a video file
+// InputInlineQueryResultVideo represents a link to a page containing an embedded video player or a video file
 type InputInlineQueryResultVideo struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Title of the result
 	Title string `json:"title"`
 	// A short description of the result, if known
 	Description string `json:"description"`
 	// The URL of the video thumbnail (JPEG), if it exists
-	ThumbnailUrl string `json:"thumbnail_url"`
+	ThumbnailURL string `json:"thumbnail_url"`
 	// URL of the embedded video player or video file
-	VideoUrl string `json:"video_url"`
+	VideoURL string `json:"video_url"`
 	// MIME type of the content of the video URL, only "text/html" or "video/mp4" are currently supported
 	MimeType string `json:"mime_type"`
 	// Width of the video
@@ -13767,6 +15277,7 @@ type InputInlineQueryResultVideo struct {
 	InputMessageContent InputMessageContent `json:"input_message_content"`
 }
 
+// MarshalJSON returns InputInlineQueryResultVideo object as the JSON encoding of InputInlineQueryResultVideo.
 func (entity *InputInlineQueryResultVideo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -13775,25 +15286,29 @@ func (entity *InputInlineQueryResultVideo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputInlineQueryResultVideo) GetClass() string {
 	return ClassInputInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InputInlineQueryResultVideo) GetType() string {
 	return TypeInputInlineQueryResultVideo
 }
 
+// InputInlineQueryResultType returns constant class type string of the class.
 func (*InputInlineQueryResultVideo) InputInlineQueryResultType() string {
 	return TypeInputInlineQueryResultVideo
 }
 
-func (inputInlineQueryResultVideo *InputInlineQueryResultVideo) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputInlineQueryResultVideo object to a copy of JSON encoding of InputInlineQueryResultVideo.
+func (entity *InputInlineQueryResultVideo) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id                  string          `json:"id"`
+		ID                  string          `json:"id"`
 		Title               string          `json:"title"`
 		Description         string          `json:"description"`
-		ThumbnailUrl        string          `json:"thumbnail_url"`
-		VideoUrl            string          `json:"video_url"`
+		ThumbnailURL        string          `json:"thumbnail_url"`
+		VideoURL            string          `json:"video_url"`
 		MimeType            string          `json:"mime_type"`
 		VideoWidth          int32           `json:"video_width"`
 		VideoHeight         int32           `json:"video_height"`
@@ -13807,34 +15322,34 @@ func (inputInlineQueryResultVideo *InputInlineQueryResultVideo) UnmarshalJSON(da
 		return err
 	}
 
-	inputInlineQueryResultVideo.Id = tmp.Id
-	inputInlineQueryResultVideo.Title = tmp.Title
-	inputInlineQueryResultVideo.Description = tmp.Description
-	inputInlineQueryResultVideo.ThumbnailUrl = tmp.ThumbnailUrl
-	inputInlineQueryResultVideo.VideoUrl = tmp.VideoUrl
-	inputInlineQueryResultVideo.MimeType = tmp.MimeType
-	inputInlineQueryResultVideo.VideoWidth = tmp.VideoWidth
-	inputInlineQueryResultVideo.VideoHeight = tmp.VideoHeight
-	inputInlineQueryResultVideo.VideoDuration = tmp.VideoDuration
+	entity.ID = tmp.ID
+	entity.Title = tmp.Title
+	entity.Description = tmp.Description
+	entity.ThumbnailURL = tmp.ThumbnailURL
+	entity.VideoURL = tmp.VideoURL
+	entity.MimeType = tmp.MimeType
+	entity.VideoWidth = tmp.VideoWidth
+	entity.VideoHeight = tmp.VideoHeight
+	entity.VideoDuration = tmp.VideoDuration
 
 	fieldReplyMarkup, _ := UnmarshalReplyMarkup(tmp.ReplyMarkup)
-	inputInlineQueryResultVideo.ReplyMarkup = fieldReplyMarkup
+	entity.ReplyMarkup = fieldReplyMarkup
 
 	fieldInputMessageContent, _ := UnmarshalInputMessageContent(tmp.InputMessageContent)
-	inputInlineQueryResultVideo.InputMessageContent = fieldInputMessageContent
+	entity.InputMessageContent = fieldInputMessageContent
 
 	return nil
 }
 
-// Represents a link to an opus-encoded audio file within an OGG container, single channel audio
+// InputInlineQueryResultVoiceNote represents a link to an opus-encoded audio file within an OGG container, single channel audio
 type InputInlineQueryResultVoiceNote struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Title of the voice note
 	Title string `json:"title"`
 	// The URL of the voice note file
-	VoiceNoteUrl string `json:"voice_note_url"`
+	VoiceNoteURL string `json:"voice_note_url"`
 	// Duration of the voice note, in seconds
 	VoiceNoteDuration int32 `json:"voice_note_duration"`
 	// The message reply markup. Must be of type replyMarkupInlineKeyboard or null
@@ -13843,6 +15358,7 @@ type InputInlineQueryResultVoiceNote struct {
 	InputMessageContent InputMessageContent `json:"input_message_content"`
 }
 
+// MarshalJSON returns InputInlineQueryResultVoiceNote object as the JSON encoding of InputInlineQueryResultVoiceNote.
 func (entity *InputInlineQueryResultVoiceNote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -13851,23 +15367,27 @@ func (entity *InputInlineQueryResultVoiceNote) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputInlineQueryResultVoiceNote) GetClass() string {
 	return ClassInputInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InputInlineQueryResultVoiceNote) GetType() string {
 	return TypeInputInlineQueryResultVoiceNote
 }
 
+// InputInlineQueryResultType returns constant class type string of the class.
 func (*InputInlineQueryResultVoiceNote) InputInlineQueryResultType() string {
 	return TypeInputInlineQueryResultVoiceNote
 }
 
-func (inputInlineQueryResultVoiceNote *InputInlineQueryResultVoiceNote) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputInlineQueryResultVoiceNote object to a copy of JSON encoding of InputInlineQueryResultVoiceNote.
+func (entity *InputInlineQueryResultVoiceNote) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id                  string          `json:"id"`
+		ID                  string          `json:"id"`
 		Title               string          `json:"title"`
-		VoiceNoteUrl        string          `json:"voice_note_url"`
+		VoiceNoteURL        string          `json:"voice_note_url"`
 		VoiceNoteDuration   int32           `json:"voice_note_duration"`
 		ReplyMarkup         json.RawMessage `json:"reply_markup"`
 		InputMessageContent json.RawMessage `json:"input_message_content"`
@@ -13878,29 +15398,29 @@ func (inputInlineQueryResultVoiceNote *InputInlineQueryResultVoiceNote) Unmarsha
 		return err
 	}
 
-	inputInlineQueryResultVoiceNote.Id = tmp.Id
-	inputInlineQueryResultVoiceNote.Title = tmp.Title
-	inputInlineQueryResultVoiceNote.VoiceNoteUrl = tmp.VoiceNoteUrl
-	inputInlineQueryResultVoiceNote.VoiceNoteDuration = tmp.VoiceNoteDuration
+	entity.ID = tmp.ID
+	entity.Title = tmp.Title
+	entity.VoiceNoteURL = tmp.VoiceNoteURL
+	entity.VoiceNoteDuration = tmp.VoiceNoteDuration
 
 	fieldReplyMarkup, _ := UnmarshalReplyMarkup(tmp.ReplyMarkup)
-	inputInlineQueryResultVoiceNote.ReplyMarkup = fieldReplyMarkup
+	entity.ReplyMarkup = fieldReplyMarkup
 
 	fieldInputMessageContent, _ := UnmarshalInputMessageContent(tmp.InputMessageContent)
-	inputInlineQueryResultVoiceNote.InputMessageContent = fieldInputMessageContent
+	entity.InputMessageContent = fieldInputMessageContent
 
 	return nil
 }
 
-// Represents a link to an article or web page
+// InlineQueryResultArticle represents a link to an article or web page
 type InlineQueryResultArticle struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// URL of the result, if it exists
-	Url string `json:"url"`
+	URL string `json:"url"`
 	// True, if the URL must be not shown
-	HideUrl bool `json:"hide_url"`
+	HideURL bool `json:"hide_url"`
 	// Title of the result
 	Title string `json:"title"`
 	// A short description of the result
@@ -13909,6 +15429,7 @@ type InlineQueryResultArticle struct {
 	Thumbnail *PhotoSize `json:"thumbnail"`
 }
 
+// MarshalJSON returns InlineQueryResultArticle object as the JSON encoding of InlineQueryResultArticle.
 func (entity *InlineQueryResultArticle) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -13917,29 +15438,33 @@ func (entity *InlineQueryResultArticle) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InlineQueryResultArticle) GetClass() string {
 	return ClassInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InlineQueryResultArticle) GetType() string {
 	return TypeInlineQueryResultArticle
 }
 
+// InlineQueryResultType returns constant class type string of the class.
 func (*InlineQueryResultArticle) InlineQueryResultType() string {
 	return TypeInlineQueryResultArticle
 }
 
-// Represents a user contact
+// InlineQueryResultContact represents a user contact
 type InlineQueryResultContact struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// A user contact
 	Contact *Contact `json:"contact"`
 	// Result thumbnail; may be null
 	Thumbnail *PhotoSize `json:"thumbnail"`
 }
 
+// MarshalJSON returns InlineQueryResultContact object as the JSON encoding of InlineQueryResultContact.
 func (entity *InlineQueryResultContact) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -13948,23 +15473,26 @@ func (entity *InlineQueryResultContact) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InlineQueryResultContact) GetClass() string {
 	return ClassInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InlineQueryResultContact) GetType() string {
 	return TypeInlineQueryResultContact
 }
 
+// InlineQueryResultType returns constant class type string of the class.
 func (*InlineQueryResultContact) InlineQueryResultType() string {
 	return TypeInlineQueryResultContact
 }
 
-// Represents a point on the map
+// InlineQueryResultLocation represents a point on the map
 type InlineQueryResultLocation struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Location result
 	Location *Location `json:"location"`
 	// Title of the result
@@ -13973,6 +15501,7 @@ type InlineQueryResultLocation struct {
 	Thumbnail *PhotoSize `json:"thumbnail"`
 }
 
+// MarshalJSON returns InlineQueryResultLocation object as the JSON encoding of InlineQueryResultLocation.
 func (entity *InlineQueryResultLocation) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -13981,29 +15510,33 @@ func (entity *InlineQueryResultLocation) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InlineQueryResultLocation) GetClass() string {
 	return ClassInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InlineQueryResultLocation) GetType() string {
 	return TypeInlineQueryResultLocation
 }
 
+// InlineQueryResultType returns constant class type string of the class.
 func (*InlineQueryResultLocation) InlineQueryResultType() string {
 	return TypeInlineQueryResultLocation
 }
 
-// Represents information about a venue
+// InlineQueryResultVenue represents information about a venue
 type InlineQueryResultVenue struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Venue result
 	Venue *Venue `json:"venue"`
 	// Result thumbnail; may be null
 	Thumbnail *PhotoSize `json:"thumbnail"`
 }
 
+// MarshalJSON returns InlineQueryResultVenue object as the JSON encoding of InlineQueryResultVenue.
 func (entity *InlineQueryResultVenue) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14012,27 +15545,31 @@ func (entity *InlineQueryResultVenue) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InlineQueryResultVenue) GetClass() string {
 	return ClassInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InlineQueryResultVenue) GetType() string {
 	return TypeInlineQueryResultVenue
 }
 
+// InlineQueryResultType returns constant class type string of the class.
 func (*InlineQueryResultVenue) InlineQueryResultType() string {
 	return TypeInlineQueryResultVenue
 }
 
-// Represents information about a game
+// InlineQueryResultGame represents information about a game
 type InlineQueryResultGame struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Game result
 	Game *Game `json:"game"`
 }
 
+// MarshalJSON returns InlineQueryResultGame object as the JSON encoding of InlineQueryResultGame.
 func (entity *InlineQueryResultGame) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14041,29 +15578,33 @@ func (entity *InlineQueryResultGame) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InlineQueryResultGame) GetClass() string {
 	return ClassInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InlineQueryResultGame) GetType() string {
 	return TypeInlineQueryResultGame
 }
 
+// InlineQueryResultType returns constant class type string of the class.
 func (*InlineQueryResultGame) InlineQueryResultType() string {
 	return TypeInlineQueryResultGame
 }
 
-// Represents an animation file
+// InlineQueryResultAnimation represents an animation file
 type InlineQueryResultAnimation struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Animation file
 	Animation *Animation `json:"animation"`
 	// Animation title
 	Title string `json:"title"`
 }
 
+// MarshalJSON returns InlineQueryResultAnimation object as the JSON encoding of InlineQueryResultAnimation.
 func (entity *InlineQueryResultAnimation) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14072,27 +15613,31 @@ func (entity *InlineQueryResultAnimation) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InlineQueryResultAnimation) GetClass() string {
 	return ClassInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InlineQueryResultAnimation) GetType() string {
 	return TypeInlineQueryResultAnimation
 }
 
+// InlineQueryResultType returns constant class type string of the class.
 func (*InlineQueryResultAnimation) InlineQueryResultType() string {
 	return TypeInlineQueryResultAnimation
 }
 
-// Represents an audio file
+// InlineQueryResultAudio represents an audio file
 type InlineQueryResultAudio struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Audio file
 	Audio *Audio `json:"audio"`
 }
 
+// MarshalJSON returns InlineQueryResultAudio object as the JSON encoding of InlineQueryResultAudio.
 func (entity *InlineQueryResultAudio) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14101,23 +15646,26 @@ func (entity *InlineQueryResultAudio) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InlineQueryResultAudio) GetClass() string {
 	return ClassInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InlineQueryResultAudio) GetType() string {
 	return TypeInlineQueryResultAudio
 }
 
+// InlineQueryResultType returns constant class type string of the class.
 func (*InlineQueryResultAudio) InlineQueryResultType() string {
 	return TypeInlineQueryResultAudio
 }
 
-// Represents a document
+// InlineQueryResultDocument represents a document
 type InlineQueryResultDocument struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Document
 	Document *Document `json:"document"`
 	// Document title
@@ -14126,6 +15674,7 @@ type InlineQueryResultDocument struct {
 	Description string `json:"description"`
 }
 
+// MarshalJSON returns InlineQueryResultDocument object as the JSON encoding of InlineQueryResultDocument.
 func (entity *InlineQueryResultDocument) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14134,23 +15683,26 @@ func (entity *InlineQueryResultDocument) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InlineQueryResultDocument) GetClass() string {
 	return ClassInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InlineQueryResultDocument) GetType() string {
 	return TypeInlineQueryResultDocument
 }
 
+// InlineQueryResultType returns constant class type string of the class.
 func (*InlineQueryResultDocument) InlineQueryResultType() string {
 	return TypeInlineQueryResultDocument
 }
 
-// Represents a photo
+// InlineQueryResultPhoto represents a photo
 type InlineQueryResultPhoto struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Photo
 	Photo *Photo `json:"photo"`
 	// Title of the result, if known
@@ -14159,6 +15711,7 @@ type InlineQueryResultPhoto struct {
 	Description string `json:"description"`
 }
 
+// MarshalJSON returns InlineQueryResultPhoto object as the JSON encoding of InlineQueryResultPhoto.
 func (entity *InlineQueryResultPhoto) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14167,27 +15720,31 @@ func (entity *InlineQueryResultPhoto) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InlineQueryResultPhoto) GetClass() string {
 	return ClassInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InlineQueryResultPhoto) GetType() string {
 	return TypeInlineQueryResultPhoto
 }
 
+// InlineQueryResultType returns constant class type string of the class.
 func (*InlineQueryResultPhoto) InlineQueryResultType() string {
 	return TypeInlineQueryResultPhoto
 }
 
-// Represents a sticker
+// InlineQueryResultSticker represents a sticker
 type InlineQueryResultSticker struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Sticker
 	Sticker *Sticker `json:"sticker"`
 }
 
+// MarshalJSON returns InlineQueryResultSticker object as the JSON encoding of InlineQueryResultSticker.
 func (entity *InlineQueryResultSticker) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14196,23 +15753,26 @@ func (entity *InlineQueryResultSticker) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InlineQueryResultSticker) GetClass() string {
 	return ClassInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InlineQueryResultSticker) GetType() string {
 	return TypeInlineQueryResultSticker
 }
 
+// InlineQueryResultType returns constant class type string of the class.
 func (*InlineQueryResultSticker) InlineQueryResultType() string {
 	return TypeInlineQueryResultSticker
 }
 
-// Represents a video
+// InlineQueryResultVideo represents a video
 type InlineQueryResultVideo struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Video
 	Video *Video `json:"video"`
 	// Title of the video
@@ -14221,6 +15781,7 @@ type InlineQueryResultVideo struct {
 	Description string `json:"description"`
 }
 
+// MarshalJSON returns InlineQueryResultVideo object as the JSON encoding of InlineQueryResultVideo.
 func (entity *InlineQueryResultVideo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14229,29 +15790,33 @@ func (entity *InlineQueryResultVideo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InlineQueryResultVideo) GetClass() string {
 	return ClassInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InlineQueryResultVideo) GetType() string {
 	return TypeInlineQueryResultVideo
 }
 
+// InlineQueryResultType returns constant class type string of the class.
 func (*InlineQueryResultVideo) InlineQueryResultType() string {
 	return TypeInlineQueryResultVideo
 }
 
-// Represents a voice note
+// InlineQueryResultVoiceNote represents a voice note
 type InlineQueryResultVoiceNote struct {
 	meta
 	// Unique identifier of the query result
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Voice note
 	VoiceNote *VoiceNote `json:"voice_note"`
 	// Title of the voice note
 	Title string `json:"title"`
 }
 
+// MarshalJSON returns InlineQueryResultVoiceNote object as the JSON encoding of InlineQueryResultVoiceNote.
 func (entity *InlineQueryResultVoiceNote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14260,23 +15825,26 @@ func (entity *InlineQueryResultVoiceNote) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InlineQueryResultVoiceNote) GetClass() string {
 	return ClassInlineQueryResult
 }
 
+// GetType returns constant class type string of the class.
 func (*InlineQueryResultVoiceNote) GetType() string {
 	return TypeInlineQueryResultVoiceNote
 }
 
+// InlineQueryResultType returns constant class type string of the class.
 func (*InlineQueryResultVoiceNote) InlineQueryResultType() string {
 	return TypeInlineQueryResultVoiceNote
 }
 
-// Represents the results of the inline query. Use sendInlineQueryResultMessage to send the result of the query
+// InlineQueryResults represents the results of the inline query. Use sendInlineQueryResultMessage to send the result of the query
 type InlineQueryResults struct {
 	meta
 	// Unique identifier of the inline query
-	InlineQueryId JsonInt64 `json:"inline_query_id"`
+	InlineQueryID Int64JSON `json:"inline_query_id"`
 	// The offset for the next request. If empty, there are no more results
 	NextOffset string `json:"next_offset"`
 	// Results of the query
@@ -14287,6 +15855,7 @@ type InlineQueryResults struct {
 	SwitchPmParameter string `json:"switch_pm_parameter"`
 }
 
+// MarshalJSON returns InlineQueryResults object as the JSON encoding of InlineQueryResults.
 func (entity *InlineQueryResults) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14295,21 +15864,24 @@ func (entity *InlineQueryResults) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InlineQueryResults) GetClass() string {
 	return ClassInlineQueryResults
 }
 
+// GetType returns constant class type string of the class.
 func (*InlineQueryResults) GetType() string {
 	return TypeInlineQueryResults
 }
 
-// The payload from a general callback button
+// CallbackQueryPayloadData the payload from a general callback button
 type CallbackQueryPayloadData struct {
 	meta
 	// Data that was attached to the callback button
 	Data []byte `json:"data"`
 }
 
+// MarshalJSON returns CallbackQueryPayloadData object as the JSON encoding of CallbackQueryPayloadData.
 func (entity *CallbackQueryPayloadData) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14318,25 +15890,29 @@ func (entity *CallbackQueryPayloadData) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CallbackQueryPayloadData) GetClass() string {
 	return ClassCallbackQueryPayload
 }
 
+// GetType returns constant class type string of the class.
 func (*CallbackQueryPayloadData) GetType() string {
 	return TypeCallbackQueryPayloadData
 }
 
+// CallbackQueryPayloadType returns constant class type string of the class.
 func (*CallbackQueryPayloadData) CallbackQueryPayloadType() string {
 	return TypeCallbackQueryPayloadData
 }
 
-// The payload from a game callback button
+// CallbackQueryPayloadGame the payload from a game callback button
 type CallbackQueryPayloadGame struct {
 	meta
 	// A short name of the game that was attached to the callback button
 	GameShortName string `json:"game_short_name"`
 }
 
+// MarshalJSON returns CallbackQueryPayloadGame object as the JSON encoding of CallbackQueryPayloadGame.
 func (entity *CallbackQueryPayloadGame) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14345,19 +15921,22 @@ func (entity *CallbackQueryPayloadGame) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CallbackQueryPayloadGame) GetClass() string {
 	return ClassCallbackQueryPayload
 }
 
+// GetType returns constant class type string of the class.
 func (*CallbackQueryPayloadGame) GetType() string {
 	return TypeCallbackQueryPayloadGame
 }
 
+// CallbackQueryPayloadType returns constant class type string of the class.
 func (*CallbackQueryPayloadGame) CallbackQueryPayloadType() string {
 	return TypeCallbackQueryPayloadGame
 }
 
-// Contains a bot's answer to a callback query
+// CallbackQueryAnswer contains a bot's answer to a callback query
 type CallbackQueryAnswer struct {
 	meta
 	// Text of the answer
@@ -14365,9 +15944,10 @@ type CallbackQueryAnswer struct {
 	// True, if an alert should be shown to the user instead of a toast notification
 	ShowAlert bool `json:"show_alert"`
 	// URL to be opened
-	Url string `json:"url"`
+	URL string `json:"url"`
 }
 
+// MarshalJSON returns CallbackQueryAnswer object as the JSON encoding of CallbackQueryAnswer.
 func (entity *CallbackQueryAnswer) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14376,21 +15956,24 @@ func (entity *CallbackQueryAnswer) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CallbackQueryAnswer) GetClass() string {
 	return ClassCallbackQueryAnswer
 }
 
+// GetType returns constant class type string of the class.
 func (*CallbackQueryAnswer) GetType() string {
 	return TypeCallbackQueryAnswer
 }
 
-// Contains the result of a custom request
+// CustomRequestResult contains the result of a custom request
 type CustomRequestResult struct {
 	meta
 	// A JSON-serialized result
 	Result string `json:"result"`
 }
 
+// MarshalJSON returns CustomRequestResult object as the JSON encoding of CustomRequestResult.
 func (entity *CustomRequestResult) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14399,25 +15982,28 @@ func (entity *CustomRequestResult) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CustomRequestResult) GetClass() string {
 	return ClassCustomRequestResult
 }
 
+// GetType returns constant class type string of the class.
 func (*CustomRequestResult) GetType() string {
 	return TypeCustomRequestResult
 }
 
-// Contains one row of the game high score table
+// GameHighScore contains one row of the game high score table
 type GameHighScore struct {
 	meta
 	// Position in the high score table
 	Position int32 `json:"position"`
 	// User identifier
-	UserId int32 `json:"user_id"`
+	UserID int32 `json:"user_id"`
 	// User score
 	Score int32 `json:"score"`
 }
 
+// MarshalJSON returns GameHighScore object as the JSON encoding of GameHighScore.
 func (entity *GameHighScore) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14426,21 +16012,24 @@ func (entity *GameHighScore) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*GameHighScore) GetClass() string {
 	return ClassGameHighScore
 }
 
+// GetType returns constant class type string of the class.
 func (*GameHighScore) GetType() string {
 	return TypeGameHighScore
 }
 
-// Contains a list of game high scores
+// GameHighScores contains a list of game high scores
 type GameHighScores struct {
 	meta
 	// A list of game high scores
 	Scores []*GameHighScore `json:"scores"`
 }
 
+// MarshalJSON returns GameHighScores object as the JSON encoding of GameHighScores.
 func (entity *GameHighScores) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14449,15 +16038,17 @@ func (entity *GameHighScores) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*GameHighScores) GetClass() string {
 	return ClassGameHighScores
 }
 
+// GetType returns constant class type string of the class.
 func (*GameHighScores) GetType() string {
 	return TypeGameHighScores
 }
 
-// A message was edited
+// ChatEventMessageEdited a message was edited
 type ChatEventMessageEdited struct {
 	meta
 	// The original message before the edit
@@ -14466,6 +16057,7 @@ type ChatEventMessageEdited struct {
 	NewMessage *Message `json:"new_message"`
 }
 
+// MarshalJSON returns ChatEventMessageEdited object as the JSON encoding of ChatEventMessageEdited.
 func (entity *ChatEventMessageEdited) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14474,25 +16066,29 @@ func (entity *ChatEventMessageEdited) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEventMessageEdited) GetClass() string {
 	return ClassChatEventAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEventMessageEdited) GetType() string {
 	return TypeChatEventMessageEdited
 }
 
+// ChatEventActionType returns constant class type string of the class.
 func (*ChatEventMessageEdited) ChatEventActionType() string {
 	return TypeChatEventMessageEdited
 }
 
-// A message was deleted
+// ChatEventMessageDeleted a message was deleted
 type ChatEventMessageDeleted struct {
 	meta
 	// Deleted message
 	Message *Message `json:"message"`
 }
 
+// MarshalJSON returns ChatEventMessageDeleted object as the JSON encoding of ChatEventMessageDeleted.
 func (entity *ChatEventMessageDeleted) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14501,25 +16097,29 @@ func (entity *ChatEventMessageDeleted) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEventMessageDeleted) GetClass() string {
 	return ClassChatEventAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEventMessageDeleted) GetType() string {
 	return TypeChatEventMessageDeleted
 }
 
+// ChatEventActionType returns constant class type string of the class.
 func (*ChatEventMessageDeleted) ChatEventActionType() string {
 	return TypeChatEventMessageDeleted
 }
 
-// A message was pinned
+// ChatEventMessagePinned a message was pinned
 type ChatEventMessagePinned struct {
 	meta
 	// Pinned message
 	Message *Message `json:"message"`
 }
 
+// MarshalJSON returns ChatEventMessagePinned object as the JSON encoding of ChatEventMessagePinned.
 func (entity *ChatEventMessagePinned) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14528,23 +16128,27 @@ func (entity *ChatEventMessagePinned) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEventMessagePinned) GetClass() string {
 	return ClassChatEventAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEventMessagePinned) GetType() string {
 	return TypeChatEventMessagePinned
 }
 
+// ChatEventActionType returns constant class type string of the class.
 func (*ChatEventMessagePinned) ChatEventActionType() string {
 	return TypeChatEventMessagePinned
 }
 
-// A message was unpinned
+// ChatEventMessageUnpinned a message was unpinned
 type ChatEventMessageUnpinned struct {
 	meta
 }
 
+// MarshalJSON returns ChatEventMessageUnpinned object as the JSON encoding of ChatEventMessageUnpinned.
 func (entity *ChatEventMessageUnpinned) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14553,23 +16157,27 @@ func (entity *ChatEventMessageUnpinned) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEventMessageUnpinned) GetClass() string {
 	return ClassChatEventAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEventMessageUnpinned) GetType() string {
 	return TypeChatEventMessageUnpinned
 }
 
+// ChatEventActionType returns constant class type string of the class.
 func (*ChatEventMessageUnpinned) ChatEventActionType() string {
 	return TypeChatEventMessageUnpinned
 }
 
-// A new member joined the chat
+// ChatEventMemberJoined a new member joined the chat
 type ChatEventMemberJoined struct {
 	meta
 }
 
+// MarshalJSON returns ChatEventMemberJoined object as the JSON encoding of ChatEventMemberJoined.
 func (entity *ChatEventMemberJoined) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14578,23 +16186,27 @@ func (entity *ChatEventMemberJoined) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEventMemberJoined) GetClass() string {
 	return ClassChatEventAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEventMemberJoined) GetType() string {
 	return TypeChatEventMemberJoined
 }
 
+// ChatEventActionType returns constant class type string of the class.
 func (*ChatEventMemberJoined) ChatEventActionType() string {
 	return TypeChatEventMemberJoined
 }
 
-// A member left the chat
+// ChatEventMemberLeft a member left the chat
 type ChatEventMemberLeft struct {
 	meta
 }
 
+// MarshalJSON returns ChatEventMemberLeft object as the JSON encoding of ChatEventMemberLeft.
 func (entity *ChatEventMemberLeft) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14603,27 +16215,31 @@ func (entity *ChatEventMemberLeft) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEventMemberLeft) GetClass() string {
 	return ClassChatEventAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEventMemberLeft) GetType() string {
 	return TypeChatEventMemberLeft
 }
 
+// ChatEventActionType returns constant class type string of the class.
 func (*ChatEventMemberLeft) ChatEventActionType() string {
 	return TypeChatEventMemberLeft
 }
 
-// A new chat member was invited
+// ChatEventMemberInvited a new chat member was invited
 type ChatEventMemberInvited struct {
 	meta
 	// New member user identifier
-	UserId int32 `json:"user_id"`
+	UserID int32 `json:"user_id"`
 	// New member status
 	Status ChatMemberStatus `json:"status"`
 }
 
+// MarshalJSON returns ChatEventMemberInvited object as the JSON encoding of ChatEventMemberInvited.
 func (entity *ChatEventMemberInvited) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14632,21 +16248,25 @@ func (entity *ChatEventMemberInvited) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEventMemberInvited) GetClass() string {
 	return ClassChatEventAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEventMemberInvited) GetType() string {
 	return TypeChatEventMemberInvited
 }
 
+// ChatEventActionType returns constant class type string of the class.
 func (*ChatEventMemberInvited) ChatEventActionType() string {
 	return TypeChatEventMemberInvited
 }
 
-func (chatEventMemberInvited *ChatEventMemberInvited) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets ChatEventMemberInvited object to a copy of JSON encoding of ChatEventMemberInvited.
+func (entity *ChatEventMemberInvited) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		UserId int32           `json:"user_id"`
+		UserID int32           `json:"user_id"`
 		Status json.RawMessage `json:"status"`
 	}
 
@@ -14655,25 +16275,26 @@ func (chatEventMemberInvited *ChatEventMemberInvited) UnmarshalJSON(data []byte)
 		return err
 	}
 
-	chatEventMemberInvited.UserId = tmp.UserId
+	entity.UserID = tmp.UserID
 
 	fieldStatus, _ := UnmarshalChatMemberStatus(tmp.Status)
-	chatEventMemberInvited.Status = fieldStatus
+	entity.Status = fieldStatus
 
 	return nil
 }
 
-// A chat member has gained/lost administrator status, or the list of their administrator privileges has changed
+// ChatEventMemberPromoted a chat member has gained/lost administrator status, or the list of their administrator privileges has changed
 type ChatEventMemberPromoted struct {
 	meta
 	// Chat member user identifier
-	UserId int32 `json:"user_id"`
+	UserID int32 `json:"user_id"`
 	// Previous status of the chat member
 	OldStatus ChatMemberStatus `json:"old_status"`
 	// New status of the chat member
 	NewStatus ChatMemberStatus `json:"new_status"`
 }
 
+// MarshalJSON returns ChatEventMemberPromoted object as the JSON encoding of ChatEventMemberPromoted.
 func (entity *ChatEventMemberPromoted) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14682,21 +16303,25 @@ func (entity *ChatEventMemberPromoted) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEventMemberPromoted) GetClass() string {
 	return ClassChatEventAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEventMemberPromoted) GetType() string {
 	return TypeChatEventMemberPromoted
 }
 
+// ChatEventActionType returns constant class type string of the class.
 func (*ChatEventMemberPromoted) ChatEventActionType() string {
 	return TypeChatEventMemberPromoted
 }
 
-func (chatEventMemberPromoted *ChatEventMemberPromoted) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets ChatEventMemberPromoted object to a copy of JSON encoding of ChatEventMemberPromoted.
+func (entity *ChatEventMemberPromoted) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		UserId    int32           `json:"user_id"`
+		UserID    int32           `json:"user_id"`
 		OldStatus json.RawMessage `json:"old_status"`
 		NewStatus json.RawMessage `json:"new_status"`
 	}
@@ -14706,28 +16331,29 @@ func (chatEventMemberPromoted *ChatEventMemberPromoted) UnmarshalJSON(data []byt
 		return err
 	}
 
-	chatEventMemberPromoted.UserId = tmp.UserId
+	entity.UserID = tmp.UserID
 
 	fieldOldStatus, _ := UnmarshalChatMemberStatus(tmp.OldStatus)
-	chatEventMemberPromoted.OldStatus = fieldOldStatus
+	entity.OldStatus = fieldOldStatus
 
 	fieldNewStatus, _ := UnmarshalChatMemberStatus(tmp.NewStatus)
-	chatEventMemberPromoted.NewStatus = fieldNewStatus
+	entity.NewStatus = fieldNewStatus
 
 	return nil
 }
 
-// A chat member was restricted/unrestricted or banned/unbanned, or the list of their restrictions has changed
+// ChatEventMemberRestricted a chat member was restricted/unrestricted or banned/unbanned, or the list of their restrictions has changed
 type ChatEventMemberRestricted struct {
 	meta
 	// Chat member user identifier
-	UserId int32 `json:"user_id"`
+	UserID int32 `json:"user_id"`
 	// Previous status of the chat member
 	OldStatus ChatMemberStatus `json:"old_status"`
 	// New status of the chat member
 	NewStatus ChatMemberStatus `json:"new_status"`
 }
 
+// MarshalJSON returns ChatEventMemberRestricted object as the JSON encoding of ChatEventMemberRestricted.
 func (entity *ChatEventMemberRestricted) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14736,21 +16362,25 @@ func (entity *ChatEventMemberRestricted) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEventMemberRestricted) GetClass() string {
 	return ClassChatEventAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEventMemberRestricted) GetType() string {
 	return TypeChatEventMemberRestricted
 }
 
+// ChatEventActionType returns constant class type string of the class.
 func (*ChatEventMemberRestricted) ChatEventActionType() string {
 	return TypeChatEventMemberRestricted
 }
 
-func (chatEventMemberRestricted *ChatEventMemberRestricted) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets ChatEventMemberRestricted object to a copy of JSON encoding of ChatEventMemberRestricted.
+func (entity *ChatEventMemberRestricted) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		UserId    int32           `json:"user_id"`
+		UserID    int32           `json:"user_id"`
 		OldStatus json.RawMessage `json:"old_status"`
 		NewStatus json.RawMessage `json:"new_status"`
 	}
@@ -14760,18 +16390,18 @@ func (chatEventMemberRestricted *ChatEventMemberRestricted) UnmarshalJSON(data [
 		return err
 	}
 
-	chatEventMemberRestricted.UserId = tmp.UserId
+	entity.UserID = tmp.UserID
 
 	fieldOldStatus, _ := UnmarshalChatMemberStatus(tmp.OldStatus)
-	chatEventMemberRestricted.OldStatus = fieldOldStatus
+	entity.OldStatus = fieldOldStatus
 
 	fieldNewStatus, _ := UnmarshalChatMemberStatus(tmp.NewStatus)
-	chatEventMemberRestricted.NewStatus = fieldNewStatus
+	entity.NewStatus = fieldNewStatus
 
 	return nil
 }
 
-// The chat title was changed
+// ChatEventTitleChanged the chat title was changed
 type ChatEventTitleChanged struct {
 	meta
 	// Previous chat title
@@ -14780,6 +16410,7 @@ type ChatEventTitleChanged struct {
 	NewTitle string `json:"new_title"`
 }
 
+// MarshalJSON returns ChatEventTitleChanged object as the JSON encoding of ChatEventTitleChanged.
 func (entity *ChatEventTitleChanged) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14788,19 +16419,22 @@ func (entity *ChatEventTitleChanged) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEventTitleChanged) GetClass() string {
 	return ClassChatEventAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEventTitleChanged) GetType() string {
 	return TypeChatEventTitleChanged
 }
 
+// ChatEventActionType returns constant class type string of the class.
 func (*ChatEventTitleChanged) ChatEventActionType() string {
 	return TypeChatEventTitleChanged
 }
 
-// The chat description was changed
+// ChatEventDescriptionChanged the chat description was changed
 type ChatEventDescriptionChanged struct {
 	meta
 	// Previous chat description
@@ -14809,6 +16443,7 @@ type ChatEventDescriptionChanged struct {
 	NewDescription string `json:"new_description"`
 }
 
+// MarshalJSON returns ChatEventDescriptionChanged object as the JSON encoding of ChatEventDescriptionChanged.
 func (entity *ChatEventDescriptionChanged) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14817,19 +16452,22 @@ func (entity *ChatEventDescriptionChanged) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEventDescriptionChanged) GetClass() string {
 	return ClassChatEventAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEventDescriptionChanged) GetType() string {
 	return TypeChatEventDescriptionChanged
 }
 
+// ChatEventActionType returns constant class type string of the class.
 func (*ChatEventDescriptionChanged) ChatEventActionType() string {
 	return TypeChatEventDescriptionChanged
 }
 
-// The chat username was changed
+// ChatEventUsernameChanged the chat username was changed
 type ChatEventUsernameChanged struct {
 	meta
 	// Previous chat username
@@ -14838,6 +16476,7 @@ type ChatEventUsernameChanged struct {
 	NewUsername string `json:"new_username"`
 }
 
+// MarshalJSON returns ChatEventUsernameChanged object as the JSON encoding of ChatEventUsernameChanged.
 func (entity *ChatEventUsernameChanged) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14846,19 +16485,22 @@ func (entity *ChatEventUsernameChanged) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEventUsernameChanged) GetClass() string {
 	return ClassChatEventAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEventUsernameChanged) GetType() string {
 	return TypeChatEventUsernameChanged
 }
 
+// ChatEventActionType returns constant class type string of the class.
 func (*ChatEventUsernameChanged) ChatEventActionType() string {
 	return TypeChatEventUsernameChanged
 }
 
-// The chat photo was changed
+// ChatEventPhotoChanged the chat photo was changed
 type ChatEventPhotoChanged struct {
 	meta
 	// Previous chat photo value; may be null
@@ -14867,6 +16509,7 @@ type ChatEventPhotoChanged struct {
 	NewPhoto *ChatPhoto `json:"new_photo"`
 }
 
+// MarshalJSON returns ChatEventPhotoChanged object as the JSON encoding of ChatEventPhotoChanged.
 func (entity *ChatEventPhotoChanged) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14875,25 +16518,29 @@ func (entity *ChatEventPhotoChanged) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEventPhotoChanged) GetClass() string {
 	return ClassChatEventAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEventPhotoChanged) GetType() string {
 	return TypeChatEventPhotoChanged
 }
 
+// ChatEventActionType returns constant class type string of the class.
 func (*ChatEventPhotoChanged) ChatEventActionType() string {
 	return TypeChatEventPhotoChanged
 }
 
-// The anyone_can_invite setting of a supergroup chat was toggled
+// ChatEventInvitesToggled the anyone_can_invite setting of a supergroup chat was toggled
 type ChatEventInvitesToggled struct {
 	meta
 	// New value of anyone_can_invite
 	AnyoneCanInvite bool `json:"anyone_can_invite"`
 }
 
+// MarshalJSON returns ChatEventInvitesToggled object as the JSON encoding of ChatEventInvitesToggled.
 func (entity *ChatEventInvitesToggled) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14902,25 +16549,29 @@ func (entity *ChatEventInvitesToggled) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEventInvitesToggled) GetClass() string {
 	return ClassChatEventAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEventInvitesToggled) GetType() string {
 	return TypeChatEventInvitesToggled
 }
 
+// ChatEventActionType returns constant class type string of the class.
 func (*ChatEventInvitesToggled) ChatEventActionType() string {
 	return TypeChatEventInvitesToggled
 }
 
-// The sign_messages setting of a channel was toggled
+// ChatEventSignMessagesToggled the sign_messages setting of a channel was toggled
 type ChatEventSignMessagesToggled struct {
 	meta
 	// New value of sign_messages
 	SignMessages bool `json:"sign_messages"`
 }
 
+// MarshalJSON returns ChatEventSignMessagesToggled object as the JSON encoding of ChatEventSignMessagesToggled.
 func (entity *ChatEventSignMessagesToggled) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14929,27 +16580,31 @@ func (entity *ChatEventSignMessagesToggled) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEventSignMessagesToggled) GetClass() string {
 	return ClassChatEventAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEventSignMessagesToggled) GetType() string {
 	return TypeChatEventSignMessagesToggled
 }
 
+// ChatEventActionType returns constant class type string of the class.
 func (*ChatEventSignMessagesToggled) ChatEventActionType() string {
 	return TypeChatEventSignMessagesToggled
 }
 
-// The supergroup sticker set was changed
+// ChatEventStickerSetChanged the supergroup sticker set was changed
 type ChatEventStickerSetChanged struct {
 	meta
 	// Previous identifier of the chat sticker set; 0 if none
-	OldStickerSetId JsonInt64 `json:"old_sticker_set_id"`
+	OldStickerSetID Int64JSON `json:"old_sticker_set_id"`
 	// New identifier of the chat sticker set; 0 if none
-	NewStickerSetId JsonInt64 `json:"new_sticker_set_id"`
+	NewStickerSetID Int64JSON `json:"new_sticker_set_id"`
 }
 
+// MarshalJSON returns ChatEventStickerSetChanged object as the JSON encoding of ChatEventStickerSetChanged.
 func (entity *ChatEventStickerSetChanged) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14958,25 +16613,29 @@ func (entity *ChatEventStickerSetChanged) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEventStickerSetChanged) GetClass() string {
 	return ClassChatEventAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEventStickerSetChanged) GetType() string {
 	return TypeChatEventStickerSetChanged
 }
 
+// ChatEventActionType returns constant class type string of the class.
 func (*ChatEventStickerSetChanged) ChatEventActionType() string {
 	return TypeChatEventStickerSetChanged
 }
 
-// The is_all_history_available setting of a supergroup was toggled
+// ChatEventIsAllHistoryAvailableToggled the is_all_history_available setting of a supergroup was toggled
 type ChatEventIsAllHistoryAvailableToggled struct {
 	meta
 	// New value of is_all_history_available
 	IsAllHistoryAvailable bool `json:"is_all_history_available"`
 }
 
+// MarshalJSON returns ChatEventIsAllHistoryAvailableToggled object as the JSON encoding of ChatEventIsAllHistoryAvailableToggled.
 func (entity *ChatEventIsAllHistoryAvailableToggled) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -14985,31 +16644,35 @@ func (entity *ChatEventIsAllHistoryAvailableToggled) MarshalJSON() ([]byte, erro
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEventIsAllHistoryAvailableToggled) GetClass() string {
 	return ClassChatEventAction
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEventIsAllHistoryAvailableToggled) GetType() string {
 	return TypeChatEventIsAllHistoryAvailableToggled
 }
 
+// ChatEventActionType returns constant class type string of the class.
 func (*ChatEventIsAllHistoryAvailableToggled) ChatEventActionType() string {
 	return TypeChatEventIsAllHistoryAvailableToggled
 }
 
-// Represents a chat event
+// ChatEvent represents a chat event
 type ChatEvent struct {
 	meta
 	// Chat event identifier
-	Id JsonInt64 `json:"id"`
+	ID Int64JSON `json:"id"`
 	// Point in time (Unix timestamp) when the event happened
 	Date int32 `json:"date"`
 	// Identifier of the user who performed the action that triggered the event
-	UserId int32 `json:"user_id"`
+	UserID int32 `json:"user_id"`
 	// Action performed by the user
 	Action ChatEventAction `json:"action"`
 }
 
+// MarshalJSON returns ChatEvent object as the JSON encoding of ChatEvent.
 func (entity *ChatEvent) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15018,19 +16681,22 @@ func (entity *ChatEvent) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEvent) GetClass() string {
 	return ClassChatEvent
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEvent) GetType() string {
 	return TypeChatEvent
 }
 
-func (chatEvent *ChatEvent) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets ChatEvent object to a copy of JSON encoding of ChatEvent.
+func (entity *ChatEvent) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id     JsonInt64       `json:"id"`
+		ID     Int64JSON       `json:"id"`
 		Date   int32           `json:"date"`
-		UserId int32           `json:"user_id"`
+		UserID int32           `json:"user_id"`
 		Action json.RawMessage `json:"action"`
 	}
 
@@ -15039,23 +16705,24 @@ func (chatEvent *ChatEvent) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	chatEvent.Id = tmp.Id
-	chatEvent.Date = tmp.Date
-	chatEvent.UserId = tmp.UserId
+	entity.ID = tmp.ID
+	entity.Date = tmp.Date
+	entity.UserID = tmp.UserID
 
 	fieldAction, _ := UnmarshalChatEventAction(tmp.Action)
-	chatEvent.Action = fieldAction
+	entity.Action = fieldAction
 
 	return nil
 }
 
-// Contains a list of chat events
+// ChatEvents contains a list of chat events
 type ChatEvents struct {
 	meta
 	// List of events
 	Events []*ChatEvent `json:"events"`
 }
 
+// MarshalJSON returns ChatEvents object as the JSON encoding of ChatEvents.
 func (entity *ChatEvents) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15064,15 +16731,17 @@ func (entity *ChatEvents) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEvents) GetClass() string {
 	return ClassChatEvents
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEvents) GetType() string {
 	return TypeChatEvents
 }
 
-// Represents a set of filters used to obtain a chat event log
+// ChatEventLogFilters represents a set of filters used to obtain a chat event log
 type ChatEventLogFilters struct {
 	meta
 	// True, if message edits should be returned
@@ -15097,6 +16766,7 @@ type ChatEventLogFilters struct {
 	SettingChanges bool `json:"setting_changes"`
 }
 
+// MarshalJSON returns ChatEventLogFilters object as the JSON encoding of ChatEventLogFilters.
 func (entity *ChatEventLogFilters) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15105,21 +16775,24 @@ func (entity *ChatEventLogFilters) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatEventLogFilters) GetClass() string {
 	return ClassChatEventLogFilters
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatEventLogFilters) GetType() string {
 	return TypeChatEventLogFilters
 }
 
-// An ordinary language pack string
+// LanguagePackStringValueOrdinary an ordinary language pack string
 type LanguagePackStringValueOrdinary struct {
 	meta
 	// String value
 	Value string `json:"value"`
 }
 
+// MarshalJSON returns LanguagePackStringValueOrdinary object as the JSON encoding of LanguagePackStringValueOrdinary.
 func (entity *LanguagePackStringValueOrdinary) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15128,19 +16801,22 @@ func (entity *LanguagePackStringValueOrdinary) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*LanguagePackStringValueOrdinary) GetClass() string {
 	return ClassLanguagePackStringValue
 }
 
+// GetType returns constant class type string of the class.
 func (*LanguagePackStringValueOrdinary) GetType() string {
 	return TypeLanguagePackStringValueOrdinary
 }
 
+// LanguagePackStringValueType returns constant class type string of the class.
 func (*LanguagePackStringValueOrdinary) LanguagePackStringValueType() string {
 	return TypeLanguagePackStringValueOrdinary
 }
 
-// A language pack string which has different forms based on the number of some object it mentions
+// LanguagePackStringValuePluralized a language pack string which has different forms based on the number of some object it mentions
 type LanguagePackStringValuePluralized struct {
 	meta
 	// Value for zero objects
@@ -15157,6 +16833,7 @@ type LanguagePackStringValuePluralized struct {
 	OtherValue string `json:"other_value"`
 }
 
+// MarshalJSON returns LanguagePackStringValuePluralized object as the JSON encoding of LanguagePackStringValuePluralized.
 func (entity *LanguagePackStringValuePluralized) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15165,23 +16842,27 @@ func (entity *LanguagePackStringValuePluralized) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*LanguagePackStringValuePluralized) GetClass() string {
 	return ClassLanguagePackStringValue
 }
 
+// GetType returns constant class type string of the class.
 func (*LanguagePackStringValuePluralized) GetType() string {
 	return TypeLanguagePackStringValuePluralized
 }
 
+// LanguagePackStringValueType returns constant class type string of the class.
 func (*LanguagePackStringValuePluralized) LanguagePackStringValueType() string {
 	return TypeLanguagePackStringValuePluralized
 }
 
-// A deleted language pack string, the value should be taken from the built-in english language pack
+// LanguagePackStringValueDeleted a deleted language pack string, the value should be taken from the built-in english language pack
 type LanguagePackStringValueDeleted struct {
 	meta
 }
 
+// MarshalJSON returns LanguagePackStringValueDeleted object as the JSON encoding of LanguagePackStringValueDeleted.
 func (entity *LanguagePackStringValueDeleted) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15190,19 +16871,22 @@ func (entity *LanguagePackStringValueDeleted) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*LanguagePackStringValueDeleted) GetClass() string {
 	return ClassLanguagePackStringValue
 }
 
+// GetType returns constant class type string of the class.
 func (*LanguagePackStringValueDeleted) GetType() string {
 	return TypeLanguagePackStringValueDeleted
 }
 
+// LanguagePackStringValueType returns constant class type string of the class.
 func (*LanguagePackStringValueDeleted) LanguagePackStringValueType() string {
 	return TypeLanguagePackStringValueDeleted
 }
 
-// Represents one language pack string
+// LanguagePackString represents one language pack string
 type LanguagePackString struct {
 	meta
 	// String key
@@ -15211,6 +16895,7 @@ type LanguagePackString struct {
 	Value LanguagePackStringValue `json:"value"`
 }
 
+// MarshalJSON returns LanguagePackString object as the JSON encoding of LanguagePackString.
 func (entity *LanguagePackString) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15219,15 +16904,18 @@ func (entity *LanguagePackString) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*LanguagePackString) GetClass() string {
 	return ClassLanguagePackString
 }
 
+// GetType returns constant class type string of the class.
 func (*LanguagePackString) GetType() string {
 	return TypeLanguagePackString
 }
 
-func (languagePackString *LanguagePackString) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets LanguagePackString object to a copy of JSON encoding of LanguagePackString.
+func (entity *LanguagePackString) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Key   string          `json:"key"`
 		Value json.RawMessage `json:"value"`
@@ -15238,21 +16926,22 @@ func (languagePackString *LanguagePackString) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	languagePackString.Key = tmp.Key
+	entity.Key = tmp.Key
 
 	fieldValue, _ := UnmarshalLanguagePackStringValue(tmp.Value)
-	languagePackString.Value = fieldValue
+	entity.Value = fieldValue
 
 	return nil
 }
 
-// Contains a list of language pack strings
+// LanguagePackStrings contains a list of language pack strings
 type LanguagePackStrings struct {
 	meta
 	// A list of language pack strings
 	Strings []*LanguagePackString `json:"strings"`
 }
 
+// MarshalJSON returns LanguagePackStrings object as the JSON encoding of LanguagePackStrings.
 func (entity *LanguagePackStrings) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15261,19 +16950,21 @@ func (entity *LanguagePackStrings) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*LanguagePackStrings) GetClass() string {
 	return ClassLanguagePackStrings
 }
 
+// GetType returns constant class type string of the class.
 func (*LanguagePackStrings) GetType() string {
 	return TypeLanguagePackStrings
 }
 
-// Contains information about a language pack
+// LanguagePackInfo contains information about a language pack
 type LanguagePackInfo struct {
 	meta
 	// Unique language pack identifier
-	Id string `json:"id"`
+	ID string `json:"id"`
 	// Language name
 	Name string `json:"name"`
 	// Name of the language in that language
@@ -15282,6 +16973,7 @@ type LanguagePackInfo struct {
 	LocalStringCount int32 `json:"local_string_count"`
 }
 
+// MarshalJSON returns LanguagePackInfo object as the JSON encoding of LanguagePackInfo.
 func (entity *LanguagePackInfo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15290,21 +16982,24 @@ func (entity *LanguagePackInfo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*LanguagePackInfo) GetClass() string {
 	return ClassLanguagePackInfo
 }
 
+// GetType returns constant class type string of the class.
 func (*LanguagePackInfo) GetType() string {
 	return TypeLanguagePackInfo
 }
 
-// Contains information about the current localization target
+// LocalizationTargetInfo contains information about the current localization target
 type LocalizationTargetInfo struct {
 	meta
 	// List of available language packs for this application
 	LanguagePacks []*LanguagePackInfo `json:"language_packs"`
 }
 
+// MarshalJSON returns LocalizationTargetInfo object as the JSON encoding of LocalizationTargetInfo.
 func (entity *LocalizationTargetInfo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15313,21 +17008,24 @@ func (entity *LocalizationTargetInfo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*LocalizationTargetInfo) GetClass() string {
 	return ClassLocalizationTargetInfo
 }
 
+// GetType returns constant class type string of the class.
 func (*LocalizationTargetInfo) GetType() string {
 	return TypeLocalizationTargetInfo
 }
 
-// A token for Google Cloud Messaging
+// DeviceTokenGoogleCloudMessaging a token for Google Cloud Messaging
 type DeviceTokenGoogleCloudMessaging struct {
 	meta
 	// Device registration token; may be empty to de-register a device
 	Token string `json:"token"`
 }
 
+// MarshalJSON returns DeviceTokenGoogleCloudMessaging object as the JSON encoding of DeviceTokenGoogleCloudMessaging.
 func (entity *DeviceTokenGoogleCloudMessaging) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15336,19 +17034,22 @@ func (entity *DeviceTokenGoogleCloudMessaging) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*DeviceTokenGoogleCloudMessaging) GetClass() string {
 	return ClassDeviceToken
 }
 
+// GetType returns constant class type string of the class.
 func (*DeviceTokenGoogleCloudMessaging) GetType() string {
 	return TypeDeviceTokenGoogleCloudMessaging
 }
 
+// DeviceTokenType returns constant class type string of the class.
 func (*DeviceTokenGoogleCloudMessaging) DeviceTokenType() string {
 	return TypeDeviceTokenGoogleCloudMessaging
 }
 
-// A token for Apple Push Notification service
+// DeviceTokenApplePush a token for Apple Push Notification service
 type DeviceTokenApplePush struct {
 	meta
 	// Device token; may be empty to de-register a device
@@ -15357,6 +17058,7 @@ type DeviceTokenApplePush struct {
 	IsAppSandbox bool `json:"is_app_sandbox"`
 }
 
+// MarshalJSON returns DeviceTokenApplePush object as the JSON encoding of DeviceTokenApplePush.
 func (entity *DeviceTokenApplePush) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15365,19 +17067,22 @@ func (entity *DeviceTokenApplePush) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*DeviceTokenApplePush) GetClass() string {
 	return ClassDeviceToken
 }
 
+// GetType returns constant class type string of the class.
 func (*DeviceTokenApplePush) GetType() string {
 	return TypeDeviceTokenApplePush
 }
 
+// DeviceTokenType returns constant class type string of the class.
 func (*DeviceTokenApplePush) DeviceTokenType() string {
 	return TypeDeviceTokenApplePush
 }
 
-// A token for Apple Push Notification service VoIP notifications
+// DeviceTokenApplePushVoIP a token for Apple Push Notification service VoIP notifications
 type DeviceTokenApplePushVoIP struct {
 	meta
 	// Device token; may be empty to de-register a device
@@ -15386,6 +17091,7 @@ type DeviceTokenApplePushVoIP struct {
 	IsAppSandbox bool `json:"is_app_sandbox"`
 }
 
+// MarshalJSON returns DeviceTokenApplePushVoIP object as the JSON encoding of DeviceTokenApplePushVoIP.
 func (entity *DeviceTokenApplePushVoIP) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15394,25 +17100,29 @@ func (entity *DeviceTokenApplePushVoIP) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*DeviceTokenApplePushVoIP) GetClass() string {
 	return ClassDeviceToken
 }
 
+// GetType returns constant class type string of the class.
 func (*DeviceTokenApplePushVoIP) GetType() string {
 	return TypeDeviceTokenApplePushVoIP
 }
 
+// DeviceTokenType returns constant class type string of the class.
 func (*DeviceTokenApplePushVoIP) DeviceTokenType() string {
 	return TypeDeviceTokenApplePushVoIP
 }
 
-// A token for Windows Push Notification Services
+// DeviceTokenWindowsPush a token for Windows Push Notification Services
 type DeviceTokenWindowsPush struct {
 	meta
 	// The access token that will be used to send notifications; may be empty to de-register a device
 	AccessToken string `json:"access_token"`
 }
 
+// MarshalJSON returns DeviceTokenWindowsPush object as the JSON encoding of DeviceTokenWindowsPush.
 func (entity *DeviceTokenWindowsPush) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15421,25 +17131,29 @@ func (entity *DeviceTokenWindowsPush) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*DeviceTokenWindowsPush) GetClass() string {
 	return ClassDeviceToken
 }
 
+// GetType returns constant class type string of the class.
 func (*DeviceTokenWindowsPush) GetType() string {
 	return TypeDeviceTokenWindowsPush
 }
 
+// DeviceTokenType returns constant class type string of the class.
 func (*DeviceTokenWindowsPush) DeviceTokenType() string {
 	return TypeDeviceTokenWindowsPush
 }
 
-// A token for Microsoft Push Notification Service
+// DeviceTokenMicrosoftPush a token for Microsoft Push Notification Service
 type DeviceTokenMicrosoftPush struct {
 	meta
 	// Push notification channel URI; may be empty to de-register a device
-	ChannelUri string `json:"channel_uri"`
+	ChannelURI string `json:"channel_uri"`
 }
 
+// MarshalJSON returns DeviceTokenMicrosoftPush object as the JSON encoding of DeviceTokenMicrosoftPush.
 func (entity *DeviceTokenMicrosoftPush) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15448,25 +17162,29 @@ func (entity *DeviceTokenMicrosoftPush) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*DeviceTokenMicrosoftPush) GetClass() string {
 	return ClassDeviceToken
 }
 
+// GetType returns constant class type string of the class.
 func (*DeviceTokenMicrosoftPush) GetType() string {
 	return TypeDeviceTokenMicrosoftPush
 }
 
+// DeviceTokenType returns constant class type string of the class.
 func (*DeviceTokenMicrosoftPush) DeviceTokenType() string {
 	return TypeDeviceTokenMicrosoftPush
 }
 
-// A token for Microsoft Push Notification Service VoIP channel
+// DeviceTokenMicrosoftPushVoIP a token for Microsoft Push Notification Service VoIP channel
 type DeviceTokenMicrosoftPushVoIP struct {
 	meta
 	// Push notification channel URI; may be empty to de-register a device
-	ChannelUri string `json:"channel_uri"`
+	ChannelURI string `json:"channel_uri"`
 }
 
+// MarshalJSON returns DeviceTokenMicrosoftPushVoIP object as the JSON encoding of DeviceTokenMicrosoftPushVoIP.
 func (entity *DeviceTokenMicrosoftPushVoIP) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15475,19 +17193,22 @@ func (entity *DeviceTokenMicrosoftPushVoIP) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*DeviceTokenMicrosoftPushVoIP) GetClass() string {
 	return ClassDeviceToken
 }
 
+// GetType returns constant class type string of the class.
 func (*DeviceTokenMicrosoftPushVoIP) GetType() string {
 	return TypeDeviceTokenMicrosoftPushVoIP
 }
 
+// DeviceTokenType returns constant class type string of the class.
 func (*DeviceTokenMicrosoftPushVoIP) DeviceTokenType() string {
 	return TypeDeviceTokenMicrosoftPushVoIP
 }
 
-// A token for web Push API
+// DeviceTokenWebPush a token for web Push API
 type DeviceTokenWebPush struct {
 	meta
 	// Absolute URL exposed by the push service where the application server can send push messages; may be empty to de-register a device
@@ -15498,6 +17219,7 @@ type DeviceTokenWebPush struct {
 	AuthBase64url string `json:"auth_base64url"`
 }
 
+// MarshalJSON returns DeviceTokenWebPush object as the JSON encoding of DeviceTokenWebPush.
 func (entity *DeviceTokenWebPush) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15506,25 +17228,29 @@ func (entity *DeviceTokenWebPush) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*DeviceTokenWebPush) GetClass() string {
 	return ClassDeviceToken
 }
 
+// GetType returns constant class type string of the class.
 func (*DeviceTokenWebPush) GetType() string {
 	return TypeDeviceTokenWebPush
 }
 
+// DeviceTokenType returns constant class type string of the class.
 func (*DeviceTokenWebPush) DeviceTokenType() string {
 	return TypeDeviceTokenWebPush
 }
 
-// A token for Simple Push API for Firefox OS
+// DeviceTokenSimplePush a token for Simple Push API for Firefox OS
 type DeviceTokenSimplePush struct {
 	meta
 	// Absolute URL exposed by the push service where the application server can send push messages; may be empty to de-register a device
 	Endpoint string `json:"endpoint"`
 }
 
+// MarshalJSON returns DeviceTokenSimplePush object as the JSON encoding of DeviceTokenSimplePush.
 func (entity *DeviceTokenSimplePush) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15533,25 +17259,29 @@ func (entity *DeviceTokenSimplePush) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*DeviceTokenSimplePush) GetClass() string {
 	return ClassDeviceToken
 }
 
+// GetType returns constant class type string of the class.
 func (*DeviceTokenSimplePush) GetType() string {
 	return TypeDeviceTokenSimplePush
 }
 
+// DeviceTokenType returns constant class type string of the class.
 func (*DeviceTokenSimplePush) DeviceTokenType() string {
 	return TypeDeviceTokenSimplePush
 }
 
-// A token for Ubuntu Push Client service
+// DeviceTokenUbuntuPush a token for Ubuntu Push Client service
 type DeviceTokenUbuntuPush struct {
 	meta
 	// Token; may be empty to de-register a device
 	Token string `json:"token"`
 }
 
+// MarshalJSON returns DeviceTokenUbuntuPush object as the JSON encoding of DeviceTokenUbuntuPush.
 func (entity *DeviceTokenUbuntuPush) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15560,25 +17290,29 @@ func (entity *DeviceTokenUbuntuPush) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*DeviceTokenUbuntuPush) GetClass() string {
 	return ClassDeviceToken
 }
 
+// GetType returns constant class type string of the class.
 func (*DeviceTokenUbuntuPush) GetType() string {
 	return TypeDeviceTokenUbuntuPush
 }
 
+// DeviceTokenType returns constant class type string of the class.
 func (*DeviceTokenUbuntuPush) DeviceTokenType() string {
 	return TypeDeviceTokenUbuntuPush
 }
 
-// A token for BlackBerry Push Service
+// DeviceTokenBlackBerryPush a token for BlackBerry Push Service
 type DeviceTokenBlackBerryPush struct {
 	meta
 	// Token; may be empty to de-register a device
 	Token string `json:"token"`
 }
 
+// MarshalJSON returns DeviceTokenBlackBerryPush object as the JSON encoding of DeviceTokenBlackBerryPush.
 func (entity *DeviceTokenBlackBerryPush) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15587,25 +17321,29 @@ func (entity *DeviceTokenBlackBerryPush) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*DeviceTokenBlackBerryPush) GetClass() string {
 	return ClassDeviceToken
 }
 
+// GetType returns constant class type string of the class.
 func (*DeviceTokenBlackBerryPush) GetType() string {
 	return TypeDeviceTokenBlackBerryPush
 }
 
+// DeviceTokenType returns constant class type string of the class.
 func (*DeviceTokenBlackBerryPush) DeviceTokenType() string {
 	return TypeDeviceTokenBlackBerryPush
 }
 
-// A token for Tizen Push Service
+// DeviceTokenTizenPush a token for Tizen Push Service
 type DeviceTokenTizenPush struct {
 	meta
 	// Push service registration identifier; may be empty to de-register a device
-	RegId string `json:"reg_id"`
+	RegID string `json:"reg_id"`
 }
 
+// MarshalJSON returns DeviceTokenTizenPush object as the JSON encoding of DeviceTokenTizenPush.
 func (entity *DeviceTokenTizenPush) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15614,29 +17352,33 @@ func (entity *DeviceTokenTizenPush) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*DeviceTokenTizenPush) GetClass() string {
 	return ClassDeviceToken
 }
 
+// GetType returns constant class type string of the class.
 func (*DeviceTokenTizenPush) GetType() string {
 	return TypeDeviceTokenTizenPush
 }
 
+// DeviceTokenType returns constant class type string of the class.
 func (*DeviceTokenTizenPush) DeviceTokenType() string {
 	return TypeDeviceTokenTizenPush
 }
 
-// Contains information about a wallpaper
+// Wallpaper contains information about a wallpaper
 type Wallpaper struct {
 	meta
 	// Unique persistent wallpaper identifier
-	Id int32 `json:"id"`
+	ID int32 `json:"id"`
 	// Available variants of the wallpaper in different sizes. These photos can only be downloaded; they can't be sent in a message
 	Sizes []*PhotoSize `json:"sizes"`
 	// Main color of the wallpaper in RGB24 format; should be treated as background color if no photos are specified
 	Color int32 `json:"color"`
 }
 
+// MarshalJSON returns Wallpaper object as the JSON encoding of Wallpaper.
 func (entity *Wallpaper) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15645,21 +17387,24 @@ func (entity *Wallpaper) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Wallpaper) GetClass() string {
 	return ClassWallpaper
 }
 
+// GetType returns constant class type string of the class.
 func (*Wallpaper) GetType() string {
 	return TypeWallpaper
 }
 
-// Contains a list of wallpapers
+// Wallpapers contains a list of wallpapers
 type Wallpapers struct {
 	meta
 	// A list of wallpapers
 	Wallpapers []*Wallpaper `json:"wallpapers"`
 }
 
+// MarshalJSON returns Wallpapers object as the JSON encoding of Wallpapers.
 func (entity *Wallpapers) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15668,21 +17413,24 @@ func (entity *Wallpapers) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Wallpapers) GetClass() string {
 	return ClassWallpapers
 }
 
+// GetType returns constant class type string of the class.
 func (*Wallpapers) GetType() string {
 	return TypeWallpapers
 }
 
-// Contains a list of hashtags
+// Hashtags contains a list of hashtags
 type Hashtags struct {
 	meta
 	// A list of hashtags
 	Hashtags []string `json:"hashtags"`
 }
 
+// MarshalJSON returns Hashtags object as the JSON encoding of Hashtags.
 func (entity *Hashtags) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15691,19 +17439,22 @@ func (entity *Hashtags) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Hashtags) GetClass() string {
 	return ClassHashtags
 }
 
+// GetType returns constant class type string of the class.
 func (*Hashtags) GetType() string {
 	return TypeHashtags
 }
 
-// The username can be set
+// CheckChatUsernameResultOk the username can be set
 type CheckChatUsernameResultOk struct {
 	meta
 }
 
+// MarshalJSON returns CheckChatUsernameResultOk object as the JSON encoding of CheckChatUsernameResultOk.
 func (entity *CheckChatUsernameResultOk) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15712,23 +17463,27 @@ func (entity *CheckChatUsernameResultOk) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CheckChatUsernameResultOk) GetClass() string {
 	return ClassCheckChatUsernameResult
 }
 
+// GetType returns constant class type string of the class.
 func (*CheckChatUsernameResultOk) GetType() string {
 	return TypeCheckChatUsernameResultOk
 }
 
+// CheckChatUsernameResultType returns constant class type string of the class.
 func (*CheckChatUsernameResultOk) CheckChatUsernameResultType() string {
 	return TypeCheckChatUsernameResultOk
 }
 
-// The username is invalid
+// CheckChatUsernameResultUsernameInvalid the username is invalid
 type CheckChatUsernameResultUsernameInvalid struct {
 	meta
 }
 
+// MarshalJSON returns CheckChatUsernameResultUsernameInvalid object as the JSON encoding of CheckChatUsernameResultUsernameInvalid.
 func (entity *CheckChatUsernameResultUsernameInvalid) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15737,23 +17492,27 @@ func (entity *CheckChatUsernameResultUsernameInvalid) MarshalJSON() ([]byte, err
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CheckChatUsernameResultUsernameInvalid) GetClass() string {
 	return ClassCheckChatUsernameResult
 }
 
+// GetType returns constant class type string of the class.
 func (*CheckChatUsernameResultUsernameInvalid) GetType() string {
 	return TypeCheckChatUsernameResultUsernameInvalid
 }
 
+// CheckChatUsernameResultType returns constant class type string of the class.
 func (*CheckChatUsernameResultUsernameInvalid) CheckChatUsernameResultType() string {
 	return TypeCheckChatUsernameResultUsernameInvalid
 }
 
-// The username is occupied
+// CheckChatUsernameResultUsernameOccupied the username is occupied
 type CheckChatUsernameResultUsernameOccupied struct {
 	meta
 }
 
+// MarshalJSON returns CheckChatUsernameResultUsernameOccupied object as the JSON encoding of CheckChatUsernameResultUsernameOccupied.
 func (entity *CheckChatUsernameResultUsernameOccupied) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15762,23 +17521,27 @@ func (entity *CheckChatUsernameResultUsernameOccupied) MarshalJSON() ([]byte, er
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CheckChatUsernameResultUsernameOccupied) GetClass() string {
 	return ClassCheckChatUsernameResult
 }
 
+// GetType returns constant class type string of the class.
 func (*CheckChatUsernameResultUsernameOccupied) GetType() string {
 	return TypeCheckChatUsernameResultUsernameOccupied
 }
 
+// CheckChatUsernameResultType returns constant class type string of the class.
 func (*CheckChatUsernameResultUsernameOccupied) CheckChatUsernameResultType() string {
 	return TypeCheckChatUsernameResultUsernameOccupied
 }
 
-// The user has too much public chats, one of them should be made private first
+// CheckChatUsernameResultPublicChatsTooMuch the user has too much public chats, one of them should be made private first
 type CheckChatUsernameResultPublicChatsTooMuch struct {
 	meta
 }
 
+// MarshalJSON returns CheckChatUsernameResultPublicChatsTooMuch object as the JSON encoding of CheckChatUsernameResultPublicChatsTooMuch.
 func (entity *CheckChatUsernameResultPublicChatsTooMuch) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15787,23 +17550,27 @@ func (entity *CheckChatUsernameResultPublicChatsTooMuch) MarshalJSON() ([]byte, 
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CheckChatUsernameResultPublicChatsTooMuch) GetClass() string {
 	return ClassCheckChatUsernameResult
 }
 
+// GetType returns constant class type string of the class.
 func (*CheckChatUsernameResultPublicChatsTooMuch) GetType() string {
 	return TypeCheckChatUsernameResultPublicChatsTooMuch
 }
 
+// CheckChatUsernameResultType returns constant class type string of the class.
 func (*CheckChatUsernameResultPublicChatsTooMuch) CheckChatUsernameResultType() string {
 	return TypeCheckChatUsernameResultPublicChatsTooMuch
 }
 
-// The user can't be a member of a public supergroup
+// CheckChatUsernameResultPublicGroupsUnavailable the user can't be a member of a public supergroup
 type CheckChatUsernameResultPublicGroupsUnavailable struct {
 	meta
 }
 
+// MarshalJSON returns CheckChatUsernameResultPublicGroupsUnavailable object as the JSON encoding of CheckChatUsernameResultPublicGroupsUnavailable.
 func (entity *CheckChatUsernameResultPublicGroupsUnavailable) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15812,25 +17579,29 @@ func (entity *CheckChatUsernameResultPublicGroupsUnavailable) MarshalJSON() ([]b
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*CheckChatUsernameResultPublicGroupsUnavailable) GetClass() string {
 	return ClassCheckChatUsernameResult
 }
 
+// GetType returns constant class type string of the class.
 func (*CheckChatUsernameResultPublicGroupsUnavailable) GetType() string {
 	return TypeCheckChatUsernameResultPublicGroupsUnavailable
 }
 
+// CheckChatUsernameResultType returns constant class type string of the class.
 func (*CheckChatUsernameResultPublicGroupsUnavailable) CheckChatUsernameResultType() string {
 	return TypeCheckChatUsernameResultPublicGroupsUnavailable
 }
 
-// Boolean option
+// OptionValueBoolean boolean option
 type OptionValueBoolean struct {
 	meta
 	// The value of the option
 	Value bool `json:"value"`
 }
 
+// MarshalJSON returns OptionValueBoolean object as the JSON encoding of OptionValueBoolean.
 func (entity *OptionValueBoolean) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15839,23 +17610,27 @@ func (entity *OptionValueBoolean) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*OptionValueBoolean) GetClass() string {
 	return ClassOptionValue
 }
 
+// GetType returns constant class type string of the class.
 func (*OptionValueBoolean) GetType() string {
 	return TypeOptionValueBoolean
 }
 
+// OptionValueType returns constant class type string of the class.
 func (*OptionValueBoolean) OptionValueType() string {
 	return TypeOptionValueBoolean
 }
 
-// An unknown option or an option which has a default value
+// OptionValueEmpty an unknown option or an option which has a default value
 type OptionValueEmpty struct {
 	meta
 }
 
+// MarshalJSON returns OptionValueEmpty object as the JSON encoding of OptionValueEmpty.
 func (entity *OptionValueEmpty) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15864,25 +17639,29 @@ func (entity *OptionValueEmpty) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*OptionValueEmpty) GetClass() string {
 	return ClassOptionValue
 }
 
+// GetType returns constant class type string of the class.
 func (*OptionValueEmpty) GetType() string {
 	return TypeOptionValueEmpty
 }
 
+// OptionValueType returns constant class type string of the class.
 func (*OptionValueEmpty) OptionValueType() string {
 	return TypeOptionValueEmpty
 }
 
-// An integer option
+// OptionValueInteger an integer option
 type OptionValueInteger struct {
 	meta
 	// The value of the option
 	Value int32 `json:"value"`
 }
 
+// MarshalJSON returns OptionValueInteger object as the JSON encoding of OptionValueInteger.
 func (entity *OptionValueInteger) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15891,25 +17670,29 @@ func (entity *OptionValueInteger) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*OptionValueInteger) GetClass() string {
 	return ClassOptionValue
 }
 
+// GetType returns constant class type string of the class.
 func (*OptionValueInteger) GetType() string {
 	return TypeOptionValueInteger
 }
 
+// OptionValueType returns constant class type string of the class.
 func (*OptionValueInteger) OptionValueType() string {
 	return TypeOptionValueInteger
 }
 
-// A string option
+// OptionValueString a string option
 type OptionValueString struct {
 	meta
 	// The value of the option
 	Value string `json:"value"`
 }
 
+// MarshalJSON returns OptionValueString object as the JSON encoding of OptionValueString.
 func (entity *OptionValueString) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15918,23 +17701,27 @@ func (entity *OptionValueString) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*OptionValueString) GetClass() string {
 	return ClassOptionValue
 }
 
+// GetType returns constant class type string of the class.
 func (*OptionValueString) GetType() string {
 	return TypeOptionValueString
 }
 
+// OptionValueType returns constant class type string of the class.
 func (*OptionValueString) OptionValueType() string {
 	return TypeOptionValueString
 }
 
-// A rule to allow all users to do something
+// UserPrivacySettingRuleAllowAll a rule to allow all users to do something
 type UserPrivacySettingRuleAllowAll struct {
 	meta
 }
 
+// MarshalJSON returns UserPrivacySettingRuleAllowAll object as the JSON encoding of UserPrivacySettingRuleAllowAll.
 func (entity *UserPrivacySettingRuleAllowAll) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15943,23 +17730,27 @@ func (entity *UserPrivacySettingRuleAllowAll) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserPrivacySettingRuleAllowAll) GetClass() string {
 	return ClassUserPrivacySettingRule
 }
 
+// GetType returns constant class type string of the class.
 func (*UserPrivacySettingRuleAllowAll) GetType() string {
 	return TypeUserPrivacySettingRuleAllowAll
 }
 
+// UserPrivacySettingRuleType returns constant class type string of the class.
 func (*UserPrivacySettingRuleAllowAll) UserPrivacySettingRuleType() string {
 	return TypeUserPrivacySettingRuleAllowAll
 }
 
-// A rule to allow all of a user's contacts to do something
+// UserPrivacySettingRuleAllowContacts a rule to allow all of a user's contacts to do something
 type UserPrivacySettingRuleAllowContacts struct {
 	meta
 }
 
+// MarshalJSON returns UserPrivacySettingRuleAllowContacts object as the JSON encoding of UserPrivacySettingRuleAllowContacts.
 func (entity *UserPrivacySettingRuleAllowContacts) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15968,25 +17759,29 @@ func (entity *UserPrivacySettingRuleAllowContacts) MarshalJSON() ([]byte, error)
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserPrivacySettingRuleAllowContacts) GetClass() string {
 	return ClassUserPrivacySettingRule
 }
 
+// GetType returns constant class type string of the class.
 func (*UserPrivacySettingRuleAllowContacts) GetType() string {
 	return TypeUserPrivacySettingRuleAllowContacts
 }
 
+// UserPrivacySettingRuleType returns constant class type string of the class.
 func (*UserPrivacySettingRuleAllowContacts) UserPrivacySettingRuleType() string {
 	return TypeUserPrivacySettingRuleAllowContacts
 }
 
-// A rule to allow certain specified users to do something
+// UserPrivacySettingRuleAllowUsers a rule to allow certain specified users to do something
 type UserPrivacySettingRuleAllowUsers struct {
 	meta
 	// The user identifiers
-	UserIds []int32 `json:"user_ids"`
+	UserIDs []int32 `json:"user_ids"`
 }
 
+// MarshalJSON returns UserPrivacySettingRuleAllowUsers object as the JSON encoding of UserPrivacySettingRuleAllowUsers.
 func (entity *UserPrivacySettingRuleAllowUsers) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -15995,23 +17790,27 @@ func (entity *UserPrivacySettingRuleAllowUsers) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserPrivacySettingRuleAllowUsers) GetClass() string {
 	return ClassUserPrivacySettingRule
 }
 
+// GetType returns constant class type string of the class.
 func (*UserPrivacySettingRuleAllowUsers) GetType() string {
 	return TypeUserPrivacySettingRuleAllowUsers
 }
 
+// UserPrivacySettingRuleType returns constant class type string of the class.
 func (*UserPrivacySettingRuleAllowUsers) UserPrivacySettingRuleType() string {
 	return TypeUserPrivacySettingRuleAllowUsers
 }
 
-// A rule to restrict all users from doing something
+// UserPrivacySettingRuleRestrictAll a rule to restrict all users from doing something
 type UserPrivacySettingRuleRestrictAll struct {
 	meta
 }
 
+// MarshalJSON returns UserPrivacySettingRuleRestrictAll object as the JSON encoding of UserPrivacySettingRuleRestrictAll.
 func (entity *UserPrivacySettingRuleRestrictAll) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16020,23 +17819,27 @@ func (entity *UserPrivacySettingRuleRestrictAll) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserPrivacySettingRuleRestrictAll) GetClass() string {
 	return ClassUserPrivacySettingRule
 }
 
+// GetType returns constant class type string of the class.
 func (*UserPrivacySettingRuleRestrictAll) GetType() string {
 	return TypeUserPrivacySettingRuleRestrictAll
 }
 
+// UserPrivacySettingRuleType returns constant class type string of the class.
 func (*UserPrivacySettingRuleRestrictAll) UserPrivacySettingRuleType() string {
 	return TypeUserPrivacySettingRuleRestrictAll
 }
 
-// A rule to restrict all contacts of a user from doing something
+// UserPrivacySettingRuleRestrictContacts a rule to restrict all contacts of a user from doing something
 type UserPrivacySettingRuleRestrictContacts struct {
 	meta
 }
 
+// MarshalJSON returns UserPrivacySettingRuleRestrictContacts object as the JSON encoding of UserPrivacySettingRuleRestrictContacts.
 func (entity *UserPrivacySettingRuleRestrictContacts) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16045,25 +17848,29 @@ func (entity *UserPrivacySettingRuleRestrictContacts) MarshalJSON() ([]byte, err
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserPrivacySettingRuleRestrictContacts) GetClass() string {
 	return ClassUserPrivacySettingRule
 }
 
+// GetType returns constant class type string of the class.
 func (*UserPrivacySettingRuleRestrictContacts) GetType() string {
 	return TypeUserPrivacySettingRuleRestrictContacts
 }
 
+// UserPrivacySettingRuleType returns constant class type string of the class.
 func (*UserPrivacySettingRuleRestrictContacts) UserPrivacySettingRuleType() string {
 	return TypeUserPrivacySettingRuleRestrictContacts
 }
 
-// A rule to restrict all specified users from doing something
+// UserPrivacySettingRuleRestrictUsers a rule to restrict all specified users from doing something
 type UserPrivacySettingRuleRestrictUsers struct {
 	meta
 	// The user identifiers
-	UserIds []int32 `json:"user_ids"`
+	UserIDs []int32 `json:"user_ids"`
 }
 
+// MarshalJSON returns UserPrivacySettingRuleRestrictUsers object as the JSON encoding of UserPrivacySettingRuleRestrictUsers.
 func (entity *UserPrivacySettingRuleRestrictUsers) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16072,25 +17879,29 @@ func (entity *UserPrivacySettingRuleRestrictUsers) MarshalJSON() ([]byte, error)
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserPrivacySettingRuleRestrictUsers) GetClass() string {
 	return ClassUserPrivacySettingRule
 }
 
+// GetType returns constant class type string of the class.
 func (*UserPrivacySettingRuleRestrictUsers) GetType() string {
 	return TypeUserPrivacySettingRuleRestrictUsers
 }
 
+// UserPrivacySettingRuleType returns constant class type string of the class.
 func (*UserPrivacySettingRuleRestrictUsers) UserPrivacySettingRuleType() string {
 	return TypeUserPrivacySettingRuleRestrictUsers
 }
 
-// A list of privacy rules. Rules are matched in the specified order. The first matched rule defines the privacy setting for a given user. If no rule matches, the action is not allowed
+// UserPrivacySettingRules a list of privacy rules. Rules are matched in the specified order. The first matched rule defines the privacy setting for a given user. If no rule matches, the action is not allowed
 type UserPrivacySettingRules struct {
 	meta
 	// A list of rules
 	Rules []UserPrivacySettingRule `json:"rules"`
 }
 
+// MarshalJSON returns UserPrivacySettingRules object as the JSON encoding of UserPrivacySettingRules.
 func (entity *UserPrivacySettingRules) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16099,19 +17910,22 @@ func (entity *UserPrivacySettingRules) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserPrivacySettingRules) GetClass() string {
 	return ClassUserPrivacySettingRules
 }
 
+// GetType returns constant class type string of the class.
 func (*UserPrivacySettingRules) GetType() string {
 	return TypeUserPrivacySettingRules
 }
 
-// A privacy setting for managing whether the user's online status is visible
+// UserPrivacySettingShowStatus a privacy setting for managing whether the user's online status is visible
 type UserPrivacySettingShowStatus struct {
 	meta
 }
 
+// MarshalJSON returns UserPrivacySettingShowStatus object as the JSON encoding of UserPrivacySettingShowStatus.
 func (entity *UserPrivacySettingShowStatus) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16120,23 +17934,27 @@ func (entity *UserPrivacySettingShowStatus) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserPrivacySettingShowStatus) GetClass() string {
 	return ClassUserPrivacySetting
 }
 
+// GetType returns constant class type string of the class.
 func (*UserPrivacySettingShowStatus) GetType() string {
 	return TypeUserPrivacySettingShowStatus
 }
 
+// UserPrivacySettingType returns constant class type string of the class.
 func (*UserPrivacySettingShowStatus) UserPrivacySettingType() string {
 	return TypeUserPrivacySettingShowStatus
 }
 
-// A privacy setting for managing whether the user can be invited to chats
+// UserPrivacySettingAllowChatInvites a privacy setting for managing whether the user can be invited to chats
 type UserPrivacySettingAllowChatInvites struct {
 	meta
 }
 
+// MarshalJSON returns UserPrivacySettingAllowChatInvites object as the JSON encoding of UserPrivacySettingAllowChatInvites.
 func (entity *UserPrivacySettingAllowChatInvites) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16145,23 +17963,27 @@ func (entity *UserPrivacySettingAllowChatInvites) MarshalJSON() ([]byte, error) 
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserPrivacySettingAllowChatInvites) GetClass() string {
 	return ClassUserPrivacySetting
 }
 
+// GetType returns constant class type string of the class.
 func (*UserPrivacySettingAllowChatInvites) GetType() string {
 	return TypeUserPrivacySettingAllowChatInvites
 }
 
+// UserPrivacySettingType returns constant class type string of the class.
 func (*UserPrivacySettingAllowChatInvites) UserPrivacySettingType() string {
 	return TypeUserPrivacySettingAllowChatInvites
 }
 
-// A privacy setting for managing whether the user can be called
+// UserPrivacySettingAllowCalls a privacy setting for managing whether the user can be called
 type UserPrivacySettingAllowCalls struct {
 	meta
 }
 
+// MarshalJSON returns UserPrivacySettingAllowCalls object as the JSON encoding of UserPrivacySettingAllowCalls.
 func (entity *UserPrivacySettingAllowCalls) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16170,50 +17992,56 @@ func (entity *UserPrivacySettingAllowCalls) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UserPrivacySettingAllowCalls) GetClass() string {
 	return ClassUserPrivacySetting
 }
 
+// GetType returns constant class type string of the class.
 func (*UserPrivacySettingAllowCalls) GetType() string {
 	return TypeUserPrivacySettingAllowCalls
 }
 
+// UserPrivacySettingType returns constant class type string of the class.
 func (*UserPrivacySettingAllowCalls) UserPrivacySettingType() string {
 	return TypeUserPrivacySettingAllowCalls
 }
 
-// Contains information about the period of inactivity after which the current user's account will automatically be deleted
-type AccountTtl struct {
+// AccountTTL contains information about the period of inactivity after which the current user's account will automatically be deleted
+type AccountTTL struct {
 	meta
 	// Number of days of inactivity before the account will be flagged for deletion; should range from 30-366 days
 	Days int32 `json:"days"`
 }
 
-func (entity *AccountTtl) MarshalJSON() ([]byte, error) {
+// MarshalJSON returns AccountTTL object as the JSON encoding of AccountTTL.
+func (entity *AccountTTL) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
-	type stub AccountTtl
+	type stub AccountTTL
 
 	return json.Marshal((*stub)(entity))
 }
 
-func (*AccountTtl) GetClass() string {
-	return ClassAccountTtl
+// GetClass returns constant class string of the class.
+func (*AccountTTL) GetClass() string {
+	return ClassAccountTTL
 }
 
-func (*AccountTtl) GetType() string {
-	return TypeAccountTtl
+// GetType returns constant class type string of the class.
+func (*AccountTTL) GetType() string {
+	return TypeAccountTTL
 }
 
-// Contains information about one session in a Telegram application used by the current user
+// Session contains information about one session in a Telegram application used by the current user
 type Session struct {
 	meta
 	// Session identifier
-	Id JsonInt64 `json:"id"`
+	ID Int64JSON `json:"id"`
 	// True, if this session is the current session
 	IsCurrent bool `json:"is_current"`
 	// Telegram API identifier, as provided by the application
-	ApiId int32 `json:"api_id"`
+	APIID int32 `json:"api_id"`
 	// Name of the application, as provided by the application
 	ApplicationName string `json:"application_name"`
 	// The version of the application, as provided by the application
@@ -16231,13 +18059,14 @@ type Session struct {
 	// Point in time (Unix timestamp) when the session was last used
 	LastActiveDate int32 `json:"last_active_date"`
 	// IP address from which the session was created, in human-readable format
-	Ip string `json:"ip"`
+	IP string `json:"ip"`
 	// A two-letter country code for the country from which the session was created, based on the IP address
 	Country string `json:"country"`
 	// Region code from which the session was created, based on the IP address
 	Region string `json:"region"`
 }
 
+// MarshalJSON returns Session object as the JSON encoding of Session.
 func (entity *Session) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16246,21 +18075,24 @@ func (entity *Session) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Session) GetClass() string {
 	return ClassSession
 }
 
+// GetType returns constant class type string of the class.
 func (*Session) GetType() string {
 	return TypeSession
 }
 
-// Contains a list of sessions
+// Sessions contains a list of sessions
 type Sessions struct {
 	meta
 	// List of sessions
 	Sessions []*Session `json:"sessions"`
 }
 
+// MarshalJSON returns Sessions object as the JSON encoding of Sessions.
 func (entity *Sessions) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16269,23 +18101,25 @@ func (entity *Sessions) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Sessions) GetClass() string {
 	return ClassSessions
 }
 
+// GetType returns constant class type string of the class.
 func (*Sessions) GetType() string {
 	return TypeSessions
 }
 
-// Contains information about one website the current user is logged in with Telegram
+// ConnectedWebsite contains information about one website the current user is logged in with Telegram
 type ConnectedWebsite struct {
 	meta
 	// Website identifier
-	Id JsonInt64 `json:"id"`
+	ID Int64JSON `json:"id"`
 	// The domain name of the website
 	DomainName string `json:"domain_name"`
 	// User identifier of a bot linked with the website
-	BotUserId int32 `json:"bot_user_id"`
+	BotUserID int32 `json:"bot_user_id"`
 	// The version of a browser used to log in
 	Browser string `json:"browser"`
 	// Operating system the browser is running on
@@ -16295,11 +18129,12 @@ type ConnectedWebsite struct {
 	// Point in time (Unix timestamp) when obtained authorization was last used
 	LastActiveDate int32 `json:"last_active_date"`
 	// IP address from which the user was logged in, in human-readable format
-	Ip string `json:"ip"`
+	IP string `json:"ip"`
 	// Human-readable description of a country and a region, from which the user was logged in, based on the IP address
 	Location string `json:"location"`
 }
 
+// MarshalJSON returns ConnectedWebsite object as the JSON encoding of ConnectedWebsite.
 func (entity *ConnectedWebsite) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16308,21 +18143,24 @@ func (entity *ConnectedWebsite) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ConnectedWebsite) GetClass() string {
 	return ClassConnectedWebsite
 }
 
+// GetType returns constant class type string of the class.
 func (*ConnectedWebsite) GetType() string {
 	return TypeConnectedWebsite
 }
 
-// Contains a list of websites the current user is logged in with Telegram
+// ConnectedWebsites contains a list of websites the current user is logged in with Telegram
 type ConnectedWebsites struct {
 	meta
 	// List of connected websites
 	Websites []*ConnectedWebsite `json:"websites"`
 }
 
+// MarshalJSON returns ConnectedWebsites object as the JSON encoding of ConnectedWebsites.
 func (entity *ConnectedWebsites) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16331,21 +18169,24 @@ func (entity *ConnectedWebsites) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ConnectedWebsites) GetClass() string {
 	return ClassConnectedWebsites
 }
 
+// GetType returns constant class type string of the class.
 func (*ConnectedWebsites) GetType() string {
 	return TypeConnectedWebsites
 }
 
-// Contains information about the availability of the "Report spam" action for a chat
+// ChatReportSpamState contains information about the availability of the "Report spam" action for a chat
 type ChatReportSpamState struct {
 	meta
 	// True, if a prompt with the "Report spam" action should be shown to the user
 	CanReportSpam bool `json:"can_report_spam"`
 }
 
+// MarshalJSON returns ChatReportSpamState object as the JSON encoding of ChatReportSpamState.
 func (entity *ChatReportSpamState) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16354,19 +18195,22 @@ func (entity *ChatReportSpamState) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatReportSpamState) GetClass() string {
 	return ClassChatReportSpamState
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatReportSpamState) GetType() string {
 	return TypeChatReportSpamState
 }
 
-// The chat contains spam messages
+// ChatReportReasonSpam the chat contains spam messages
 type ChatReportReasonSpam struct {
 	meta
 }
 
+// MarshalJSON returns ChatReportReasonSpam object as the JSON encoding of ChatReportReasonSpam.
 func (entity *ChatReportReasonSpam) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16375,23 +18219,27 @@ func (entity *ChatReportReasonSpam) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatReportReasonSpam) GetClass() string {
 	return ClassChatReportReason
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatReportReasonSpam) GetType() string {
 	return TypeChatReportReasonSpam
 }
 
+// ChatReportReasonType returns constant class type string of the class.
 func (*ChatReportReasonSpam) ChatReportReasonType() string {
 	return TypeChatReportReasonSpam
 }
 
-// The chat promotes violence
+// ChatReportReasonViolence the chat promotes violence
 type ChatReportReasonViolence struct {
 	meta
 }
 
+// MarshalJSON returns ChatReportReasonViolence object as the JSON encoding of ChatReportReasonViolence.
 func (entity *ChatReportReasonViolence) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16400,23 +18248,27 @@ func (entity *ChatReportReasonViolence) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatReportReasonViolence) GetClass() string {
 	return ClassChatReportReason
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatReportReasonViolence) GetType() string {
 	return TypeChatReportReasonViolence
 }
 
+// ChatReportReasonType returns constant class type string of the class.
 func (*ChatReportReasonViolence) ChatReportReasonType() string {
 	return TypeChatReportReasonViolence
 }
 
-// The chat contains pornographic messages
+// ChatReportReasonPornography the chat contains pornographic messages
 type ChatReportReasonPornography struct {
 	meta
 }
 
+// MarshalJSON returns ChatReportReasonPornography object as the JSON encoding of ChatReportReasonPornography.
 func (entity *ChatReportReasonPornography) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16425,23 +18277,27 @@ func (entity *ChatReportReasonPornography) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatReportReasonPornography) GetClass() string {
 	return ClassChatReportReason
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatReportReasonPornography) GetType() string {
 	return TypeChatReportReasonPornography
 }
 
+// ChatReportReasonType returns constant class type string of the class.
 func (*ChatReportReasonPornography) ChatReportReasonType() string {
 	return TypeChatReportReasonPornography
 }
 
-// The chat contains copyrighted content
+// ChatReportReasonCopyright the chat contains copyrighted content
 type ChatReportReasonCopyright struct {
 	meta
 }
 
+// MarshalJSON returns ChatReportReasonCopyright object as the JSON encoding of ChatReportReasonCopyright.
 func (entity *ChatReportReasonCopyright) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16450,25 +18306,29 @@ func (entity *ChatReportReasonCopyright) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatReportReasonCopyright) GetClass() string {
 	return ClassChatReportReason
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatReportReasonCopyright) GetType() string {
 	return TypeChatReportReasonCopyright
 }
 
+// ChatReportReasonType returns constant class type string of the class.
 func (*ChatReportReasonCopyright) ChatReportReasonType() string {
 	return TypeChatReportReasonCopyright
 }
 
-// A custom reason provided by the user
+// ChatReportReasonCustom a custom reason provided by the user
 type ChatReportReasonCustom struct {
 	meta
 	// Report text
 	Text string `json:"text"`
 }
 
+// MarshalJSON returns ChatReportReasonCustom object as the JSON encoding of ChatReportReasonCustom.
 func (entity *ChatReportReasonCustom) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16477,27 +18337,31 @@ func (entity *ChatReportReasonCustom) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ChatReportReasonCustom) GetClass() string {
 	return ClassChatReportReason
 }
 
+// GetType returns constant class type string of the class.
 func (*ChatReportReasonCustom) GetType() string {
 	return TypeChatReportReasonCustom
 }
 
+// ChatReportReasonType returns constant class type string of the class.
 func (*ChatReportReasonCustom) ChatReportReasonType() string {
 	return TypeChatReportReasonCustom
 }
 
-// Contains a public HTTPS link to a message in a public supergroup or channel
+// PublicMessageLink contains a public HTTPS link to a message in a public supergroup or channel
 type PublicMessageLink struct {
 	meta
 	// Message link
 	Link string `json:"link"`
 	// HTML-code for embedding the message
-	Html string `json:"html"`
+	HTML string `json:"html"`
 }
 
+// MarshalJSON returns PublicMessageLink object as the JSON encoding of PublicMessageLink.
 func (entity *PublicMessageLink) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16506,19 +18370,22 @@ func (entity *PublicMessageLink) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*PublicMessageLink) GetClass() string {
 	return ClassPublicMessageLink
 }
 
+// GetType returns constant class type string of the class.
 func (*PublicMessageLink) GetType() string {
 	return TypePublicMessageLink
 }
 
-// The data is not a file
+// FileTypeNone the data is not a file
 type FileTypeNone struct {
 	meta
 }
 
+// MarshalJSON returns FileTypeNone object as the JSON encoding of FileTypeNone.
 func (entity *FileTypeNone) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16527,23 +18394,27 @@ func (entity *FileTypeNone) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*FileTypeNone) GetClass() string {
 	return ClassFileType
 }
 
+// GetType returns constant class type string of the class.
 func (*FileTypeNone) GetType() string {
 	return TypeFileTypeNone
 }
 
+// FileTypeType returns constant class type string of the class.
 func (*FileTypeNone) FileTypeType() string {
 	return TypeFileTypeNone
 }
 
-// The file is an animation
+// FileTypeAnimation the file is an animation
 type FileTypeAnimation struct {
 	meta
 }
 
+// MarshalJSON returns FileTypeAnimation object as the JSON encoding of FileTypeAnimation.
 func (entity *FileTypeAnimation) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16552,23 +18423,27 @@ func (entity *FileTypeAnimation) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*FileTypeAnimation) GetClass() string {
 	return ClassFileType
 }
 
+// GetType returns constant class type string of the class.
 func (*FileTypeAnimation) GetType() string {
 	return TypeFileTypeAnimation
 }
 
+// FileTypeType returns constant class type string of the class.
 func (*FileTypeAnimation) FileTypeType() string {
 	return TypeFileTypeAnimation
 }
 
-// The file is an audio file
+// FileTypeAudio the file is an audio file
 type FileTypeAudio struct {
 	meta
 }
 
+// MarshalJSON returns FileTypeAudio object as the JSON encoding of FileTypeAudio.
 func (entity *FileTypeAudio) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16577,23 +18452,27 @@ func (entity *FileTypeAudio) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*FileTypeAudio) GetClass() string {
 	return ClassFileType
 }
 
+// GetType returns constant class type string of the class.
 func (*FileTypeAudio) GetType() string {
 	return TypeFileTypeAudio
 }
 
+// FileTypeType returns constant class type string of the class.
 func (*FileTypeAudio) FileTypeType() string {
 	return TypeFileTypeAudio
 }
 
-// The file is a document
+// FileTypeDocument the file is a document
 type FileTypeDocument struct {
 	meta
 }
 
+// MarshalJSON returns FileTypeDocument object as the JSON encoding of FileTypeDocument.
 func (entity *FileTypeDocument) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16602,23 +18481,27 @@ func (entity *FileTypeDocument) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*FileTypeDocument) GetClass() string {
 	return ClassFileType
 }
 
+// GetType returns constant class type string of the class.
 func (*FileTypeDocument) GetType() string {
 	return TypeFileTypeDocument
 }
 
+// FileTypeType returns constant class type string of the class.
 func (*FileTypeDocument) FileTypeType() string {
 	return TypeFileTypeDocument
 }
 
-// The file is a photo
+// FileTypePhoto the file is a photo
 type FileTypePhoto struct {
 	meta
 }
 
+// MarshalJSON returns FileTypePhoto object as the JSON encoding of FileTypePhoto.
 func (entity *FileTypePhoto) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16627,23 +18510,27 @@ func (entity *FileTypePhoto) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*FileTypePhoto) GetClass() string {
 	return ClassFileType
 }
 
+// GetType returns constant class type string of the class.
 func (*FileTypePhoto) GetType() string {
 	return TypeFileTypePhoto
 }
 
+// FileTypeType returns constant class type string of the class.
 func (*FileTypePhoto) FileTypeType() string {
 	return TypeFileTypePhoto
 }
 
-// The file is a profile photo
+// FileTypeProfilePhoto the file is a profile photo
 type FileTypeProfilePhoto struct {
 	meta
 }
 
+// MarshalJSON returns FileTypeProfilePhoto object as the JSON encoding of FileTypeProfilePhoto.
 func (entity *FileTypeProfilePhoto) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16652,23 +18539,27 @@ func (entity *FileTypeProfilePhoto) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*FileTypeProfilePhoto) GetClass() string {
 	return ClassFileType
 }
 
+// GetType returns constant class type string of the class.
 func (*FileTypeProfilePhoto) GetType() string {
 	return TypeFileTypeProfilePhoto
 }
 
+// FileTypeType returns constant class type string of the class.
 func (*FileTypeProfilePhoto) FileTypeType() string {
 	return TypeFileTypeProfilePhoto
 }
 
-// The file was sent to a secret chat (the file type is not known to the server)
+// FileTypeSecret the file was sent to a secret chat (the file type is not known to the server)
 type FileTypeSecret struct {
 	meta
 }
 
+// MarshalJSON returns FileTypeSecret object as the JSON encoding of FileTypeSecret.
 func (entity *FileTypeSecret) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16677,23 +18568,27 @@ func (entity *FileTypeSecret) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*FileTypeSecret) GetClass() string {
 	return ClassFileType
 }
 
+// GetType returns constant class type string of the class.
 func (*FileTypeSecret) GetType() string {
 	return TypeFileTypeSecret
 }
 
+// FileTypeType returns constant class type string of the class.
 func (*FileTypeSecret) FileTypeType() string {
 	return TypeFileTypeSecret
 }
 
-// The file is a thumbnail of a file from a secret chat
+// FileTypeSecretThumbnail the file is a thumbnail of a file from a secret chat
 type FileTypeSecretThumbnail struct {
 	meta
 }
 
+// MarshalJSON returns FileTypeSecretThumbnail object as the JSON encoding of FileTypeSecretThumbnail.
 func (entity *FileTypeSecretThumbnail) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16702,23 +18597,27 @@ func (entity *FileTypeSecretThumbnail) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*FileTypeSecretThumbnail) GetClass() string {
 	return ClassFileType
 }
 
+// GetType returns constant class type string of the class.
 func (*FileTypeSecretThumbnail) GetType() string {
 	return TypeFileTypeSecretThumbnail
 }
 
+// FileTypeType returns constant class type string of the class.
 func (*FileTypeSecretThumbnail) FileTypeType() string {
 	return TypeFileTypeSecretThumbnail
 }
 
-// The file is a file from Secure storage used for storing Telegram Passport files
+// FileTypeSecure the file is a file from Secure storage used for storing Telegram Passport files
 type FileTypeSecure struct {
 	meta
 }
 
+// MarshalJSON returns FileTypeSecure object as the JSON encoding of FileTypeSecure.
 func (entity *FileTypeSecure) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16727,23 +18626,27 @@ func (entity *FileTypeSecure) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*FileTypeSecure) GetClass() string {
 	return ClassFileType
 }
 
+// GetType returns constant class type string of the class.
 func (*FileTypeSecure) GetType() string {
 	return TypeFileTypeSecure
 }
 
+// FileTypeType returns constant class type string of the class.
 func (*FileTypeSecure) FileTypeType() string {
 	return TypeFileTypeSecure
 }
 
-// The file is a sticker
+// FileTypeSticker the file is a sticker
 type FileTypeSticker struct {
 	meta
 }
 
+// MarshalJSON returns FileTypeSticker object as the JSON encoding of FileTypeSticker.
 func (entity *FileTypeSticker) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16752,23 +18655,27 @@ func (entity *FileTypeSticker) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*FileTypeSticker) GetClass() string {
 	return ClassFileType
 }
 
+// GetType returns constant class type string of the class.
 func (*FileTypeSticker) GetType() string {
 	return TypeFileTypeSticker
 }
 
+// FileTypeType returns constant class type string of the class.
 func (*FileTypeSticker) FileTypeType() string {
 	return TypeFileTypeSticker
 }
 
-// The file is a thumbnail of another file
+// FileTypeThumbnail the file is a thumbnail of another file
 type FileTypeThumbnail struct {
 	meta
 }
 
+// MarshalJSON returns FileTypeThumbnail object as the JSON encoding of FileTypeThumbnail.
 func (entity *FileTypeThumbnail) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16777,23 +18684,27 @@ func (entity *FileTypeThumbnail) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*FileTypeThumbnail) GetClass() string {
 	return ClassFileType
 }
 
+// GetType returns constant class type string of the class.
 func (*FileTypeThumbnail) GetType() string {
 	return TypeFileTypeThumbnail
 }
 
+// FileTypeType returns constant class type string of the class.
 func (*FileTypeThumbnail) FileTypeType() string {
 	return TypeFileTypeThumbnail
 }
 
-// The file type is not yet known
+// FileTypeUnknown the file type is not yet known
 type FileTypeUnknown struct {
 	meta
 }
 
+// MarshalJSON returns FileTypeUnknown object as the JSON encoding of FileTypeUnknown.
 func (entity *FileTypeUnknown) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16802,23 +18713,27 @@ func (entity *FileTypeUnknown) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*FileTypeUnknown) GetClass() string {
 	return ClassFileType
 }
 
+// GetType returns constant class type string of the class.
 func (*FileTypeUnknown) GetType() string {
 	return TypeFileTypeUnknown
 }
 
+// FileTypeType returns constant class type string of the class.
 func (*FileTypeUnknown) FileTypeType() string {
 	return TypeFileTypeUnknown
 }
 
-// The file is a video
+// FileTypeVideo the file is a video
 type FileTypeVideo struct {
 	meta
 }
 
+// MarshalJSON returns FileTypeVideo object as the JSON encoding of FileTypeVideo.
 func (entity *FileTypeVideo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16827,23 +18742,27 @@ func (entity *FileTypeVideo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*FileTypeVideo) GetClass() string {
 	return ClassFileType
 }
 
+// GetType returns constant class type string of the class.
 func (*FileTypeVideo) GetType() string {
 	return TypeFileTypeVideo
 }
 
+// FileTypeType returns constant class type string of the class.
 func (*FileTypeVideo) FileTypeType() string {
 	return TypeFileTypeVideo
 }
 
-// The file is a video note
+// FileTypeVideoNote the file is a video note
 type FileTypeVideoNote struct {
 	meta
 }
 
+// MarshalJSON returns FileTypeVideoNote object as the JSON encoding of FileTypeVideoNote.
 func (entity *FileTypeVideoNote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16852,23 +18771,27 @@ func (entity *FileTypeVideoNote) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*FileTypeVideoNote) GetClass() string {
 	return ClassFileType
 }
 
+// GetType returns constant class type string of the class.
 func (*FileTypeVideoNote) GetType() string {
 	return TypeFileTypeVideoNote
 }
 
+// FileTypeType returns constant class type string of the class.
 func (*FileTypeVideoNote) FileTypeType() string {
 	return TypeFileTypeVideoNote
 }
 
-// The file is a voice note
+// FileTypeVoiceNote the file is a voice note
 type FileTypeVoiceNote struct {
 	meta
 }
 
+// MarshalJSON returns FileTypeVoiceNote object as the JSON encoding of FileTypeVoiceNote.
 func (entity *FileTypeVoiceNote) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16877,23 +18800,27 @@ func (entity *FileTypeVoiceNote) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*FileTypeVoiceNote) GetClass() string {
 	return ClassFileType
 }
 
+// GetType returns constant class type string of the class.
 func (*FileTypeVoiceNote) GetType() string {
 	return TypeFileTypeVoiceNote
 }
 
+// FileTypeType returns constant class type string of the class.
 func (*FileTypeVoiceNote) FileTypeType() string {
 	return TypeFileTypeVoiceNote
 }
 
-// The file is a wallpaper
+// FileTypeWallpaper the file is a wallpaper
 type FileTypeWallpaper struct {
 	meta
 }
 
+// MarshalJSON returns FileTypeWallpaper object as the JSON encoding of FileTypeWallpaper.
 func (entity *FileTypeWallpaper) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16902,19 +18829,22 @@ func (entity *FileTypeWallpaper) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*FileTypeWallpaper) GetClass() string {
 	return ClassFileType
 }
 
+// GetType returns constant class type string of the class.
 func (*FileTypeWallpaper) GetType() string {
 	return TypeFileTypeWallpaper
 }
 
+// FileTypeType returns constant class type string of the class.
 func (*FileTypeWallpaper) FileTypeType() string {
 	return TypeFileTypeWallpaper
 }
 
-// Contains the storage usage statistics for a specific file type
+// StorageStatisticsByFileType contains the storage usage statistics for a specific file type
 type StorageStatisticsByFileType struct {
 	meta
 	// File type
@@ -16925,6 +18855,7 @@ type StorageStatisticsByFileType struct {
 	Count int32 `json:"count"`
 }
 
+// MarshalJSON returns StorageStatisticsByFileType object as the JSON encoding of StorageStatisticsByFileType.
 func (entity *StorageStatisticsByFileType) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16933,15 +18864,18 @@ func (entity *StorageStatisticsByFileType) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*StorageStatisticsByFileType) GetClass() string {
 	return ClassStorageStatisticsByFileType
 }
 
+// GetType returns constant class type string of the class.
 func (*StorageStatisticsByFileType) GetType() string {
 	return TypeStorageStatisticsByFileType
 }
 
-func (storageStatisticsByFileType *StorageStatisticsByFileType) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets StorageStatisticsByFileType object to a copy of JSON encoding of StorageStatisticsByFileType.
+func (entity *StorageStatisticsByFileType) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		FileType json.RawMessage `json:"file_type"`
 		Size     int64           `json:"size"`
@@ -16953,20 +18887,20 @@ func (storageStatisticsByFileType *StorageStatisticsByFileType) UnmarshalJSON(da
 		return err
 	}
 
-	storageStatisticsByFileType.Size = tmp.Size
-	storageStatisticsByFileType.Count = tmp.Count
+	entity.Size = tmp.Size
+	entity.Count = tmp.Count
 
 	fieldFileType, _ := UnmarshalFileType(tmp.FileType)
-	storageStatisticsByFileType.FileType = fieldFileType
+	entity.FileType = fieldFileType
 
 	return nil
 }
 
-// Contains the storage usage statistics for a specific chat
+// StorageStatisticsByChat contains the storage usage statistics for a specific chat
 type StorageStatisticsByChat struct {
 	meta
 	// Chat identifier; 0 if none
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// Total size of the files in the chat
 	Size int64 `json:"size"`
 	// Total number of files in the chat
@@ -16975,6 +18909,7 @@ type StorageStatisticsByChat struct {
 	ByFileType []*StorageStatisticsByFileType `json:"by_file_type"`
 }
 
+// MarshalJSON returns StorageStatisticsByChat object as the JSON encoding of StorageStatisticsByChat.
 func (entity *StorageStatisticsByChat) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -16983,15 +18918,17 @@ func (entity *StorageStatisticsByChat) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*StorageStatisticsByChat) GetClass() string {
 	return ClassStorageStatisticsByChat
 }
 
+// GetType returns constant class type string of the class.
 func (*StorageStatisticsByChat) GetType() string {
 	return TypeStorageStatisticsByChat
 }
 
-// Contains the exact storage usage statistics split by chats and file type
+// StorageStatistics contains the exact storage usage statistics split by chats and file type
 type StorageStatistics struct {
 	meta
 	// Total size of files
@@ -17002,6 +18939,7 @@ type StorageStatistics struct {
 	ByChat []*StorageStatisticsByChat `json:"by_chat"`
 }
 
+// MarshalJSON returns StorageStatistics object as the JSON encoding of StorageStatistics.
 func (entity *StorageStatistics) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17010,15 +18948,17 @@ func (entity *StorageStatistics) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*StorageStatistics) GetClass() string {
 	return ClassStorageStatistics
 }
 
+// GetType returns constant class type string of the class.
 func (*StorageStatistics) GetType() string {
 	return TypeStorageStatistics
 }
 
-// Contains approximate storage usage statistics, excluding files of unknown file type
+// StorageStatisticsFast contains approximate storage usage statistics, excluding files of unknown file type
 type StorageStatisticsFast struct {
 	meta
 	// Approximate total size of files
@@ -17029,6 +18969,7 @@ type StorageStatisticsFast struct {
 	DatabaseSize int64 `json:"database_size"`
 }
 
+// MarshalJSON returns StorageStatisticsFast object as the JSON encoding of StorageStatisticsFast.
 func (entity *StorageStatisticsFast) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17037,19 +18978,22 @@ func (entity *StorageStatisticsFast) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*StorageStatisticsFast) GetClass() string {
 	return ClassStorageStatisticsFast
 }
 
+// GetType returns constant class type string of the class.
 func (*StorageStatisticsFast) GetType() string {
 	return TypeStorageStatisticsFast
 }
 
-// The network is not available
+// NetworkTypeNone the network is not available
 type NetworkTypeNone struct {
 	meta
 }
 
+// MarshalJSON returns NetworkTypeNone object as the JSON encoding of NetworkTypeNone.
 func (entity *NetworkTypeNone) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17058,23 +19002,27 @@ func (entity *NetworkTypeNone) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*NetworkTypeNone) GetClass() string {
 	return ClassNetworkType
 }
 
+// GetType returns constant class type string of the class.
 func (*NetworkTypeNone) GetType() string {
 	return TypeNetworkTypeNone
 }
 
+// NetworkTypeType returns constant class type string of the class.
 func (*NetworkTypeNone) NetworkTypeType() string {
 	return TypeNetworkTypeNone
 }
 
-// A mobile network
+// NetworkTypeMobile a mobile network
 type NetworkTypeMobile struct {
 	meta
 }
 
+// MarshalJSON returns NetworkTypeMobile object as the JSON encoding of NetworkTypeMobile.
 func (entity *NetworkTypeMobile) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17083,23 +19031,27 @@ func (entity *NetworkTypeMobile) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*NetworkTypeMobile) GetClass() string {
 	return ClassNetworkType
 }
 
+// GetType returns constant class type string of the class.
 func (*NetworkTypeMobile) GetType() string {
 	return TypeNetworkTypeMobile
 }
 
+// NetworkTypeType returns constant class type string of the class.
 func (*NetworkTypeMobile) NetworkTypeType() string {
 	return TypeNetworkTypeMobile
 }
 
-// A mobile roaming network
+// NetworkTypeMobileRoaming a mobile roaming network
 type NetworkTypeMobileRoaming struct {
 	meta
 }
 
+// MarshalJSON returns NetworkTypeMobileRoaming object as the JSON encoding of NetworkTypeMobileRoaming.
 func (entity *NetworkTypeMobileRoaming) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17108,23 +19060,27 @@ func (entity *NetworkTypeMobileRoaming) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*NetworkTypeMobileRoaming) GetClass() string {
 	return ClassNetworkType
 }
 
+// GetType returns constant class type string of the class.
 func (*NetworkTypeMobileRoaming) GetType() string {
 	return TypeNetworkTypeMobileRoaming
 }
 
+// NetworkTypeType returns constant class type string of the class.
 func (*NetworkTypeMobileRoaming) NetworkTypeType() string {
 	return TypeNetworkTypeMobileRoaming
 }
 
-// A Wi-Fi network
+// NetworkTypeWiFi a Wi-Fi network
 type NetworkTypeWiFi struct {
 	meta
 }
 
+// MarshalJSON returns NetworkTypeWiFi object as the JSON encoding of NetworkTypeWiFi.
 func (entity *NetworkTypeWiFi) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17133,23 +19089,27 @@ func (entity *NetworkTypeWiFi) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*NetworkTypeWiFi) GetClass() string {
 	return ClassNetworkType
 }
 
+// GetType returns constant class type string of the class.
 func (*NetworkTypeWiFi) GetType() string {
 	return TypeNetworkTypeWiFi
 }
 
+// NetworkTypeType returns constant class type string of the class.
 func (*NetworkTypeWiFi) NetworkTypeType() string {
 	return TypeNetworkTypeWiFi
 }
 
-// A different network type (e.g., Ethernet network)
+// NetworkTypeOther a different network type (e.g., Ethernet network)
 type NetworkTypeOther struct {
 	meta
 }
 
+// MarshalJSON returns NetworkTypeOther object as the JSON encoding of NetworkTypeOther.
 func (entity *NetworkTypeOther) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17158,19 +19118,22 @@ func (entity *NetworkTypeOther) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*NetworkTypeOther) GetClass() string {
 	return ClassNetworkType
 }
 
+// GetType returns constant class type string of the class.
 func (*NetworkTypeOther) GetType() string {
 	return TypeNetworkTypeOther
 }
 
+// NetworkTypeType returns constant class type string of the class.
 func (*NetworkTypeOther) NetworkTypeType() string {
 	return TypeNetworkTypeOther
 }
 
-// Contains information about the total amount of data that was used to send and receive files
+// NetworkStatisticsEntryFile contains information about the total amount of data that was used to send and receive files
 type NetworkStatisticsEntryFile struct {
 	meta
 	// Type of the file the data is part of
@@ -17183,6 +19146,7 @@ type NetworkStatisticsEntryFile struct {
 	ReceivedBytes int64 `json:"received_bytes"`
 }
 
+// MarshalJSON returns NetworkStatisticsEntryFile object as the JSON encoding of NetworkStatisticsEntryFile.
 func (entity *NetworkStatisticsEntryFile) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17191,19 +19155,23 @@ func (entity *NetworkStatisticsEntryFile) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*NetworkStatisticsEntryFile) GetClass() string {
 	return ClassNetworkStatisticsEntry
 }
 
+// GetType returns constant class type string of the class.
 func (*NetworkStatisticsEntryFile) GetType() string {
 	return TypeNetworkStatisticsEntryFile
 }
 
+// NetworkStatisticsEntryType returns constant class type string of the class.
 func (*NetworkStatisticsEntryFile) NetworkStatisticsEntryType() string {
 	return TypeNetworkStatisticsEntryFile
 }
 
-func (networkStatisticsEntryFile *NetworkStatisticsEntryFile) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets NetworkStatisticsEntryFile object to a copy of JSON encoding of NetworkStatisticsEntryFile.
+func (entity *NetworkStatisticsEntryFile) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		FileType      json.RawMessage `json:"file_type"`
 		NetworkType   json.RawMessage `json:"network_type"`
@@ -17216,19 +19184,19 @@ func (networkStatisticsEntryFile *NetworkStatisticsEntryFile) UnmarshalJSON(data
 		return err
 	}
 
-	networkStatisticsEntryFile.SentBytes = tmp.SentBytes
-	networkStatisticsEntryFile.ReceivedBytes = tmp.ReceivedBytes
+	entity.SentBytes = tmp.SentBytes
+	entity.ReceivedBytes = tmp.ReceivedBytes
 
 	fieldFileType, _ := UnmarshalFileType(tmp.FileType)
-	networkStatisticsEntryFile.FileType = fieldFileType
+	entity.FileType = fieldFileType
 
 	fieldNetworkType, _ := UnmarshalNetworkType(tmp.NetworkType)
-	networkStatisticsEntryFile.NetworkType = fieldNetworkType
+	entity.NetworkType = fieldNetworkType
 
 	return nil
 }
 
-// Contains information about the total amount of data that was used for calls
+// NetworkStatisticsEntryCall contains information about the total amount of data that was used for calls
 type NetworkStatisticsEntryCall struct {
 	meta
 	// Type of the network the data was sent through. Call setNetworkType to maintain the actual network type
@@ -17241,6 +19209,7 @@ type NetworkStatisticsEntryCall struct {
 	Duration float64 `json:"duration"`
 }
 
+// MarshalJSON returns NetworkStatisticsEntryCall object as the JSON encoding of NetworkStatisticsEntryCall.
 func (entity *NetworkStatisticsEntryCall) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17249,19 +19218,23 @@ func (entity *NetworkStatisticsEntryCall) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*NetworkStatisticsEntryCall) GetClass() string {
 	return ClassNetworkStatisticsEntry
 }
 
+// GetType returns constant class type string of the class.
 func (*NetworkStatisticsEntryCall) GetType() string {
 	return TypeNetworkStatisticsEntryCall
 }
 
+// NetworkStatisticsEntryType returns constant class type string of the class.
 func (*NetworkStatisticsEntryCall) NetworkStatisticsEntryType() string {
 	return TypeNetworkStatisticsEntryCall
 }
 
-func (networkStatisticsEntryCall *NetworkStatisticsEntryCall) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets NetworkStatisticsEntryCall object to a copy of JSON encoding of NetworkStatisticsEntryCall.
+func (entity *NetworkStatisticsEntryCall) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		NetworkType   json.RawMessage `json:"network_type"`
 		SentBytes     int64           `json:"sent_bytes"`
@@ -17274,17 +19247,17 @@ func (networkStatisticsEntryCall *NetworkStatisticsEntryCall) UnmarshalJSON(data
 		return err
 	}
 
-	networkStatisticsEntryCall.SentBytes = tmp.SentBytes
-	networkStatisticsEntryCall.ReceivedBytes = tmp.ReceivedBytes
-	networkStatisticsEntryCall.Duration = tmp.Duration
+	entity.SentBytes = tmp.SentBytes
+	entity.ReceivedBytes = tmp.ReceivedBytes
+	entity.Duration = tmp.Duration
 
 	fieldNetworkType, _ := UnmarshalNetworkType(tmp.NetworkType)
-	networkStatisticsEntryCall.NetworkType = fieldNetworkType
+	entity.NetworkType = fieldNetworkType
 
 	return nil
 }
 
-// A full list of available network statistic entries
+// NetworkStatistics a full list of available network statistic entries
 type NetworkStatistics struct {
 	meta
 	// Point in time (Unix timestamp) when the app began collecting statistics
@@ -17293,6 +19266,7 @@ type NetworkStatistics struct {
 	Entries []NetworkStatisticsEntry `json:"entries"`
 }
 
+// MarshalJSON returns NetworkStatistics object as the JSON encoding of NetworkStatistics.
 func (entity *NetworkStatistics) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17301,19 +19275,22 @@ func (entity *NetworkStatistics) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*NetworkStatistics) GetClass() string {
 	return ClassNetworkStatistics
 }
 
+// GetType returns constant class type string of the class.
 func (*NetworkStatistics) GetType() string {
 	return TypeNetworkStatistics
 }
 
-// Currently waiting for the network to become available. Use SetNetworkType to change the available network type
+// ConnectionStateWaitingForNetwork currently waiting for the network to become available. Use SetNetworkType to change the available network type
 type ConnectionStateWaitingForNetwork struct {
 	meta
 }
 
+// MarshalJSON returns ConnectionStateWaitingForNetwork object as the JSON encoding of ConnectionStateWaitingForNetwork.
 func (entity *ConnectionStateWaitingForNetwork) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17322,23 +19299,27 @@ func (entity *ConnectionStateWaitingForNetwork) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ConnectionStateWaitingForNetwork) GetClass() string {
 	return ClassConnectionState
 }
 
+// GetType returns constant class type string of the class.
 func (*ConnectionStateWaitingForNetwork) GetType() string {
 	return TypeConnectionStateWaitingForNetwork
 }
 
+// ConnectionStateType returns constant class type string of the class.
 func (*ConnectionStateWaitingForNetwork) ConnectionStateType() string {
 	return TypeConnectionStateWaitingForNetwork
 }
 
-// Currently establishing a connection with a proxy server
+// ConnectionStateConnectingToProxy currently establishing a connection with a proxy server
 type ConnectionStateConnectingToProxy struct {
 	meta
 }
 
+// MarshalJSON returns ConnectionStateConnectingToProxy object as the JSON encoding of ConnectionStateConnectingToProxy.
 func (entity *ConnectionStateConnectingToProxy) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17347,23 +19328,27 @@ func (entity *ConnectionStateConnectingToProxy) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ConnectionStateConnectingToProxy) GetClass() string {
 	return ClassConnectionState
 }
 
+// GetType returns constant class type string of the class.
 func (*ConnectionStateConnectingToProxy) GetType() string {
 	return TypeConnectionStateConnectingToProxy
 }
 
+// ConnectionStateType returns constant class type string of the class.
 func (*ConnectionStateConnectingToProxy) ConnectionStateType() string {
 	return TypeConnectionStateConnectingToProxy
 }
 
-// Currently establishing a connection to the Telegram servers
+// ConnectionStateConnecting currently establishing a connection to the Telegram servers
 type ConnectionStateConnecting struct {
 	meta
 }
 
+// MarshalJSON returns ConnectionStateConnecting object as the JSON encoding of ConnectionStateConnecting.
 func (entity *ConnectionStateConnecting) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17372,23 +19357,27 @@ func (entity *ConnectionStateConnecting) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ConnectionStateConnecting) GetClass() string {
 	return ClassConnectionState
 }
 
+// GetType returns constant class type string of the class.
 func (*ConnectionStateConnecting) GetType() string {
 	return TypeConnectionStateConnecting
 }
 
+// ConnectionStateType returns constant class type string of the class.
 func (*ConnectionStateConnecting) ConnectionStateType() string {
 	return TypeConnectionStateConnecting
 }
 
-// Downloading data received while the client was offline
+// ConnectionStateUpdating downloading data received while the client was offline
 type ConnectionStateUpdating struct {
 	meta
 }
 
+// MarshalJSON returns ConnectionStateUpdating object as the JSON encoding of ConnectionStateUpdating.
 func (entity *ConnectionStateUpdating) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17397,23 +19386,27 @@ func (entity *ConnectionStateUpdating) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ConnectionStateUpdating) GetClass() string {
 	return ClassConnectionState
 }
 
+// GetType returns constant class type string of the class.
 func (*ConnectionStateUpdating) GetType() string {
 	return TypeConnectionStateUpdating
 }
 
+// ConnectionStateType returns constant class type string of the class.
 func (*ConnectionStateUpdating) ConnectionStateType() string {
 	return TypeConnectionStateUpdating
 }
 
-// There is a working connection to the Telegram servers
+// ConnectionStateReady there is a working connection to the Telegram servers
 type ConnectionStateReady struct {
 	meta
 }
 
+// MarshalJSON returns ConnectionStateReady object as the JSON encoding of ConnectionStateReady.
 func (entity *ConnectionStateReady) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17422,23 +19415,27 @@ func (entity *ConnectionStateReady) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ConnectionStateReady) GetClass() string {
 	return ClassConnectionState
 }
 
+// GetType returns constant class type string of the class.
 func (*ConnectionStateReady) GetType() string {
 	return TypeConnectionStateReady
 }
 
+// ConnectionStateType returns constant class type string of the class.
 func (*ConnectionStateReady) ConnectionStateType() string {
 	return TypeConnectionStateReady
 }
 
-// A category containing frequently used private chats with non-bot users
+// TopChatCategoryUsers a category containing frequently used private chats with non-bot users
 type TopChatCategoryUsers struct {
 	meta
 }
 
+// MarshalJSON returns TopChatCategoryUsers object as the JSON encoding of TopChatCategoryUsers.
 func (entity *TopChatCategoryUsers) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17447,23 +19444,27 @@ func (entity *TopChatCategoryUsers) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TopChatCategoryUsers) GetClass() string {
 	return ClassTopChatCategory
 }
 
+// GetType returns constant class type string of the class.
 func (*TopChatCategoryUsers) GetType() string {
 	return TypeTopChatCategoryUsers
 }
 
+// TopChatCategoryType returns constant class type string of the class.
 func (*TopChatCategoryUsers) TopChatCategoryType() string {
 	return TypeTopChatCategoryUsers
 }
 
-// A category containing frequently used private chats with bot users
+// TopChatCategoryBots a category containing frequently used private chats with bot users
 type TopChatCategoryBots struct {
 	meta
 }
 
+// MarshalJSON returns TopChatCategoryBots object as the JSON encoding of TopChatCategoryBots.
 func (entity *TopChatCategoryBots) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17472,23 +19473,27 @@ func (entity *TopChatCategoryBots) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TopChatCategoryBots) GetClass() string {
 	return ClassTopChatCategory
 }
 
+// GetType returns constant class type string of the class.
 func (*TopChatCategoryBots) GetType() string {
 	return TypeTopChatCategoryBots
 }
 
+// TopChatCategoryType returns constant class type string of the class.
 func (*TopChatCategoryBots) TopChatCategoryType() string {
 	return TypeTopChatCategoryBots
 }
 
-// A category containing frequently used basic groups and supergroups
+// TopChatCategoryGroups a category containing frequently used basic groups and supergroups
 type TopChatCategoryGroups struct {
 	meta
 }
 
+// MarshalJSON returns TopChatCategoryGroups object as the JSON encoding of TopChatCategoryGroups.
 func (entity *TopChatCategoryGroups) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17497,23 +19502,27 @@ func (entity *TopChatCategoryGroups) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TopChatCategoryGroups) GetClass() string {
 	return ClassTopChatCategory
 }
 
+// GetType returns constant class type string of the class.
 func (*TopChatCategoryGroups) GetType() string {
 	return TypeTopChatCategoryGroups
 }
 
+// TopChatCategoryType returns constant class type string of the class.
 func (*TopChatCategoryGroups) TopChatCategoryType() string {
 	return TypeTopChatCategoryGroups
 }
 
-// A category containing frequently used channels
+// TopChatCategoryChannels a category containing frequently used channels
 type TopChatCategoryChannels struct {
 	meta
 }
 
+// MarshalJSON returns TopChatCategoryChannels object as the JSON encoding of TopChatCategoryChannels.
 func (entity *TopChatCategoryChannels) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17522,23 +19531,27 @@ func (entity *TopChatCategoryChannels) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TopChatCategoryChannels) GetClass() string {
 	return ClassTopChatCategory
 }
 
+// GetType returns constant class type string of the class.
 func (*TopChatCategoryChannels) GetType() string {
 	return TypeTopChatCategoryChannels
 }
 
+// TopChatCategoryType returns constant class type string of the class.
 func (*TopChatCategoryChannels) TopChatCategoryType() string {
 	return TypeTopChatCategoryChannels
 }
 
-// A category containing frequently used chats with inline bots sorted by their usage in inline mode
+// TopChatCategoryInlineBots a category containing frequently used chats with inline bots sorted by their usage in inline mode
 type TopChatCategoryInlineBots struct {
 	meta
 }
 
+// MarshalJSON returns TopChatCategoryInlineBots object as the JSON encoding of TopChatCategoryInlineBots.
 func (entity *TopChatCategoryInlineBots) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17547,23 +19560,27 @@ func (entity *TopChatCategoryInlineBots) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TopChatCategoryInlineBots) GetClass() string {
 	return ClassTopChatCategory
 }
 
+// GetType returns constant class type string of the class.
 func (*TopChatCategoryInlineBots) GetType() string {
 	return TypeTopChatCategoryInlineBots
 }
 
+// TopChatCategoryType returns constant class type string of the class.
 func (*TopChatCategoryInlineBots) TopChatCategoryType() string {
 	return TypeTopChatCategoryInlineBots
 }
 
-// A category containing frequently used chats used for calls
+// TopChatCategoryCalls a category containing frequently used chats used for calls
 type TopChatCategoryCalls struct {
 	meta
 }
 
+// MarshalJSON returns TopChatCategoryCalls object as the JSON encoding of TopChatCategoryCalls.
 func (entity *TopChatCategoryCalls) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17572,154 +19589,177 @@ func (entity *TopChatCategoryCalls) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TopChatCategoryCalls) GetClass() string {
 	return ClassTopChatCategory
 }
 
+// GetType returns constant class type string of the class.
 func (*TopChatCategoryCalls) GetType() string {
 	return TypeTopChatCategoryCalls
 }
 
+// TopChatCategoryType returns constant class type string of the class.
 func (*TopChatCategoryCalls) TopChatCategoryType() string {
 	return TypeTopChatCategoryCalls
 }
 
-// A URL linking to a user
-type TMeUrlTypeUser struct {
+// TMeURLTypeUser a URL linking to a user
+type TMeURLTypeUser struct {
 	meta
 	// Identifier of the user
-	UserId int32 `json:"user_id"`
+	UserID int32 `json:"user_id"`
 }
 
-func (entity *TMeUrlTypeUser) MarshalJSON() ([]byte, error) {
+// MarshalJSON returns TMeURLTypeUser object as the JSON encoding of TMeURLTypeUser.
+func (entity *TMeURLTypeUser) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
-	type stub TMeUrlTypeUser
+	type stub TMeURLTypeUser
 
 	return json.Marshal((*stub)(entity))
 }
 
-func (*TMeUrlTypeUser) GetClass() string {
-	return ClassTMeUrlType
+// GetClass returns constant class string of the class.
+func (*TMeURLTypeUser) GetClass() string {
+	return ClassTMeURLType
 }
 
-func (*TMeUrlTypeUser) GetType() string {
-	return TypeTMeUrlTypeUser
+// GetType returns constant class type string of the class.
+func (*TMeURLTypeUser) GetType() string {
+	return TypeTMeURLTypeUser
 }
 
-func (*TMeUrlTypeUser) TMeUrlTypeType() string {
-	return TypeTMeUrlTypeUser
+// TMeURLTypeType returns constant class type string of the class.
+func (*TMeURLTypeUser) TMeURLTypeType() string {
+	return TypeTMeURLTypeUser
 }
 
-// A URL linking to a public supergroup or channel
-type TMeUrlTypeSupergroup struct {
+// TMeURLTypeSupergroup a URL linking to a public supergroup or channel
+type TMeURLTypeSupergroup struct {
 	meta
 	// Identifier of the supergroup or channel
-	SupergroupId int64 `json:"supergroup_id"`
+	SupergroupID int64 `json:"supergroup_id"`
 }
 
-func (entity *TMeUrlTypeSupergroup) MarshalJSON() ([]byte, error) {
+// MarshalJSON returns TMeURLTypeSupergroup object as the JSON encoding of TMeURLTypeSupergroup.
+func (entity *TMeURLTypeSupergroup) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
-	type stub TMeUrlTypeSupergroup
+	type stub TMeURLTypeSupergroup
 
 	return json.Marshal((*stub)(entity))
 }
 
-func (*TMeUrlTypeSupergroup) GetClass() string {
-	return ClassTMeUrlType
+// GetClass returns constant class string of the class.
+func (*TMeURLTypeSupergroup) GetClass() string {
+	return ClassTMeURLType
 }
 
-func (*TMeUrlTypeSupergroup) GetType() string {
-	return TypeTMeUrlTypeSupergroup
+// GetType returns constant class type string of the class.
+func (*TMeURLTypeSupergroup) GetType() string {
+	return TypeTMeURLTypeSupergroup
 }
 
-func (*TMeUrlTypeSupergroup) TMeUrlTypeType() string {
-	return TypeTMeUrlTypeSupergroup
+// TMeURLTypeType returns constant class type string of the class.
+func (*TMeURLTypeSupergroup) TMeURLTypeType() string {
+	return TypeTMeURLTypeSupergroup
 }
 
-// A chat invite link
-type TMeUrlTypeChatInvite struct {
+// TMeURLTypeChatInvite a chat invite link
+type TMeURLTypeChatInvite struct {
 	meta
 	// Chat invite link info
 	Info *ChatInviteLinkInfo `json:"info"`
 }
 
-func (entity *TMeUrlTypeChatInvite) MarshalJSON() ([]byte, error) {
+// MarshalJSON returns TMeURLTypeChatInvite object as the JSON encoding of TMeURLTypeChatInvite.
+func (entity *TMeURLTypeChatInvite) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
-	type stub TMeUrlTypeChatInvite
+	type stub TMeURLTypeChatInvite
 
 	return json.Marshal((*stub)(entity))
 }
 
-func (*TMeUrlTypeChatInvite) GetClass() string {
-	return ClassTMeUrlType
+// GetClass returns constant class string of the class.
+func (*TMeURLTypeChatInvite) GetClass() string {
+	return ClassTMeURLType
 }
 
-func (*TMeUrlTypeChatInvite) GetType() string {
-	return TypeTMeUrlTypeChatInvite
+// GetType returns constant class type string of the class.
+func (*TMeURLTypeChatInvite) GetType() string {
+	return TypeTMeURLTypeChatInvite
 }
 
-func (*TMeUrlTypeChatInvite) TMeUrlTypeType() string {
-	return TypeTMeUrlTypeChatInvite
+// TMeURLTypeType returns constant class type string of the class.
+func (*TMeURLTypeChatInvite) TMeURLTypeType() string {
+	return TypeTMeURLTypeChatInvite
 }
 
-// A URL linking to a sticker set
-type TMeUrlTypeStickerSet struct {
+// TMeURLTypeStickerSet a URL linking to a sticker set
+type TMeURLTypeStickerSet struct {
 	meta
 	// Identifier of the sticker set
-	StickerSetId JsonInt64 `json:"sticker_set_id"`
+	StickerSetID Int64JSON `json:"sticker_set_id"`
 }
 
-func (entity *TMeUrlTypeStickerSet) MarshalJSON() ([]byte, error) {
+// MarshalJSON returns TMeURLTypeStickerSet object as the JSON encoding of TMeURLTypeStickerSet.
+func (entity *TMeURLTypeStickerSet) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
-	type stub TMeUrlTypeStickerSet
+	type stub TMeURLTypeStickerSet
 
 	return json.Marshal((*stub)(entity))
 }
 
-func (*TMeUrlTypeStickerSet) GetClass() string {
-	return ClassTMeUrlType
+// GetClass returns constant class string of the class.
+func (*TMeURLTypeStickerSet) GetClass() string {
+	return ClassTMeURLType
 }
 
-func (*TMeUrlTypeStickerSet) GetType() string {
-	return TypeTMeUrlTypeStickerSet
+// GetType returns constant class type string of the class.
+func (*TMeURLTypeStickerSet) GetType() string {
+	return TypeTMeURLTypeStickerSet
 }
 
-func (*TMeUrlTypeStickerSet) TMeUrlTypeType() string {
-	return TypeTMeUrlTypeStickerSet
+// TMeURLTypeType returns constant class type string of the class.
+func (*TMeURLTypeStickerSet) TMeURLTypeType() string {
+	return TypeTMeURLTypeStickerSet
 }
 
-// Represents a URL linking to an internal Telegram entity
-type TMeUrl struct {
+// TMeURL represents a URL linking to an internal Telegram entity
+type TMeURL struct {
 	meta
 	// URL
-	Url string `json:"url"`
+	URL string `json:"url"`
 	// Type of the URL
-	Type TMeUrlType `json:"type"`
+	Type TMeURLType `json:"type"`
 }
 
-func (entity *TMeUrl) MarshalJSON() ([]byte, error) {
+// MarshalJSON returns TMeURL object as the JSON encoding of TMeURL.
+func (entity *TMeURL) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
-	type stub TMeUrl
+	type stub TMeURL
 
 	return json.Marshal((*stub)(entity))
 }
 
-func (*TMeUrl) GetClass() string {
-	return ClassTMeUrl
+// GetClass returns constant class string of the class.
+func (*TMeURL) GetClass() string {
+	return ClassTMeURL
 }
 
-func (*TMeUrl) GetType() string {
-	return TypeTMeUrl
+// GetType returns constant class type string of the class.
+func (*TMeURL) GetType() string {
+	return TypeTMeURL
 }
 
-func (tMeUrl *TMeUrl) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets TMeURL object to a copy of JSON encoding of TMeURL.
+func (entity *TMeURL) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Url  string          `json:"url"`
+		URL  string          `json:"url"`
 		Type json.RawMessage `json:"type"`
 	}
 
@@ -17728,44 +19768,48 @@ func (tMeUrl *TMeUrl) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	tMeUrl.Url = tmp.Url
+	entity.URL = tmp.URL
 
-	fieldType, _ := UnmarshalTMeUrlType(tmp.Type)
-	tMeUrl.Type = fieldType
+	fieldType, _ := UnmarshalTMeURLType(tmp.Type)
+	entity.Type = fieldType
 
 	return nil
 }
 
-// Contains a list of t.me URLs
-type TMeUrls struct {
+// TMeURLs contains a list of t.me URLs
+type TMeURLs struct {
 	meta
 	// List of URLs
-	Urls []*TMeUrl `json:"urls"`
+	URLs []*TMeURL `json:"urls"`
 }
 
-func (entity *TMeUrls) MarshalJSON() ([]byte, error) {
+// MarshalJSON returns TMeURLs object as the JSON encoding of TMeURLs.
+func (entity *TMeURLs) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
-	type stub TMeUrls
+	type stub TMeURLs
 
 	return json.Marshal((*stub)(entity))
 }
 
-func (*TMeUrls) GetClass() string {
-	return ClassTMeUrls
+// GetClass returns constant class string of the class.
+func (*TMeURLs) GetClass() string {
+	return ClassTMeURLs
 }
 
-func (*TMeUrls) GetType() string {
-	return TypeTMeUrls
+// GetType returns constant class type string of the class.
+func (*TMeURLs) GetType() string {
+	return TypeTMeURLs
 }
 
-// Contains a counter
+// Count contains a counter
 type Count struct {
 	meta
 	// Count
 	Count int32 `json:"count"`
 }
 
+// MarshalJSON returns Count object as the JSON encoding of Count.
 func (entity *Count) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17774,21 +19818,24 @@ func (entity *Count) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Count) GetClass() string {
 	return ClassCount
 }
 
+// GetType returns constant class type string of the class.
 func (*Count) GetType() string {
 	return TypeCount
 }
 
-// Contains some text
+// Text contains some text
 type Text struct {
 	meta
 	// Text
 	Text string `json:"text"`
 }
 
+// MarshalJSON returns Text object as the JSON encoding of Text.
 func (entity *Text) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17797,21 +19844,24 @@ func (entity *Text) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Text) GetClass() string {
 	return ClassText
 }
 
+// GetType returns constant class type string of the class.
 func (*Text) GetType() string {
 	return TypeText
 }
 
-// Contains a value representing a number of seconds
+// Seconds contains a value representing a number of seconds
 type Seconds struct {
 	meta
 	// Number of seconds
 	Seconds float64 `json:"seconds"`
 }
 
+// MarshalJSON returns Seconds object as the JSON encoding of Seconds.
 func (entity *Seconds) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17820,15 +19870,17 @@ func (entity *Seconds) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Seconds) GetClass() string {
 	return ClassSeconds
 }
 
+// GetType returns constant class type string of the class.
 func (*Seconds) GetType() string {
 	return TypeSeconds
 }
 
-// Contains information about a tg:// deep link
+// DeepLinkInfo contains information about a tg:// deep link
 type DeepLinkInfo struct {
 	meta
 	// Text to be shown to the user
@@ -17837,6 +19889,7 @@ type DeepLinkInfo struct {
 	NeedUpdateApplication bool `json:"need_update_application"`
 }
 
+// MarshalJSON returns DeepLinkInfo object as the JSON encoding of DeepLinkInfo.
 func (entity *DeepLinkInfo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17845,19 +19898,22 @@ func (entity *DeepLinkInfo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*DeepLinkInfo) GetClass() string {
 	return ClassDeepLinkInfo
 }
 
+// GetType returns constant class type string of the class.
 func (*DeepLinkInfo) GetType() string {
 	return TypeDeepLinkInfo
 }
 
-// The text should be parsed in markdown-style
+// TextParseModeMarkdown the text should be parsed in markdown-style
 type TextParseModeMarkdown struct {
 	meta
 }
 
+// MarshalJSON returns TextParseModeMarkdown object as the JSON encoding of TextParseModeMarkdown.
 func (entity *TextParseModeMarkdown) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17866,23 +19922,27 @@ func (entity *TextParseModeMarkdown) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TextParseModeMarkdown) GetClass() string {
 	return ClassTextParseMode
 }
 
+// GetType returns constant class type string of the class.
 func (*TextParseModeMarkdown) GetType() string {
 	return TypeTextParseModeMarkdown
 }
 
+// TextParseModeType returns constant class type string of the class.
 func (*TextParseModeMarkdown) TextParseModeType() string {
 	return TypeTextParseModeMarkdown
 }
 
-// The text should be parsed in HTML-style
+// TextParseModeHTML the text should be parsed in HTML-style
 type TextParseModeHTML struct {
 	meta
 }
 
+// MarshalJSON returns TextParseModeHTML object as the JSON encoding of TextParseModeHTML.
 func (entity *TextParseModeHTML) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17891,19 +19951,22 @@ func (entity *TextParseModeHTML) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TextParseModeHTML) GetClass() string {
 	return ClassTextParseMode
 }
 
+// GetType returns constant class type string of the class.
 func (*TextParseModeHTML) GetType() string {
 	return TypeTextParseModeHTML
 }
 
+// TextParseModeType returns constant class type string of the class.
 func (*TextParseModeHTML) TextParseModeType() string {
 	return TypeTextParseModeHTML
 }
 
-// A SOCKS5 proxy server
+// ProxyTypeSocks5 a SOCKS5 proxy server
 type ProxyTypeSocks5 struct {
 	meta
 	// Username for logging in; may be empty
@@ -17912,6 +19975,7 @@ type ProxyTypeSocks5 struct {
 	Password string `json:"password"`
 }
 
+// MarshalJSON returns ProxyTypeSocks5 object as the JSON encoding of ProxyTypeSocks5.
 func (entity *ProxyTypeSocks5) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17920,56 +19984,64 @@ func (entity *ProxyTypeSocks5) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ProxyTypeSocks5) GetClass() string {
 	return ClassProxyType
 }
 
+// GetType returns constant class type string of the class.
 func (*ProxyTypeSocks5) GetType() string {
 	return TypeProxyTypeSocks5
 }
 
+// ProxyTypeType returns constant class type string of the class.
 func (*ProxyTypeSocks5) ProxyTypeType() string {
 	return TypeProxyTypeSocks5
 }
 
-// A HTTP transparent proxy server
-type ProxyTypeHttp struct {
+// ProxyTypeHTTP a HTTP transparent proxy server
+type ProxyTypeHTTP struct {
 	meta
 	// Username for logging in; may be empty
 	Username string `json:"username"`
 	// Password for logging in; may be empty
 	Password string `json:"password"`
 	// Pass true, if the proxy supports only HTTP requests and doesn't support transparent TCP connections via HTTP CONNECT method
-	HttpOnly bool `json:"http_only"`
+	HTTPOnly bool `json:"http_only"`
 }
 
-func (entity *ProxyTypeHttp) MarshalJSON() ([]byte, error) {
+// MarshalJSON returns ProxyTypeHTTP object as the JSON encoding of ProxyTypeHTTP.
+func (entity *ProxyTypeHTTP) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
-	type stub ProxyTypeHttp
+	type stub ProxyTypeHTTP
 
 	return json.Marshal((*stub)(entity))
 }
 
-func (*ProxyTypeHttp) GetClass() string {
+// GetClass returns constant class string of the class.
+func (*ProxyTypeHTTP) GetClass() string {
 	return ClassProxyType
 }
 
-func (*ProxyTypeHttp) GetType() string {
-	return TypeProxyTypeHttp
+// GetType returns constant class type string of the class.
+func (*ProxyTypeHTTP) GetType() string {
+	return TypeProxyTypeHTTP
 }
 
-func (*ProxyTypeHttp) ProxyTypeType() string {
-	return TypeProxyTypeHttp
+// ProxyTypeType returns constant class type string of the class.
+func (*ProxyTypeHTTP) ProxyTypeType() string {
+	return TypeProxyTypeHTTP
 }
 
-// An MTProto proxy server
+// ProxyTypeMtproto an MTProto proxy server
 type ProxyTypeMtproto struct {
 	meta
 	// The proxy's secret in hexadecimal encoding
 	Secret string `json:"secret"`
 }
 
+// MarshalJSON returns ProxyTypeMtproto object as the JSON encoding of ProxyTypeMtproto.
 func (entity *ProxyTypeMtproto) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -17978,23 +20050,26 @@ func (entity *ProxyTypeMtproto) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*ProxyTypeMtproto) GetClass() string {
 	return ClassProxyType
 }
 
+// GetType returns constant class type string of the class.
 func (*ProxyTypeMtproto) GetType() string {
 	return TypeProxyTypeMtproto
 }
 
+// ProxyTypeType returns constant class type string of the class.
 func (*ProxyTypeMtproto) ProxyTypeType() string {
 	return TypeProxyTypeMtproto
 }
 
-// Contains information about a proxy server
+// Proxy contains information about a proxy server
 type Proxy struct {
 	meta
 	// Unique identifier of the proxy
-	Id int32 `json:"id"`
+	ID int32 `json:"id"`
 	// Proxy server IP address
 	Server string `json:"server"`
 	// Proxy server port
@@ -18007,6 +20082,7 @@ type Proxy struct {
 	Type ProxyType `json:"type"`
 }
 
+// MarshalJSON returns Proxy object as the JSON encoding of Proxy.
 func (entity *Proxy) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18015,17 +20091,20 @@ func (entity *Proxy) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Proxy) GetClass() string {
 	return ClassProxy
 }
 
+// GetType returns constant class type string of the class.
 func (*Proxy) GetType() string {
 	return TypeProxy
 }
 
-func (proxy *Proxy) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets Proxy object to a copy of JSON encoding of Proxy.
+func (entity *Proxy) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id           int32           `json:"id"`
+		ID           int32           `json:"id"`
 		Server       string          `json:"server"`
 		Port         int32           `json:"port"`
 		LastUsedDate int32           `json:"last_used_date"`
@@ -18038,25 +20117,26 @@ func (proxy *Proxy) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	proxy.Id = tmp.Id
-	proxy.Server = tmp.Server
-	proxy.Port = tmp.Port
-	proxy.LastUsedDate = tmp.LastUsedDate
-	proxy.IsEnabled = tmp.IsEnabled
+	entity.ID = tmp.ID
+	entity.Server = tmp.Server
+	entity.Port = tmp.Port
+	entity.LastUsedDate = tmp.LastUsedDate
+	entity.IsEnabled = tmp.IsEnabled
 
 	fieldType, _ := UnmarshalProxyType(tmp.Type)
-	proxy.Type = fieldType
+	entity.Type = fieldType
 
 	return nil
 }
 
-// Represents a list of proxy servers
+// Proxies represents a list of proxy servers
 type Proxies struct {
 	meta
 	// List of proxy servers
 	Proxies []*Proxy `json:"proxies"`
 }
 
+// MarshalJSON returns Proxies object as the JSON encoding of Proxies.
 func (entity *Proxies) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18065,15 +20145,17 @@ func (entity *Proxies) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*Proxies) GetClass() string {
 	return ClassProxies
 }
 
+// GetType returns constant class type string of the class.
 func (*Proxies) GetType() string {
 	return TypeProxies
 }
 
-// Describes a sticker that should be added to a sticker set
+// InputSticker describes a sticker that should be added to a sticker set
 type InputSticker struct {
 	meta
 	// PNG image with the sticker; must be up to 512 kB in size and fit in a 512x512 square
@@ -18084,6 +20166,7 @@ type InputSticker struct {
 	MaskPosition *MaskPosition `json:"mask_position"`
 }
 
+// MarshalJSON returns InputSticker object as the JSON encoding of InputSticker.
 func (entity *InputSticker) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18092,15 +20175,18 @@ func (entity *InputSticker) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*InputSticker) GetClass() string {
 	return ClassInputSticker
 }
 
+// GetType returns constant class type string of the class.
 func (*InputSticker) GetType() string {
 	return TypeInputSticker
 }
 
-func (inputSticker *InputSticker) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets InputSticker object to a copy of JSON encoding of InputSticker.
+func (entity *InputSticker) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		PngSticker   json.RawMessage `json:"png_sticker"`
 		Emojis       string          `json:"emojis"`
@@ -18112,22 +20198,23 @@ func (inputSticker *InputSticker) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	inputSticker.Emojis = tmp.Emojis
-	inputSticker.MaskPosition = tmp.MaskPosition
+	entity.Emojis = tmp.Emojis
+	entity.MaskPosition = tmp.MaskPosition
 
 	fieldPngSticker, _ := UnmarshalInputFile(tmp.PngSticker)
-	inputSticker.PngSticker = fieldPngSticker
+	entity.PngSticker = fieldPngSticker
 
 	return nil
 }
 
-// The user authorization state has changed
+// UpdateAuthorizationState the user authorization state has changed
 type UpdateAuthorizationState struct {
 	meta
 	// New authorization state
 	AuthorizationState AuthorizationState `json:"authorization_state"`
 }
 
+// MarshalJSON returns UpdateAuthorizationState object as the JSON encoding of UpdateAuthorizationState.
 func (entity *UpdateAuthorizationState) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18136,19 +20223,23 @@ func (entity *UpdateAuthorizationState) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateAuthorizationState) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateAuthorizationState) GetType() string {
 	return TypeUpdateAuthorizationState
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateAuthorizationState) UpdateType() string {
 	return TypeUpdateAuthorizationState
 }
 
-func (updateAuthorizationState *UpdateAuthorizationState) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets UpdateAuthorizationState object to a copy of JSON encoding of UpdateAuthorizationState.
+func (entity *UpdateAuthorizationState) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		AuthorizationState json.RawMessage `json:"authorization_state"`
 	}
@@ -18159,12 +20250,12 @@ func (updateAuthorizationState *UpdateAuthorizationState) UnmarshalJSON(data []b
 	}
 
 	fieldAuthorizationState, _ := UnmarshalAuthorizationState(tmp.AuthorizationState)
-	updateAuthorizationState.AuthorizationState = fieldAuthorizationState
+	entity.AuthorizationState = fieldAuthorizationState
 
 	return nil
 }
 
-// A new message was received; can also be an outgoing message
+// UpdateNewMessage a new message was received; can also be an outgoing message
 type UpdateNewMessage struct {
 	meta
 	// The new message
@@ -18175,6 +20266,7 @@ type UpdateNewMessage struct {
 	ContainsMention bool `json:"contains_mention"`
 }
 
+// MarshalJSON returns UpdateNewMessage object as the JSON encoding of UpdateNewMessage.
 func (entity *UpdateNewMessage) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18183,27 +20275,31 @@ func (entity *UpdateNewMessage) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateNewMessage) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateNewMessage) GetType() string {
 	return TypeUpdateNewMessage
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateNewMessage) UpdateType() string {
 	return TypeUpdateNewMessage
 }
 
-// A request to send a message has reached the Telegram server. This doesn't mean that the message will be sent successfully or even that the send message request will be processed. This update will be sent only if the option "use_quick_ack" is set to true. This update may be sent multiple times for the same message
+// UpdateMessageSendAcknowledged a request to send a message has reached the Telegram server. This doesn't mean that the message will be sent successfully or even that the send message request will be processed. This update will be sent only if the option "use_quick_ack" is set to true. This update may be sent multiple times for the same message
 type UpdateMessageSendAcknowledged struct {
 	meta
 	// The chat identifier of the sent message
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// A temporary message identifier
-	MessageId int64 `json:"message_id"`
+	MessageID int64 `json:"message_id"`
 }
 
+// MarshalJSON returns UpdateMessageSendAcknowledged object as the JSON encoding of UpdateMessageSendAcknowledged.
 func (entity *UpdateMessageSendAcknowledged) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18212,27 +20308,31 @@ func (entity *UpdateMessageSendAcknowledged) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateMessageSendAcknowledged) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateMessageSendAcknowledged) GetType() string {
 	return TypeUpdateMessageSendAcknowledged
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateMessageSendAcknowledged) UpdateType() string {
 	return TypeUpdateMessageSendAcknowledged
 }
 
-// A message has been successfully sent
+// UpdateMessageSendSucceeded a message has been successfully sent
 type UpdateMessageSendSucceeded struct {
 	meta
 	// Information about the sent message. Usually only the message identifier, date, and content are changed, but almost all other fields can also change
 	Message *Message `json:"message"`
 	// The previous temporary message identifier
-	OldMessageId int64 `json:"old_message_id"`
+	OldMessageID int64 `json:"old_message_id"`
 }
 
+// MarshalJSON returns UpdateMessageSendSucceeded object as the JSON encoding of UpdateMessageSendSucceeded.
 func (entity *UpdateMessageSendSucceeded) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18241,31 +20341,35 @@ func (entity *UpdateMessageSendSucceeded) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateMessageSendSucceeded) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateMessageSendSucceeded) GetType() string {
 	return TypeUpdateMessageSendSucceeded
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateMessageSendSucceeded) UpdateType() string {
 	return TypeUpdateMessageSendSucceeded
 }
 
-// A message failed to send. Be aware that some messages being sent can be irrecoverably deleted, in which case updateDeleteMessages will be received instead of this update
+// UpdateMessageSendFailed a message failed to send. Be aware that some messages being sent can be irrecoverably deleted, in which case updateDeleteMessages will be received instead of this update
 type UpdateMessageSendFailed struct {
 	meta
 	// Contains information about the message that failed to send
 	Message *Message `json:"message"`
 	// The previous temporary message identifier
-	OldMessageId int64 `json:"old_message_id"`
+	OldMessageID int64 `json:"old_message_id"`
 	// An error code
 	ErrorCode int32 `json:"error_code"`
 	// Error message
 	ErrorMessage string `json:"error_message"`
 }
 
+// MarshalJSON returns UpdateMessageSendFailed object as the JSON encoding of UpdateMessageSendFailed.
 func (entity *UpdateMessageSendFailed) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18274,29 +20378,33 @@ func (entity *UpdateMessageSendFailed) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateMessageSendFailed) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateMessageSendFailed) GetType() string {
 	return TypeUpdateMessageSendFailed
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateMessageSendFailed) UpdateType() string {
 	return TypeUpdateMessageSendFailed
 }
 
-// The message content has changed
+// UpdateMessageContent the message content has changed
 type UpdateMessageContent struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// Message identifier
-	MessageId int64 `json:"message_id"`
+	MessageID int64 `json:"message_id"`
 	// New message content
 	NewContent MessageContent `json:"new_content"`
 }
 
+// MarshalJSON returns UpdateMessageContent object as the JSON encoding of UpdateMessageContent.
 func (entity *UpdateMessageContent) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18305,22 +20413,26 @@ func (entity *UpdateMessageContent) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateMessageContent) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateMessageContent) GetType() string {
 	return TypeUpdateMessageContent
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateMessageContent) UpdateType() string {
 	return TypeUpdateMessageContent
 }
 
-func (updateMessageContent *UpdateMessageContent) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets UpdateMessageContent object to a copy of JSON encoding of UpdateMessageContent.
+func (entity *UpdateMessageContent) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		ChatId     int64           `json:"chat_id"`
-		MessageId  int64           `json:"message_id"`
+		ChatID     int64           `json:"chat_id"`
+		MessageID  int64           `json:"message_id"`
 		NewContent json.RawMessage `json:"new_content"`
 	}
 
@@ -18329,28 +20441,29 @@ func (updateMessageContent *UpdateMessageContent) UnmarshalJSON(data []byte) err
 		return err
 	}
 
-	updateMessageContent.ChatId = tmp.ChatId
-	updateMessageContent.MessageId = tmp.MessageId
+	entity.ChatID = tmp.ChatID
+	entity.MessageID = tmp.MessageID
 
 	fieldNewContent, _ := UnmarshalMessageContent(tmp.NewContent)
-	updateMessageContent.NewContent = fieldNewContent
+	entity.NewContent = fieldNewContent
 
 	return nil
 }
 
-// A message was edited. Changes in the message content will come in a separate updateMessageContent
+// UpdateMessageEdited a message was edited. Changes in the message content will come in a separate updateMessageContent
 type UpdateMessageEdited struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// Message identifier
-	MessageId int64 `json:"message_id"`
+	MessageID int64 `json:"message_id"`
 	// Point in time (Unix timestamp) when the message was edited
 	EditDate int32 `json:"edit_date"`
 	// New message reply markup; may be null
 	ReplyMarkup ReplyMarkup `json:"reply_markup"`
 }
 
+// MarshalJSON returns UpdateMessageEdited object as the JSON encoding of UpdateMessageEdited.
 func (entity *UpdateMessageEdited) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18359,22 +20472,26 @@ func (entity *UpdateMessageEdited) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateMessageEdited) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateMessageEdited) GetType() string {
 	return TypeUpdateMessageEdited
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateMessageEdited) UpdateType() string {
 	return TypeUpdateMessageEdited
 }
 
-func (updateMessageEdited *UpdateMessageEdited) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets UpdateMessageEdited object to a copy of JSON encoding of UpdateMessageEdited.
+func (entity *UpdateMessageEdited) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		ChatId      int64           `json:"chat_id"`
-		MessageId   int64           `json:"message_id"`
+		ChatID      int64           `json:"chat_id"`
+		MessageID   int64           `json:"message_id"`
 		EditDate    int32           `json:"edit_date"`
 		ReplyMarkup json.RawMessage `json:"reply_markup"`
 	}
@@ -18384,27 +20501,28 @@ func (updateMessageEdited *UpdateMessageEdited) UnmarshalJSON(data []byte) error
 		return err
 	}
 
-	updateMessageEdited.ChatId = tmp.ChatId
-	updateMessageEdited.MessageId = tmp.MessageId
-	updateMessageEdited.EditDate = tmp.EditDate
+	entity.ChatID = tmp.ChatID
+	entity.MessageID = tmp.MessageID
+	entity.EditDate = tmp.EditDate
 
 	fieldReplyMarkup, _ := UnmarshalReplyMarkup(tmp.ReplyMarkup)
-	updateMessageEdited.ReplyMarkup = fieldReplyMarkup
+	entity.ReplyMarkup = fieldReplyMarkup
 
 	return nil
 }
 
-// The view count of the message has changed
+// UpdateMessageViews the view count of the message has changed
 type UpdateMessageViews struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// Message identifier
-	MessageId int64 `json:"message_id"`
+	MessageID int64 `json:"message_id"`
 	// New value of the view count
 	Views int32 `json:"views"`
 }
 
+// MarshalJSON returns UpdateMessageViews object as the JSON encoding of UpdateMessageViews.
 func (entity *UpdateMessageViews) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18413,27 +20531,31 @@ func (entity *UpdateMessageViews) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateMessageViews) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateMessageViews) GetType() string {
 	return TypeUpdateMessageViews
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateMessageViews) UpdateType() string {
 	return TypeUpdateMessageViews
 }
 
-// The message content was opened. Updates voice note messages to "listened", video note messages to "viewed" and starts the TTL timer for self-destructing messages
+// UpdateMessageContentOpened the message content was opened. Updates voice note messages to "listened", video note messages to "viewed" and starts the TTL timer for self-destructing messages
 type UpdateMessageContentOpened struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// Message identifier
-	MessageId int64 `json:"message_id"`
+	MessageID int64 `json:"message_id"`
 }
 
+// MarshalJSON returns UpdateMessageContentOpened object as the JSON encoding of UpdateMessageContentOpened.
 func (entity *UpdateMessageContentOpened) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18442,29 +20564,33 @@ func (entity *UpdateMessageContentOpened) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateMessageContentOpened) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateMessageContentOpened) GetType() string {
 	return TypeUpdateMessageContentOpened
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateMessageContentOpened) UpdateType() string {
 	return TypeUpdateMessageContentOpened
 }
 
-// A message with an unread mention was read
+// UpdateMessageMentionRead a message with an unread mention was read
 type UpdateMessageMentionRead struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// Message identifier
-	MessageId int64 `json:"message_id"`
+	MessageID int64 `json:"message_id"`
 	// The new number of unread mention messages left in the chat
 	UnreadMentionCount int32 `json:"unread_mention_count"`
 }
 
+// MarshalJSON returns UpdateMessageMentionRead object as the JSON encoding of UpdateMessageMentionRead.
 func (entity *UpdateMessageMentionRead) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18473,25 +20599,29 @@ func (entity *UpdateMessageMentionRead) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateMessageMentionRead) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateMessageMentionRead) GetType() string {
 	return TypeUpdateMessageMentionRead
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateMessageMentionRead) UpdateType() string {
 	return TypeUpdateMessageMentionRead
 }
 
-// A new chat has been loaded/created. This update is guaranteed to come before the chat identifier is returned to the client. The chat field changes will be reported through separate updates
+// UpdateNewChat a new chat has been loaded/created. This update is guaranteed to come before the chat identifier is returned to the client. The chat field changes will be reported through separate updates
 type UpdateNewChat struct {
 	meta
 	// The chat
 	Chat *Chat `json:"chat"`
 }
 
+// MarshalJSON returns UpdateNewChat object as the JSON encoding of UpdateNewChat.
 func (entity *UpdateNewChat) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18500,27 +20630,31 @@ func (entity *UpdateNewChat) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateNewChat) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateNewChat) GetType() string {
 	return TypeUpdateNewChat
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateNewChat) UpdateType() string {
 	return TypeUpdateNewChat
 }
 
-// The title of a chat was changed
+// UpdateChatTitle the title of a chat was changed
 type UpdateChatTitle struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// The new chat title
 	Title string `json:"title"`
 }
 
+// MarshalJSON returns UpdateChatTitle object as the JSON encoding of UpdateChatTitle.
 func (entity *UpdateChatTitle) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18529,27 +20663,31 @@ func (entity *UpdateChatTitle) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateChatTitle) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateChatTitle) GetType() string {
 	return TypeUpdateChatTitle
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateChatTitle) UpdateType() string {
 	return TypeUpdateChatTitle
 }
 
-// A chat photo was changed
+// UpdateChatPhoto a chat photo was changed
 type UpdateChatPhoto struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// The new chat photo; may be null
 	Photo *ChatPhoto `json:"photo"`
 }
 
+// MarshalJSON returns UpdateChatPhoto object as the JSON encoding of UpdateChatPhoto.
 func (entity *UpdateChatPhoto) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18558,29 +20696,33 @@ func (entity *UpdateChatPhoto) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateChatPhoto) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateChatPhoto) GetType() string {
 	return TypeUpdateChatPhoto
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateChatPhoto) UpdateType() string {
 	return TypeUpdateChatPhoto
 }
 
-// The last message of a chat was changed. If last_message is null then the last message in the chat became unknown. Some new unknown messages might be added to the chat in this case
+// UpdateChatLastMessage the last message of a chat was changed. If last_message is null then the last message in the chat became unknown. Some new unknown messages might be added to the chat in this case
 type UpdateChatLastMessage struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// The new last message in the chat; may be null
 	LastMessage *Message `json:"last_message"`
 	// New value of the chat order
-	Order JsonInt64 `json:"order"`
+	Order Int64JSON `json:"order"`
 }
 
+// MarshalJSON returns UpdateChatLastMessage object as the JSON encoding of UpdateChatLastMessage.
 func (entity *UpdateChatLastMessage) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18589,27 +20731,31 @@ func (entity *UpdateChatLastMessage) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateChatLastMessage) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateChatLastMessage) GetType() string {
 	return TypeUpdateChatLastMessage
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateChatLastMessage) UpdateType() string {
 	return TypeUpdateChatLastMessage
 }
 
-// The order of the chat in the chats list has changed. Instead of this update updateChatLastMessage, updateChatIsPinned or updateChatDraftMessage might be sent
+// UpdateChatOrder the order of the chat in the chats list has changed. Instead of this update updateChatLastMessage, updateChatIsPinned or updateChatDraftMessage might be sent
 type UpdateChatOrder struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// New value of the order
-	Order JsonInt64 `json:"order"`
+	Order Int64JSON `json:"order"`
 }
 
+// MarshalJSON returns UpdateChatOrder object as the JSON encoding of UpdateChatOrder.
 func (entity *UpdateChatOrder) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18618,29 +20764,33 @@ func (entity *UpdateChatOrder) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateChatOrder) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateChatOrder) GetType() string {
 	return TypeUpdateChatOrder
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateChatOrder) UpdateType() string {
 	return TypeUpdateChatOrder
 }
 
-// A chat was pinned or unpinned
+// UpdateChatIsPinned a chat was pinned or unpinned
 type UpdateChatIsPinned struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// New value of is_pinned
 	IsPinned bool `json:"is_pinned"`
 	// New value of the chat order
-	Order JsonInt64 `json:"order"`
+	Order Int64JSON `json:"order"`
 }
 
+// MarshalJSON returns UpdateChatIsPinned object as the JSON encoding of UpdateChatIsPinned.
 func (entity *UpdateChatIsPinned) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18649,27 +20799,31 @@ func (entity *UpdateChatIsPinned) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateChatIsPinned) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateChatIsPinned) GetType() string {
 	return TypeUpdateChatIsPinned
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateChatIsPinned) UpdateType() string {
 	return TypeUpdateChatIsPinned
 }
 
-// A chat was marked as unread or was read
+// UpdateChatIsMarkedAsUnread a chat was marked as unread or was read
 type UpdateChatIsMarkedAsUnread struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// New value of is_marked_as_unread
 	IsMarkedAsUnread bool `json:"is_marked_as_unread"`
 }
 
+// MarshalJSON returns UpdateChatIsMarkedAsUnread object as the JSON encoding of UpdateChatIsMarkedAsUnread.
 func (entity *UpdateChatIsMarkedAsUnread) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18678,29 +20832,33 @@ func (entity *UpdateChatIsMarkedAsUnread) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateChatIsMarkedAsUnread) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateChatIsMarkedAsUnread) GetType() string {
 	return TypeUpdateChatIsMarkedAsUnread
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateChatIsMarkedAsUnread) UpdateType() string {
 	return TypeUpdateChatIsMarkedAsUnread
 }
 
-// A chat's is_sponsored field has changed
+// UpdateChatIsSponsored a chat's is_sponsored field has changed
 type UpdateChatIsSponsored struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// New value of is_sponsored
 	IsSponsored bool `json:"is_sponsored"`
 	// New value of chat order
-	Order JsonInt64 `json:"order"`
+	Order Int64JSON `json:"order"`
 }
 
+// MarshalJSON returns UpdateChatIsSponsored object as the JSON encoding of UpdateChatIsSponsored.
 func (entity *UpdateChatIsSponsored) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18709,27 +20867,31 @@ func (entity *UpdateChatIsSponsored) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateChatIsSponsored) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateChatIsSponsored) GetType() string {
 	return TypeUpdateChatIsSponsored
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateChatIsSponsored) UpdateType() string {
 	return TypeUpdateChatIsSponsored
 }
 
-// The value of the default disable_notification parameter, used when a message is sent to the chat, was changed
+// UpdateChatDefaultDisableNotification the value of the default disable_notification parameter, used when a message is sent to the chat, was changed
 type UpdateChatDefaultDisableNotification struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// The new default_disable_notification value
 	DefaultDisableNotification bool `json:"default_disable_notification"`
 }
 
+// MarshalJSON returns UpdateChatDefaultDisableNotification object as the JSON encoding of UpdateChatDefaultDisableNotification.
 func (entity *UpdateChatDefaultDisableNotification) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18738,29 +20900,33 @@ func (entity *UpdateChatDefaultDisableNotification) MarshalJSON() ([]byte, error
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateChatDefaultDisableNotification) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateChatDefaultDisableNotification) GetType() string {
 	return TypeUpdateChatDefaultDisableNotification
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateChatDefaultDisableNotification) UpdateType() string {
 	return TypeUpdateChatDefaultDisableNotification
 }
 
-// Incoming messages were read or number of unread messages has been changed
+// UpdateChatReadInbox incoming messages were read or number of unread messages has been changed
 type UpdateChatReadInbox struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// Identifier of the last read incoming message
-	LastReadInboxMessageId int64 `json:"last_read_inbox_message_id"`
+	LastReadInboxMessageID int64 `json:"last_read_inbox_message_id"`
 	// The number of unread messages left in the chat
 	UnreadCount int32 `json:"unread_count"`
 }
 
+// MarshalJSON returns UpdateChatReadInbox object as the JSON encoding of UpdateChatReadInbox.
 func (entity *UpdateChatReadInbox) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18769,27 +20935,31 @@ func (entity *UpdateChatReadInbox) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateChatReadInbox) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateChatReadInbox) GetType() string {
 	return TypeUpdateChatReadInbox
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateChatReadInbox) UpdateType() string {
 	return TypeUpdateChatReadInbox
 }
 
-// Outgoing messages were read
+// UpdateChatReadOutbox outgoing messages were read
 type UpdateChatReadOutbox struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// Identifier of last read outgoing message
-	LastReadOutboxMessageId int64 `json:"last_read_outbox_message_id"`
+	LastReadOutboxMessageID int64 `json:"last_read_outbox_message_id"`
 }
 
+// MarshalJSON returns UpdateChatReadOutbox object as the JSON encoding of UpdateChatReadOutbox.
 func (entity *UpdateChatReadOutbox) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18798,27 +20968,31 @@ func (entity *UpdateChatReadOutbox) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateChatReadOutbox) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateChatReadOutbox) GetType() string {
 	return TypeUpdateChatReadOutbox
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateChatReadOutbox) UpdateType() string {
 	return TypeUpdateChatReadOutbox
 }
 
-// The chat unread_mention_count has changed
+// UpdateChatUnreadMentionCount the chat unread_mention_count has changed
 type UpdateChatUnreadMentionCount struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// The number of unread mention messages left in the chat
 	UnreadMentionCount int32 `json:"unread_mention_count"`
 }
 
+// MarshalJSON returns UpdateChatUnreadMentionCount object as the JSON encoding of UpdateChatUnreadMentionCount.
 func (entity *UpdateChatUnreadMentionCount) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18827,27 +21001,31 @@ func (entity *UpdateChatUnreadMentionCount) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateChatUnreadMentionCount) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateChatUnreadMentionCount) GetType() string {
 	return TypeUpdateChatUnreadMentionCount
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateChatUnreadMentionCount) UpdateType() string {
 	return TypeUpdateChatUnreadMentionCount
 }
 
-// Notification settings for a chat were changed
+// UpdateChatNotificationSettings notification settings for a chat were changed
 type UpdateChatNotificationSettings struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// The new notification settings
 	NotificationSettings *ChatNotificationSettings `json:"notification_settings"`
 }
 
+// MarshalJSON returns UpdateChatNotificationSettings object as the JSON encoding of UpdateChatNotificationSettings.
 func (entity *UpdateChatNotificationSettings) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18856,19 +21034,22 @@ func (entity *UpdateChatNotificationSettings) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateChatNotificationSettings) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateChatNotificationSettings) GetType() string {
 	return TypeUpdateChatNotificationSettings
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateChatNotificationSettings) UpdateType() string {
 	return TypeUpdateChatNotificationSettings
 }
 
-// Notification settings for some type of chats were updated
+// UpdateScopeNotificationSettings notification settings for some type of chats were updated
 type UpdateScopeNotificationSettings struct {
 	meta
 	// Types of chats for which notification settings were updated
@@ -18877,6 +21058,7 @@ type UpdateScopeNotificationSettings struct {
 	NotificationSettings *ScopeNotificationSettings `json:"notification_settings"`
 }
 
+// MarshalJSON returns UpdateScopeNotificationSettings object as the JSON encoding of UpdateScopeNotificationSettings.
 func (entity *UpdateScopeNotificationSettings) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18885,19 +21067,23 @@ func (entity *UpdateScopeNotificationSettings) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateScopeNotificationSettings) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateScopeNotificationSettings) GetType() string {
 	return TypeUpdateScopeNotificationSettings
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateScopeNotificationSettings) UpdateType() string {
 	return TypeUpdateScopeNotificationSettings
 }
 
-func (updateScopeNotificationSettings *UpdateScopeNotificationSettings) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets UpdateScopeNotificationSettings object to a copy of JSON encoding of UpdateScopeNotificationSettings.
+func (entity *UpdateScopeNotificationSettings) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Scope                json.RawMessage            `json:"scope"`
 		NotificationSettings *ScopeNotificationSettings `json:"notification_settings"`
@@ -18908,23 +21094,24 @@ func (updateScopeNotificationSettings *UpdateScopeNotificationSettings) Unmarsha
 		return err
 	}
 
-	updateScopeNotificationSettings.NotificationSettings = tmp.NotificationSettings
+	entity.NotificationSettings = tmp.NotificationSettings
 
 	fieldScope, _ := UnmarshalNotificationSettingsScope(tmp.Scope)
-	updateScopeNotificationSettings.Scope = fieldScope
+	entity.Scope = fieldScope
 
 	return nil
 }
 
-// The default chat reply markup was changed. Can occur because new messages with reply markup were received or because an old reply markup was hidden by the user
+// UpdateChatReplyMarkup the default chat reply markup was changed. Can occur because new messages with reply markup were received or because an old reply markup was hidden by the user
 type UpdateChatReplyMarkup struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// Identifier of the message from which reply markup needs to be used; 0 if there is no default custom reply markup in the chat
-	ReplyMarkupMessageId int64 `json:"reply_markup_message_id"`
+	ReplyMarkupMessageID int64 `json:"reply_markup_message_id"`
 }
 
+// MarshalJSON returns UpdateChatReplyMarkup object as the JSON encoding of UpdateChatReplyMarkup.
 func (entity *UpdateChatReplyMarkup) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18933,29 +21120,33 @@ func (entity *UpdateChatReplyMarkup) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateChatReplyMarkup) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateChatReplyMarkup) GetType() string {
 	return TypeUpdateChatReplyMarkup
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateChatReplyMarkup) UpdateType() string {
 	return TypeUpdateChatReplyMarkup
 }
 
-// A chat draft has changed. Be aware that the update may come in the currently opened chat but with old content of the draft. If the user has changed the content of the draft, this update shouldn't be applied
+// UpdateChatDraftMessage a chat draft has changed. Be aware that the update may come in the currently opened chat but with old content of the draft. If the user has changed the content of the draft, this update shouldn't be applied
 type UpdateChatDraftMessage struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// The new draft message; may be null
 	DraftMessage *DraftMessage `json:"draft_message"`
 	// New value of the chat order
-	Order JsonInt64 `json:"order"`
+	Order Int64JSON `json:"order"`
 }
 
+// MarshalJSON returns UpdateChatDraftMessage object as the JSON encoding of UpdateChatDraftMessage.
 func (entity *UpdateChatDraftMessage) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18964,31 +21155,35 @@ func (entity *UpdateChatDraftMessage) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateChatDraftMessage) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateChatDraftMessage) GetType() string {
 	return TypeUpdateChatDraftMessage
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateChatDraftMessage) UpdateType() string {
 	return TypeUpdateChatDraftMessage
 }
 
-// Some messages were deleted
+// UpdateDeleteMessages some messages were deleted
 type UpdateDeleteMessages struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// Identifiers of the deleted messages
-	MessageIds []int64 `json:"message_ids"`
+	MessageIDs []int64 `json:"message_ids"`
 	// True, if the messages are permanently deleted by a user (as opposed to just becoming unaccessible)
 	IsPermanent bool `json:"is_permanent"`
 	// True, if the messages are deleted only from the cache and can possibly be retrieved again in the future
 	FromCache bool `json:"from_cache"`
 }
 
+// MarshalJSON returns UpdateDeleteMessages object as the JSON encoding of UpdateDeleteMessages.
 func (entity *UpdateDeleteMessages) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -18997,29 +21192,33 @@ func (entity *UpdateDeleteMessages) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateDeleteMessages) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateDeleteMessages) GetType() string {
 	return TypeUpdateDeleteMessages
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateDeleteMessages) UpdateType() string {
 	return TypeUpdateDeleteMessages
 }
 
-// User activity in the chat has changed
+// UpdateUserChatAction user activity in the chat has changed
 type UpdateUserChatAction struct {
 	meta
 	// Chat identifier
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// Identifier of a user performing an action
-	UserId int32 `json:"user_id"`
+	UserID int32 `json:"user_id"`
 	// The action description
 	Action ChatAction `json:"action"`
 }
 
+// MarshalJSON returns UpdateUserChatAction object as the JSON encoding of UpdateUserChatAction.
 func (entity *UpdateUserChatAction) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19028,22 +21227,26 @@ func (entity *UpdateUserChatAction) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateUserChatAction) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateUserChatAction) GetType() string {
 	return TypeUpdateUserChatAction
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateUserChatAction) UpdateType() string {
 	return TypeUpdateUserChatAction
 }
 
-func (updateUserChatAction *UpdateUserChatAction) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets UpdateUserChatAction object to a copy of JSON encoding of UpdateUserChatAction.
+func (entity *UpdateUserChatAction) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		ChatId int64           `json:"chat_id"`
-		UserId int32           `json:"user_id"`
+		ChatID int64           `json:"chat_id"`
+		UserID int32           `json:"user_id"`
 		Action json.RawMessage `json:"action"`
 	}
 
@@ -19052,24 +21255,25 @@ func (updateUserChatAction *UpdateUserChatAction) UnmarshalJSON(data []byte) err
 		return err
 	}
 
-	updateUserChatAction.ChatId = tmp.ChatId
-	updateUserChatAction.UserId = tmp.UserId
+	entity.ChatID = tmp.ChatID
+	entity.UserID = tmp.UserID
 
 	fieldAction, _ := UnmarshalChatAction(tmp.Action)
-	updateUserChatAction.Action = fieldAction
+	entity.Action = fieldAction
 
 	return nil
 }
 
-// The user went online or offline
+// UpdateUserStatus the user went online or offline
 type UpdateUserStatus struct {
 	meta
 	// User identifier
-	UserId int32 `json:"user_id"`
+	UserID int32 `json:"user_id"`
 	// New status of the user
 	Status UserStatus `json:"status"`
 }
 
+// MarshalJSON returns UpdateUserStatus object as the JSON encoding of UpdateUserStatus.
 func (entity *UpdateUserStatus) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19078,21 +21282,25 @@ func (entity *UpdateUserStatus) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateUserStatus) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateUserStatus) GetType() string {
 	return TypeUpdateUserStatus
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateUserStatus) UpdateType() string {
 	return TypeUpdateUserStatus
 }
 
-func (updateUserStatus *UpdateUserStatus) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets UpdateUserStatus object to a copy of JSON encoding of UpdateUserStatus.
+func (entity *UpdateUserStatus) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		UserId int32           `json:"user_id"`
+		UserID int32           `json:"user_id"`
 		Status json.RawMessage `json:"status"`
 	}
 
@@ -19101,21 +21309,22 @@ func (updateUserStatus *UpdateUserStatus) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	updateUserStatus.UserId = tmp.UserId
+	entity.UserID = tmp.UserID
 
 	fieldStatus, _ := UnmarshalUserStatus(tmp.Status)
-	updateUserStatus.Status = fieldStatus
+	entity.Status = fieldStatus
 
 	return nil
 }
 
-// Some data of a user has changed. This update is guaranteed to come before the user identifier is returned to the client
+// UpdateUser some data of a user has changed. This update is guaranteed to come before the user identifier is returned to the client
 type UpdateUser struct {
 	meta
 	// New data about the user
 	User *User `json:"user"`
 }
 
+// MarshalJSON returns UpdateUser object as the JSON encoding of UpdateUser.
 func (entity *UpdateUser) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19124,25 +21333,29 @@ func (entity *UpdateUser) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateUser) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateUser) GetType() string {
 	return TypeUpdateUser
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateUser) UpdateType() string {
 	return TypeUpdateUser
 }
 
-// Some data of a basic group has changed. This update is guaranteed to come before the basic group identifier is returned to the client
+// UpdateBasicGroup some data of a basic group has changed. This update is guaranteed to come before the basic group identifier is returned to the client
 type UpdateBasicGroup struct {
 	meta
 	// New data about the group
 	BasicGroup *BasicGroup `json:"basic_group"`
 }
 
+// MarshalJSON returns UpdateBasicGroup object as the JSON encoding of UpdateBasicGroup.
 func (entity *UpdateBasicGroup) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19151,25 +21364,29 @@ func (entity *UpdateBasicGroup) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateBasicGroup) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateBasicGroup) GetType() string {
 	return TypeUpdateBasicGroup
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateBasicGroup) UpdateType() string {
 	return TypeUpdateBasicGroup
 }
 
-// Some data of a supergroup or a channel has changed. This update is guaranteed to come before the supergroup identifier is returned to the client
+// UpdateSupergroup some data of a supergroup or a channel has changed. This update is guaranteed to come before the supergroup identifier is returned to the client
 type UpdateSupergroup struct {
 	meta
 	// New data about the supergroup
 	Supergroup *Supergroup `json:"supergroup"`
 }
 
+// MarshalJSON returns UpdateSupergroup object as the JSON encoding of UpdateSupergroup.
 func (entity *UpdateSupergroup) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19178,25 +21395,29 @@ func (entity *UpdateSupergroup) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateSupergroup) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateSupergroup) GetType() string {
 	return TypeUpdateSupergroup
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateSupergroup) UpdateType() string {
 	return TypeUpdateSupergroup
 }
 
-// Some data of a secret chat has changed. This update is guaranteed to come before the secret chat identifier is returned to the client
+// UpdateSecretChat some data of a secret chat has changed. This update is guaranteed to come before the secret chat identifier is returned to the client
 type UpdateSecretChat struct {
 	meta
 	// New data about the secret chat
 	SecretChat *SecretChat `json:"secret_chat"`
 }
 
+// MarshalJSON returns UpdateSecretChat object as the JSON encoding of UpdateSecretChat.
 func (entity *UpdateSecretChat) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19205,27 +21426,31 @@ func (entity *UpdateSecretChat) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateSecretChat) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateSecretChat) GetType() string {
 	return TypeUpdateSecretChat
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateSecretChat) UpdateType() string {
 	return TypeUpdateSecretChat
 }
 
-// Some data from userFullInfo has been changed
+// UpdateUserFullInfo some data from userFullInfo has been changed
 type UpdateUserFullInfo struct {
 	meta
 	// User identifier
-	UserId int32 `json:"user_id"`
+	UserID int32 `json:"user_id"`
 	// New full information about the user
 	UserFullInfo *UserFullInfo `json:"user_full_info"`
 }
 
+// MarshalJSON returns UpdateUserFullInfo object as the JSON encoding of UpdateUserFullInfo.
 func (entity *UpdateUserFullInfo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19234,27 +21459,31 @@ func (entity *UpdateUserFullInfo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateUserFullInfo) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateUserFullInfo) GetType() string {
 	return TypeUpdateUserFullInfo
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateUserFullInfo) UpdateType() string {
 	return TypeUpdateUserFullInfo
 }
 
-// Some data from basicGroupFullInfo has been changed
+// UpdateBasicGroupFullInfo some data from basicGroupFullInfo has been changed
 type UpdateBasicGroupFullInfo struct {
 	meta
 	// Identifier of a basic group
-	BasicGroupId int32 `json:"basic_group_id"`
+	BasicGroupID int32 `json:"basic_group_id"`
 	// New full information about the group
 	BasicGroupFullInfo *BasicGroupFullInfo `json:"basic_group_full_info"`
 }
 
+// MarshalJSON returns UpdateBasicGroupFullInfo object as the JSON encoding of UpdateBasicGroupFullInfo.
 func (entity *UpdateBasicGroupFullInfo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19263,27 +21492,31 @@ func (entity *UpdateBasicGroupFullInfo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateBasicGroupFullInfo) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateBasicGroupFullInfo) GetType() string {
 	return TypeUpdateBasicGroupFullInfo
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateBasicGroupFullInfo) UpdateType() string {
 	return TypeUpdateBasicGroupFullInfo
 }
 
-// Some data from supergroupFullInfo has been changed
+// UpdateSupergroupFullInfo some data from supergroupFullInfo has been changed
 type UpdateSupergroupFullInfo struct {
 	meta
 	// Identifier of the supergroup or channel
-	SupergroupId int32 `json:"supergroup_id"`
+	SupergroupID int32 `json:"supergroup_id"`
 	// New full information about the supergroup
 	SupergroupFullInfo *SupergroupFullInfo `json:"supergroup_full_info"`
 }
 
+// MarshalJSON returns UpdateSupergroupFullInfo object as the JSON encoding of UpdateSupergroupFullInfo.
 func (entity *UpdateSupergroupFullInfo) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19292,19 +21525,22 @@ func (entity *UpdateSupergroupFullInfo) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateSupergroupFullInfo) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateSupergroupFullInfo) GetType() string {
 	return TypeUpdateSupergroupFullInfo
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateSupergroupFullInfo) UpdateType() string {
 	return TypeUpdateSupergroupFullInfo
 }
 
-// Service notification from the server. Upon receiving this the client must show a popup with the content of the notification
+// UpdateServiceNotification service notification from the server. Upon receiving this the client must show a popup with the content of the notification
 type UpdateServiceNotification struct {
 	meta
 	// Notification type. If type begins with "AUTH_KEY_DROP_", then two buttons "Cancel" and "Log out" should be shown under notification; if user presses the second, all local data should be destroyed using Destroy method
@@ -19313,6 +21549,7 @@ type UpdateServiceNotification struct {
 	Content MessageContent `json:"content"`
 }
 
+// MarshalJSON returns UpdateServiceNotification object as the JSON encoding of UpdateServiceNotification.
 func (entity *UpdateServiceNotification) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19321,19 +21558,23 @@ func (entity *UpdateServiceNotification) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateServiceNotification) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateServiceNotification) GetType() string {
 	return TypeUpdateServiceNotification
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateServiceNotification) UpdateType() string {
 	return TypeUpdateServiceNotification
 }
 
-func (updateServiceNotification *UpdateServiceNotification) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets UpdateServiceNotification object to a copy of JSON encoding of UpdateServiceNotification.
+func (entity *UpdateServiceNotification) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Type    string          `json:"type"`
 		Content json.RawMessage `json:"content"`
@@ -19344,21 +21585,22 @@ func (updateServiceNotification *UpdateServiceNotification) UnmarshalJSON(data [
 		return err
 	}
 
-	updateServiceNotification.Type = tmp.Type
+	entity.Type = tmp.Type
 
 	fieldContent, _ := UnmarshalMessageContent(tmp.Content)
-	updateServiceNotification.Content = fieldContent
+	entity.Content = fieldContent
 
 	return nil
 }
 
-// Information about a file was updated
+// UpdateFile information about a file was updated
 type UpdateFile struct {
 	meta
 	// New data about the file
 	File *File `json:"file"`
 }
 
+// MarshalJSON returns UpdateFile object as the JSON encoding of UpdateFile.
 func (entity *UpdateFile) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19367,23 +21609,26 @@ func (entity *UpdateFile) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateFile) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateFile) GetType() string {
 	return TypeUpdateFile
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateFile) UpdateType() string {
 	return TypeUpdateFile
 }
 
-// The file generation process needs to be started by the client
+// UpdateFileGenerationStart the file generation process needs to be started by the client
 type UpdateFileGenerationStart struct {
 	meta
 	// Unique identifier for the generation process
-	GenerationId JsonInt64 `json:"generation_id"`
+	GenerationID Int64JSON `json:"generation_id"`
 	// The path to a file from which a new file is generated; may be empty
 	OriginalPath string `json:"original_path"`
 	// The path to a file that should be created and where the new file should be generated
@@ -19392,6 +21637,7 @@ type UpdateFileGenerationStart struct {
 	Conversion string `json:"conversion"`
 }
 
+// MarshalJSON returns UpdateFileGenerationStart object as the JSON encoding of UpdateFileGenerationStart.
 func (entity *UpdateFileGenerationStart) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19400,25 +21646,29 @@ func (entity *UpdateFileGenerationStart) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateFileGenerationStart) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateFileGenerationStart) GetType() string {
 	return TypeUpdateFileGenerationStart
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateFileGenerationStart) UpdateType() string {
 	return TypeUpdateFileGenerationStart
 }
 
-// File generation is no longer needed
+// UpdateFileGenerationStop file generation is no longer needed
 type UpdateFileGenerationStop struct {
 	meta
 	// Unique identifier for the generation process
-	GenerationId JsonInt64 `json:"generation_id"`
+	GenerationID Int64JSON `json:"generation_id"`
 }
 
+// MarshalJSON returns UpdateFileGenerationStop object as the JSON encoding of UpdateFileGenerationStop.
 func (entity *UpdateFileGenerationStop) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19427,25 +21677,29 @@ func (entity *UpdateFileGenerationStop) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateFileGenerationStop) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateFileGenerationStop) GetType() string {
 	return TypeUpdateFileGenerationStop
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateFileGenerationStop) UpdateType() string {
 	return TypeUpdateFileGenerationStop
 }
 
-// New call was created or information about a call was updated
+// UpdateCall new call was created or information about a call was updated
 type UpdateCall struct {
 	meta
 	// New data about a call
 	Call *Call `json:"call"`
 }
 
+// MarshalJSON returns UpdateCall object as the JSON encoding of UpdateCall.
 func (entity *UpdateCall) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19454,19 +21708,22 @@ func (entity *UpdateCall) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateCall) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateCall) GetType() string {
 	return TypeUpdateCall
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateCall) UpdateType() string {
 	return TypeUpdateCall
 }
 
-// Some privacy setting rules have been changed
+// UpdateUserPrivacySettingRules some privacy setting rules have been changed
 type UpdateUserPrivacySettingRules struct {
 	meta
 	// The privacy setting
@@ -19475,6 +21732,7 @@ type UpdateUserPrivacySettingRules struct {
 	Rules *UserPrivacySettingRules `json:"rules"`
 }
 
+// MarshalJSON returns UpdateUserPrivacySettingRules object as the JSON encoding of UpdateUserPrivacySettingRules.
 func (entity *UpdateUserPrivacySettingRules) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19483,19 +21741,23 @@ func (entity *UpdateUserPrivacySettingRules) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateUserPrivacySettingRules) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateUserPrivacySettingRules) GetType() string {
 	return TypeUpdateUserPrivacySettingRules
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateUserPrivacySettingRules) UpdateType() string {
 	return TypeUpdateUserPrivacySettingRules
 }
 
-func (updateUserPrivacySettingRules *UpdateUserPrivacySettingRules) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets UpdateUserPrivacySettingRules object to a copy of JSON encoding of UpdateUserPrivacySettingRules.
+func (entity *UpdateUserPrivacySettingRules) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Setting json.RawMessage          `json:"setting"`
 		Rules   *UserPrivacySettingRules `json:"rules"`
@@ -19506,15 +21768,15 @@ func (updateUserPrivacySettingRules *UpdateUserPrivacySettingRules) UnmarshalJSO
 		return err
 	}
 
-	updateUserPrivacySettingRules.Rules = tmp.Rules
+	entity.Rules = tmp.Rules
 
 	fieldSetting, _ := UnmarshalUserPrivacySetting(tmp.Setting)
-	updateUserPrivacySettingRules.Setting = fieldSetting
+	entity.Setting = fieldSetting
 
 	return nil
 }
 
-// Number of unread messages has changed. This update is sent only if a message database is used
+// UpdateUnreadMessageCount number of unread messages has changed. This update is sent only if a message database is used
 type UpdateUnreadMessageCount struct {
 	meta
 	// Total number of unread messages
@@ -19523,6 +21785,7 @@ type UpdateUnreadMessageCount struct {
 	UnreadUnmutedCount int32 `json:"unread_unmuted_count"`
 }
 
+// MarshalJSON returns UpdateUnreadMessageCount object as the JSON encoding of UpdateUnreadMessageCount.
 func (entity *UpdateUnreadMessageCount) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19531,19 +21794,22 @@ func (entity *UpdateUnreadMessageCount) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateUnreadMessageCount) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateUnreadMessageCount) GetType() string {
 	return TypeUpdateUnreadMessageCount
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateUnreadMessageCount) UpdateType() string {
 	return TypeUpdateUnreadMessageCount
 }
 
-// Number of unread chats, i.e. with unread messages or marked as unread, has changed. This update is sent only if a message database is used
+// UpdateUnreadChatCount number of unread chats, i.e. with unread messages or marked as unread, has changed. This update is sent only if a message database is used
 type UpdateUnreadChatCount struct {
 	meta
 	// Total number of unread chats
@@ -19556,6 +21822,7 @@ type UpdateUnreadChatCount struct {
 	MarkedAsUnreadUnmutedCount int32 `json:"marked_as_unread_unmuted_count"`
 }
 
+// MarshalJSON returns UpdateUnreadChatCount object as the JSON encoding of UpdateUnreadChatCount.
 func (entity *UpdateUnreadChatCount) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19564,19 +21831,22 @@ func (entity *UpdateUnreadChatCount) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateUnreadChatCount) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateUnreadChatCount) GetType() string {
 	return TypeUpdateUnreadChatCount
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateUnreadChatCount) UpdateType() string {
 	return TypeUpdateUnreadChatCount
 }
 
-// An option changed its value
+// UpdateOption an option changed its value
 type UpdateOption struct {
 	meta
 	// The option name
@@ -19585,6 +21855,7 @@ type UpdateOption struct {
 	Value OptionValue `json:"value"`
 }
 
+// MarshalJSON returns UpdateOption object as the JSON encoding of UpdateOption.
 func (entity *UpdateOption) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19593,19 +21864,23 @@ func (entity *UpdateOption) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateOption) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateOption) GetType() string {
 	return TypeUpdateOption
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateOption) UpdateType() string {
 	return TypeUpdateOption
 }
 
-func (updateOption *UpdateOption) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets UpdateOption object to a copy of JSON encoding of UpdateOption.
+func (entity *UpdateOption) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		Name  string          `json:"name"`
 		Value json.RawMessage `json:"value"`
@@ -19616,23 +21891,24 @@ func (updateOption *UpdateOption) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	updateOption.Name = tmp.Name
+	entity.Name = tmp.Name
 
 	fieldValue, _ := UnmarshalOptionValue(tmp.Value)
-	updateOption.Value = fieldValue
+	entity.Value = fieldValue
 
 	return nil
 }
 
-// The list of installed sticker sets was updated
+// UpdateInstalledStickerSets the list of installed sticker sets was updated
 type UpdateInstalledStickerSets struct {
 	meta
 	// True, if the list of installed mask sticker sets was updated
 	IsMasks bool `json:"is_masks"`
 	// The new list of installed ordinary sticker sets
-	StickerSetIds []JsonInt64 `json:"sticker_set_ids"`
+	StickerSetIDs []Int64JSON `json:"sticker_set_ids"`
 }
 
+// MarshalJSON returns UpdateInstalledStickerSets object as the JSON encoding of UpdateInstalledStickerSets.
 func (entity *UpdateInstalledStickerSets) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19641,25 +21917,29 @@ func (entity *UpdateInstalledStickerSets) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateInstalledStickerSets) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateInstalledStickerSets) GetType() string {
 	return TypeUpdateInstalledStickerSets
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateInstalledStickerSets) UpdateType() string {
 	return TypeUpdateInstalledStickerSets
 }
 
-// The list of trending sticker sets was updated or some of them were viewed
+// UpdateTrendingStickerSets the list of trending sticker sets was updated or some of them were viewed
 type UpdateTrendingStickerSets struct {
 	meta
 	// The new list of trending sticker sets
 	StickerSets *StickerSets `json:"sticker_sets"`
 }
 
+// MarshalJSON returns UpdateTrendingStickerSets object as the JSON encoding of UpdateTrendingStickerSets.
 func (entity *UpdateTrendingStickerSets) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19668,27 +21948,31 @@ func (entity *UpdateTrendingStickerSets) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateTrendingStickerSets) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateTrendingStickerSets) GetType() string {
 	return TypeUpdateTrendingStickerSets
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateTrendingStickerSets) UpdateType() string {
 	return TypeUpdateTrendingStickerSets
 }
 
-// The list of recently used stickers was updated
+// UpdateRecentStickers the list of recently used stickers was updated
 type UpdateRecentStickers struct {
 	meta
 	// True, if the list of stickers attached to photo or video files was updated, otherwise the list of sent stickers is updated
 	IsAttached bool `json:"is_attached"`
 	// The new list of file identifiers of recently used stickers
-	StickerIds []int32 `json:"sticker_ids"`
+	StickerIDs []int32 `json:"sticker_ids"`
 }
 
+// MarshalJSON returns UpdateRecentStickers object as the JSON encoding of UpdateRecentStickers.
 func (entity *UpdateRecentStickers) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19697,25 +21981,29 @@ func (entity *UpdateRecentStickers) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateRecentStickers) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateRecentStickers) GetType() string {
 	return TypeUpdateRecentStickers
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateRecentStickers) UpdateType() string {
 	return TypeUpdateRecentStickers
 }
 
-// The list of favorite stickers was updated
+// UpdateFavoriteStickers the list of favorite stickers was updated
 type UpdateFavoriteStickers struct {
 	meta
 	// The new list of file identifiers of favorite stickers
-	StickerIds []int32 `json:"sticker_ids"`
+	StickerIDs []int32 `json:"sticker_ids"`
 }
 
+// MarshalJSON returns UpdateFavoriteStickers object as the JSON encoding of UpdateFavoriteStickers.
 func (entity *UpdateFavoriteStickers) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19724,25 +22012,29 @@ func (entity *UpdateFavoriteStickers) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateFavoriteStickers) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateFavoriteStickers) GetType() string {
 	return TypeUpdateFavoriteStickers
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateFavoriteStickers) UpdateType() string {
 	return TypeUpdateFavoriteStickers
 }
 
-// The list of saved animations was updated
+// UpdateSavedAnimations the list of saved animations was updated
 type UpdateSavedAnimations struct {
 	meta
 	// The new list of file identifiers of saved animations
-	AnimationIds []int32 `json:"animation_ids"`
+	AnimationIDs []int32 `json:"animation_ids"`
 }
 
+// MarshalJSON returns UpdateSavedAnimations object as the JSON encoding of UpdateSavedAnimations.
 func (entity *UpdateSavedAnimations) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19751,29 +22043,33 @@ func (entity *UpdateSavedAnimations) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateSavedAnimations) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateSavedAnimations) GetType() string {
 	return TypeUpdateSavedAnimations
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateSavedAnimations) UpdateType() string {
 	return TypeUpdateSavedAnimations
 }
 
-// Some language pack strings have been updated
+// UpdateLanguagePackStrings some language pack strings have been updated
 type UpdateLanguagePackStrings struct {
 	meta
 	// Localization target to which the language pack belongs
 	LocalizationTarget string `json:"localization_target"`
 	// Identifier of the updated language pack
-	LanguagePackId string `json:"language_pack_id"`
+	LanguagePackID string `json:"language_pack_id"`
 	// List of changed language pack strings
 	Strings []*LanguagePackString `json:"strings"`
 }
 
+// MarshalJSON returns UpdateLanguagePackStrings object as the JSON encoding of UpdateLanguagePackStrings.
 func (entity *UpdateLanguagePackStrings) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19782,25 +22078,29 @@ func (entity *UpdateLanguagePackStrings) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateLanguagePackStrings) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateLanguagePackStrings) GetType() string {
 	return TypeUpdateLanguagePackStrings
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateLanguagePackStrings) UpdateType() string {
 	return TypeUpdateLanguagePackStrings
 }
 
-// The connection state has changed
+// UpdateConnectionState the connection state has changed
 type UpdateConnectionState struct {
 	meta
 	// The new connection state
 	State ConnectionState `json:"state"`
 }
 
+// MarshalJSON returns UpdateConnectionState object as the JSON encoding of UpdateConnectionState.
 func (entity *UpdateConnectionState) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19809,19 +22109,23 @@ func (entity *UpdateConnectionState) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateConnectionState) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateConnectionState) GetType() string {
 	return TypeUpdateConnectionState
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateConnectionState) UpdateType() string {
 	return TypeUpdateConnectionState
 }
 
-func (updateConnectionState *UpdateConnectionState) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets UpdateConnectionState object to a copy of JSON encoding of UpdateConnectionState.
+func (entity *UpdateConnectionState) UnmarshalJSON(data []byte) error {
 	var tmp struct {
 		State json.RawMessage `json:"state"`
 	}
@@ -19832,20 +22136,21 @@ func (updateConnectionState *UpdateConnectionState) UnmarshalJSON(data []byte) e
 	}
 
 	fieldState, _ := UnmarshalConnectionState(tmp.State)
-	updateConnectionState.State = fieldState
+	entity.State = fieldState
 
 	return nil
 }
 
-// New terms of service must be accepted by the user. If the terms of service are declined, then the deleteAccount method should be called with the reason "Decline ToS update"
+// UpdateTermsOfService new terms of service must be accepted by the user. If the terms of service are declined, then the deleteAccount method should be called with the reason "Decline ToS update"
 type UpdateTermsOfService struct {
 	meta
 	// Identifier of the terms of service
-	TermsOfServiceId string `json:"terms_of_service_id"`
+	TermsOfServiceID string `json:"terms_of_service_id"`
 	// The new terms of service
 	TermsOfService *TermsOfService `json:"terms_of_service"`
 }
 
+// MarshalJSON returns UpdateTermsOfService object as the JSON encoding of UpdateTermsOfService.
 func (entity *UpdateTermsOfService) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19854,25 +22159,28 @@ func (entity *UpdateTermsOfService) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateTermsOfService) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateTermsOfService) GetType() string {
 	return TypeUpdateTermsOfService
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateTermsOfService) UpdateType() string {
 	return TypeUpdateTermsOfService
 }
 
-// A new incoming inline query; for bots only
+// UpdateNewInlineQuery a new incoming inline query; for bots only
 type UpdateNewInlineQuery struct {
 	meta
 	// Unique query identifier
-	Id JsonInt64 `json:"id"`
+	ID Int64JSON `json:"id"`
 	// Identifier of the user who sent the query
-	SenderUserId int32 `json:"sender_user_id"`
+	SenderUserID int32 `json:"sender_user_id"`
 	// User location, provided by the client; may be null
 	UserLocation *Location `json:"user_location"`
 	// Text of the query
@@ -19881,6 +22189,7 @@ type UpdateNewInlineQuery struct {
 	Offset string `json:"offset"`
 }
 
+// MarshalJSON returns UpdateNewInlineQuery object as the JSON encoding of UpdateNewInlineQuery.
 func (entity *UpdateNewInlineQuery) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19889,33 +22198,37 @@ func (entity *UpdateNewInlineQuery) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateNewInlineQuery) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateNewInlineQuery) GetType() string {
 	return TypeUpdateNewInlineQuery
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateNewInlineQuery) UpdateType() string {
 	return TypeUpdateNewInlineQuery
 }
 
-// The user has chosen a result of an inline query; for bots only
+// UpdateNewChosenInlineResult the user has chosen a result of an inline query; for bots only
 type UpdateNewChosenInlineResult struct {
 	meta
 	// Identifier of the user who sent the query
-	SenderUserId int32 `json:"sender_user_id"`
+	SenderUserID int32 `json:"sender_user_id"`
 	// User location, provided by the client; may be null
 	UserLocation *Location `json:"user_location"`
 	// Text of the query
 	Query string `json:"query"`
 	// Identifier of the chosen result
-	ResultId string `json:"result_id"`
+	ResultID string `json:"result_id"`
 	// Identifier of the sent inline message, if known
-	InlineMessageId string `json:"inline_message_id"`
+	InlineMessageID string `json:"inline_message_id"`
 }
 
+// MarshalJSON returns UpdateNewChosenInlineResult object as the JSON encoding of UpdateNewChosenInlineResult.
 func (entity *UpdateNewChosenInlineResult) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19924,35 +22237,39 @@ func (entity *UpdateNewChosenInlineResult) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateNewChosenInlineResult) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateNewChosenInlineResult) GetType() string {
 	return TypeUpdateNewChosenInlineResult
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateNewChosenInlineResult) UpdateType() string {
 	return TypeUpdateNewChosenInlineResult
 }
 
-// A new incoming callback query; for bots only
+// UpdateNewCallbackQuery a new incoming callback query; for bots only
 type UpdateNewCallbackQuery struct {
 	meta
 	// Unique query identifier
-	Id JsonInt64 `json:"id"`
+	ID Int64JSON `json:"id"`
 	// Identifier of the user who sent the query
-	SenderUserId int32 `json:"sender_user_id"`
+	SenderUserID int32 `json:"sender_user_id"`
 	// Identifier of the chat, in which the query was sent
-	ChatId int64 `json:"chat_id"`
+	ChatID int64 `json:"chat_id"`
 	// Identifier of the message, from which the query originated
-	MessageId int64 `json:"message_id"`
+	MessageID int64 `json:"message_id"`
 	// Identifier that uniquely corresponds to the chat to which the message was sent
-	ChatInstance JsonInt64 `json:"chat_instance"`
+	ChatInstance Int64JSON `json:"chat_instance"`
 	// Query payload
 	Payload CallbackQueryPayload `json:"payload"`
 }
 
+// MarshalJSON returns UpdateNewCallbackQuery object as the JSON encoding of UpdateNewCallbackQuery.
 func (entity *UpdateNewCallbackQuery) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -19961,25 +22278,29 @@ func (entity *UpdateNewCallbackQuery) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateNewCallbackQuery) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateNewCallbackQuery) GetType() string {
 	return TypeUpdateNewCallbackQuery
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateNewCallbackQuery) UpdateType() string {
 	return TypeUpdateNewCallbackQuery
 }
 
-func (updateNewCallbackQuery *UpdateNewCallbackQuery) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets UpdateNewCallbackQuery object to a copy of JSON encoding of UpdateNewCallbackQuery.
+func (entity *UpdateNewCallbackQuery) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id           JsonInt64       `json:"id"`
-		SenderUserId int32           `json:"sender_user_id"`
-		ChatId       int64           `json:"chat_id"`
-		MessageId    int64           `json:"message_id"`
-		ChatInstance JsonInt64       `json:"chat_instance"`
+		ID           Int64JSON       `json:"id"`
+		SenderUserID int32           `json:"sender_user_id"`
+		ChatID       int64           `json:"chat_id"`
+		MessageID    int64           `json:"message_id"`
+		ChatInstance Int64JSON       `json:"chat_instance"`
 		Payload      json.RawMessage `json:"payload"`
 	}
 
@@ -19988,33 +22309,34 @@ func (updateNewCallbackQuery *UpdateNewCallbackQuery) UnmarshalJSON(data []byte)
 		return err
 	}
 
-	updateNewCallbackQuery.Id = tmp.Id
-	updateNewCallbackQuery.SenderUserId = tmp.SenderUserId
-	updateNewCallbackQuery.ChatId = tmp.ChatId
-	updateNewCallbackQuery.MessageId = tmp.MessageId
-	updateNewCallbackQuery.ChatInstance = tmp.ChatInstance
+	entity.ID = tmp.ID
+	entity.SenderUserID = tmp.SenderUserID
+	entity.ChatID = tmp.ChatID
+	entity.MessageID = tmp.MessageID
+	entity.ChatInstance = tmp.ChatInstance
 
 	fieldPayload, _ := UnmarshalCallbackQueryPayload(tmp.Payload)
-	updateNewCallbackQuery.Payload = fieldPayload
+	entity.Payload = fieldPayload
 
 	return nil
 }
 
-// A new incoming callback query from a message sent via a bot; for bots only
+// UpdateNewInlineCallbackQuery a new incoming callback query from a message sent via a bot; for bots only
 type UpdateNewInlineCallbackQuery struct {
 	meta
 	// Unique query identifier
-	Id JsonInt64 `json:"id"`
+	ID Int64JSON `json:"id"`
 	// Identifier of the user who sent the query
-	SenderUserId int32 `json:"sender_user_id"`
+	SenderUserID int32 `json:"sender_user_id"`
 	// Identifier of the inline message, from which the query originated
-	InlineMessageId string `json:"inline_message_id"`
+	InlineMessageID string `json:"inline_message_id"`
 	// An identifier uniquely corresponding to the chat a message was sent to
-	ChatInstance JsonInt64 `json:"chat_instance"`
+	ChatInstance Int64JSON `json:"chat_instance"`
 	// Query payload
 	Payload CallbackQueryPayload `json:"payload"`
 }
 
+// MarshalJSON returns UpdateNewInlineCallbackQuery object as the JSON encoding of UpdateNewInlineCallbackQuery.
 func (entity *UpdateNewInlineCallbackQuery) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -20023,24 +22345,28 @@ func (entity *UpdateNewInlineCallbackQuery) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateNewInlineCallbackQuery) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateNewInlineCallbackQuery) GetType() string {
 	return TypeUpdateNewInlineCallbackQuery
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateNewInlineCallbackQuery) UpdateType() string {
 	return TypeUpdateNewInlineCallbackQuery
 }
 
-func (updateNewInlineCallbackQuery *UpdateNewInlineCallbackQuery) UnmarshalJSON(data []byte) error {
+// UnmarshalJSON sets UpdateNewInlineCallbackQuery object to a copy of JSON encoding of UpdateNewInlineCallbackQuery.
+func (entity *UpdateNewInlineCallbackQuery) UnmarshalJSON(data []byte) error {
 	var tmp struct {
-		Id              JsonInt64       `json:"id"`
-		SenderUserId    int32           `json:"sender_user_id"`
-		InlineMessageId string          `json:"inline_message_id"`
-		ChatInstance    JsonInt64       `json:"chat_instance"`
+		ID              Int64JSON       `json:"id"`
+		SenderUserID    int32           `json:"sender_user_id"`
+		InlineMessageID string          `json:"inline_message_id"`
+		ChatInstance    Int64JSON       `json:"chat_instance"`
 		Payload         json.RawMessage `json:"payload"`
 	}
 
@@ -20049,30 +22375,31 @@ func (updateNewInlineCallbackQuery *UpdateNewInlineCallbackQuery) UnmarshalJSON(
 		return err
 	}
 
-	updateNewInlineCallbackQuery.Id = tmp.Id
-	updateNewInlineCallbackQuery.SenderUserId = tmp.SenderUserId
-	updateNewInlineCallbackQuery.InlineMessageId = tmp.InlineMessageId
-	updateNewInlineCallbackQuery.ChatInstance = tmp.ChatInstance
+	entity.ID = tmp.ID
+	entity.SenderUserID = tmp.SenderUserID
+	entity.InlineMessageID = tmp.InlineMessageID
+	entity.ChatInstance = tmp.ChatInstance
 
 	fieldPayload, _ := UnmarshalCallbackQueryPayload(tmp.Payload)
-	updateNewInlineCallbackQuery.Payload = fieldPayload
+	entity.Payload = fieldPayload
 
 	return nil
 }
 
-// A new incoming shipping query; for bots only. Only for invoices with flexible price
+// UpdateNewShippingQuery a new incoming shipping query; for bots only. Only for invoices with flexible price
 type UpdateNewShippingQuery struct {
 	meta
 	// Unique query identifier
-	Id JsonInt64 `json:"id"`
+	ID Int64JSON `json:"id"`
 	// Identifier of the user who sent the query
-	SenderUserId int32 `json:"sender_user_id"`
+	SenderUserID int32 `json:"sender_user_id"`
 	// Invoice payload
 	InvoicePayload string `json:"invoice_payload"`
 	// User shipping address
 	ShippingAddress *Address `json:"shipping_address"`
 }
 
+// MarshalJSON returns UpdateNewShippingQuery object as the JSON encoding of UpdateNewShippingQuery.
 func (entity *UpdateNewShippingQuery) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -20081,25 +22408,28 @@ func (entity *UpdateNewShippingQuery) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateNewShippingQuery) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateNewShippingQuery) GetType() string {
 	return TypeUpdateNewShippingQuery
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateNewShippingQuery) UpdateType() string {
 	return TypeUpdateNewShippingQuery
 }
 
-// A new incoming pre-checkout query; for bots only. Contains full information about a checkout
+// UpdateNewPreCheckoutQuery a new incoming pre-checkout query; for bots only. Contains full information about a checkout
 type UpdateNewPreCheckoutQuery struct {
 	meta
 	// Unique query identifier
-	Id JsonInt64 `json:"id"`
+	ID Int64JSON `json:"id"`
 	// Identifier of the user who sent the query
-	SenderUserId int32 `json:"sender_user_id"`
+	SenderUserID int32 `json:"sender_user_id"`
 	// Currency for the product price
 	Currency string `json:"currency"`
 	// Total price for the product, in the minimal quantity of the currency
@@ -20107,11 +22437,12 @@ type UpdateNewPreCheckoutQuery struct {
 	// Invoice payload
 	InvoicePayload []byte `json:"invoice_payload"`
 	// Identifier of a shipping option chosen by the user; may be empty if not applicable
-	ShippingOptionId string `json:"shipping_option_id"`
+	ShippingOptionID string `json:"shipping_option_id"`
 	// Information about the order; may be null
 	OrderInfo *OrderInfo `json:"order_info"`
 }
 
+// MarshalJSON returns UpdateNewPreCheckoutQuery object as the JSON encoding of UpdateNewPreCheckoutQuery.
 func (entity *UpdateNewPreCheckoutQuery) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -20120,25 +22451,29 @@ func (entity *UpdateNewPreCheckoutQuery) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateNewPreCheckoutQuery) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateNewPreCheckoutQuery) GetType() string {
 	return TypeUpdateNewPreCheckoutQuery
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateNewPreCheckoutQuery) UpdateType() string {
 	return TypeUpdateNewPreCheckoutQuery
 }
 
-// A new incoming event; for bots only
+// UpdateNewCustomEvent a new incoming event; for bots only
 type UpdateNewCustomEvent struct {
 	meta
 	// A JSON-serialized event
 	Event string `json:"event"`
 }
 
+// MarshalJSON returns UpdateNewCustomEvent object as the JSON encoding of UpdateNewCustomEvent.
 func (entity *UpdateNewCustomEvent) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -20147,29 +22482,33 @@ func (entity *UpdateNewCustomEvent) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateNewCustomEvent) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateNewCustomEvent) GetType() string {
 	return TypeUpdateNewCustomEvent
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateNewCustomEvent) UpdateType() string {
 	return TypeUpdateNewCustomEvent
 }
 
-// A new incoming query; for bots only
+// UpdateNewCustomQuery a new incoming query; for bots only
 type UpdateNewCustomQuery struct {
 	meta
 	// The query identifier
-	Id JsonInt64 `json:"id"`
+	ID Int64JSON `json:"id"`
 	// JSON-serialized query data
 	Data string `json:"data"`
 	// Query timeout
 	Timeout int32 `json:"timeout"`
 }
 
+// MarshalJSON returns UpdateNewCustomQuery object as the JSON encoding of UpdateNewCustomQuery.
 func (entity *UpdateNewCustomQuery) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -20178,25 +22517,29 @@ func (entity *UpdateNewCustomQuery) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*UpdateNewCustomQuery) GetClass() string {
 	return ClassUpdate
 }
 
+// GetType returns constant class type string of the class.
 func (*UpdateNewCustomQuery) GetType() string {
 	return TypeUpdateNewCustomQuery
 }
 
+// UpdateType returns constant class type string of the class.
 func (*UpdateNewCustomQuery) UpdateType() string {
 	return TypeUpdateNewCustomQuery
 }
 
-// A simple object containing a number; for testing only
+// TestInt a simple object containing a number; for testing only
 type TestInt struct {
 	meta
 	// Number
 	Value int32 `json:"value"`
 }
 
+// MarshalJSON returns TestInt object as the JSON encoding of TestInt.
 func (entity *TestInt) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -20205,21 +22548,24 @@ func (entity *TestInt) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TestInt) GetClass() string {
 	return ClassTestInt
 }
 
+// GetType returns constant class type string of the class.
 func (*TestInt) GetType() string {
 	return TypeTestInt
 }
 
-// A simple object containing a string; for testing only
+// TestString a simple object containing a string; for testing only
 type TestString struct {
 	meta
 	// String
 	Value string `json:"value"`
 }
 
+// MarshalJSON returns TestString object as the JSON encoding of TestString.
 func (entity *TestString) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -20228,21 +22574,24 @@ func (entity *TestString) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TestString) GetClass() string {
 	return ClassTestString
 }
 
+// GetType returns constant class type string of the class.
 func (*TestString) GetType() string {
 	return TypeTestString
 }
 
-// A simple object containing a sequence of bytes; for testing only
+// TestBytes a simple object containing a sequence of bytes; for testing only
 type TestBytes struct {
 	meta
 	// Bytes
 	Value []byte `json:"value"`
 }
 
+// MarshalJSON returns TestBytes object as the JSON encoding of TestBytes.
 func (entity *TestBytes) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -20251,21 +22600,24 @@ func (entity *TestBytes) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TestBytes) GetClass() string {
 	return ClassTestBytes
 }
 
+// GetType returns constant class type string of the class.
 func (*TestBytes) GetType() string {
 	return TypeTestBytes
 }
 
-// A simple object containing a vector of numbers; for testing only
+// TestVectorInt a simple object containing a vector of numbers; for testing only
 type TestVectorInt struct {
 	meta
 	// Vector of numbers
 	Value []int32 `json:"value"`
 }
 
+// MarshalJSON returns TestVectorInt object as the JSON encoding of TestVectorInt.
 func (entity *TestVectorInt) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -20274,21 +22626,24 @@ func (entity *TestVectorInt) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TestVectorInt) GetClass() string {
 	return ClassTestVectorInt
 }
 
+// GetType returns constant class type string of the class.
 func (*TestVectorInt) GetType() string {
 	return TypeTestVectorInt
 }
 
-// A simple object containing a vector of objects that hold a number; for testing only
+// TestVectorIntObject a simple object containing a vector of objects that hold a number; for testing only
 type TestVectorIntObject struct {
 	meta
 	// Vector of objects
 	Value []*TestInt `json:"value"`
 }
 
+// MarshalJSON returns TestVectorIntObject object as the JSON encoding of TestVectorIntObject.
 func (entity *TestVectorIntObject) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -20297,21 +22652,24 @@ func (entity *TestVectorIntObject) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TestVectorIntObject) GetClass() string {
 	return ClassTestVectorIntObject
 }
 
+// GetType returns constant class type string of the class.
 func (*TestVectorIntObject) GetType() string {
 	return TypeTestVectorIntObject
 }
 
-// A simple object containing a vector of strings; for testing only
+// TestVectorString a simple object containing a vector of strings; for testing only
 type TestVectorString struct {
 	meta
 	// Vector of strings
 	Value []string `json:"value"`
 }
 
+// MarshalJSON returns TestVectorString object as the JSON encoding of TestVectorString.
 func (entity *TestVectorString) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -20320,21 +22678,24 @@ func (entity *TestVectorString) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TestVectorString) GetClass() string {
 	return ClassTestVectorString
 }
 
+// GetType returns constant class type string of the class.
 func (*TestVectorString) GetType() string {
 	return TypeTestVectorString
 }
 
-// A simple object containing a vector of objects that hold a string; for testing only
+// TestVectorStringObject a simple object containing a vector of objects that hold a string; for testing only
 type TestVectorStringObject struct {
 	meta
 	// Vector of objects
 	Value []*TestString `json:"value"`
 }
 
+// MarshalJSON returns TestVectorStringObject object as the JSON encoding of TestVectorStringObject.
 func (entity *TestVectorStringObject) MarshalJSON() ([]byte, error) {
 	entity.meta.Type = entity.GetType()
 
@@ -20343,10 +22704,12 @@ func (entity *TestVectorStringObject) MarshalJSON() ([]byte, error) {
 	return json.Marshal((*stub)(entity))
 }
 
+// GetClass returns constant class string of the class.
 func (*TestVectorStringObject) GetClass() string {
 	return ClassTestVectorStringObject
 }
 
+// GetType returns constant class type string of the class.
 func (*TestVectorStringObject) GetType() string {
 	return TypeTestVectorStringObject
 }

@@ -4,9 +4,10 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/zelenin/go-tdlib/tlparser"
+	"github.com/u-robot/go-tdlib/tlparser"
 )
 
+// GenerateFunctions generates source code from the Telegram API scheme.
 func GenerateFunctions(schema *tlparser.Schema, packageName string) []byte {
 	buf := bytes.NewBufferString("")
 
@@ -19,62 +20,64 @@ func GenerateFunctions(schema *tlparser.Schema, packageName string) []byte {
 	buf.WriteString("\n")
 
 	for _, function := range schema.Functions {
-		tdlibFunction := TdlibFunction(function.Name, schema)
-		tdlibFunctionReturn := TdlibFunctionReturn(function.Class, schema)
+		tdlibFunction := NewTdlibFunction(function.Name, schema)
+		tdlibFunctionReturn := NewTdlibFunctionReturn(function.Class, schema)
 
 		if len(function.Properties) > 0 {
-			buf.WriteString("\n")
+			buf.WriteString(fmt.Sprintf("// %sRequest contains request data for function %s\n", tdlibFunction.ToGoName(), tdlibFunction.ToGoName()))
 			buf.WriteString(fmt.Sprintf("type %sRequest struct { \n", tdlibFunction.ToGoName()))
 			for _, property := range function.Properties {
-				tdlibTypeProperty := TdlibTypeProperty(property.Name, property.Type, schema)
+				tdlibTypeProperty := NewTdlibTypeProperty(property.Name, property.Type, schema)
 
-				buf.WriteString(fmt.Sprintf("    // %s\n", property.Description))
+				buf.WriteString(fmt.Sprintf("    // %s %s\n", tdlibTypeProperty.ToGoName(), firstLower(property.Description)))
 				buf.WriteString(fmt.Sprintf("    %s %s `json:\"%s\"`\n", tdlibTypeProperty.ToGoName(), tdlibTypeProperty.ToGoType(), property.Name))
 			}
 			buf.WriteString("}\n")
 		}
 
-		buf.WriteString("\n")
-		buf.WriteString("// " + function.Description)
-		buf.WriteString("\n")
+		buf.WriteString(fmt.Sprintf("\n// %s %s\n", tdlibFunction.ToGoName(), firstLower(function.Description)))
 
 		requestArgument := ""
 		if len(function.Properties) > 0 {
-			requestArgument = fmt.Sprintf("req *%sRequest", tdlibFunction.ToGoName())
+			requestArgument = fmt.Sprintf("request *%sRequest", tdlibFunction.ToGoName())
 		}
 
 		buf.WriteString(fmt.Sprintf("func (client *Client) %s(%s) (%s, error) {\n", tdlibFunction.ToGoName(), requestArgument, tdlibFunctionReturn.ToGoReturn()))
 
 		sendMethod := "Send"
 		if function.IsSynchronous {
-			sendMethod = "jsonClient.Execute"
+			sendMethod = "tdClient.Execute"
 		}
 
 		if len(function.Properties) > 0 {
-			buf.WriteString(fmt.Sprintf(`    result, err := client.%s(Request{
+			buf.WriteString(fmt.Sprintf(`    // Unlock receive function at the end of this function to mark received event as processed
+	defer client.Unlock("%s")
+    result, err := client.%s(Request{
         meta: meta{
             Type: "%s",
         },
         Data: map[string]interface{}{
-`, sendMethod, function.Name))
+`, tdlibFunction.ToGoName(), sendMethod, function.Name))
 
 			for _, property := range function.Properties {
-				tdlibTypeProperty := TdlibTypeProperty(property.Name, property.Type, schema)
+				tdlibTypeProperty := NewTdlibTypeProperty(property.Name, property.Type, schema)
 
-				buf.WriteString(fmt.Sprintf("            \"%s\": req.%s,\n", property.Name, tdlibTypeProperty.ToGoName()))
+				buf.WriteString(fmt.Sprintf("            \"%s\": request.%s,\n", property.Name, tdlibTypeProperty.ToGoName()))
 			}
 
 			buf.WriteString(`        },
     })
 `)
 		} else {
-			buf.WriteString(fmt.Sprintf(`    result, err := client.%s(Request{
+			buf.WriteString(fmt.Sprintf(`    // Unlock receive function at the end of this function to mark received event as processed
+	defer client.Unlock("%s")
+    result, err := client.%s(Request{
         meta: meta{
             Type: "%s",
         },
         Data: map[string]interface{}{},
     })
-`, sendMethod, function.Name))
+`, tdlibFunction.ToGoName(), sendMethod, function.Name))
 		}
 
 		buf.WriteString(`    if err != nil {

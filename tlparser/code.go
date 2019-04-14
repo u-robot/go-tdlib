@@ -7,6 +7,7 @@ import (
 	"strings"
 )
 
+// ParseCode parses schema.
 func ParseCode(reader io.Reader, schema *Schema) error {
 	var prevLine string
 	var curLine string
@@ -49,22 +50,22 @@ func ParseCode(reader io.Reader, schema *Schema) error {
 
 	var ok bool
 
-	for index, _ := range schema.Functions {
+	for index := range schema.Functions {
 		hasType := false
 		_, ok = userMethods[schema.Functions[index].Name]
 		if ok {
-			schema.Functions[index].Type = FUNCTION_TYPE_USER
+			schema.Functions[index].Type = FunctionTypeUser
 			hasType = true
 		}
 
 		_, ok = botMethods[schema.Functions[index].Name]
 		if ok {
-			schema.Functions[index].Type = FUNCTION_TYPE_BOT
+			schema.Functions[index].Type = FunctionTypeBot
 			hasType = true
 		}
 
 		if !hasType {
-			schema.Functions[index].Type = FUNCTION_TYPE_COMMON
+			schema.Functions[index].Type = FunctionTypeCommon
 		}
 
 		ok = false

@@ -1,64 +1,75 @@
 package codegen
 
 import (
-	"github.com/zelenin/go-tdlib/tlparser"
 	"log"
 	"strings"
+
+	"github.com/u-robot/go-tdlib/tlparser"
 )
 
-type tdlibFunction struct {
+// TdlibFunction contains TDLib function info.
+type TdlibFunction struct {
 	name   string
 	schema *tlparser.Schema
 }
 
-func TdlibFunction(name string, schema *tlparser.Schema) *tdlibFunction {
-	return &tdlibFunction{
+// NewTdlibFunction returns TDLib function info.
+func NewTdlibFunction(name string, schema *tlparser.Schema) *TdlibFunction {
+	return &TdlibFunction{
 		name:   name,
 		schema: schema,
 	}
 }
 
-func (entity *tdlibFunction) ToGoName() string {
+// ToGoName returns string representation of name of TDLib function name in Go style.
+func (entity *TdlibFunction) ToGoName() string {
 	return firstUpper(entity.name)
 }
 
-type tdlibFunctionReturn struct {
+// TdlibFunctionReturn contains TDLib function return info.
+type TdlibFunctionReturn struct {
 	name   string
 	schema *tlparser.Schema
 }
 
-func TdlibFunctionReturn(name string, schema *tlparser.Schema) *tdlibFunctionReturn {
-	return &tdlibFunctionReturn{
+// NewTdlibFunctionReturn returns TDLib function return info.
+func NewTdlibFunctionReturn(name string, schema *tlparser.Schema) *TdlibFunctionReturn {
+	return &TdlibFunctionReturn{
 		name:   name,
 		schema: schema,
 	}
 }
 
-func (entity *tdlibFunctionReturn) IsType() bool {
+// IsType returns true if TDLib function return is type.
+func (entity *TdlibFunctionReturn) IsType() bool {
 	return isType(entity.name, func(entity *tlparser.Type) string {
 		return entity.Class
 	}, entity.schema)
 }
 
-func (entity *tdlibFunctionReturn) GetType() *tdlibType {
+// GetType returns info about type of TDLib function return.
+func (entity *TdlibFunctionReturn) GetType() *TdlibType {
 	return getType(entity.name, func(entity *tlparser.Type) string {
 		return entity.Class
 	}, entity.schema)
 }
 
-func (entity *tdlibFunctionReturn) IsClass() bool {
+// IsClass returns true if TDLib function return is class.
+func (entity *TdlibFunctionReturn) IsClass() bool {
 	return isClass(entity.name, func(entity *tlparser.Class) string {
 		return entity.Name
 	}, entity.schema)
 }
 
-func (entity *tdlibFunctionReturn) GetClass() *tdlibClass {
+// GetClass returns info about class of TDLib function return.
+func (entity *TdlibFunctionReturn) GetClass() *TdlibClass {
 	return getClass(entity.name, func(entity *tlparser.Class) string {
 		return entity.Name
 	}, entity.schema)
 }
 
-func (entity *tdlibFunctionReturn) ToGoReturn() string {
+// ToGoReturn returns string representation of TDLib function return in Go style.
+func (entity *TdlibFunctionReturn) ToGoReturn() string {
 	if strings.HasPrefix(entity.name, "vector<") {
 		log.Fatal("vectors are not supported")
 	}
@@ -74,7 +85,8 @@ func (entity *tdlibFunctionReturn) ToGoReturn() string {
 	return "*" + entity.GetType().ToGoType()
 }
 
-func (entity *tdlibFunctionReturn) ToGoType() string {
+// ToGoType returns string representation of TDLib function return type in Go style.
+func (entity *TdlibFunctionReturn) ToGoType() string {
 	if strings.HasPrefix(entity.name, "vector<") {
 		log.Fatal("vectors are not supported")
 	}
@@ -86,21 +98,24 @@ func (entity *tdlibFunctionReturn) ToGoType() string {
 	return entity.GetType().ToGoType()
 }
 
-type tdlibFunctionProperty struct {
+// TdlibFunctionProperty contains TDLib function property info.
+type TdlibFunctionProperty struct {
 	name         string
 	propertyType string
 	schema       *tlparser.Schema
 }
 
-func TdlibFunctionProperty(name string, propertyType string, schema *tlparser.Schema) *tdlibFunctionProperty {
-	return &tdlibFunctionProperty{
+// NewTdlibFunctionProperty returns TDLib function property info.
+func NewTdlibFunctionProperty(name string, propertyType string, schema *tlparser.Schema) *TdlibFunctionProperty {
+	return &TdlibFunctionProperty{
 		name:         name,
 		propertyType: propertyType,
 		schema:       schema,
 	}
 }
 
-func (entity *tdlibFunctionProperty) GetPrimitive() string {
+// GetPrimitive returns info about privitive type of TDLib function property.
+func (entity *TdlibFunctionProperty) GetPrimitive() string {
 	primitive := entity.propertyType
 
 	for strings.HasPrefix(primitive, "vector<") {
@@ -110,35 +125,40 @@ func (entity *tdlibFunctionProperty) GetPrimitive() string {
 	return primitive
 }
 
-func (entity *tdlibFunctionProperty) IsType() bool {
+// IsType returns true if TDLib function property is type.
+func (entity *TdlibFunctionProperty) IsType() bool {
 	primitive := entity.GetPrimitive()
 	return isType(primitive, func(entity *tlparser.Type) string {
 		return entity.Name
 	}, entity.schema)
 }
 
-func (entity *tdlibFunctionProperty) GetType() *tdlibType {
+// GetType returns info about type of TDLib function property.
+func (entity *TdlibFunctionProperty) GetType() *TdlibType {
 	primitive := entity.GetPrimitive()
 	return getType(primitive, func(entity *tlparser.Type) string {
 		return entity.Name
 	}, entity.schema)
 }
 
-func (entity *tdlibFunctionProperty) IsClass() bool {
+// IsClass returns true if TDLib function property is class.
+func (entity *TdlibFunctionProperty) IsClass() bool {
 	primitive := entity.GetPrimitive()
 	return isClass(primitive, func(entity *tlparser.Class) string {
 		return entity.Name
 	}, entity.schema)
 }
 
-func (entity *tdlibFunctionProperty) GetClass() *tdlibClass {
+// GetClass returns info about class of TDLib function property.
+func (entity *TdlibFunctionProperty) GetClass() *TdlibClass {
 	primitive := entity.GetPrimitive()
 	return getClass(primitive, func(entity *tlparser.Class) string {
 		return entity.Name
 	}, entity.schema)
 }
 
-func (entity *tdlibFunctionProperty) ToGoName() string {
+// ToGoName returns string representation of TDLib function property name in Go style.
+func (entity *TdlibFunctionProperty) ToGoName() string {
 	name := firstLower(underscoreToCamelCase(entity.name))
 	if name == "type" {
 		name += "Param"
@@ -147,13 +167,14 @@ func (entity *tdlibFunctionProperty) ToGoName() string {
 	return name
 }
 
-func (entity *tdlibFunctionProperty) ToGoType() string {
-	tdlibType := entity.propertyType
+// ToGoType returns string representation of TDLib function property type in Go style.
+func (entity *TdlibFunctionProperty) ToGoType() string {
+	TdlibType := entity.propertyType
 	goType := ""
 
-	for strings.HasPrefix(tdlibType, "vector<") {
+	for strings.HasPrefix(TdlibType, "vector<") {
 		goType = goType + "[]"
-		tdlibType = strings.TrimSuffix(strings.TrimPrefix(tdlibType, "vector<"), ">")
+		TdlibType = strings.TrimSuffix(strings.TrimPrefix(TdlibType, "vector<"), ">")
 	}
 
 	if entity.IsClass() {
@@ -167,19 +188,22 @@ func (entity *tdlibFunctionProperty) ToGoType() string {
 	return goType + "*" + entity.GetType().ToGoType()
 }
 
-type tdlibType struct {
+// TdlibType contains TDLib type info.
+type TdlibType struct {
 	name   string
 	schema *tlparser.Schema
 }
 
-func TdlibType(name string, schema *tlparser.Schema) *tdlibType {
-	return &tdlibType{
+// NewTdlibType returns TDLib type info.
+func NewTdlibType(name string, schema *tlparser.Schema) *TdlibType {
+	return &TdlibType{
 		name:   name,
 		schema: schema,
 	}
 }
 
-func (entity *tdlibType) IsInternal() bool {
+// IsInternal returns true if TDLib type is internal Go type.
+func (entity *TdlibType) IsInternal() bool {
 	switch entity.name {
 	case "double":
 		return true
@@ -212,7 +236,8 @@ func (entity *tdlibType) IsInternal() bool {
 	return false
 }
 
-func (entity *tdlibType) GetType() *tlparser.Type {
+// GetType returns info about type of TDLib type.
+func (entity *TdlibType) GetType() *tlparser.Type {
 	name := normalizeEntityName(entity.name)
 	for _, typ := range entity.schema.Types {
 		if typ.Name == name {
@@ -222,7 +247,8 @@ func (entity *tdlibType) GetType() *tlparser.Type {
 	return nil
 }
 
-func (entity *tdlibType) ToGoType() string {
+// ToGoType returns string representation of TDLib type in Go style.
+func (entity *TdlibType) ToGoType() string {
 	if strings.HasPrefix(entity.name, "vector<") {
 		log.Fatal("vectors are not supported")
 	}
@@ -241,7 +267,7 @@ func (entity *tdlibType) ToGoType() string {
 		return "int64"
 
 	case "int64":
-		return "JsonInt64"
+		return "Int64JSON"
 
 	case "bytes":
 		return "[]byte"
@@ -256,11 +282,13 @@ func (entity *tdlibType) ToGoType() string {
 	return firstUpper(entity.name)
 }
 
-func (entity *tdlibType) ToType() string {
+// ToType returns string representation of TDLib type in Go style.
+func (entity *TdlibType) ToType() string {
 	return entity.ToGoType() + "Type"
 }
 
-func (entity *tdlibType) HasClass() bool {
+// HasClass returns true if TDLib type has class.
+func (entity *TdlibType) HasClass() bool {
 	className := entity.GetType().Class
 	for _, class := range entity.schema.Classes {
 		if class.Name == className {
@@ -271,7 +299,8 @@ func (entity *tdlibType) HasClass() bool {
 	return false
 }
 
-func (entity *tdlibType) GetClass() *tlparser.Class {
+// GetClass returns info about class of TDLib type.
+func (entity *TdlibType) GetClass() *tlparser.Class {
 	className := entity.GetType().Class
 	for _, class := range entity.schema.Classes {
 		if class.Name == className {
@@ -282,10 +311,11 @@ func (entity *tdlibType) GetClass() *tlparser.Class {
 	return nil
 }
 
-func (entity *tdlibType) HasClassProperties() bool {
+// HasClassProperties returns true if TDLib type has class properties.
+func (entity *TdlibType) HasClassProperties() bool {
 	for _, prop := range entity.GetType().Properties {
-		tdlibTypeProperty := TdlibTypeProperty(prop.Name, prop.Type, entity.schema)
-		if tdlibTypeProperty.IsClass() && !tdlibTypeProperty.IsList() {
+		TdlibTypeProperty := NewTdlibTypeProperty(prop.Name, prop.Type, entity.schema)
+		if TdlibTypeProperty.IsClass() && !TdlibTypeProperty.IsList() {
 			return true
 		}
 
@@ -294,76 +324,89 @@ func (entity *tdlibType) HasClassProperties() bool {
 	return false
 }
 
-func (entity *tdlibType) IsList() bool {
+// IsList returns true if TDLib type is list.
+func (entity *TdlibType) IsList() bool {
 	return strings.HasPrefix(entity.name, "vector<")
 }
 
-func (entity *tdlibType) ToClassConst() string {
+// ToClassConst returns string representation of TDLib type class in Go style.
+func (entity *TdlibType) ToClassConst() string {
 	if entity.HasClass() {
-		return "Class" + TdlibClass(entity.GetType().Class, entity.schema).ToGoType()
+		return "Class" + NewTdlibClass(entity.GetType().Class, entity.schema).ToGoType()
 	}
 	return "Class" + entity.ToGoType()
 }
 
-func (entity *tdlibType) ToTypeConst() string {
+// ToTypeConst returns string representation of TDLib type class in Go style.
+func (entity *TdlibType) ToTypeConst() string {
 	return "Type" + entity.ToGoType()
 }
 
-type tdlibClass struct {
+// TdlibClass contains TDLib class info.
+type TdlibClass struct {
 	name   string
 	schema *tlparser.Schema
 }
 
-func TdlibClass(name string, schema *tlparser.Schema) *tdlibClass {
-	return &tdlibClass{
+// NewTdlibClass returns TDLib class info.
+func NewTdlibClass(name string, schema *tlparser.Schema) *TdlibClass {
+	return &TdlibClass{
 		name:   name,
 		schema: schema,
 	}
 }
 
-func (entity *tdlibClass) ToGoType() string {
+// ToGoType returns string representation of TDLib class name in Go style.
+func (entity *TdlibClass) ToGoType() string {
 	return firstUpper(entity.name)
 }
 
-func (entity *tdlibClass) ToType() string {
+// ToType returns string representation of TDLib class name in Go style.
+func (entity *TdlibClass) ToType() string {
 	return entity.ToGoType() + "Type"
 }
 
-func (entity *tdlibClass) GetSubTypes() []*tdlibType {
-	types := []*tdlibType{}
+// GetSubTypes returns list of subtype of TDLib class.
+func (entity *TdlibClass) GetSubTypes() []*TdlibType {
+	types := []*TdlibType{}
 
 	for _, t := range entity.schema.Types {
 		if t.Class == entity.name {
-			types = append(types, TdlibType(t.Name, entity.schema))
+			types = append(types, NewTdlibType(t.Name, entity.schema))
 		}
 	}
 
 	return types
 }
 
-func (entity *tdlibClass) ToClassConst() string {
+// ToClassConst returns string representation of TDLib class in Go style.
+func (entity *TdlibClass) ToClassConst() string {
 	return "Class" + entity.ToGoType()
 }
 
-type tdlibTypeProperty struct {
+// TdlibTypeProperty contains TDLib type property info.
+type TdlibTypeProperty struct {
 	name         string
 	propertyType string
 	schema       *tlparser.Schema
 }
 
-func TdlibTypeProperty(name string, propertyType string, schema *tlparser.Schema) *tdlibTypeProperty {
-	return &tdlibTypeProperty{
+// NewTdlibTypeProperty returns TDLib type property info.
+func NewTdlibTypeProperty(name string, propertyType string, schema *tlparser.Schema) *TdlibTypeProperty {
+	return &TdlibTypeProperty{
 		name:         name,
 		propertyType: propertyType,
 		schema:       schema,
 	}
 }
 
-func (entity *tdlibTypeProperty) IsList() bool {
+// IsList returns true if TDLib type property is list.
+func (entity *TdlibTypeProperty) IsList() bool {
 	return strings.HasPrefix(entity.propertyType, "vector<")
 }
 
-func (entity *tdlibTypeProperty) GetPrimitive() string {
+// GetPrimitive returns info about privitive type of TDLib type property.
+func (entity *TdlibTypeProperty) GetPrimitive() string {
 	primitive := entity.propertyType
 
 	for strings.HasPrefix(primitive, "vector<") {
@@ -373,39 +416,45 @@ func (entity *tdlibTypeProperty) GetPrimitive() string {
 	return primitive
 }
 
-func (entity *tdlibTypeProperty) IsType() bool {
+// IsType returns true if TDLib type property is type.
+func (entity *TdlibTypeProperty) IsType() bool {
 	primitive := entity.GetPrimitive()
 	return isType(primitive, func(entity *tlparser.Type) string {
 		return entity.Name
 	}, entity.schema)
 }
 
-func (entity *tdlibTypeProperty) GetType() *tdlibType {
+// GetType returns info about type of TDLib type property.
+func (entity *TdlibTypeProperty) GetType() *TdlibType {
 	primitive := entity.GetPrimitive()
 	return getType(primitive, func(entity *tlparser.Type) string {
 		return entity.Name
 	}, entity.schema)
 }
 
-func (entity *tdlibTypeProperty) IsClass() bool {
+// IsClass returns true if TDLib type property is class.
+func (entity *TdlibTypeProperty) IsClass() bool {
 	primitive := entity.GetPrimitive()
 	return isClass(primitive, func(entity *tlparser.Class) string {
 		return entity.Name
 	}, entity.schema)
 }
 
-func (entity *tdlibTypeProperty) GetClass() *tdlibClass {
+// GetClass returns info about class of TDLib type property.
+func (entity *TdlibTypeProperty) GetClass() *TdlibClass {
 	primitive := entity.GetPrimitive()
 	return getClass(primitive, func(entity *tlparser.Class) string {
 		return entity.Name
 	}, entity.schema)
 }
 
-func (entity *tdlibTypeProperty) ToGoName() string {
+// ToGoName returns string representation of TDLib type property name in Go style.
+func (entity *TdlibTypeProperty) ToGoName() string {
 	return firstUpper(underscoreToCamelCase(entity.name))
 }
 
-func (entity *tdlibTypeProperty) ToGoFunctionPropertyName() string {
+// ToGoFunctionPropertyName returns string representation of TDLib type property name in Go style.
+func (entity *TdlibTypeProperty) ToGoFunctionPropertyName() string {
 	name := firstLower(underscoreToCamelCase(entity.name))
 	if name == "type" {
 		name += "Param"
@@ -414,13 +463,14 @@ func (entity *tdlibTypeProperty) ToGoFunctionPropertyName() string {
 	return name
 }
 
-func (entity *tdlibTypeProperty) ToGoType() string {
-	tdlibType := entity.propertyType
+// ToGoType returns string representation of TDLib type property type in Go style.
+func (entity *TdlibTypeProperty) ToGoType() string {
+	TdlibType := entity.propertyType
 	goType := ""
 
-	for strings.HasPrefix(tdlibType, "vector<") {
+	for strings.HasPrefix(TdlibType, "vector<") {
 		goType = goType + "[]"
-		tdlibType = strings.TrimSuffix(strings.TrimPrefix(tdlibType, "vector<"), ">")
+		TdlibType = strings.TrimSuffix(strings.TrimPrefix(TdlibType, "vector<"), ">")
 	}
 
 	if entity.IsClass() {
@@ -445,11 +495,11 @@ func isType(name string, field func(entity *tlparser.Type) string, schema *tlpar
 	return false
 }
 
-func getType(name string, field func(entity *tlparser.Type) string, schema *tlparser.Schema) *tdlibType {
+func getType(name string, field func(entity *tlparser.Type) string, schema *tlparser.Schema) *TdlibType {
 	name = normalizeEntityName(name)
 	for _, entity := range schema.Types {
 		if name == field(entity) {
-			return TdlibType(entity.Name, schema)
+			return NewTdlibType(entity.Name, schema)
 		}
 	}
 
@@ -467,11 +517,11 @@ func isClass(name string, field func(entity *tlparser.Class) string, schema *tlp
 	return false
 }
 
-func getClass(name string, field func(entity *tlparser.Class) string, schema *tlparser.Schema) *tdlibClass {
+func getClass(name string, field func(entity *tlparser.Class) string, schema *tlparser.Schema) *TdlibClass {
 	name = normalizeEntityName(name)
 	for _, entity := range schema.Classes {
 		if name == field(entity) {
-			return TdlibClass(entity.Name, schema)
+			return NewTdlibClass(entity.Name, schema)
 		}
 	}
 
@@ -483,5 +533,5 @@ func normalizeEntityName(name string) string {
 		name = "boolFalse"
 	}
 
-	return name
+	return tlparser.FixAAA(name)
 }

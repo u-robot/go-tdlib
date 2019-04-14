@@ -579,7 +579,7 @@
             ]
         },
         {
-            "name": "inputFileId",
+            "name": "inputFileID",
             "description": "A file defined by its unique ID",
             "class": "InputFile",
             "properties": [
@@ -2515,7 +2515,7 @@
             ]
         },
         {
-            "name": "inlineKeyboardButtonTypeUrl",
+            "name": "inlineKeyboardButtonTypeURL",
             "description": "A button that opens a specified URL",
             "class": "InlineKeyboardButtonType",
             "properties": [
@@ -2720,7 +2720,7 @@
             ]
         },
         {
-            "name": "richTextUrl",
+            "name": "richTextURL",
             "description": "A rich text URL link",
             "class": "RichText",
             "properties": [
@@ -5091,7 +5091,7 @@
             "properties": []
         },
         {
-            "name": "messageChatSetTtl",
+            "name": "messageChatSetTTL",
             "description": "The TTL (Time To Live) setting messages in a secret chat has been changed",
             "class": "MessageContent",
             "properties": [
@@ -5283,7 +5283,7 @@
             "properties": []
         },
         {
-            "name": "textEntityTypeUrl",
+            "name": "textEntityTypeURL",
             "description": "An HTTP URL",
             "class": "TextEntityType",
             "properties": []
@@ -5331,7 +5331,7 @@
             ]
         },
         {
-            "name": "textEntityTypeTextUrl",
+            "name": "textEntityTypeTextURL",
             "description": "A text description shown instead of a raw URL",
             "class": "TextEntityType",
             "properties": [
@@ -5390,7 +5390,7 @@
                 {
                     "name": "text",
                     "type": "formattedText",
-                    "description": "Formatted text to be sent; 1-GetOption(\"message_text_length_max\") characters. Only Bold, Italic, Code, Pre, PreCode and TextUrl entities are allowed to be specified manually"
+                    "description": "Formatted text to be sent; 1-GetOption(\"message_text_length_max\") characters. Only Bold, Italic, Code, Pre, PreCode and TextURL entities are allowed to be specified manually"
                 },
                 {
                     "name": "disable_web_page_preview",
@@ -5866,7 +5866,7 @@
             "properties": []
         },
         {
-            "name": "searchMessagesFilterUrl",
+            "name": "searchMessagesFilterURL",
             "description": "Returns only messages containing URLs",
             "class": "SearchMessagesFilter",
             "properties": []
@@ -6314,9 +6314,9 @@
             ]
         },
         {
-            "name": "callId",
+            "name": "callID",
             "description": "Contains the call identifier",
-            "class": "CallId",
+            "class": "CallID",
             "properties": [
                 {
                     "name": "id",
@@ -8304,9 +8304,9 @@
             "properties": []
         },
         {
-            "name": "accountTtl",
+            "name": "accountTTL",
             "description": "Contains information about the period of inactivity after which the current user's account will automatically be deleted",
-            "class": "AccountTtl",
+            "class": "AccountTTL",
             "properties": [
                 {
                     "name": "days",
@@ -8890,9 +8890,9 @@
             "properties": []
         },
         {
-            "name": "tMeUrlTypeUser",
+            "name": "tMeURLTypeUser",
             "description": "A URL linking to a user",
-            "class": "TMeUrlType",
+            "class": "TMeURLType",
             "properties": [
                 {
                     "name": "user_id",
@@ -8902,9 +8902,9 @@
             ]
         },
         {
-            "name": "tMeUrlTypeSupergroup",
+            "name": "tMeURLTypeSupergroup",
             "description": "A URL linking to a public supergroup or channel",
-            "class": "TMeUrlType",
+            "class": "TMeURLType",
             "properties": [
                 {
                     "name": "supergroup_id",
@@ -8914,9 +8914,9 @@
             ]
         },
         {
-            "name": "tMeUrlTypeChatInvite",
+            "name": "tMeURLTypeChatInvite",
             "description": "A chat invite link",
-            "class": "TMeUrlType",
+            "class": "TMeURLType",
             "properties": [
                 {
                     "name": "info",
@@ -8926,9 +8926,9 @@
             ]
         },
         {
-            "name": "tMeUrlTypeStickerSet",
+            "name": "tMeURLTypeStickerSet",
             "description": "A URL linking to a sticker set",
-            "class": "TMeUrlType",
+            "class": "TMeURLType",
             "properties": [
                 {
                     "name": "sticker_set_id",
@@ -8938,9 +8938,9 @@
             ]
         },
         {
-            "name": "tMeUrl",
+            "name": "tMeURL",
             "description": "Represents a URL linking to an internal Telegram entity",
-            "class": "TMeUrl",
+            "class": "TMeURL",
             "properties": [
                 {
                     "name": "url",
@@ -8949,19 +8949,19 @@
                 },
                 {
                     "name": "type",
-                    "type": "TMeUrlType",
+                    "type": "TMeURLType",
                     "description": "Type of the URL"
                 }
             ]
         },
         {
-            "name": "tMeUrls",
+            "name": "tMeURLs",
             "description": "Contains a list of t.me URLs",
-            "class": "TMeUrls",
+            "class": "TMeURLs",
             "properties": [
                 {
                     "name": "urls",
-                    "type": "vector\u003ctMeUrl\u003e",
+                    "type": "vector\u003ctMeURL\u003e",
                     "description": "List of URLs"
                 }
             ]
@@ -9049,7 +9049,7 @@
             ]
         },
         {
-            "name": "proxyTypeHttp",
+            "name": "proxyTypeHTTP",
             "description": "A HTTP transparent proxy server",
             "class": "ProxyType",
             "properties": [
@@ -10613,7 +10613,7 @@
             "description": "Represents the categories of chats for which a list of frequently used chats can be retrieved"
         },
         {
-            "name": "TMeUrlType",
+            "name": "TMeURLType",
             "description": "Describes the type of a URL linking to an internal Telegram entity"
         },
         {
@@ -11851,7 +11851,7 @@
             "type": 1
         },
         {
-            "name": "sendChatSetTtlMessage",
+            "name": "sendChatSetTTLMessage",
             "description": "Changes the current TTL setting (sets a new self-destruct timer) in a secret chat and sends the corresponding message",
             "class": "Message",
             "properties": [
@@ -12231,7 +12231,7 @@
         },
         {
             "name": "parseTextEntities",
-            "description": "Parses Bold, Italic, Code, Pre, PreCode and TextUrl entities contained in the text. This is an offline method. Can be called before authorization. Can be called synchronously",
+            "description": "Parses Bold, Italic, Code, Pre, PreCode and TextURL entities contained in the text. This is an offline method. Can be called before authorization. Can be called synchronously",
             "class": "FormattedText",
             "properties": [
                 {
@@ -12911,7 +12911,7 @@
                 {
                     "name": "photo",
                     "type": "InputFile",
-                    "description": "New chat photo. You can use a zero InputFileId to delete the chat photo. Files that are accessible only by HTTP URL are not acceptable"
+                    "description": "New chat photo. You can use a zero InputFileID to delete the chat photo. Files that are accessible only by HTTP URL are not acceptable"
                 }
             ],
             "is_synchronous": false,
@@ -13435,7 +13435,7 @@
         {
             "name": "createCall",
             "description": "Creates a new call",
-            "class": "CallId",
+            "class": "CallID",
             "properties": [
                 {
                     "name": "user_id",
@@ -14153,7 +14153,7 @@
                 {
                     "name": "photo",
                     "type": "InputFile",
-                    "description": "Profile photo to set. inputFileId and inputFileRemote may still be unsupported"
+                    "description": "Profile photo to set. inputFileID and inputFileRemote may still be unsupported"
                 }
             ],
             "is_synchronous": false,
@@ -14877,9 +14877,9 @@
             "type": 2
         },
         {
-            "name": "getRecentlyVisitedTMeUrls",
+            "name": "getRecentlyVisitedTMeURLs",
             "description": "Returns t.me URLs recently visited by a newly registered user",
-            "class": "TMeUrls",
+            "class": "TMeURLs",
             "properties": [
                 {
                     "name": "referrer",
@@ -14888,7 +14888,7 @@
                 }
             ],
             "is_synchronous": false,
-            "type": 2
+            "type": 1
         },
         {
             "name": "setUserPrivacySettingRules",
@@ -14957,26 +14957,26 @@
             "type": 1
         },
         {
-            "name": "setAccountTtl",
+            "name": "setAccountTTL",
             "description": "Changes the period of inactivity after which the account of the current user will automatically be deleted",
             "class": "Ok",
             "properties": [
                 {
                     "name": "ttl",
-                    "type": "accountTtl",
+                    "type": "accountTTL",
                     "description": "New account TTL"
                 }
             ],
             "is_synchronous": false,
-            "type": 2
+            "type": 1
         },
         {
-            "name": "getAccountTtl",
+            "name": "getAccountTTL",
             "description": "Returns the period of inactivity after which the account of the current user will automatically be deleted",
-            "class": "AccountTtl",
+            "class": "AccountTTL",
             "properties": [],
             "is_synchronous": false,
-            "type": 2
+            "type": 1
         },
         {
             "name": "deleteAccount",

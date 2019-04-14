@@ -7,6 +7,7 @@ import (
 	"fmt"
 )
 
+// UnmarshalAuthenticationCodeType parses the JSON-encoded data and return it as AuthenticationCodeType object.
 func UnmarshalAuthenticationCodeType(data json.RawMessage) (AuthenticationCodeType, error) {
 	var meta meta
 
@@ -33,6 +34,7 @@ func UnmarshalAuthenticationCodeType(data json.RawMessage) (AuthenticationCodeTy
 	}
 }
 
+// UnmarshalAuthorizationState parses the JSON-encoded data and return it as AuthorizationState object.
 func UnmarshalAuthorizationState(data json.RawMessage) (AuthorizationState, error) {
 	var meta meta
 
@@ -74,6 +76,7 @@ func UnmarshalAuthorizationState(data json.RawMessage) (AuthorizationState, erro
 	}
 }
 
+// UnmarshalInputFile parses the JSON-encoded data and return it as InputFile object.
 func UnmarshalInputFile(data json.RawMessage) (InputFile, error) {
 	var meta meta
 
@@ -83,8 +86,8 @@ func UnmarshalInputFile(data json.RawMessage) (InputFile, error) {
 	}
 
 	switch meta.Type {
-	case TypeInputFileId:
-		return UnmarshalInputFileId(data)
+	case TypeInputFileID:
+		return UnmarshalInputFileID(data)
 
 	case TypeInputFileRemote:
 		return UnmarshalInputFileRemote(data)
@@ -100,6 +103,7 @@ func UnmarshalInputFile(data json.RawMessage) (InputFile, error) {
 	}
 }
 
+// UnmarshalMaskPoint parses the JSON-encoded data and return it as MaskPoint object.
 func UnmarshalMaskPoint(data json.RawMessage) (MaskPoint, error) {
 	var meta meta
 
@@ -126,6 +130,7 @@ func UnmarshalMaskPoint(data json.RawMessage) (MaskPoint, error) {
 	}
 }
 
+// UnmarshalLinkState parses the JSON-encoded data and return it as LinkState object.
 func UnmarshalLinkState(data json.RawMessage) (LinkState, error) {
 	var meta meta
 
@@ -149,6 +154,7 @@ func UnmarshalLinkState(data json.RawMessage) (LinkState, error) {
 	}
 }
 
+// UnmarshalUserType parses the JSON-encoded data and return it as UserType object.
 func UnmarshalUserType(data json.RawMessage) (UserType, error) {
 	var meta meta
 
@@ -175,6 +181,7 @@ func UnmarshalUserType(data json.RawMessage) (UserType, error) {
 	}
 }
 
+// UnmarshalChatMemberStatus parses the JSON-encoded data and return it as ChatMemberStatus object.
 func UnmarshalChatMemberStatus(data json.RawMessage) (ChatMemberStatus, error) {
 	var meta meta
 
@@ -207,6 +214,7 @@ func UnmarshalChatMemberStatus(data json.RawMessage) (ChatMemberStatus, error) {
 	}
 }
 
+// UnmarshalChatMembersFilter parses the JSON-encoded data and return it as ChatMembersFilter object.
 func UnmarshalChatMembersFilter(data json.RawMessage) (ChatMembersFilter, error) {
 	var meta meta
 
@@ -236,6 +244,7 @@ func UnmarshalChatMembersFilter(data json.RawMessage) (ChatMembersFilter, error)
 	}
 }
 
+// UnmarshalSupergroupMembersFilter parses the JSON-encoded data and return it as SupergroupMembersFilter object.
 func UnmarshalSupergroupMembersFilter(data json.RawMessage) (SupergroupMembersFilter, error) {
 	var meta meta
 
@@ -268,6 +277,7 @@ func UnmarshalSupergroupMembersFilter(data json.RawMessage) (SupergroupMembersFi
 	}
 }
 
+// UnmarshalSecretChatState parses the JSON-encoded data and return it as SecretChatState object.
 func UnmarshalSecretChatState(data json.RawMessage) (SecretChatState, error) {
 	var meta meta
 
@@ -291,6 +301,7 @@ func UnmarshalSecretChatState(data json.RawMessage) (SecretChatState, error) {
 	}
 }
 
+// UnmarshalMessageForwardInfo parses the JSON-encoded data and return it as MessageForwardInfo object.
 func UnmarshalMessageForwardInfo(data json.RawMessage) (MessageForwardInfo, error) {
 	var meta meta
 
@@ -311,6 +322,7 @@ func UnmarshalMessageForwardInfo(data json.RawMessage) (MessageForwardInfo, erro
 	}
 }
 
+// UnmarshalMessageSendingState parses the JSON-encoded data and return it as MessageSendingState object.
 func UnmarshalMessageSendingState(data json.RawMessage) (MessageSendingState, error) {
 	var meta meta
 
@@ -331,6 +343,7 @@ func UnmarshalMessageSendingState(data json.RawMessage) (MessageSendingState, er
 	}
 }
 
+// UnmarshalNotificationSettingsScope parses the JSON-encoded data and return it as NotificationSettingsScope object.
 func UnmarshalNotificationSettingsScope(data json.RawMessage) (NotificationSettingsScope, error) {
 	var meta meta
 
@@ -351,6 +364,7 @@ func UnmarshalNotificationSettingsScope(data json.RawMessage) (NotificationSetti
 	}
 }
 
+// UnmarshalChatType parses the JSON-encoded data and return it as ChatType object.
 func UnmarshalChatType(data json.RawMessage) (ChatType, error) {
 	var meta meta
 
@@ -377,6 +391,7 @@ func UnmarshalChatType(data json.RawMessage) (ChatType, error) {
 	}
 }
 
+// UnmarshalKeyboardButtonType parses the JSON-encoded data and return it as KeyboardButtonType object.
 func UnmarshalKeyboardButtonType(data json.RawMessage) (KeyboardButtonType, error) {
 	var meta meta
 
@@ -400,6 +415,7 @@ func UnmarshalKeyboardButtonType(data json.RawMessage) (KeyboardButtonType, erro
 	}
 }
 
+// UnmarshalInlineKeyboardButtonType parses the JSON-encoded data and return it as InlineKeyboardButtonType object.
 func UnmarshalInlineKeyboardButtonType(data json.RawMessage) (InlineKeyboardButtonType, error) {
 	var meta meta
 
@@ -409,8 +425,8 @@ func UnmarshalInlineKeyboardButtonType(data json.RawMessage) (InlineKeyboardButt
 	}
 
 	switch meta.Type {
-	case TypeInlineKeyboardButtonTypeUrl:
-		return UnmarshalInlineKeyboardButtonTypeUrl(data)
+	case TypeInlineKeyboardButtonTypeURL:
+		return UnmarshalInlineKeyboardButtonTypeURL(data)
 
 	case TypeInlineKeyboardButtonTypeCallback:
 		return UnmarshalInlineKeyboardButtonTypeCallback(data)
@@ -429,6 +445,7 @@ func UnmarshalInlineKeyboardButtonType(data json.RawMessage) (InlineKeyboardButt
 	}
 }
 
+// UnmarshalReplyMarkup parses the JSON-encoded data and return it as ReplyMarkup object.
 func UnmarshalReplyMarkup(data json.RawMessage) (ReplyMarkup, error) {
 	var meta meta
 
@@ -455,6 +472,7 @@ func UnmarshalReplyMarkup(data json.RawMessage) (ReplyMarkup, error) {
 	}
 }
 
+// UnmarshalRichText parses the JSON-encoded data and return it as RichText object.
 func UnmarshalRichText(data json.RawMessage) (RichText, error) {
 	var meta meta
 
@@ -482,8 +500,8 @@ func UnmarshalRichText(data json.RawMessage) (RichText, error) {
 	case TypeRichTextFixed:
 		return UnmarshalRichTextFixed(data)
 
-	case TypeRichTextUrl:
-		return UnmarshalRichTextUrl(data)
+	case TypeRichTextURL:
+		return UnmarshalRichTextURL(data)
 
 	case TypeRichTextEmailAddress:
 		return UnmarshalRichTextEmailAddress(data)
@@ -496,6 +514,7 @@ func UnmarshalRichText(data json.RawMessage) (RichText, error) {
 	}
 }
 
+// UnmarshalPageBlock parses the JSON-encoded data and return it as PageBlock object.
 func UnmarshalPageBlock(data json.RawMessage) (PageBlock, error) {
 	var meta meta
 
@@ -579,6 +598,7 @@ func UnmarshalPageBlock(data json.RawMessage) (PageBlock, error) {
 	}
 }
 
+// UnmarshalInputCredentials parses the JSON-encoded data and return it as InputCredentials object.
 func UnmarshalInputCredentials(data json.RawMessage) (InputCredentials, error) {
 	var meta meta
 
@@ -605,6 +625,7 @@ func UnmarshalInputCredentials(data json.RawMessage) (InputCredentials, error) {
 	}
 }
 
+// UnmarshalPassportElementType parses the JSON-encoded data and return it as PassportElementType object.
 func UnmarshalPassportElementType(data json.RawMessage) (PassportElementType, error) {
 	var meta meta
 
@@ -658,6 +679,7 @@ func UnmarshalPassportElementType(data json.RawMessage) (PassportElementType, er
 	}
 }
 
+// UnmarshalPassportElement parses the JSON-encoded data and return it as PassportElement object.
 func UnmarshalPassportElement(data json.RawMessage) (PassportElement, error) {
 	var meta meta
 
@@ -711,6 +733,7 @@ func UnmarshalPassportElement(data json.RawMessage) (PassportElement, error) {
 	}
 }
 
+// UnmarshalInputPassportElement parses the JSON-encoded data and return it as InputPassportElement object.
 func UnmarshalInputPassportElement(data json.RawMessage) (InputPassportElement, error) {
 	var meta meta
 
@@ -764,6 +787,7 @@ func UnmarshalInputPassportElement(data json.RawMessage) (InputPassportElement, 
 	}
 }
 
+// UnmarshalPassportElementErrorSource parses the JSON-encoded data and return it as PassportElementErrorSource object.
 func UnmarshalPassportElementErrorSource(data json.RawMessage) (PassportElementErrorSource, error) {
 	var meta meta
 
@@ -805,6 +829,7 @@ func UnmarshalPassportElementErrorSource(data json.RawMessage) (PassportElementE
 	}
 }
 
+// UnmarshalInputPassportElementErrorSource parses the JSON-encoded data and return it as InputPassportElementErrorSource object.
 func UnmarshalInputPassportElementErrorSource(data json.RawMessage) (InputPassportElementErrorSource, error) {
 	var meta meta
 
@@ -846,6 +871,7 @@ func UnmarshalInputPassportElementErrorSource(data json.RawMessage) (InputPasspo
 	}
 }
 
+// UnmarshalMessageContent parses the JSON-encoded data and return it as MessageContent object.
 func UnmarshalMessageContent(data json.RawMessage) (MessageContent, error) {
 	var meta meta
 
@@ -942,8 +968,8 @@ func UnmarshalMessageContent(data json.RawMessage) (MessageContent, error) {
 	case TypeMessageScreenshotTaken:
 		return UnmarshalMessageScreenshotTaken(data)
 
-	case TypeMessageChatSetTtl:
-		return UnmarshalMessageChatSetTtl(data)
+	case TypeMessageChatSetTTL:
+		return UnmarshalMessageChatSetTTL(data)
 
 	case TypeMessageCustomServiceAction:
 		return UnmarshalMessageCustomServiceAction(data)
@@ -977,6 +1003,7 @@ func UnmarshalMessageContent(data json.RawMessage) (MessageContent, error) {
 	}
 }
 
+// UnmarshalTextEntityType parses the JSON-encoded data and return it as TextEntityType object.
 func UnmarshalTextEntityType(data json.RawMessage) (TextEntityType, error) {
 	var meta meta
 
@@ -998,8 +1025,8 @@ func UnmarshalTextEntityType(data json.RawMessage) (TextEntityType, error) {
 	case TypeTextEntityTypeBotCommand:
 		return UnmarshalTextEntityTypeBotCommand(data)
 
-	case TypeTextEntityTypeUrl:
-		return UnmarshalTextEntityTypeUrl(data)
+	case TypeTextEntityTypeURL:
+		return UnmarshalTextEntityTypeURL(data)
 
 	case TypeTextEntityTypeEmailAddress:
 		return UnmarshalTextEntityTypeEmailAddress(data)
@@ -1019,8 +1046,8 @@ func UnmarshalTextEntityType(data json.RawMessage) (TextEntityType, error) {
 	case TypeTextEntityTypePreCode:
 		return UnmarshalTextEntityTypePreCode(data)
 
-	case TypeTextEntityTypeTextUrl:
-		return UnmarshalTextEntityTypeTextUrl(data)
+	case TypeTextEntityTypeTextURL:
+		return UnmarshalTextEntityTypeTextURL(data)
 
 	case TypeTextEntityTypeMentionName:
 		return UnmarshalTextEntityTypeMentionName(data)
@@ -1033,6 +1060,7 @@ func UnmarshalTextEntityType(data json.RawMessage) (TextEntityType, error) {
 	}
 }
 
+// UnmarshalInputMessageContent parses the JSON-encoded data and return it as InputMessageContent object.
 func UnmarshalInputMessageContent(data json.RawMessage) (InputMessageContent, error) {
 	var meta meta
 
@@ -1092,6 +1120,7 @@ func UnmarshalInputMessageContent(data json.RawMessage) (InputMessageContent, er
 	}
 }
 
+// UnmarshalSearchMessagesFilter parses the JSON-encoded data and return it as SearchMessagesFilter object.
 func UnmarshalSearchMessagesFilter(data json.RawMessage) (SearchMessagesFilter, error) {
 	var meta meta
 
@@ -1125,8 +1154,8 @@ func UnmarshalSearchMessagesFilter(data json.RawMessage) (SearchMessagesFilter, 
 	case TypeSearchMessagesFilterPhotoAndVideo:
 		return UnmarshalSearchMessagesFilterPhotoAndVideo(data)
 
-	case TypeSearchMessagesFilterUrl:
-		return UnmarshalSearchMessagesFilterUrl(data)
+	case TypeSearchMessagesFilterURL:
+		return UnmarshalSearchMessagesFilterURL(data)
 
 	case TypeSearchMessagesFilterChatPhoto:
 		return UnmarshalSearchMessagesFilterChatPhoto(data)
@@ -1154,6 +1183,7 @@ func UnmarshalSearchMessagesFilter(data json.RawMessage) (SearchMessagesFilter, 
 	}
 }
 
+// UnmarshalChatAction parses the JSON-encoded data and return it as ChatAction object.
 func UnmarshalChatAction(data json.RawMessage) (ChatAction, error) {
 	var meta meta
 
@@ -1207,6 +1237,7 @@ func UnmarshalChatAction(data json.RawMessage) (ChatAction, error) {
 	}
 }
 
+// UnmarshalUserStatus parses the JSON-encoded data and return it as UserStatus object.
 func UnmarshalUserStatus(data json.RawMessage) (UserStatus, error) {
 	var meta meta
 
@@ -1239,6 +1270,7 @@ func UnmarshalUserStatus(data json.RawMessage) (UserStatus, error) {
 	}
 }
 
+// UnmarshalCallDiscardReason parses the JSON-encoded data and return it as CallDiscardReason object.
 func UnmarshalCallDiscardReason(data json.RawMessage) (CallDiscardReason, error) {
 	var meta meta
 
@@ -1268,6 +1300,7 @@ func UnmarshalCallDiscardReason(data json.RawMessage) (CallDiscardReason, error)
 	}
 }
 
+// UnmarshalCallState parses the JSON-encoded data and return it as CallState object.
 func UnmarshalCallState(data json.RawMessage) (CallState, error) {
 	var meta meta
 
@@ -1300,6 +1333,7 @@ func UnmarshalCallState(data json.RawMessage) (CallState, error) {
 	}
 }
 
+// UnmarshalInputInlineQueryResult parses the JSON-encoded data and return it as InputInlineQueryResult object.
 func UnmarshalInputInlineQueryResult(data json.RawMessage) (InputInlineQueryResult, error) {
 	var meta meta
 
@@ -1353,6 +1387,7 @@ func UnmarshalInputInlineQueryResult(data json.RawMessage) (InputInlineQueryResu
 	}
 }
 
+// UnmarshalInlineQueryResult parses the JSON-encoded data and return it as InlineQueryResult object.
 func UnmarshalInlineQueryResult(data json.RawMessage) (InlineQueryResult, error) {
 	var meta meta
 
@@ -1403,6 +1438,7 @@ func UnmarshalInlineQueryResult(data json.RawMessage) (InlineQueryResult, error)
 	}
 }
 
+// UnmarshalCallbackQueryPayload parses the JSON-encoded data and return it as CallbackQueryPayload object.
 func UnmarshalCallbackQueryPayload(data json.RawMessage) (CallbackQueryPayload, error) {
 	var meta meta
 
@@ -1423,6 +1459,7 @@ func UnmarshalCallbackQueryPayload(data json.RawMessage) (CallbackQueryPayload, 
 	}
 }
 
+// UnmarshalChatEventAction parses the JSON-encoded data and return it as ChatEventAction object.
 func UnmarshalChatEventAction(data json.RawMessage) (ChatEventAction, error) {
 	var meta meta
 
@@ -1488,6 +1525,7 @@ func UnmarshalChatEventAction(data json.RawMessage) (ChatEventAction, error) {
 	}
 }
 
+// UnmarshalLanguagePackStringValue parses the JSON-encoded data and return it as LanguagePackStringValue object.
 func UnmarshalLanguagePackStringValue(data json.RawMessage) (LanguagePackStringValue, error) {
 	var meta meta
 
@@ -1511,6 +1549,7 @@ func UnmarshalLanguagePackStringValue(data json.RawMessage) (LanguagePackStringV
 	}
 }
 
+// UnmarshalDeviceToken parses the JSON-encoded data and return it as DeviceToken object.
 func UnmarshalDeviceToken(data json.RawMessage) (DeviceToken, error) {
 	var meta meta
 
@@ -1558,6 +1597,7 @@ func UnmarshalDeviceToken(data json.RawMessage) (DeviceToken, error) {
 	}
 }
 
+// UnmarshalCheckChatUsernameResult parses the JSON-encoded data and return it as CheckChatUsernameResult object.
 func UnmarshalCheckChatUsernameResult(data json.RawMessage) (CheckChatUsernameResult, error) {
 	var meta meta
 
@@ -1587,6 +1627,7 @@ func UnmarshalCheckChatUsernameResult(data json.RawMessage) (CheckChatUsernameRe
 	}
 }
 
+// UnmarshalOptionValue parses the JSON-encoded data and return it as OptionValue object.
 func UnmarshalOptionValue(data json.RawMessage) (OptionValue, error) {
 	var meta meta
 
@@ -1613,6 +1654,7 @@ func UnmarshalOptionValue(data json.RawMessage) (OptionValue, error) {
 	}
 }
 
+// UnmarshalUserPrivacySettingRule parses the JSON-encoded data and return it as UserPrivacySettingRule object.
 func UnmarshalUserPrivacySettingRule(data json.RawMessage) (UserPrivacySettingRule, error) {
 	var meta meta
 
@@ -1645,6 +1687,7 @@ func UnmarshalUserPrivacySettingRule(data json.RawMessage) (UserPrivacySettingRu
 	}
 }
 
+// UnmarshalUserPrivacySetting parses the JSON-encoded data and return it as UserPrivacySetting object.
 func UnmarshalUserPrivacySetting(data json.RawMessage) (UserPrivacySetting, error) {
 	var meta meta
 
@@ -1668,6 +1711,7 @@ func UnmarshalUserPrivacySetting(data json.RawMessage) (UserPrivacySetting, erro
 	}
 }
 
+// UnmarshalChatReportReason parses the JSON-encoded data and return it as ChatReportReason object.
 func UnmarshalChatReportReason(data json.RawMessage) (ChatReportReason, error) {
 	var meta meta
 
@@ -1697,6 +1741,7 @@ func UnmarshalChatReportReason(data json.RawMessage) (ChatReportReason, error) {
 	}
 }
 
+// UnmarshalFileType parses the JSON-encoded data and return it as FileType object.
 func UnmarshalFileType(data json.RawMessage) (FileType, error) {
 	var meta meta
 
@@ -1759,6 +1804,7 @@ func UnmarshalFileType(data json.RawMessage) (FileType, error) {
 	}
 }
 
+// UnmarshalNetworkType parses the JSON-encoded data and return it as NetworkType object.
 func UnmarshalNetworkType(data json.RawMessage) (NetworkType, error) {
 	var meta meta
 
@@ -1788,6 +1834,7 @@ func UnmarshalNetworkType(data json.RawMessage) (NetworkType, error) {
 	}
 }
 
+// UnmarshalNetworkStatisticsEntry parses the JSON-encoded data and return it as NetworkStatisticsEntry object.
 func UnmarshalNetworkStatisticsEntry(data json.RawMessage) (NetworkStatisticsEntry, error) {
 	var meta meta
 
@@ -1808,6 +1855,7 @@ func UnmarshalNetworkStatisticsEntry(data json.RawMessage) (NetworkStatisticsEnt
 	}
 }
 
+// UnmarshalConnectionState parses the JSON-encoded data and return it as ConnectionState object.
 func UnmarshalConnectionState(data json.RawMessage) (ConnectionState, error) {
 	var meta meta
 
@@ -1837,6 +1885,7 @@ func UnmarshalConnectionState(data json.RawMessage) (ConnectionState, error) {
 	}
 }
 
+// UnmarshalTopChatCategory parses the JSON-encoded data and return it as TopChatCategory object.
 func UnmarshalTopChatCategory(data json.RawMessage) (TopChatCategory, error) {
 	var meta meta
 
@@ -1869,7 +1918,8 @@ func UnmarshalTopChatCategory(data json.RawMessage) (TopChatCategory, error) {
 	}
 }
 
-func UnmarshalTMeUrlType(data json.RawMessage) (TMeUrlType, error) {
+// UnmarshalTMeURLType parses the JSON-encoded data and return it as TMeURLType object.
+func UnmarshalTMeURLType(data json.RawMessage) (TMeURLType, error) {
 	var meta meta
 
 	err := json.Unmarshal(data, &meta)
@@ -1878,23 +1928,24 @@ func UnmarshalTMeUrlType(data json.RawMessage) (TMeUrlType, error) {
 	}
 
 	switch meta.Type {
-	case TypeTMeUrlTypeUser:
-		return UnmarshalTMeUrlTypeUser(data)
+	case TypeTMeURLTypeUser:
+		return UnmarshalTMeURLTypeUser(data)
 
-	case TypeTMeUrlTypeSupergroup:
-		return UnmarshalTMeUrlTypeSupergroup(data)
+	case TypeTMeURLTypeSupergroup:
+		return UnmarshalTMeURLTypeSupergroup(data)
 
-	case TypeTMeUrlTypeChatInvite:
-		return UnmarshalTMeUrlTypeChatInvite(data)
+	case TypeTMeURLTypeChatInvite:
+		return UnmarshalTMeURLTypeChatInvite(data)
 
-	case TypeTMeUrlTypeStickerSet:
-		return UnmarshalTMeUrlTypeStickerSet(data)
+	case TypeTMeURLTypeStickerSet:
+		return UnmarshalTMeURLTypeStickerSet(data)
 
 	default:
 		return nil, fmt.Errorf("Error unmarshaling. Unknown type: " + meta.Type)
 	}
 }
 
+// UnmarshalTextParseMode parses the JSON-encoded data and return it as TextParseMode object.
 func UnmarshalTextParseMode(data json.RawMessage) (TextParseMode, error) {
 	var meta meta
 
@@ -1915,6 +1966,7 @@ func UnmarshalTextParseMode(data json.RawMessage) (TextParseMode, error) {
 	}
 }
 
+// UnmarshalProxyType parses the JSON-encoded data and return it as ProxyType object.
 func UnmarshalProxyType(data json.RawMessage) (ProxyType, error) {
 	var meta meta
 
@@ -1927,8 +1979,8 @@ func UnmarshalProxyType(data json.RawMessage) (ProxyType, error) {
 	case TypeProxyTypeSocks5:
 		return UnmarshalProxyTypeSocks5(data)
 
-	case TypeProxyTypeHttp:
-		return UnmarshalProxyTypeHttp(data)
+	case TypeProxyTypeHTTP:
+		return UnmarshalProxyTypeHTTP(data)
 
 	case TypeProxyTypeMtproto:
 		return UnmarshalProxyTypeMtproto(data)
@@ -1938,6 +1990,7 @@ func UnmarshalProxyType(data json.RawMessage) (ProxyType, error) {
 	}
 }
 
+// UnmarshalUpdate parses the JSON-encoded data and return it as Update object.
 func UnmarshalUpdate(data json.RawMessage) (Update, error) {
 	var meta meta
 
@@ -2135,4822 +2188,5425 @@ func UnmarshalUpdate(data json.RawMessage) (Update, error) {
 	}
 }
 
+// UnmarshalError parses the JSON-encoded data and return it as Error object.
 func UnmarshalError(data json.RawMessage) (*Error, error) {
-	var resp Error
+	var response Error
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalOk parses the JSON-encoded data and return it as Ok object.
 func UnmarshalOk(data json.RawMessage) (*Ok, error) {
-	var resp Ok
+	var response Ok
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTdlibParameters parses the JSON-encoded data and return it as TdlibParameters object.
 func UnmarshalTdlibParameters(data json.RawMessage) (*TdlibParameters, error) {
-	var resp TdlibParameters
+	var response TdlibParameters
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalAuthenticationCodeTypeTelegramMessage parses the JSON-encoded data and return it as AuthenticationCodeTypeTelegramMessage object.
 func UnmarshalAuthenticationCodeTypeTelegramMessage(data json.RawMessage) (*AuthenticationCodeTypeTelegramMessage, error) {
-	var resp AuthenticationCodeTypeTelegramMessage
+	var response AuthenticationCodeTypeTelegramMessage
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalAuthenticationCodeTypeSms parses the JSON-encoded data and return it as AuthenticationCodeTypeSms object.
 func UnmarshalAuthenticationCodeTypeSms(data json.RawMessage) (*AuthenticationCodeTypeSms, error) {
-	var resp AuthenticationCodeTypeSms
+	var response AuthenticationCodeTypeSms
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalAuthenticationCodeTypeCall parses the JSON-encoded data and return it as AuthenticationCodeTypeCall object.
 func UnmarshalAuthenticationCodeTypeCall(data json.RawMessage) (*AuthenticationCodeTypeCall, error) {
-	var resp AuthenticationCodeTypeCall
+	var response AuthenticationCodeTypeCall
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalAuthenticationCodeTypeFlashCall parses the JSON-encoded data and return it as AuthenticationCodeTypeFlashCall object.
 func UnmarshalAuthenticationCodeTypeFlashCall(data json.RawMessage) (*AuthenticationCodeTypeFlashCall, error) {
-	var resp AuthenticationCodeTypeFlashCall
+	var response AuthenticationCodeTypeFlashCall
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalAuthenticationCodeInfo parses the JSON-encoded data and return it as AuthenticationCodeInfo object.
 func UnmarshalAuthenticationCodeInfo(data json.RawMessage) (*AuthenticationCodeInfo, error) {
-	var resp AuthenticationCodeInfo
+	var response AuthenticationCodeInfo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalEmailAddressAuthenticationCodeInfo parses the JSON-encoded data and return it as EmailAddressAuthenticationCodeInfo object.
 func UnmarshalEmailAddressAuthenticationCodeInfo(data json.RawMessage) (*EmailAddressAuthenticationCodeInfo, error) {
-	var resp EmailAddressAuthenticationCodeInfo
+	var response EmailAddressAuthenticationCodeInfo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTextEntity parses the JSON-encoded data and return it as TextEntity object.
 func UnmarshalTextEntity(data json.RawMessage) (*TextEntity, error) {
-	var resp TextEntity
+	var response TextEntity
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTextEntities parses the JSON-encoded data and return it as TextEntities object.
 func UnmarshalTextEntities(data json.RawMessage) (*TextEntities, error) {
-	var resp TextEntities
+	var response TextEntities
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalFormattedText parses the JSON-encoded data and return it as FormattedText object.
 func UnmarshalFormattedText(data json.RawMessage) (*FormattedText, error) {
-	var resp FormattedText
+	var response FormattedText
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTermsOfService parses the JSON-encoded data and return it as TermsOfService object.
 func UnmarshalTermsOfService(data json.RawMessage) (*TermsOfService, error) {
-	var resp TermsOfService
+	var response TermsOfService
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalAuthorizationStateWaitTdlibParameters parses the JSON-encoded data and return it as AuthorizationStateWaitTdlibParameters object.
 func UnmarshalAuthorizationStateWaitTdlibParameters(data json.RawMessage) (*AuthorizationStateWaitTdlibParameters, error) {
-	var resp AuthorizationStateWaitTdlibParameters
+	var response AuthorizationStateWaitTdlibParameters
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalAuthorizationStateWaitEncryptionKey parses the JSON-encoded data and return it as AuthorizationStateWaitEncryptionKey object.
 func UnmarshalAuthorizationStateWaitEncryptionKey(data json.RawMessage) (*AuthorizationStateWaitEncryptionKey, error) {
-	var resp AuthorizationStateWaitEncryptionKey
+	var response AuthorizationStateWaitEncryptionKey
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalAuthorizationStateWaitPhoneNumber parses the JSON-encoded data and return it as AuthorizationStateWaitPhoneNumber object.
 func UnmarshalAuthorizationStateWaitPhoneNumber(data json.RawMessage) (*AuthorizationStateWaitPhoneNumber, error) {
-	var resp AuthorizationStateWaitPhoneNumber
+	var response AuthorizationStateWaitPhoneNumber
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalAuthorizationStateWaitCode parses the JSON-encoded data and return it as AuthorizationStateWaitCode object.
 func UnmarshalAuthorizationStateWaitCode(data json.RawMessage) (*AuthorizationStateWaitCode, error) {
-	var resp AuthorizationStateWaitCode
+	var response AuthorizationStateWaitCode
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalAuthorizationStateWaitPassword parses the JSON-encoded data and return it as AuthorizationStateWaitPassword object.
 func UnmarshalAuthorizationStateWaitPassword(data json.RawMessage) (*AuthorizationStateWaitPassword, error) {
-	var resp AuthorizationStateWaitPassword
+	var response AuthorizationStateWaitPassword
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalAuthorizationStateReady parses the JSON-encoded data and return it as AuthorizationStateReady object.
 func UnmarshalAuthorizationStateReady(data json.RawMessage) (*AuthorizationStateReady, error) {
-	var resp AuthorizationStateReady
+	var response AuthorizationStateReady
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalAuthorizationStateLoggingOut parses the JSON-encoded data and return it as AuthorizationStateLoggingOut object.
 func UnmarshalAuthorizationStateLoggingOut(data json.RawMessage) (*AuthorizationStateLoggingOut, error) {
-	var resp AuthorizationStateLoggingOut
+	var response AuthorizationStateLoggingOut
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalAuthorizationStateClosing parses the JSON-encoded data and return it as AuthorizationStateClosing object.
 func UnmarshalAuthorizationStateClosing(data json.RawMessage) (*AuthorizationStateClosing, error) {
-	var resp AuthorizationStateClosing
+	var response AuthorizationStateClosing
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalAuthorizationStateClosed parses the JSON-encoded data and return it as AuthorizationStateClosed object.
 func UnmarshalAuthorizationStateClosed(data json.RawMessage) (*AuthorizationStateClosed, error) {
-	var resp AuthorizationStateClosed
+	var response AuthorizationStateClosed
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPasswordState parses the JSON-encoded data and return it as PasswordState object.
 func UnmarshalPasswordState(data json.RawMessage) (*PasswordState, error) {
-	var resp PasswordState
+	var response PasswordState
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalRecoveryEmailAddress parses the JSON-encoded data and return it as RecoveryEmailAddress object.
 func UnmarshalRecoveryEmailAddress(data json.RawMessage) (*RecoveryEmailAddress, error) {
-	var resp RecoveryEmailAddress
+	var response RecoveryEmailAddress
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTemporaryPasswordState parses the JSON-encoded data and return it as TemporaryPasswordState object.
 func UnmarshalTemporaryPasswordState(data json.RawMessage) (*TemporaryPasswordState, error) {
-	var resp TemporaryPasswordState
+	var response TemporaryPasswordState
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalLocalFile parses the JSON-encoded data and return it as LocalFile object.
 func UnmarshalLocalFile(data json.RawMessage) (*LocalFile, error) {
-	var resp LocalFile
+	var response LocalFile
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalRemoteFile parses the JSON-encoded data and return it as RemoteFile object.
 func UnmarshalRemoteFile(data json.RawMessage) (*RemoteFile, error) {
-	var resp RemoteFile
+	var response RemoteFile
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalFile parses the JSON-encoded data and return it as File object.
 func UnmarshalFile(data json.RawMessage) (*File, error) {
-	var resp File
+	var response File
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
-func UnmarshalInputFileId(data json.RawMessage) (*InputFileId, error) {
-	var resp InputFileId
+// UnmarshalInputFileID parses the JSON-encoded data and return it as InputFileID object.
+func UnmarshalInputFileID(data json.RawMessage) (*InputFileID, error) {
+	var response InputFileID
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputFileRemote parses the JSON-encoded data and return it as InputFileRemote object.
 func UnmarshalInputFileRemote(data json.RawMessage) (*InputFileRemote, error) {
-	var resp InputFileRemote
+	var response InputFileRemote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputFileLocal parses the JSON-encoded data and return it as InputFileLocal object.
 func UnmarshalInputFileLocal(data json.RawMessage) (*InputFileLocal, error) {
-	var resp InputFileLocal
+	var response InputFileLocal
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputFileGenerated parses the JSON-encoded data and return it as InputFileGenerated object.
 func UnmarshalInputFileGenerated(data json.RawMessage) (*InputFileGenerated, error) {
-	var resp InputFileGenerated
+	var response InputFileGenerated
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPhotoSize parses the JSON-encoded data and return it as PhotoSize object.
 func UnmarshalPhotoSize(data json.RawMessage) (*PhotoSize, error) {
-	var resp PhotoSize
+	var response PhotoSize
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMaskPointForehead parses the JSON-encoded data and return it as MaskPointForehead object.
 func UnmarshalMaskPointForehead(data json.RawMessage) (*MaskPointForehead, error) {
-	var resp MaskPointForehead
+	var response MaskPointForehead
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMaskPointEyes parses the JSON-encoded data and return it as MaskPointEyes object.
 func UnmarshalMaskPointEyes(data json.RawMessage) (*MaskPointEyes, error) {
-	var resp MaskPointEyes
+	var response MaskPointEyes
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMaskPointMouth parses the JSON-encoded data and return it as MaskPointMouth object.
 func UnmarshalMaskPointMouth(data json.RawMessage) (*MaskPointMouth, error) {
-	var resp MaskPointMouth
+	var response MaskPointMouth
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMaskPointChin parses the JSON-encoded data and return it as MaskPointChin object.
 func UnmarshalMaskPointChin(data json.RawMessage) (*MaskPointChin, error) {
-	var resp MaskPointChin
+	var response MaskPointChin
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMaskPosition parses the JSON-encoded data and return it as MaskPosition object.
 func UnmarshalMaskPosition(data json.RawMessage) (*MaskPosition, error) {
-	var resp MaskPosition
+	var response MaskPosition
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalAnimation parses the JSON-encoded data and return it as Animation object.
 func UnmarshalAnimation(data json.RawMessage) (*Animation, error) {
-	var resp Animation
+	var response Animation
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalAudio parses the JSON-encoded data and return it as Audio object.
 func UnmarshalAudio(data json.RawMessage) (*Audio, error) {
-	var resp Audio
+	var response Audio
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalDocument parses the JSON-encoded data and return it as Document object.
 func UnmarshalDocument(data json.RawMessage) (*Document, error) {
-	var resp Document
+	var response Document
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPhoto parses the JSON-encoded data and return it as Photo object.
 func UnmarshalPhoto(data json.RawMessage) (*Photo, error) {
-	var resp Photo
+	var response Photo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSticker parses the JSON-encoded data and return it as Sticker object.
 func UnmarshalSticker(data json.RawMessage) (*Sticker, error) {
-	var resp Sticker
+	var response Sticker
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalVideo parses the JSON-encoded data and return it as Video object.
 func UnmarshalVideo(data json.RawMessage) (*Video, error) {
-	var resp Video
+	var response Video
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalVideoNote parses the JSON-encoded data and return it as VideoNote object.
 func UnmarshalVideoNote(data json.RawMessage) (*VideoNote, error) {
-	var resp VideoNote
+	var response VideoNote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalVoiceNote parses the JSON-encoded data and return it as VoiceNote object.
 func UnmarshalVoiceNote(data json.RawMessage) (*VoiceNote, error) {
-	var resp VoiceNote
+	var response VoiceNote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalContact parses the JSON-encoded data and return it as Contact object.
 func UnmarshalContact(data json.RawMessage) (*Contact, error) {
-	var resp Contact
+	var response Contact
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalLocation parses the JSON-encoded data and return it as Location object.
 func UnmarshalLocation(data json.RawMessage) (*Location, error) {
-	var resp Location
+	var response Location
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalVenue parses the JSON-encoded data and return it as Venue object.
 func UnmarshalVenue(data json.RawMessage) (*Venue, error) {
-	var resp Venue
+	var response Venue
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalGame parses the JSON-encoded data and return it as Game object.
 func UnmarshalGame(data json.RawMessage) (*Game, error) {
-	var resp Game
+	var response Game
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalProfilePhoto parses the JSON-encoded data and return it as ProfilePhoto object.
 func UnmarshalProfilePhoto(data json.RawMessage) (*ProfilePhoto, error) {
-	var resp ProfilePhoto
+	var response ProfilePhoto
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatPhoto parses the JSON-encoded data and return it as ChatPhoto object.
 func UnmarshalChatPhoto(data json.RawMessage) (*ChatPhoto, error) {
-	var resp ChatPhoto
+	var response ChatPhoto
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalLinkStateNone parses the JSON-encoded data and return it as LinkStateNone object.
 func UnmarshalLinkStateNone(data json.RawMessage) (*LinkStateNone, error) {
-	var resp LinkStateNone
+	var response LinkStateNone
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalLinkStateKnowsPhoneNumber parses the JSON-encoded data and return it as LinkStateKnowsPhoneNumber object.
 func UnmarshalLinkStateKnowsPhoneNumber(data json.RawMessage) (*LinkStateKnowsPhoneNumber, error) {
-	var resp LinkStateKnowsPhoneNumber
+	var response LinkStateKnowsPhoneNumber
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalLinkStateIsContact parses the JSON-encoded data and return it as LinkStateIsContact object.
 func UnmarshalLinkStateIsContact(data json.RawMessage) (*LinkStateIsContact, error) {
-	var resp LinkStateIsContact
+	var response LinkStateIsContact
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserTypeRegular parses the JSON-encoded data and return it as UserTypeRegular object.
 func UnmarshalUserTypeRegular(data json.RawMessage) (*UserTypeRegular, error) {
-	var resp UserTypeRegular
+	var response UserTypeRegular
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserTypeDeleted parses the JSON-encoded data and return it as UserTypeDeleted object.
 func UnmarshalUserTypeDeleted(data json.RawMessage) (*UserTypeDeleted, error) {
-	var resp UserTypeDeleted
+	var response UserTypeDeleted
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserTypeBot parses the JSON-encoded data and return it as UserTypeBot object.
 func UnmarshalUserTypeBot(data json.RawMessage) (*UserTypeBot, error) {
-	var resp UserTypeBot
+	var response UserTypeBot
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserTypeUnknown parses the JSON-encoded data and return it as UserTypeUnknown object.
 func UnmarshalUserTypeUnknown(data json.RawMessage) (*UserTypeUnknown, error) {
-	var resp UserTypeUnknown
+	var response UserTypeUnknown
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalBotCommand parses the JSON-encoded data and return it as BotCommand object.
 func UnmarshalBotCommand(data json.RawMessage) (*BotCommand, error) {
-	var resp BotCommand
+	var response BotCommand
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalBotInfo parses the JSON-encoded data and return it as BotInfo object.
 func UnmarshalBotInfo(data json.RawMessage) (*BotInfo, error) {
-	var resp BotInfo
+	var response BotInfo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUser parses the JSON-encoded data and return it as User object.
 func UnmarshalUser(data json.RawMessage) (*User, error) {
-	var resp User
+	var response User
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserFullInfo parses the JSON-encoded data and return it as UserFullInfo object.
 func UnmarshalUserFullInfo(data json.RawMessage) (*UserFullInfo, error) {
-	var resp UserFullInfo
+	var response UserFullInfo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserProfilePhotos parses the JSON-encoded data and return it as UserProfilePhotos object.
 func UnmarshalUserProfilePhotos(data json.RawMessage) (*UserProfilePhotos, error) {
-	var resp UserProfilePhotos
+	var response UserProfilePhotos
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUsers parses the JSON-encoded data and return it as Users object.
 func UnmarshalUsers(data json.RawMessage) (*Users, error) {
-	var resp Users
+	var response Users
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatMemberStatusCreator parses the JSON-encoded data and return it as ChatMemberStatusCreator object.
 func UnmarshalChatMemberStatusCreator(data json.RawMessage) (*ChatMemberStatusCreator, error) {
-	var resp ChatMemberStatusCreator
+	var response ChatMemberStatusCreator
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatMemberStatusAdministrator parses the JSON-encoded data and return it as ChatMemberStatusAdministrator object.
 func UnmarshalChatMemberStatusAdministrator(data json.RawMessage) (*ChatMemberStatusAdministrator, error) {
-	var resp ChatMemberStatusAdministrator
+	var response ChatMemberStatusAdministrator
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatMemberStatusMember parses the JSON-encoded data and return it as ChatMemberStatusMember object.
 func UnmarshalChatMemberStatusMember(data json.RawMessage) (*ChatMemberStatusMember, error) {
-	var resp ChatMemberStatusMember
+	var response ChatMemberStatusMember
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatMemberStatusRestricted parses the JSON-encoded data and return it as ChatMemberStatusRestricted object.
 func UnmarshalChatMemberStatusRestricted(data json.RawMessage) (*ChatMemberStatusRestricted, error) {
-	var resp ChatMemberStatusRestricted
+	var response ChatMemberStatusRestricted
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatMemberStatusLeft parses the JSON-encoded data and return it as ChatMemberStatusLeft object.
 func UnmarshalChatMemberStatusLeft(data json.RawMessage) (*ChatMemberStatusLeft, error) {
-	var resp ChatMemberStatusLeft
+	var response ChatMemberStatusLeft
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatMemberStatusBanned parses the JSON-encoded data and return it as ChatMemberStatusBanned object.
 func UnmarshalChatMemberStatusBanned(data json.RawMessage) (*ChatMemberStatusBanned, error) {
-	var resp ChatMemberStatusBanned
+	var response ChatMemberStatusBanned
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatMember parses the JSON-encoded data and return it as ChatMember object.
 func UnmarshalChatMember(data json.RawMessage) (*ChatMember, error) {
-	var resp ChatMember
+	var response ChatMember
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatMembers parses the JSON-encoded data and return it as ChatMembers object.
 func UnmarshalChatMembers(data json.RawMessage) (*ChatMembers, error) {
-	var resp ChatMembers
+	var response ChatMembers
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatMembersFilterAdministrators parses the JSON-encoded data and return it as ChatMembersFilterAdministrators object.
 func UnmarshalChatMembersFilterAdministrators(data json.RawMessage) (*ChatMembersFilterAdministrators, error) {
-	var resp ChatMembersFilterAdministrators
+	var response ChatMembersFilterAdministrators
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatMembersFilterMembers parses the JSON-encoded data and return it as ChatMembersFilterMembers object.
 func UnmarshalChatMembersFilterMembers(data json.RawMessage) (*ChatMembersFilterMembers, error) {
-	var resp ChatMembersFilterMembers
+	var response ChatMembersFilterMembers
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatMembersFilterRestricted parses the JSON-encoded data and return it as ChatMembersFilterRestricted object.
 func UnmarshalChatMembersFilterRestricted(data json.RawMessage) (*ChatMembersFilterRestricted, error) {
-	var resp ChatMembersFilterRestricted
+	var response ChatMembersFilterRestricted
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatMembersFilterBanned parses the JSON-encoded data and return it as ChatMembersFilterBanned object.
 func UnmarshalChatMembersFilterBanned(data json.RawMessage) (*ChatMembersFilterBanned, error) {
-	var resp ChatMembersFilterBanned
+	var response ChatMembersFilterBanned
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatMembersFilterBots parses the JSON-encoded data and return it as ChatMembersFilterBots object.
 func UnmarshalChatMembersFilterBots(data json.RawMessage) (*ChatMembersFilterBots, error) {
-	var resp ChatMembersFilterBots
+	var response ChatMembersFilterBots
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSupergroupMembersFilterRecent parses the JSON-encoded data and return it as SupergroupMembersFilterRecent object.
 func UnmarshalSupergroupMembersFilterRecent(data json.RawMessage) (*SupergroupMembersFilterRecent, error) {
-	var resp SupergroupMembersFilterRecent
+	var response SupergroupMembersFilterRecent
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSupergroupMembersFilterAdministrators parses the JSON-encoded data and return it as SupergroupMembersFilterAdministrators object.
 func UnmarshalSupergroupMembersFilterAdministrators(data json.RawMessage) (*SupergroupMembersFilterAdministrators, error) {
-	var resp SupergroupMembersFilterAdministrators
+	var response SupergroupMembersFilterAdministrators
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSupergroupMembersFilterSearch parses the JSON-encoded data and return it as SupergroupMembersFilterSearch object.
 func UnmarshalSupergroupMembersFilterSearch(data json.RawMessage) (*SupergroupMembersFilterSearch, error) {
-	var resp SupergroupMembersFilterSearch
+	var response SupergroupMembersFilterSearch
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSupergroupMembersFilterRestricted parses the JSON-encoded data and return it as SupergroupMembersFilterRestricted object.
 func UnmarshalSupergroupMembersFilterRestricted(data json.RawMessage) (*SupergroupMembersFilterRestricted, error) {
-	var resp SupergroupMembersFilterRestricted
+	var response SupergroupMembersFilterRestricted
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSupergroupMembersFilterBanned parses the JSON-encoded data and return it as SupergroupMembersFilterBanned object.
 func UnmarshalSupergroupMembersFilterBanned(data json.RawMessage) (*SupergroupMembersFilterBanned, error) {
-	var resp SupergroupMembersFilterBanned
+	var response SupergroupMembersFilterBanned
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSupergroupMembersFilterBots parses the JSON-encoded data and return it as SupergroupMembersFilterBots object.
 func UnmarshalSupergroupMembersFilterBots(data json.RawMessage) (*SupergroupMembersFilterBots, error) {
-	var resp SupergroupMembersFilterBots
+	var response SupergroupMembersFilterBots
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalBasicGroup parses the JSON-encoded data and return it as BasicGroup object.
 func UnmarshalBasicGroup(data json.RawMessage) (*BasicGroup, error) {
-	var resp BasicGroup
+	var response BasicGroup
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalBasicGroupFullInfo parses the JSON-encoded data and return it as BasicGroupFullInfo object.
 func UnmarshalBasicGroupFullInfo(data json.RawMessage) (*BasicGroupFullInfo, error) {
-	var resp BasicGroupFullInfo
+	var response BasicGroupFullInfo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSupergroup parses the JSON-encoded data and return it as Supergroup object.
 func UnmarshalSupergroup(data json.RawMessage) (*Supergroup, error) {
-	var resp Supergroup
+	var response Supergroup
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSupergroupFullInfo parses the JSON-encoded data and return it as SupergroupFullInfo object.
 func UnmarshalSupergroupFullInfo(data json.RawMessage) (*SupergroupFullInfo, error) {
-	var resp SupergroupFullInfo
+	var response SupergroupFullInfo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSecretChatStatePending parses the JSON-encoded data and return it as SecretChatStatePending object.
 func UnmarshalSecretChatStatePending(data json.RawMessage) (*SecretChatStatePending, error) {
-	var resp SecretChatStatePending
+	var response SecretChatStatePending
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSecretChatStateReady parses the JSON-encoded data and return it as SecretChatStateReady object.
 func UnmarshalSecretChatStateReady(data json.RawMessage) (*SecretChatStateReady, error) {
-	var resp SecretChatStateReady
+	var response SecretChatStateReady
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSecretChatStateClosed parses the JSON-encoded data and return it as SecretChatStateClosed object.
 func UnmarshalSecretChatStateClosed(data json.RawMessage) (*SecretChatStateClosed, error) {
-	var resp SecretChatStateClosed
+	var response SecretChatStateClosed
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSecretChat parses the JSON-encoded data and return it as SecretChat object.
 func UnmarshalSecretChat(data json.RawMessage) (*SecretChat, error) {
-	var resp SecretChat
+	var response SecretChat
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageForwardedFromUser parses the JSON-encoded data and return it as MessageForwardedFromUser object.
 func UnmarshalMessageForwardedFromUser(data json.RawMessage) (*MessageForwardedFromUser, error) {
-	var resp MessageForwardedFromUser
+	var response MessageForwardedFromUser
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageForwardedPost parses the JSON-encoded data and return it as MessageForwardedPost object.
 func UnmarshalMessageForwardedPost(data json.RawMessage) (*MessageForwardedPost, error) {
-	var resp MessageForwardedPost
+	var response MessageForwardedPost
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageSendingStatePending parses the JSON-encoded data and return it as MessageSendingStatePending object.
 func UnmarshalMessageSendingStatePending(data json.RawMessage) (*MessageSendingStatePending, error) {
-	var resp MessageSendingStatePending
+	var response MessageSendingStatePending
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageSendingStateFailed parses the JSON-encoded data and return it as MessageSendingStateFailed object.
 func UnmarshalMessageSendingStateFailed(data json.RawMessage) (*MessageSendingStateFailed, error) {
-	var resp MessageSendingStateFailed
+	var response MessageSendingStateFailed
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessage parses the JSON-encoded data and return it as Message object.
 func UnmarshalMessage(data json.RawMessage) (*Message, error) {
-	var resp Message
+	var response Message
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessages parses the JSON-encoded data and return it as Messages object.
 func UnmarshalMessages(data json.RawMessage) (*Messages, error) {
-	var resp Messages
+	var response Messages
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalFoundMessages parses the JSON-encoded data and return it as FoundMessages object.
 func UnmarshalFoundMessages(data json.RawMessage) (*FoundMessages, error) {
-	var resp FoundMessages
+	var response FoundMessages
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalNotificationSettingsScopePrivateChats parses the JSON-encoded data and return it as NotificationSettingsScopePrivateChats object.
 func UnmarshalNotificationSettingsScopePrivateChats(data json.RawMessage) (*NotificationSettingsScopePrivateChats, error) {
-	var resp NotificationSettingsScopePrivateChats
+	var response NotificationSettingsScopePrivateChats
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalNotificationSettingsScopeGroupChats parses the JSON-encoded data and return it as NotificationSettingsScopeGroupChats object.
 func UnmarshalNotificationSettingsScopeGroupChats(data json.RawMessage) (*NotificationSettingsScopeGroupChats, error) {
-	var resp NotificationSettingsScopeGroupChats
+	var response NotificationSettingsScopeGroupChats
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatNotificationSettings parses the JSON-encoded data and return it as ChatNotificationSettings object.
 func UnmarshalChatNotificationSettings(data json.RawMessage) (*ChatNotificationSettings, error) {
-	var resp ChatNotificationSettings
+	var response ChatNotificationSettings
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalScopeNotificationSettings parses the JSON-encoded data and return it as ScopeNotificationSettings object.
 func UnmarshalScopeNotificationSettings(data json.RawMessage) (*ScopeNotificationSettings, error) {
-	var resp ScopeNotificationSettings
+	var response ScopeNotificationSettings
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalDraftMessage parses the JSON-encoded data and return it as DraftMessage object.
 func UnmarshalDraftMessage(data json.RawMessage) (*DraftMessage, error) {
-	var resp DraftMessage
+	var response DraftMessage
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatTypePrivate parses the JSON-encoded data and return it as ChatTypePrivate object.
 func UnmarshalChatTypePrivate(data json.RawMessage) (*ChatTypePrivate, error) {
-	var resp ChatTypePrivate
+	var response ChatTypePrivate
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatTypeBasicGroup parses the JSON-encoded data and return it as ChatTypeBasicGroup object.
 func UnmarshalChatTypeBasicGroup(data json.RawMessage) (*ChatTypeBasicGroup, error) {
-	var resp ChatTypeBasicGroup
+	var response ChatTypeBasicGroup
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatTypeSupergroup parses the JSON-encoded data and return it as ChatTypeSupergroup object.
 func UnmarshalChatTypeSupergroup(data json.RawMessage) (*ChatTypeSupergroup, error) {
-	var resp ChatTypeSupergroup
+	var response ChatTypeSupergroup
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatTypeSecret parses the JSON-encoded data and return it as ChatTypeSecret object.
 func UnmarshalChatTypeSecret(data json.RawMessage) (*ChatTypeSecret, error) {
-	var resp ChatTypeSecret
+	var response ChatTypeSecret
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChat parses the JSON-encoded data and return it as Chat object.
 func UnmarshalChat(data json.RawMessage) (*Chat, error) {
-	var resp Chat
+	var response Chat
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChats parses the JSON-encoded data and return it as Chats object.
 func UnmarshalChats(data json.RawMessage) (*Chats, error) {
-	var resp Chats
+	var response Chats
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatInviteLink parses the JSON-encoded data and return it as ChatInviteLink object.
 func UnmarshalChatInviteLink(data json.RawMessage) (*ChatInviteLink, error) {
-	var resp ChatInviteLink
+	var response ChatInviteLink
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatInviteLinkInfo parses the JSON-encoded data and return it as ChatInviteLinkInfo object.
 func UnmarshalChatInviteLinkInfo(data json.RawMessage) (*ChatInviteLinkInfo, error) {
-	var resp ChatInviteLinkInfo
+	var response ChatInviteLinkInfo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalKeyboardButtonTypeText parses the JSON-encoded data and return it as KeyboardButtonTypeText object.
 func UnmarshalKeyboardButtonTypeText(data json.RawMessage) (*KeyboardButtonTypeText, error) {
-	var resp KeyboardButtonTypeText
+	var response KeyboardButtonTypeText
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalKeyboardButtonTypeRequestPhoneNumber parses the JSON-encoded data and return it as KeyboardButtonTypeRequestPhoneNumber object.
 func UnmarshalKeyboardButtonTypeRequestPhoneNumber(data json.RawMessage) (*KeyboardButtonTypeRequestPhoneNumber, error) {
-	var resp KeyboardButtonTypeRequestPhoneNumber
+	var response KeyboardButtonTypeRequestPhoneNumber
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalKeyboardButtonTypeRequestLocation parses the JSON-encoded data and return it as KeyboardButtonTypeRequestLocation object.
 func UnmarshalKeyboardButtonTypeRequestLocation(data json.RawMessage) (*KeyboardButtonTypeRequestLocation, error) {
-	var resp KeyboardButtonTypeRequestLocation
+	var response KeyboardButtonTypeRequestLocation
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalKeyboardButton parses the JSON-encoded data and return it as KeyboardButton object.
 func UnmarshalKeyboardButton(data json.RawMessage) (*KeyboardButton, error) {
-	var resp KeyboardButton
+	var response KeyboardButton
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
-func UnmarshalInlineKeyboardButtonTypeUrl(data json.RawMessage) (*InlineKeyboardButtonTypeUrl, error) {
-	var resp InlineKeyboardButtonTypeUrl
+// UnmarshalInlineKeyboardButtonTypeURL parses the JSON-encoded data and return it as InlineKeyboardButtonTypeURL object.
+func UnmarshalInlineKeyboardButtonTypeURL(data json.RawMessage) (*InlineKeyboardButtonTypeURL, error) {
+	var response InlineKeyboardButtonTypeURL
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInlineKeyboardButtonTypeCallback parses the JSON-encoded data and return it as InlineKeyboardButtonTypeCallback object.
 func UnmarshalInlineKeyboardButtonTypeCallback(data json.RawMessage) (*InlineKeyboardButtonTypeCallback, error) {
-	var resp InlineKeyboardButtonTypeCallback
+	var response InlineKeyboardButtonTypeCallback
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInlineKeyboardButtonTypeCallbackGame parses the JSON-encoded data and return it as InlineKeyboardButtonTypeCallbackGame object.
 func UnmarshalInlineKeyboardButtonTypeCallbackGame(data json.RawMessage) (*InlineKeyboardButtonTypeCallbackGame, error) {
-	var resp InlineKeyboardButtonTypeCallbackGame
+	var response InlineKeyboardButtonTypeCallbackGame
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInlineKeyboardButtonTypeSwitchInline parses the JSON-encoded data and return it as InlineKeyboardButtonTypeSwitchInline object.
 func UnmarshalInlineKeyboardButtonTypeSwitchInline(data json.RawMessage) (*InlineKeyboardButtonTypeSwitchInline, error) {
-	var resp InlineKeyboardButtonTypeSwitchInline
+	var response InlineKeyboardButtonTypeSwitchInline
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInlineKeyboardButtonTypeBuy parses the JSON-encoded data and return it as InlineKeyboardButtonTypeBuy object.
 func UnmarshalInlineKeyboardButtonTypeBuy(data json.RawMessage) (*InlineKeyboardButtonTypeBuy, error) {
-	var resp InlineKeyboardButtonTypeBuy
+	var response InlineKeyboardButtonTypeBuy
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInlineKeyboardButton parses the JSON-encoded data and return it as InlineKeyboardButton object.
 func UnmarshalInlineKeyboardButton(data json.RawMessage) (*InlineKeyboardButton, error) {
-	var resp InlineKeyboardButton
+	var response InlineKeyboardButton
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalReplyMarkupRemoveKeyboard parses the JSON-encoded data and return it as ReplyMarkupRemoveKeyboard object.
 func UnmarshalReplyMarkupRemoveKeyboard(data json.RawMessage) (*ReplyMarkupRemoveKeyboard, error) {
-	var resp ReplyMarkupRemoveKeyboard
+	var response ReplyMarkupRemoveKeyboard
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalReplyMarkupForceReply parses the JSON-encoded data and return it as ReplyMarkupForceReply object.
 func UnmarshalReplyMarkupForceReply(data json.RawMessage) (*ReplyMarkupForceReply, error) {
-	var resp ReplyMarkupForceReply
+	var response ReplyMarkupForceReply
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalReplyMarkupShowKeyboard parses the JSON-encoded data and return it as ReplyMarkupShowKeyboard object.
 func UnmarshalReplyMarkupShowKeyboard(data json.RawMessage) (*ReplyMarkupShowKeyboard, error) {
-	var resp ReplyMarkupShowKeyboard
+	var response ReplyMarkupShowKeyboard
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalReplyMarkupInlineKeyboard parses the JSON-encoded data and return it as ReplyMarkupInlineKeyboard object.
 func UnmarshalReplyMarkupInlineKeyboard(data json.RawMessage) (*ReplyMarkupInlineKeyboard, error) {
-	var resp ReplyMarkupInlineKeyboard
+	var response ReplyMarkupInlineKeyboard
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalRichTextPlain parses the JSON-encoded data and return it as RichTextPlain object.
 func UnmarshalRichTextPlain(data json.RawMessage) (*RichTextPlain, error) {
-	var resp RichTextPlain
+	var response RichTextPlain
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalRichTextBold parses the JSON-encoded data and return it as RichTextBold object.
 func UnmarshalRichTextBold(data json.RawMessage) (*RichTextBold, error) {
-	var resp RichTextBold
+	var response RichTextBold
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalRichTextItalic parses the JSON-encoded data and return it as RichTextItalic object.
 func UnmarshalRichTextItalic(data json.RawMessage) (*RichTextItalic, error) {
-	var resp RichTextItalic
+	var response RichTextItalic
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalRichTextUnderline parses the JSON-encoded data and return it as RichTextUnderline object.
 func UnmarshalRichTextUnderline(data json.RawMessage) (*RichTextUnderline, error) {
-	var resp RichTextUnderline
+	var response RichTextUnderline
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalRichTextStrikethrough parses the JSON-encoded data and return it as RichTextStrikethrough object.
 func UnmarshalRichTextStrikethrough(data json.RawMessage) (*RichTextStrikethrough, error) {
-	var resp RichTextStrikethrough
+	var response RichTextStrikethrough
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalRichTextFixed parses the JSON-encoded data and return it as RichTextFixed object.
 func UnmarshalRichTextFixed(data json.RawMessage) (*RichTextFixed, error) {
-	var resp RichTextFixed
+	var response RichTextFixed
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
-func UnmarshalRichTextUrl(data json.RawMessage) (*RichTextUrl, error) {
-	var resp RichTextUrl
+// UnmarshalRichTextURL parses the JSON-encoded data and return it as RichTextURL object.
+func UnmarshalRichTextURL(data json.RawMessage) (*RichTextURL, error) {
+	var response RichTextURL
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalRichTextEmailAddress parses the JSON-encoded data and return it as RichTextEmailAddress object.
 func UnmarshalRichTextEmailAddress(data json.RawMessage) (*RichTextEmailAddress, error) {
-	var resp RichTextEmailAddress
+	var response RichTextEmailAddress
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalRichTexts parses the JSON-encoded data and return it as RichTexts object.
 func UnmarshalRichTexts(data json.RawMessage) (*RichTexts, error) {
-	var resp RichTexts
+	var response RichTexts
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockTitle parses the JSON-encoded data and return it as PageBlockTitle object.
 func UnmarshalPageBlockTitle(data json.RawMessage) (*PageBlockTitle, error) {
-	var resp PageBlockTitle
+	var response PageBlockTitle
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockSubtitle parses the JSON-encoded data and return it as PageBlockSubtitle object.
 func UnmarshalPageBlockSubtitle(data json.RawMessage) (*PageBlockSubtitle, error) {
-	var resp PageBlockSubtitle
+	var response PageBlockSubtitle
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockAuthorDate parses the JSON-encoded data and return it as PageBlockAuthorDate object.
 func UnmarshalPageBlockAuthorDate(data json.RawMessage) (*PageBlockAuthorDate, error) {
-	var resp PageBlockAuthorDate
+	var response PageBlockAuthorDate
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockHeader parses the JSON-encoded data and return it as PageBlockHeader object.
 func UnmarshalPageBlockHeader(data json.RawMessage) (*PageBlockHeader, error) {
-	var resp PageBlockHeader
+	var response PageBlockHeader
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockSubheader parses the JSON-encoded data and return it as PageBlockSubheader object.
 func UnmarshalPageBlockSubheader(data json.RawMessage) (*PageBlockSubheader, error) {
-	var resp PageBlockSubheader
+	var response PageBlockSubheader
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockParagraph parses the JSON-encoded data and return it as PageBlockParagraph object.
 func UnmarshalPageBlockParagraph(data json.RawMessage) (*PageBlockParagraph, error) {
-	var resp PageBlockParagraph
+	var response PageBlockParagraph
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockPreformatted parses the JSON-encoded data and return it as PageBlockPreformatted object.
 func UnmarshalPageBlockPreformatted(data json.RawMessage) (*PageBlockPreformatted, error) {
-	var resp PageBlockPreformatted
+	var response PageBlockPreformatted
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockFooter parses the JSON-encoded data and return it as PageBlockFooter object.
 func UnmarshalPageBlockFooter(data json.RawMessage) (*PageBlockFooter, error) {
-	var resp PageBlockFooter
+	var response PageBlockFooter
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockDivider parses the JSON-encoded data and return it as PageBlockDivider object.
 func UnmarshalPageBlockDivider(data json.RawMessage) (*PageBlockDivider, error) {
-	var resp PageBlockDivider
+	var response PageBlockDivider
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockAnchor parses the JSON-encoded data and return it as PageBlockAnchor object.
 func UnmarshalPageBlockAnchor(data json.RawMessage) (*PageBlockAnchor, error) {
-	var resp PageBlockAnchor
+	var response PageBlockAnchor
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockList parses the JSON-encoded data and return it as PageBlockList object.
 func UnmarshalPageBlockList(data json.RawMessage) (*PageBlockList, error) {
-	var resp PageBlockList
+	var response PageBlockList
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockBlockQuote parses the JSON-encoded data and return it as PageBlockBlockQuote object.
 func UnmarshalPageBlockBlockQuote(data json.RawMessage) (*PageBlockBlockQuote, error) {
-	var resp PageBlockBlockQuote
+	var response PageBlockBlockQuote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockPullQuote parses the JSON-encoded data and return it as PageBlockPullQuote object.
 func UnmarshalPageBlockPullQuote(data json.RawMessage) (*PageBlockPullQuote, error) {
-	var resp PageBlockPullQuote
+	var response PageBlockPullQuote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockAnimation parses the JSON-encoded data and return it as PageBlockAnimation object.
 func UnmarshalPageBlockAnimation(data json.RawMessage) (*PageBlockAnimation, error) {
-	var resp PageBlockAnimation
+	var response PageBlockAnimation
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockAudio parses the JSON-encoded data and return it as PageBlockAudio object.
 func UnmarshalPageBlockAudio(data json.RawMessage) (*PageBlockAudio, error) {
-	var resp PageBlockAudio
+	var response PageBlockAudio
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockPhoto parses the JSON-encoded data and return it as PageBlockPhoto object.
 func UnmarshalPageBlockPhoto(data json.RawMessage) (*PageBlockPhoto, error) {
-	var resp PageBlockPhoto
+	var response PageBlockPhoto
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockVideo parses the JSON-encoded data and return it as PageBlockVideo object.
 func UnmarshalPageBlockVideo(data json.RawMessage) (*PageBlockVideo, error) {
-	var resp PageBlockVideo
+	var response PageBlockVideo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockCover parses the JSON-encoded data and return it as PageBlockCover object.
 func UnmarshalPageBlockCover(data json.RawMessage) (*PageBlockCover, error) {
-	var resp PageBlockCover
+	var response PageBlockCover
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockEmbedded parses the JSON-encoded data and return it as PageBlockEmbedded object.
 func UnmarshalPageBlockEmbedded(data json.RawMessage) (*PageBlockEmbedded, error) {
-	var resp PageBlockEmbedded
+	var response PageBlockEmbedded
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockEmbeddedPost parses the JSON-encoded data and return it as PageBlockEmbeddedPost object.
 func UnmarshalPageBlockEmbeddedPost(data json.RawMessage) (*PageBlockEmbeddedPost, error) {
-	var resp PageBlockEmbeddedPost
+	var response PageBlockEmbeddedPost
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockCollage parses the JSON-encoded data and return it as PageBlockCollage object.
 func UnmarshalPageBlockCollage(data json.RawMessage) (*PageBlockCollage, error) {
-	var resp PageBlockCollage
+	var response PageBlockCollage
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockSlideshow parses the JSON-encoded data and return it as PageBlockSlideshow object.
 func UnmarshalPageBlockSlideshow(data json.RawMessage) (*PageBlockSlideshow, error) {
-	var resp PageBlockSlideshow
+	var response PageBlockSlideshow
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPageBlockChatLink parses the JSON-encoded data and return it as PageBlockChatLink object.
 func UnmarshalPageBlockChatLink(data json.RawMessage) (*PageBlockChatLink, error) {
-	var resp PageBlockChatLink
+	var response PageBlockChatLink
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalWebPageInstantView parses the JSON-encoded data and return it as WebPageInstantView object.
 func UnmarshalWebPageInstantView(data json.RawMessage) (*WebPageInstantView, error) {
-	var resp WebPageInstantView
+	var response WebPageInstantView
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalWebPage parses the JSON-encoded data and return it as WebPage object.
 func UnmarshalWebPage(data json.RawMessage) (*WebPage, error) {
-	var resp WebPage
+	var response WebPage
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalAddress parses the JSON-encoded data and return it as Address object.
 func UnmarshalAddress(data json.RawMessage) (*Address, error) {
-	var resp Address
+	var response Address
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalLabeledPricePart parses the JSON-encoded data and return it as LabeledPricePart object.
 func UnmarshalLabeledPricePart(data json.RawMessage) (*LabeledPricePart, error) {
-	var resp LabeledPricePart
+	var response LabeledPricePart
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInvoice parses the JSON-encoded data and return it as Invoice object.
 func UnmarshalInvoice(data json.RawMessage) (*Invoice, error) {
-	var resp Invoice
+	var response Invoice
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalOrderInfo parses the JSON-encoded data and return it as OrderInfo object.
 func UnmarshalOrderInfo(data json.RawMessage) (*OrderInfo, error) {
-	var resp OrderInfo
+	var response OrderInfo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalShippingOption parses the JSON-encoded data and return it as ShippingOption object.
 func UnmarshalShippingOption(data json.RawMessage) (*ShippingOption, error) {
-	var resp ShippingOption
+	var response ShippingOption
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSavedCredentials parses the JSON-encoded data and return it as SavedCredentials object.
 func UnmarshalSavedCredentials(data json.RawMessage) (*SavedCredentials, error) {
-	var resp SavedCredentials
+	var response SavedCredentials
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputCredentialsSaved parses the JSON-encoded data and return it as InputCredentialsSaved object.
 func UnmarshalInputCredentialsSaved(data json.RawMessage) (*InputCredentialsSaved, error) {
-	var resp InputCredentialsSaved
+	var response InputCredentialsSaved
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputCredentialsNew parses the JSON-encoded data and return it as InputCredentialsNew object.
 func UnmarshalInputCredentialsNew(data json.RawMessage) (*InputCredentialsNew, error) {
-	var resp InputCredentialsNew
+	var response InputCredentialsNew
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputCredentialsAndroidPay parses the JSON-encoded data and return it as InputCredentialsAndroidPay object.
 func UnmarshalInputCredentialsAndroidPay(data json.RawMessage) (*InputCredentialsAndroidPay, error) {
-	var resp InputCredentialsAndroidPay
+	var response InputCredentialsAndroidPay
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputCredentialsApplePay parses the JSON-encoded data and return it as InputCredentialsApplePay object.
 func UnmarshalInputCredentialsApplePay(data json.RawMessage) (*InputCredentialsApplePay, error) {
-	var resp InputCredentialsApplePay
+	var response InputCredentialsApplePay
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPaymentsProviderStripe parses the JSON-encoded data and return it as PaymentsProviderStripe object.
 func UnmarshalPaymentsProviderStripe(data json.RawMessage) (*PaymentsProviderStripe, error) {
-	var resp PaymentsProviderStripe
+	var response PaymentsProviderStripe
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPaymentForm parses the JSON-encoded data and return it as PaymentForm object.
 func UnmarshalPaymentForm(data json.RawMessage) (*PaymentForm, error) {
-	var resp PaymentForm
+	var response PaymentForm
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalValidatedOrderInfo parses the JSON-encoded data and return it as ValidatedOrderInfo object.
 func UnmarshalValidatedOrderInfo(data json.RawMessage) (*ValidatedOrderInfo, error) {
-	var resp ValidatedOrderInfo
+	var response ValidatedOrderInfo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPaymentResult parses the JSON-encoded data and return it as PaymentResult object.
 func UnmarshalPaymentResult(data json.RawMessage) (*PaymentResult, error) {
-	var resp PaymentResult
+	var response PaymentResult
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPaymentReceipt parses the JSON-encoded data and return it as PaymentReceipt object.
 func UnmarshalPaymentReceipt(data json.RawMessage) (*PaymentReceipt, error) {
-	var resp PaymentReceipt
+	var response PaymentReceipt
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalDatedFile parses the JSON-encoded data and return it as DatedFile object.
 func UnmarshalDatedFile(data json.RawMessage) (*DatedFile, error) {
-	var resp DatedFile
+	var response DatedFile
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementTypePersonalDetails parses the JSON-encoded data and return it as PassportElementTypePersonalDetails object.
 func UnmarshalPassportElementTypePersonalDetails(data json.RawMessage) (*PassportElementTypePersonalDetails, error) {
-	var resp PassportElementTypePersonalDetails
+	var response PassportElementTypePersonalDetails
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementTypePassport parses the JSON-encoded data and return it as PassportElementTypePassport object.
 func UnmarshalPassportElementTypePassport(data json.RawMessage) (*PassportElementTypePassport, error) {
-	var resp PassportElementTypePassport
+	var response PassportElementTypePassport
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementTypeDriverLicense parses the JSON-encoded data and return it as PassportElementTypeDriverLicense object.
 func UnmarshalPassportElementTypeDriverLicense(data json.RawMessage) (*PassportElementTypeDriverLicense, error) {
-	var resp PassportElementTypeDriverLicense
+	var response PassportElementTypeDriverLicense
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementTypeIdentityCard parses the JSON-encoded data and return it as PassportElementTypeIdentityCard object.
 func UnmarshalPassportElementTypeIdentityCard(data json.RawMessage) (*PassportElementTypeIdentityCard, error) {
-	var resp PassportElementTypeIdentityCard
+	var response PassportElementTypeIdentityCard
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementTypeInternalPassport parses the JSON-encoded data and return it as PassportElementTypeInternalPassport object.
 func UnmarshalPassportElementTypeInternalPassport(data json.RawMessage) (*PassportElementTypeInternalPassport, error) {
-	var resp PassportElementTypeInternalPassport
+	var response PassportElementTypeInternalPassport
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementTypeAddress parses the JSON-encoded data and return it as PassportElementTypeAddress object.
 func UnmarshalPassportElementTypeAddress(data json.RawMessage) (*PassportElementTypeAddress, error) {
-	var resp PassportElementTypeAddress
+	var response PassportElementTypeAddress
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementTypeUtilityBill parses the JSON-encoded data and return it as PassportElementTypeUtilityBill object.
 func UnmarshalPassportElementTypeUtilityBill(data json.RawMessage) (*PassportElementTypeUtilityBill, error) {
-	var resp PassportElementTypeUtilityBill
+	var response PassportElementTypeUtilityBill
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementTypeBankStatement parses the JSON-encoded data and return it as PassportElementTypeBankStatement object.
 func UnmarshalPassportElementTypeBankStatement(data json.RawMessage) (*PassportElementTypeBankStatement, error) {
-	var resp PassportElementTypeBankStatement
+	var response PassportElementTypeBankStatement
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementTypeRentalAgreement parses the JSON-encoded data and return it as PassportElementTypeRentalAgreement object.
 func UnmarshalPassportElementTypeRentalAgreement(data json.RawMessage) (*PassportElementTypeRentalAgreement, error) {
-	var resp PassportElementTypeRentalAgreement
+	var response PassportElementTypeRentalAgreement
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementTypePassportRegistration parses the JSON-encoded data and return it as PassportElementTypePassportRegistration object.
 func UnmarshalPassportElementTypePassportRegistration(data json.RawMessage) (*PassportElementTypePassportRegistration, error) {
-	var resp PassportElementTypePassportRegistration
+	var response PassportElementTypePassportRegistration
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementTypeTemporaryRegistration parses the JSON-encoded data and return it as PassportElementTypeTemporaryRegistration object.
 func UnmarshalPassportElementTypeTemporaryRegistration(data json.RawMessage) (*PassportElementTypeTemporaryRegistration, error) {
-	var resp PassportElementTypeTemporaryRegistration
+	var response PassportElementTypeTemporaryRegistration
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementTypePhoneNumber parses the JSON-encoded data and return it as PassportElementTypePhoneNumber object.
 func UnmarshalPassportElementTypePhoneNumber(data json.RawMessage) (*PassportElementTypePhoneNumber, error) {
-	var resp PassportElementTypePhoneNumber
+	var response PassportElementTypePhoneNumber
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementTypeEmailAddress parses the JSON-encoded data and return it as PassportElementTypeEmailAddress object.
 func UnmarshalPassportElementTypeEmailAddress(data json.RawMessage) (*PassportElementTypeEmailAddress, error) {
-	var resp PassportElementTypeEmailAddress
+	var response PassportElementTypeEmailAddress
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalDate parses the JSON-encoded data and return it as Date object.
 func UnmarshalDate(data json.RawMessage) (*Date, error) {
-	var resp Date
+	var response Date
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPersonalDetails parses the JSON-encoded data and return it as PersonalDetails object.
 func UnmarshalPersonalDetails(data json.RawMessage) (*PersonalDetails, error) {
-	var resp PersonalDetails
+	var response PersonalDetails
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalIdentityDocument parses the JSON-encoded data and return it as IdentityDocument object.
 func UnmarshalIdentityDocument(data json.RawMessage) (*IdentityDocument, error) {
-	var resp IdentityDocument
+	var response IdentityDocument
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputIdentityDocument parses the JSON-encoded data and return it as InputIdentityDocument object.
 func UnmarshalInputIdentityDocument(data json.RawMessage) (*InputIdentityDocument, error) {
-	var resp InputIdentityDocument
+	var response InputIdentityDocument
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPersonalDocument parses the JSON-encoded data and return it as PersonalDocument object.
 func UnmarshalPersonalDocument(data json.RawMessage) (*PersonalDocument, error) {
-	var resp PersonalDocument
+	var response PersonalDocument
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPersonalDocument parses the JSON-encoded data and return it as InputPersonalDocument object.
 func UnmarshalInputPersonalDocument(data json.RawMessage) (*InputPersonalDocument, error) {
-	var resp InputPersonalDocument
+	var response InputPersonalDocument
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementPersonalDetails parses the JSON-encoded data and return it as PassportElementPersonalDetails object.
 func UnmarshalPassportElementPersonalDetails(data json.RawMessage) (*PassportElementPersonalDetails, error) {
-	var resp PassportElementPersonalDetails
+	var response PassportElementPersonalDetails
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementPassport parses the JSON-encoded data and return it as PassportElementPassport object.
 func UnmarshalPassportElementPassport(data json.RawMessage) (*PassportElementPassport, error) {
-	var resp PassportElementPassport
+	var response PassportElementPassport
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementDriverLicense parses the JSON-encoded data and return it as PassportElementDriverLicense object.
 func UnmarshalPassportElementDriverLicense(data json.RawMessage) (*PassportElementDriverLicense, error) {
-	var resp PassportElementDriverLicense
+	var response PassportElementDriverLicense
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementIdentityCard parses the JSON-encoded data and return it as PassportElementIdentityCard object.
 func UnmarshalPassportElementIdentityCard(data json.RawMessage) (*PassportElementIdentityCard, error) {
-	var resp PassportElementIdentityCard
+	var response PassportElementIdentityCard
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementInternalPassport parses the JSON-encoded data and return it as PassportElementInternalPassport object.
 func UnmarshalPassportElementInternalPassport(data json.RawMessage) (*PassportElementInternalPassport, error) {
-	var resp PassportElementInternalPassport
+	var response PassportElementInternalPassport
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementAddress parses the JSON-encoded data and return it as PassportElementAddress object.
 func UnmarshalPassportElementAddress(data json.RawMessage) (*PassportElementAddress, error) {
-	var resp PassportElementAddress
+	var response PassportElementAddress
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementUtilityBill parses the JSON-encoded data and return it as PassportElementUtilityBill object.
 func UnmarshalPassportElementUtilityBill(data json.RawMessage) (*PassportElementUtilityBill, error) {
-	var resp PassportElementUtilityBill
+	var response PassportElementUtilityBill
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementBankStatement parses the JSON-encoded data and return it as PassportElementBankStatement object.
 func UnmarshalPassportElementBankStatement(data json.RawMessage) (*PassportElementBankStatement, error) {
-	var resp PassportElementBankStatement
+	var response PassportElementBankStatement
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementRentalAgreement parses the JSON-encoded data and return it as PassportElementRentalAgreement object.
 func UnmarshalPassportElementRentalAgreement(data json.RawMessage) (*PassportElementRentalAgreement, error) {
-	var resp PassportElementRentalAgreement
+	var response PassportElementRentalAgreement
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementPassportRegistration parses the JSON-encoded data and return it as PassportElementPassportRegistration object.
 func UnmarshalPassportElementPassportRegistration(data json.RawMessage) (*PassportElementPassportRegistration, error) {
-	var resp PassportElementPassportRegistration
+	var response PassportElementPassportRegistration
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementTemporaryRegistration parses the JSON-encoded data and return it as PassportElementTemporaryRegistration object.
 func UnmarshalPassportElementTemporaryRegistration(data json.RawMessage) (*PassportElementTemporaryRegistration, error) {
-	var resp PassportElementTemporaryRegistration
+	var response PassportElementTemporaryRegistration
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementPhoneNumber parses the JSON-encoded data and return it as PassportElementPhoneNumber object.
 func UnmarshalPassportElementPhoneNumber(data json.RawMessage) (*PassportElementPhoneNumber, error) {
-	var resp PassportElementPhoneNumber
+	var response PassportElementPhoneNumber
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementEmailAddress parses the JSON-encoded data and return it as PassportElementEmailAddress object.
 func UnmarshalPassportElementEmailAddress(data json.RawMessage) (*PassportElementEmailAddress, error) {
-	var resp PassportElementEmailAddress
+	var response PassportElementEmailAddress
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementPersonalDetails parses the JSON-encoded data and return it as InputPassportElementPersonalDetails object.
 func UnmarshalInputPassportElementPersonalDetails(data json.RawMessage) (*InputPassportElementPersonalDetails, error) {
-	var resp InputPassportElementPersonalDetails
+	var response InputPassportElementPersonalDetails
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementPassport parses the JSON-encoded data and return it as InputPassportElementPassport object.
 func UnmarshalInputPassportElementPassport(data json.RawMessage) (*InputPassportElementPassport, error) {
-	var resp InputPassportElementPassport
+	var response InputPassportElementPassport
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementDriverLicense parses the JSON-encoded data and return it as InputPassportElementDriverLicense object.
 func UnmarshalInputPassportElementDriverLicense(data json.RawMessage) (*InputPassportElementDriverLicense, error) {
-	var resp InputPassportElementDriverLicense
+	var response InputPassportElementDriverLicense
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementIdentityCard parses the JSON-encoded data and return it as InputPassportElementIdentityCard object.
 func UnmarshalInputPassportElementIdentityCard(data json.RawMessage) (*InputPassportElementIdentityCard, error) {
-	var resp InputPassportElementIdentityCard
+	var response InputPassportElementIdentityCard
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementInternalPassport parses the JSON-encoded data and return it as InputPassportElementInternalPassport object.
 func UnmarshalInputPassportElementInternalPassport(data json.RawMessage) (*InputPassportElementInternalPassport, error) {
-	var resp InputPassportElementInternalPassport
+	var response InputPassportElementInternalPassport
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementAddress parses the JSON-encoded data and return it as InputPassportElementAddress object.
 func UnmarshalInputPassportElementAddress(data json.RawMessage) (*InputPassportElementAddress, error) {
-	var resp InputPassportElementAddress
+	var response InputPassportElementAddress
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementUtilityBill parses the JSON-encoded data and return it as InputPassportElementUtilityBill object.
 func UnmarshalInputPassportElementUtilityBill(data json.RawMessage) (*InputPassportElementUtilityBill, error) {
-	var resp InputPassportElementUtilityBill
+	var response InputPassportElementUtilityBill
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementBankStatement parses the JSON-encoded data and return it as InputPassportElementBankStatement object.
 func UnmarshalInputPassportElementBankStatement(data json.RawMessage) (*InputPassportElementBankStatement, error) {
-	var resp InputPassportElementBankStatement
+	var response InputPassportElementBankStatement
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementRentalAgreement parses the JSON-encoded data and return it as InputPassportElementRentalAgreement object.
 func UnmarshalInputPassportElementRentalAgreement(data json.RawMessage) (*InputPassportElementRentalAgreement, error) {
-	var resp InputPassportElementRentalAgreement
+	var response InputPassportElementRentalAgreement
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementPassportRegistration parses the JSON-encoded data and return it as InputPassportElementPassportRegistration object.
 func UnmarshalInputPassportElementPassportRegistration(data json.RawMessage) (*InputPassportElementPassportRegistration, error) {
-	var resp InputPassportElementPassportRegistration
+	var response InputPassportElementPassportRegistration
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementTemporaryRegistration parses the JSON-encoded data and return it as InputPassportElementTemporaryRegistration object.
 func UnmarshalInputPassportElementTemporaryRegistration(data json.RawMessage) (*InputPassportElementTemporaryRegistration, error) {
-	var resp InputPassportElementTemporaryRegistration
+	var response InputPassportElementTemporaryRegistration
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementPhoneNumber parses the JSON-encoded data and return it as InputPassportElementPhoneNumber object.
 func UnmarshalInputPassportElementPhoneNumber(data json.RawMessage) (*InputPassportElementPhoneNumber, error) {
-	var resp InputPassportElementPhoneNumber
+	var response InputPassportElementPhoneNumber
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementEmailAddress parses the JSON-encoded data and return it as InputPassportElementEmailAddress object.
 func UnmarshalInputPassportElementEmailAddress(data json.RawMessage) (*InputPassportElementEmailAddress, error) {
-	var resp InputPassportElementEmailAddress
+	var response InputPassportElementEmailAddress
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElements parses the JSON-encoded data and return it as PassportElements object.
 func UnmarshalPassportElements(data json.RawMessage) (*PassportElements, error) {
-	var resp PassportElements
+	var response PassportElements
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementErrorSourceUnspecified parses the JSON-encoded data and return it as PassportElementErrorSourceUnspecified object.
 func UnmarshalPassportElementErrorSourceUnspecified(data json.RawMessage) (*PassportElementErrorSourceUnspecified, error) {
-	var resp PassportElementErrorSourceUnspecified
+	var response PassportElementErrorSourceUnspecified
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementErrorSourceDataField parses the JSON-encoded data and return it as PassportElementErrorSourceDataField object.
 func UnmarshalPassportElementErrorSourceDataField(data json.RawMessage) (*PassportElementErrorSourceDataField, error) {
-	var resp PassportElementErrorSourceDataField
+	var response PassportElementErrorSourceDataField
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementErrorSourceFrontSide parses the JSON-encoded data and return it as PassportElementErrorSourceFrontSide object.
 func UnmarshalPassportElementErrorSourceFrontSide(data json.RawMessage) (*PassportElementErrorSourceFrontSide, error) {
-	var resp PassportElementErrorSourceFrontSide
+	var response PassportElementErrorSourceFrontSide
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementErrorSourceReverseSide parses the JSON-encoded data and return it as PassportElementErrorSourceReverseSide object.
 func UnmarshalPassportElementErrorSourceReverseSide(data json.RawMessage) (*PassportElementErrorSourceReverseSide, error) {
-	var resp PassportElementErrorSourceReverseSide
+	var response PassportElementErrorSourceReverseSide
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementErrorSourceSelfie parses the JSON-encoded data and return it as PassportElementErrorSourceSelfie object.
 func UnmarshalPassportElementErrorSourceSelfie(data json.RawMessage) (*PassportElementErrorSourceSelfie, error) {
-	var resp PassportElementErrorSourceSelfie
+	var response PassportElementErrorSourceSelfie
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementErrorSourceTranslationFile parses the JSON-encoded data and return it as PassportElementErrorSourceTranslationFile object.
 func UnmarshalPassportElementErrorSourceTranslationFile(data json.RawMessage) (*PassportElementErrorSourceTranslationFile, error) {
-	var resp PassportElementErrorSourceTranslationFile
+	var response PassportElementErrorSourceTranslationFile
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementErrorSourceTranslationFiles parses the JSON-encoded data and return it as PassportElementErrorSourceTranslationFiles object.
 func UnmarshalPassportElementErrorSourceTranslationFiles(data json.RawMessage) (*PassportElementErrorSourceTranslationFiles, error) {
-	var resp PassportElementErrorSourceTranslationFiles
+	var response PassportElementErrorSourceTranslationFiles
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementErrorSourceFile parses the JSON-encoded data and return it as PassportElementErrorSourceFile object.
 func UnmarshalPassportElementErrorSourceFile(data json.RawMessage) (*PassportElementErrorSourceFile, error) {
-	var resp PassportElementErrorSourceFile
+	var response PassportElementErrorSourceFile
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementErrorSourceFiles parses the JSON-encoded data and return it as PassportElementErrorSourceFiles object.
 func UnmarshalPassportElementErrorSourceFiles(data json.RawMessage) (*PassportElementErrorSourceFiles, error) {
-	var resp PassportElementErrorSourceFiles
+	var response PassportElementErrorSourceFiles
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportElementError parses the JSON-encoded data and return it as PassportElementError object.
 func UnmarshalPassportElementError(data json.RawMessage) (*PassportElementError, error) {
-	var resp PassportElementError
+	var response PassportElementError
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportSuitableElement parses the JSON-encoded data and return it as PassportSuitableElement object.
 func UnmarshalPassportSuitableElement(data json.RawMessage) (*PassportSuitableElement, error) {
-	var resp PassportSuitableElement
+	var response PassportSuitableElement
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportRequiredElement parses the JSON-encoded data and return it as PassportRequiredElement object.
 func UnmarshalPassportRequiredElement(data json.RawMessage) (*PassportRequiredElement, error) {
-	var resp PassportRequiredElement
+	var response PassportRequiredElement
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPassportAuthorizationForm parses the JSON-encoded data and return it as PassportAuthorizationForm object.
 func UnmarshalPassportAuthorizationForm(data json.RawMessage) (*PassportAuthorizationForm, error) {
-	var resp PassportAuthorizationForm
+	var response PassportAuthorizationForm
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalEncryptedCredentials parses the JSON-encoded data and return it as EncryptedCredentials object.
 func UnmarshalEncryptedCredentials(data json.RawMessage) (*EncryptedCredentials, error) {
-	var resp EncryptedCredentials
+	var response EncryptedCredentials
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalEncryptedPassportElement parses the JSON-encoded data and return it as EncryptedPassportElement object.
 func UnmarshalEncryptedPassportElement(data json.RawMessage) (*EncryptedPassportElement, error) {
-	var resp EncryptedPassportElement
+	var response EncryptedPassportElement
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementErrorSourceUnspecified parses the JSON-encoded data and return it as InputPassportElementErrorSourceUnspecified object.
 func UnmarshalInputPassportElementErrorSourceUnspecified(data json.RawMessage) (*InputPassportElementErrorSourceUnspecified, error) {
-	var resp InputPassportElementErrorSourceUnspecified
+	var response InputPassportElementErrorSourceUnspecified
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementErrorSourceDataField parses the JSON-encoded data and return it as InputPassportElementErrorSourceDataField object.
 func UnmarshalInputPassportElementErrorSourceDataField(data json.RawMessage) (*InputPassportElementErrorSourceDataField, error) {
-	var resp InputPassportElementErrorSourceDataField
+	var response InputPassportElementErrorSourceDataField
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementErrorSourceFrontSide parses the JSON-encoded data and return it as InputPassportElementErrorSourceFrontSide object.
 func UnmarshalInputPassportElementErrorSourceFrontSide(data json.RawMessage) (*InputPassportElementErrorSourceFrontSide, error) {
-	var resp InputPassportElementErrorSourceFrontSide
+	var response InputPassportElementErrorSourceFrontSide
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementErrorSourceReverseSide parses the JSON-encoded data and return it as InputPassportElementErrorSourceReverseSide object.
 func UnmarshalInputPassportElementErrorSourceReverseSide(data json.RawMessage) (*InputPassportElementErrorSourceReverseSide, error) {
-	var resp InputPassportElementErrorSourceReverseSide
+	var response InputPassportElementErrorSourceReverseSide
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementErrorSourceSelfie parses the JSON-encoded data and return it as InputPassportElementErrorSourceSelfie object.
 func UnmarshalInputPassportElementErrorSourceSelfie(data json.RawMessage) (*InputPassportElementErrorSourceSelfie, error) {
-	var resp InputPassportElementErrorSourceSelfie
+	var response InputPassportElementErrorSourceSelfie
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementErrorSourceTranslationFile parses the JSON-encoded data and return it as InputPassportElementErrorSourceTranslationFile object.
 func UnmarshalInputPassportElementErrorSourceTranslationFile(data json.RawMessage) (*InputPassportElementErrorSourceTranslationFile, error) {
-	var resp InputPassportElementErrorSourceTranslationFile
+	var response InputPassportElementErrorSourceTranslationFile
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementErrorSourceTranslationFiles parses the JSON-encoded data and return it as InputPassportElementErrorSourceTranslationFiles object.
 func UnmarshalInputPassportElementErrorSourceTranslationFiles(data json.RawMessage) (*InputPassportElementErrorSourceTranslationFiles, error) {
-	var resp InputPassportElementErrorSourceTranslationFiles
+	var response InputPassportElementErrorSourceTranslationFiles
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementErrorSourceFile parses the JSON-encoded data and return it as InputPassportElementErrorSourceFile object.
 func UnmarshalInputPassportElementErrorSourceFile(data json.RawMessage) (*InputPassportElementErrorSourceFile, error) {
-	var resp InputPassportElementErrorSourceFile
+	var response InputPassportElementErrorSourceFile
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementErrorSourceFiles parses the JSON-encoded data and return it as InputPassportElementErrorSourceFiles object.
 func UnmarshalInputPassportElementErrorSourceFiles(data json.RawMessage) (*InputPassportElementErrorSourceFiles, error) {
-	var resp InputPassportElementErrorSourceFiles
+	var response InputPassportElementErrorSourceFiles
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputPassportElementError parses the JSON-encoded data and return it as InputPassportElementError object.
 func UnmarshalInputPassportElementError(data json.RawMessage) (*InputPassportElementError, error) {
-	var resp InputPassportElementError
+	var response InputPassportElementError
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageText parses the JSON-encoded data and return it as MessageText object.
 func UnmarshalMessageText(data json.RawMessage) (*MessageText, error) {
-	var resp MessageText
+	var response MessageText
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageAnimation parses the JSON-encoded data and return it as MessageAnimation object.
 func UnmarshalMessageAnimation(data json.RawMessage) (*MessageAnimation, error) {
-	var resp MessageAnimation
+	var response MessageAnimation
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageAudio parses the JSON-encoded data and return it as MessageAudio object.
 func UnmarshalMessageAudio(data json.RawMessage) (*MessageAudio, error) {
-	var resp MessageAudio
+	var response MessageAudio
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageDocument parses the JSON-encoded data and return it as MessageDocument object.
 func UnmarshalMessageDocument(data json.RawMessage) (*MessageDocument, error) {
-	var resp MessageDocument
+	var response MessageDocument
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessagePhoto parses the JSON-encoded data and return it as MessagePhoto object.
 func UnmarshalMessagePhoto(data json.RawMessage) (*MessagePhoto, error) {
-	var resp MessagePhoto
+	var response MessagePhoto
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageExpiredPhoto parses the JSON-encoded data and return it as MessageExpiredPhoto object.
 func UnmarshalMessageExpiredPhoto(data json.RawMessage) (*MessageExpiredPhoto, error) {
-	var resp MessageExpiredPhoto
+	var response MessageExpiredPhoto
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageSticker parses the JSON-encoded data and return it as MessageSticker object.
 func UnmarshalMessageSticker(data json.RawMessage) (*MessageSticker, error) {
-	var resp MessageSticker
+	var response MessageSticker
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageVideo parses the JSON-encoded data and return it as MessageVideo object.
 func UnmarshalMessageVideo(data json.RawMessage) (*MessageVideo, error) {
-	var resp MessageVideo
+	var response MessageVideo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageExpiredVideo parses the JSON-encoded data and return it as MessageExpiredVideo object.
 func UnmarshalMessageExpiredVideo(data json.RawMessage) (*MessageExpiredVideo, error) {
-	var resp MessageExpiredVideo
+	var response MessageExpiredVideo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageVideoNote parses the JSON-encoded data and return it as MessageVideoNote object.
 func UnmarshalMessageVideoNote(data json.RawMessage) (*MessageVideoNote, error) {
-	var resp MessageVideoNote
+	var response MessageVideoNote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageVoiceNote parses the JSON-encoded data and return it as MessageVoiceNote object.
 func UnmarshalMessageVoiceNote(data json.RawMessage) (*MessageVoiceNote, error) {
-	var resp MessageVoiceNote
+	var response MessageVoiceNote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageLocation parses the JSON-encoded data and return it as MessageLocation object.
 func UnmarshalMessageLocation(data json.RawMessage) (*MessageLocation, error) {
-	var resp MessageLocation
+	var response MessageLocation
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageVenue parses the JSON-encoded data and return it as MessageVenue object.
 func UnmarshalMessageVenue(data json.RawMessage) (*MessageVenue, error) {
-	var resp MessageVenue
+	var response MessageVenue
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageContact parses the JSON-encoded data and return it as MessageContact object.
 func UnmarshalMessageContact(data json.RawMessage) (*MessageContact, error) {
-	var resp MessageContact
+	var response MessageContact
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageGame parses the JSON-encoded data and return it as MessageGame object.
 func UnmarshalMessageGame(data json.RawMessage) (*MessageGame, error) {
-	var resp MessageGame
+	var response MessageGame
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageInvoice parses the JSON-encoded data and return it as MessageInvoice object.
 func UnmarshalMessageInvoice(data json.RawMessage) (*MessageInvoice, error) {
-	var resp MessageInvoice
+	var response MessageInvoice
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageCall parses the JSON-encoded data and return it as MessageCall object.
 func UnmarshalMessageCall(data json.RawMessage) (*MessageCall, error) {
-	var resp MessageCall
+	var response MessageCall
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageBasicGroupChatCreate parses the JSON-encoded data and return it as MessageBasicGroupChatCreate object.
 func UnmarshalMessageBasicGroupChatCreate(data json.RawMessage) (*MessageBasicGroupChatCreate, error) {
-	var resp MessageBasicGroupChatCreate
+	var response MessageBasicGroupChatCreate
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageSupergroupChatCreate parses the JSON-encoded data and return it as MessageSupergroupChatCreate object.
 func UnmarshalMessageSupergroupChatCreate(data json.RawMessage) (*MessageSupergroupChatCreate, error) {
-	var resp MessageSupergroupChatCreate
+	var response MessageSupergroupChatCreate
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageChatChangeTitle parses the JSON-encoded data and return it as MessageChatChangeTitle object.
 func UnmarshalMessageChatChangeTitle(data json.RawMessage) (*MessageChatChangeTitle, error) {
-	var resp MessageChatChangeTitle
+	var response MessageChatChangeTitle
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageChatChangePhoto parses the JSON-encoded data and return it as MessageChatChangePhoto object.
 func UnmarshalMessageChatChangePhoto(data json.RawMessage) (*MessageChatChangePhoto, error) {
-	var resp MessageChatChangePhoto
+	var response MessageChatChangePhoto
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageChatDeletePhoto parses the JSON-encoded data and return it as MessageChatDeletePhoto object.
 func UnmarshalMessageChatDeletePhoto(data json.RawMessage) (*MessageChatDeletePhoto, error) {
-	var resp MessageChatDeletePhoto
+	var response MessageChatDeletePhoto
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageChatAddMembers parses the JSON-encoded data and return it as MessageChatAddMembers object.
 func UnmarshalMessageChatAddMembers(data json.RawMessage) (*MessageChatAddMembers, error) {
-	var resp MessageChatAddMembers
+	var response MessageChatAddMembers
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageChatJoinByLink parses the JSON-encoded data and return it as MessageChatJoinByLink object.
 func UnmarshalMessageChatJoinByLink(data json.RawMessage) (*MessageChatJoinByLink, error) {
-	var resp MessageChatJoinByLink
+	var response MessageChatJoinByLink
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageChatDeleteMember parses the JSON-encoded data and return it as MessageChatDeleteMember object.
 func UnmarshalMessageChatDeleteMember(data json.RawMessage) (*MessageChatDeleteMember, error) {
-	var resp MessageChatDeleteMember
+	var response MessageChatDeleteMember
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageChatUpgradeTo parses the JSON-encoded data and return it as MessageChatUpgradeTo object.
 func UnmarshalMessageChatUpgradeTo(data json.RawMessage) (*MessageChatUpgradeTo, error) {
-	var resp MessageChatUpgradeTo
+	var response MessageChatUpgradeTo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageChatUpgradeFrom parses the JSON-encoded data and return it as MessageChatUpgradeFrom object.
 func UnmarshalMessageChatUpgradeFrom(data json.RawMessage) (*MessageChatUpgradeFrom, error) {
-	var resp MessageChatUpgradeFrom
+	var response MessageChatUpgradeFrom
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessagePinMessage parses the JSON-encoded data and return it as MessagePinMessage object.
 func UnmarshalMessagePinMessage(data json.RawMessage) (*MessagePinMessage, error) {
-	var resp MessagePinMessage
+	var response MessagePinMessage
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageScreenshotTaken parses the JSON-encoded data and return it as MessageScreenshotTaken object.
 func UnmarshalMessageScreenshotTaken(data json.RawMessage) (*MessageScreenshotTaken, error) {
-	var resp MessageScreenshotTaken
+	var response MessageScreenshotTaken
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
-func UnmarshalMessageChatSetTtl(data json.RawMessage) (*MessageChatSetTtl, error) {
-	var resp MessageChatSetTtl
+// UnmarshalMessageChatSetTTL parses the JSON-encoded data and return it as MessageChatSetTTL object.
+func UnmarshalMessageChatSetTTL(data json.RawMessage) (*MessageChatSetTTL, error) {
+	var response MessageChatSetTTL
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageCustomServiceAction parses the JSON-encoded data and return it as MessageCustomServiceAction object.
 func UnmarshalMessageCustomServiceAction(data json.RawMessage) (*MessageCustomServiceAction, error) {
-	var resp MessageCustomServiceAction
+	var response MessageCustomServiceAction
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageGameScore parses the JSON-encoded data and return it as MessageGameScore object.
 func UnmarshalMessageGameScore(data json.RawMessage) (*MessageGameScore, error) {
-	var resp MessageGameScore
+	var response MessageGameScore
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessagePaymentSuccessful parses the JSON-encoded data and return it as MessagePaymentSuccessful object.
 func UnmarshalMessagePaymentSuccessful(data json.RawMessage) (*MessagePaymentSuccessful, error) {
-	var resp MessagePaymentSuccessful
+	var response MessagePaymentSuccessful
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessagePaymentSuccessfulBot parses the JSON-encoded data and return it as MessagePaymentSuccessfulBot object.
 func UnmarshalMessagePaymentSuccessfulBot(data json.RawMessage) (*MessagePaymentSuccessfulBot, error) {
-	var resp MessagePaymentSuccessfulBot
+	var response MessagePaymentSuccessfulBot
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageContactRegistered parses the JSON-encoded data and return it as MessageContactRegistered object.
 func UnmarshalMessageContactRegistered(data json.RawMessage) (*MessageContactRegistered, error) {
-	var resp MessageContactRegistered
+	var response MessageContactRegistered
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageWebsiteConnected parses the JSON-encoded data and return it as MessageWebsiteConnected object.
 func UnmarshalMessageWebsiteConnected(data json.RawMessage) (*MessageWebsiteConnected, error) {
-	var resp MessageWebsiteConnected
+	var response MessageWebsiteConnected
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessagePassportDataSent parses the JSON-encoded data and return it as MessagePassportDataSent object.
 func UnmarshalMessagePassportDataSent(data json.RawMessage) (*MessagePassportDataSent, error) {
-	var resp MessagePassportDataSent
+	var response MessagePassportDataSent
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessagePassportDataReceived parses the JSON-encoded data and return it as MessagePassportDataReceived object.
 func UnmarshalMessagePassportDataReceived(data json.RawMessage) (*MessagePassportDataReceived, error) {
-	var resp MessagePassportDataReceived
+	var response MessagePassportDataReceived
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalMessageUnsupported parses the JSON-encoded data and return it as MessageUnsupported object.
 func UnmarshalMessageUnsupported(data json.RawMessage) (*MessageUnsupported, error) {
-	var resp MessageUnsupported
+	var response MessageUnsupported
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTextEntityTypeMention parses the JSON-encoded data and return it as TextEntityTypeMention object.
 func UnmarshalTextEntityTypeMention(data json.RawMessage) (*TextEntityTypeMention, error) {
-	var resp TextEntityTypeMention
+	var response TextEntityTypeMention
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTextEntityTypeHashtag parses the JSON-encoded data and return it as TextEntityTypeHashtag object.
 func UnmarshalTextEntityTypeHashtag(data json.RawMessage) (*TextEntityTypeHashtag, error) {
-	var resp TextEntityTypeHashtag
+	var response TextEntityTypeHashtag
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTextEntityTypeCashtag parses the JSON-encoded data and return it as TextEntityTypeCashtag object.
 func UnmarshalTextEntityTypeCashtag(data json.RawMessage) (*TextEntityTypeCashtag, error) {
-	var resp TextEntityTypeCashtag
+	var response TextEntityTypeCashtag
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTextEntityTypeBotCommand parses the JSON-encoded data and return it as TextEntityTypeBotCommand object.
 func UnmarshalTextEntityTypeBotCommand(data json.RawMessage) (*TextEntityTypeBotCommand, error) {
-	var resp TextEntityTypeBotCommand
+	var response TextEntityTypeBotCommand
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
-func UnmarshalTextEntityTypeUrl(data json.RawMessage) (*TextEntityTypeUrl, error) {
-	var resp TextEntityTypeUrl
+// UnmarshalTextEntityTypeURL parses the JSON-encoded data and return it as TextEntityTypeURL object.
+func UnmarshalTextEntityTypeURL(data json.RawMessage) (*TextEntityTypeURL, error) {
+	var response TextEntityTypeURL
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTextEntityTypeEmailAddress parses the JSON-encoded data and return it as TextEntityTypeEmailAddress object.
 func UnmarshalTextEntityTypeEmailAddress(data json.RawMessage) (*TextEntityTypeEmailAddress, error) {
-	var resp TextEntityTypeEmailAddress
+	var response TextEntityTypeEmailAddress
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTextEntityTypeBold parses the JSON-encoded data and return it as TextEntityTypeBold object.
 func UnmarshalTextEntityTypeBold(data json.RawMessage) (*TextEntityTypeBold, error) {
-	var resp TextEntityTypeBold
+	var response TextEntityTypeBold
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTextEntityTypeItalic parses the JSON-encoded data and return it as TextEntityTypeItalic object.
 func UnmarshalTextEntityTypeItalic(data json.RawMessage) (*TextEntityTypeItalic, error) {
-	var resp TextEntityTypeItalic
+	var response TextEntityTypeItalic
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTextEntityTypeCode parses the JSON-encoded data and return it as TextEntityTypeCode object.
 func UnmarshalTextEntityTypeCode(data json.RawMessage) (*TextEntityTypeCode, error) {
-	var resp TextEntityTypeCode
+	var response TextEntityTypeCode
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTextEntityTypePre parses the JSON-encoded data and return it as TextEntityTypePre object.
 func UnmarshalTextEntityTypePre(data json.RawMessage) (*TextEntityTypePre, error) {
-	var resp TextEntityTypePre
+	var response TextEntityTypePre
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTextEntityTypePreCode parses the JSON-encoded data and return it as TextEntityTypePreCode object.
 func UnmarshalTextEntityTypePreCode(data json.RawMessage) (*TextEntityTypePreCode, error) {
-	var resp TextEntityTypePreCode
+	var response TextEntityTypePreCode
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
-func UnmarshalTextEntityTypeTextUrl(data json.RawMessage) (*TextEntityTypeTextUrl, error) {
-	var resp TextEntityTypeTextUrl
+// UnmarshalTextEntityTypeTextURL parses the JSON-encoded data and return it as TextEntityTypeTextURL object.
+func UnmarshalTextEntityTypeTextURL(data json.RawMessage) (*TextEntityTypeTextURL, error) {
+	var response TextEntityTypeTextURL
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTextEntityTypeMentionName parses the JSON-encoded data and return it as TextEntityTypeMentionName object.
 func UnmarshalTextEntityTypeMentionName(data json.RawMessage) (*TextEntityTypeMentionName, error) {
-	var resp TextEntityTypeMentionName
+	var response TextEntityTypeMentionName
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTextEntityTypePhoneNumber parses the JSON-encoded data and return it as TextEntityTypePhoneNumber object.
 func UnmarshalTextEntityTypePhoneNumber(data json.RawMessage) (*TextEntityTypePhoneNumber, error) {
-	var resp TextEntityTypePhoneNumber
+	var response TextEntityTypePhoneNumber
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputThumbnail parses the JSON-encoded data and return it as InputThumbnail object.
 func UnmarshalInputThumbnail(data json.RawMessage) (*InputThumbnail, error) {
-	var resp InputThumbnail
+	var response InputThumbnail
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputMessageText parses the JSON-encoded data and return it as InputMessageText object.
 func UnmarshalInputMessageText(data json.RawMessage) (*InputMessageText, error) {
-	var resp InputMessageText
+	var response InputMessageText
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputMessageAnimation parses the JSON-encoded data and return it as InputMessageAnimation object.
 func UnmarshalInputMessageAnimation(data json.RawMessage) (*InputMessageAnimation, error) {
-	var resp InputMessageAnimation
+	var response InputMessageAnimation
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputMessageAudio parses the JSON-encoded data and return it as InputMessageAudio object.
 func UnmarshalInputMessageAudio(data json.RawMessage) (*InputMessageAudio, error) {
-	var resp InputMessageAudio
+	var response InputMessageAudio
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputMessageDocument parses the JSON-encoded data and return it as InputMessageDocument object.
 func UnmarshalInputMessageDocument(data json.RawMessage) (*InputMessageDocument, error) {
-	var resp InputMessageDocument
+	var response InputMessageDocument
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputMessagePhoto parses the JSON-encoded data and return it as InputMessagePhoto object.
 func UnmarshalInputMessagePhoto(data json.RawMessage) (*InputMessagePhoto, error) {
-	var resp InputMessagePhoto
+	var response InputMessagePhoto
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputMessageSticker parses the JSON-encoded data and return it as InputMessageSticker object.
 func UnmarshalInputMessageSticker(data json.RawMessage) (*InputMessageSticker, error) {
-	var resp InputMessageSticker
+	var response InputMessageSticker
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputMessageVideo parses the JSON-encoded data and return it as InputMessageVideo object.
 func UnmarshalInputMessageVideo(data json.RawMessage) (*InputMessageVideo, error) {
-	var resp InputMessageVideo
+	var response InputMessageVideo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputMessageVideoNote parses the JSON-encoded data and return it as InputMessageVideoNote object.
 func UnmarshalInputMessageVideoNote(data json.RawMessage) (*InputMessageVideoNote, error) {
-	var resp InputMessageVideoNote
+	var response InputMessageVideoNote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputMessageVoiceNote parses the JSON-encoded data and return it as InputMessageVoiceNote object.
 func UnmarshalInputMessageVoiceNote(data json.RawMessage) (*InputMessageVoiceNote, error) {
-	var resp InputMessageVoiceNote
+	var response InputMessageVoiceNote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputMessageLocation parses the JSON-encoded data and return it as InputMessageLocation object.
 func UnmarshalInputMessageLocation(data json.RawMessage) (*InputMessageLocation, error) {
-	var resp InputMessageLocation
+	var response InputMessageLocation
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputMessageVenue parses the JSON-encoded data and return it as InputMessageVenue object.
 func UnmarshalInputMessageVenue(data json.RawMessage) (*InputMessageVenue, error) {
-	var resp InputMessageVenue
+	var response InputMessageVenue
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputMessageContact parses the JSON-encoded data and return it as InputMessageContact object.
 func UnmarshalInputMessageContact(data json.RawMessage) (*InputMessageContact, error) {
-	var resp InputMessageContact
+	var response InputMessageContact
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputMessageGame parses the JSON-encoded data and return it as InputMessageGame object.
 func UnmarshalInputMessageGame(data json.RawMessage) (*InputMessageGame, error) {
-	var resp InputMessageGame
+	var response InputMessageGame
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputMessageInvoice parses the JSON-encoded data and return it as InputMessageInvoice object.
 func UnmarshalInputMessageInvoice(data json.RawMessage) (*InputMessageInvoice, error) {
-	var resp InputMessageInvoice
+	var response InputMessageInvoice
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputMessageForwarded parses the JSON-encoded data and return it as InputMessageForwarded object.
 func UnmarshalInputMessageForwarded(data json.RawMessage) (*InputMessageForwarded, error) {
-	var resp InputMessageForwarded
+	var response InputMessageForwarded
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSearchMessagesFilterEmpty parses the JSON-encoded data and return it as SearchMessagesFilterEmpty object.
 func UnmarshalSearchMessagesFilterEmpty(data json.RawMessage) (*SearchMessagesFilterEmpty, error) {
-	var resp SearchMessagesFilterEmpty
+	var response SearchMessagesFilterEmpty
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSearchMessagesFilterAnimation parses the JSON-encoded data and return it as SearchMessagesFilterAnimation object.
 func UnmarshalSearchMessagesFilterAnimation(data json.RawMessage) (*SearchMessagesFilterAnimation, error) {
-	var resp SearchMessagesFilterAnimation
+	var response SearchMessagesFilterAnimation
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSearchMessagesFilterAudio parses the JSON-encoded data and return it as SearchMessagesFilterAudio object.
 func UnmarshalSearchMessagesFilterAudio(data json.RawMessage) (*SearchMessagesFilterAudio, error) {
-	var resp SearchMessagesFilterAudio
+	var response SearchMessagesFilterAudio
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSearchMessagesFilterDocument parses the JSON-encoded data and return it as SearchMessagesFilterDocument object.
 func UnmarshalSearchMessagesFilterDocument(data json.RawMessage) (*SearchMessagesFilterDocument, error) {
-	var resp SearchMessagesFilterDocument
+	var response SearchMessagesFilterDocument
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSearchMessagesFilterPhoto parses the JSON-encoded data and return it as SearchMessagesFilterPhoto object.
 func UnmarshalSearchMessagesFilterPhoto(data json.RawMessage) (*SearchMessagesFilterPhoto, error) {
-	var resp SearchMessagesFilterPhoto
+	var response SearchMessagesFilterPhoto
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSearchMessagesFilterVideo parses the JSON-encoded data and return it as SearchMessagesFilterVideo object.
 func UnmarshalSearchMessagesFilterVideo(data json.RawMessage) (*SearchMessagesFilterVideo, error) {
-	var resp SearchMessagesFilterVideo
+	var response SearchMessagesFilterVideo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSearchMessagesFilterVoiceNote parses the JSON-encoded data and return it as SearchMessagesFilterVoiceNote object.
 func UnmarshalSearchMessagesFilterVoiceNote(data json.RawMessage) (*SearchMessagesFilterVoiceNote, error) {
-	var resp SearchMessagesFilterVoiceNote
+	var response SearchMessagesFilterVoiceNote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSearchMessagesFilterPhotoAndVideo parses the JSON-encoded data and return it as SearchMessagesFilterPhotoAndVideo object.
 func UnmarshalSearchMessagesFilterPhotoAndVideo(data json.RawMessage) (*SearchMessagesFilterPhotoAndVideo, error) {
-	var resp SearchMessagesFilterPhotoAndVideo
+	var response SearchMessagesFilterPhotoAndVideo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
-func UnmarshalSearchMessagesFilterUrl(data json.RawMessage) (*SearchMessagesFilterUrl, error) {
-	var resp SearchMessagesFilterUrl
+// UnmarshalSearchMessagesFilterURL parses the JSON-encoded data and return it as SearchMessagesFilterURL object.
+func UnmarshalSearchMessagesFilterURL(data json.RawMessage) (*SearchMessagesFilterURL, error) {
+	var response SearchMessagesFilterURL
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSearchMessagesFilterChatPhoto parses the JSON-encoded data and return it as SearchMessagesFilterChatPhoto object.
 func UnmarshalSearchMessagesFilterChatPhoto(data json.RawMessage) (*SearchMessagesFilterChatPhoto, error) {
-	var resp SearchMessagesFilterChatPhoto
+	var response SearchMessagesFilterChatPhoto
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSearchMessagesFilterCall parses the JSON-encoded data and return it as SearchMessagesFilterCall object.
 func UnmarshalSearchMessagesFilterCall(data json.RawMessage) (*SearchMessagesFilterCall, error) {
-	var resp SearchMessagesFilterCall
+	var response SearchMessagesFilterCall
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSearchMessagesFilterMissedCall parses the JSON-encoded data and return it as SearchMessagesFilterMissedCall object.
 func UnmarshalSearchMessagesFilterMissedCall(data json.RawMessage) (*SearchMessagesFilterMissedCall, error) {
-	var resp SearchMessagesFilterMissedCall
+	var response SearchMessagesFilterMissedCall
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSearchMessagesFilterVideoNote parses the JSON-encoded data and return it as SearchMessagesFilterVideoNote object.
 func UnmarshalSearchMessagesFilterVideoNote(data json.RawMessage) (*SearchMessagesFilterVideoNote, error) {
-	var resp SearchMessagesFilterVideoNote
+	var response SearchMessagesFilterVideoNote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSearchMessagesFilterVoiceAndVideoNote parses the JSON-encoded data and return it as SearchMessagesFilterVoiceAndVideoNote object.
 func UnmarshalSearchMessagesFilterVoiceAndVideoNote(data json.RawMessage) (*SearchMessagesFilterVoiceAndVideoNote, error) {
-	var resp SearchMessagesFilterVoiceAndVideoNote
+	var response SearchMessagesFilterVoiceAndVideoNote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSearchMessagesFilterMention parses the JSON-encoded data and return it as SearchMessagesFilterMention object.
 func UnmarshalSearchMessagesFilterMention(data json.RawMessage) (*SearchMessagesFilterMention, error) {
-	var resp SearchMessagesFilterMention
+	var response SearchMessagesFilterMention
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSearchMessagesFilterUnreadMention parses the JSON-encoded data and return it as SearchMessagesFilterUnreadMention object.
 func UnmarshalSearchMessagesFilterUnreadMention(data json.RawMessage) (*SearchMessagesFilterUnreadMention, error) {
-	var resp SearchMessagesFilterUnreadMention
+	var response SearchMessagesFilterUnreadMention
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatActionTyping parses the JSON-encoded data and return it as ChatActionTyping object.
 func UnmarshalChatActionTyping(data json.RawMessage) (*ChatActionTyping, error) {
-	var resp ChatActionTyping
+	var response ChatActionTyping
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatActionRecordingVideo parses the JSON-encoded data and return it as ChatActionRecordingVideo object.
 func UnmarshalChatActionRecordingVideo(data json.RawMessage) (*ChatActionRecordingVideo, error) {
-	var resp ChatActionRecordingVideo
+	var response ChatActionRecordingVideo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatActionUploadingVideo parses the JSON-encoded data and return it as ChatActionUploadingVideo object.
 func UnmarshalChatActionUploadingVideo(data json.RawMessage) (*ChatActionUploadingVideo, error) {
-	var resp ChatActionUploadingVideo
+	var response ChatActionUploadingVideo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatActionRecordingVoiceNote parses the JSON-encoded data and return it as ChatActionRecordingVoiceNote object.
 func UnmarshalChatActionRecordingVoiceNote(data json.RawMessage) (*ChatActionRecordingVoiceNote, error) {
-	var resp ChatActionRecordingVoiceNote
+	var response ChatActionRecordingVoiceNote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatActionUploadingVoiceNote parses the JSON-encoded data and return it as ChatActionUploadingVoiceNote object.
 func UnmarshalChatActionUploadingVoiceNote(data json.RawMessage) (*ChatActionUploadingVoiceNote, error) {
-	var resp ChatActionUploadingVoiceNote
+	var response ChatActionUploadingVoiceNote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatActionUploadingPhoto parses the JSON-encoded data and return it as ChatActionUploadingPhoto object.
 func UnmarshalChatActionUploadingPhoto(data json.RawMessage) (*ChatActionUploadingPhoto, error) {
-	var resp ChatActionUploadingPhoto
+	var response ChatActionUploadingPhoto
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatActionUploadingDocument parses the JSON-encoded data and return it as ChatActionUploadingDocument object.
 func UnmarshalChatActionUploadingDocument(data json.RawMessage) (*ChatActionUploadingDocument, error) {
-	var resp ChatActionUploadingDocument
+	var response ChatActionUploadingDocument
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatActionChoosingLocation parses the JSON-encoded data and return it as ChatActionChoosingLocation object.
 func UnmarshalChatActionChoosingLocation(data json.RawMessage) (*ChatActionChoosingLocation, error) {
-	var resp ChatActionChoosingLocation
+	var response ChatActionChoosingLocation
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatActionChoosingContact parses the JSON-encoded data and return it as ChatActionChoosingContact object.
 func UnmarshalChatActionChoosingContact(data json.RawMessage) (*ChatActionChoosingContact, error) {
-	var resp ChatActionChoosingContact
+	var response ChatActionChoosingContact
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatActionStartPlayingGame parses the JSON-encoded data and return it as ChatActionStartPlayingGame object.
 func UnmarshalChatActionStartPlayingGame(data json.RawMessage) (*ChatActionStartPlayingGame, error) {
-	var resp ChatActionStartPlayingGame
+	var response ChatActionStartPlayingGame
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatActionRecordingVideoNote parses the JSON-encoded data and return it as ChatActionRecordingVideoNote object.
 func UnmarshalChatActionRecordingVideoNote(data json.RawMessage) (*ChatActionRecordingVideoNote, error) {
-	var resp ChatActionRecordingVideoNote
+	var response ChatActionRecordingVideoNote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatActionUploadingVideoNote parses the JSON-encoded data and return it as ChatActionUploadingVideoNote object.
 func UnmarshalChatActionUploadingVideoNote(data json.RawMessage) (*ChatActionUploadingVideoNote, error) {
-	var resp ChatActionUploadingVideoNote
+	var response ChatActionUploadingVideoNote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatActionCancel parses the JSON-encoded data and return it as ChatActionCancel object.
 func UnmarshalChatActionCancel(data json.RawMessage) (*ChatActionCancel, error) {
-	var resp ChatActionCancel
+	var response ChatActionCancel
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserStatusEmpty parses the JSON-encoded data and return it as UserStatusEmpty object.
 func UnmarshalUserStatusEmpty(data json.RawMessage) (*UserStatusEmpty, error) {
-	var resp UserStatusEmpty
+	var response UserStatusEmpty
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserStatusOnline parses the JSON-encoded data and return it as UserStatusOnline object.
 func UnmarshalUserStatusOnline(data json.RawMessage) (*UserStatusOnline, error) {
-	var resp UserStatusOnline
+	var response UserStatusOnline
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserStatusOffline parses the JSON-encoded data and return it as UserStatusOffline object.
 func UnmarshalUserStatusOffline(data json.RawMessage) (*UserStatusOffline, error) {
-	var resp UserStatusOffline
+	var response UserStatusOffline
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserStatusRecently parses the JSON-encoded data and return it as UserStatusRecently object.
 func UnmarshalUserStatusRecently(data json.RawMessage) (*UserStatusRecently, error) {
-	var resp UserStatusRecently
+	var response UserStatusRecently
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserStatusLastWeek parses the JSON-encoded data and return it as UserStatusLastWeek object.
 func UnmarshalUserStatusLastWeek(data json.RawMessage) (*UserStatusLastWeek, error) {
-	var resp UserStatusLastWeek
+	var response UserStatusLastWeek
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserStatusLastMonth parses the JSON-encoded data and return it as UserStatusLastMonth object.
 func UnmarshalUserStatusLastMonth(data json.RawMessage) (*UserStatusLastMonth, error) {
-	var resp UserStatusLastMonth
+	var response UserStatusLastMonth
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalStickers parses the JSON-encoded data and return it as Stickers object.
 func UnmarshalStickers(data json.RawMessage) (*Stickers, error) {
-	var resp Stickers
+	var response Stickers
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalStickerEmojis parses the JSON-encoded data and return it as StickerEmojis object.
 func UnmarshalStickerEmojis(data json.RawMessage) (*StickerEmojis, error) {
-	var resp StickerEmojis
+	var response StickerEmojis
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalStickerSet parses the JSON-encoded data and return it as StickerSet object.
 func UnmarshalStickerSet(data json.RawMessage) (*StickerSet, error) {
-	var resp StickerSet
+	var response StickerSet
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalStickerSetInfo parses the JSON-encoded data and return it as StickerSetInfo object.
 func UnmarshalStickerSetInfo(data json.RawMessage) (*StickerSetInfo, error) {
-	var resp StickerSetInfo
+	var response StickerSetInfo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalStickerSets parses the JSON-encoded data and return it as StickerSets object.
 func UnmarshalStickerSets(data json.RawMessage) (*StickerSets, error) {
-	var resp StickerSets
+	var response StickerSets
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCallDiscardReasonEmpty parses the JSON-encoded data and return it as CallDiscardReasonEmpty object.
 func UnmarshalCallDiscardReasonEmpty(data json.RawMessage) (*CallDiscardReasonEmpty, error) {
-	var resp CallDiscardReasonEmpty
+	var response CallDiscardReasonEmpty
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCallDiscardReasonMissed parses the JSON-encoded data and return it as CallDiscardReasonMissed object.
 func UnmarshalCallDiscardReasonMissed(data json.RawMessage) (*CallDiscardReasonMissed, error) {
-	var resp CallDiscardReasonMissed
+	var response CallDiscardReasonMissed
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCallDiscardReasonDeclined parses the JSON-encoded data and return it as CallDiscardReasonDeclined object.
 func UnmarshalCallDiscardReasonDeclined(data json.RawMessage) (*CallDiscardReasonDeclined, error) {
-	var resp CallDiscardReasonDeclined
+	var response CallDiscardReasonDeclined
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCallDiscardReasonDisconnected parses the JSON-encoded data and return it as CallDiscardReasonDisconnected object.
 func UnmarshalCallDiscardReasonDisconnected(data json.RawMessage) (*CallDiscardReasonDisconnected, error) {
-	var resp CallDiscardReasonDisconnected
+	var response CallDiscardReasonDisconnected
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCallDiscardReasonHungUp parses the JSON-encoded data and return it as CallDiscardReasonHungUp object.
 func UnmarshalCallDiscardReasonHungUp(data json.RawMessage) (*CallDiscardReasonHungUp, error) {
-	var resp CallDiscardReasonHungUp
+	var response CallDiscardReasonHungUp
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCallProtocol parses the JSON-encoded data and return it as CallProtocol object.
 func UnmarshalCallProtocol(data json.RawMessage) (*CallProtocol, error) {
-	var resp CallProtocol
+	var response CallProtocol
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCallConnection parses the JSON-encoded data and return it as CallConnection object.
 func UnmarshalCallConnection(data json.RawMessage) (*CallConnection, error) {
-	var resp CallConnection
+	var response CallConnection
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
-func UnmarshalCallId(data json.RawMessage) (*CallId, error) {
-	var resp CallId
+// UnmarshalCallID parses the JSON-encoded data and return it as CallID object.
+func UnmarshalCallID(data json.RawMessage) (*CallID, error) {
+	var response CallID
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCallStatePending parses the JSON-encoded data and return it as CallStatePending object.
 func UnmarshalCallStatePending(data json.RawMessage) (*CallStatePending, error) {
-	var resp CallStatePending
+	var response CallStatePending
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCallStateExchangingKeys parses the JSON-encoded data and return it as CallStateExchangingKeys object.
 func UnmarshalCallStateExchangingKeys(data json.RawMessage) (*CallStateExchangingKeys, error) {
-	var resp CallStateExchangingKeys
+	var response CallStateExchangingKeys
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCallStateReady parses the JSON-encoded data and return it as CallStateReady object.
 func UnmarshalCallStateReady(data json.RawMessage) (*CallStateReady, error) {
-	var resp CallStateReady
+	var response CallStateReady
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCallStateHangingUp parses the JSON-encoded data and return it as CallStateHangingUp object.
 func UnmarshalCallStateHangingUp(data json.RawMessage) (*CallStateHangingUp, error) {
-	var resp CallStateHangingUp
+	var response CallStateHangingUp
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCallStateDiscarded parses the JSON-encoded data and return it as CallStateDiscarded object.
 func UnmarshalCallStateDiscarded(data json.RawMessage) (*CallStateDiscarded, error) {
-	var resp CallStateDiscarded
+	var response CallStateDiscarded
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCallStateError parses the JSON-encoded data and return it as CallStateError object.
 func UnmarshalCallStateError(data json.RawMessage) (*CallStateError, error) {
-	var resp CallStateError
+	var response CallStateError
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCall parses the JSON-encoded data and return it as Call object.
 func UnmarshalCall(data json.RawMessage) (*Call, error) {
-	var resp Call
+	var response Call
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalAnimations parses the JSON-encoded data and return it as Animations object.
 func UnmarshalAnimations(data json.RawMessage) (*Animations, error) {
-	var resp Animations
+	var response Animations
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalImportedContacts parses the JSON-encoded data and return it as ImportedContacts object.
 func UnmarshalImportedContacts(data json.RawMessage) (*ImportedContacts, error) {
-	var resp ImportedContacts
+	var response ImportedContacts
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputInlineQueryResultAnimatedGif parses the JSON-encoded data and return it as InputInlineQueryResultAnimatedGif object.
 func UnmarshalInputInlineQueryResultAnimatedGif(data json.RawMessage) (*InputInlineQueryResultAnimatedGif, error) {
-	var resp InputInlineQueryResultAnimatedGif
+	var response InputInlineQueryResultAnimatedGif
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputInlineQueryResultAnimatedMpeg4 parses the JSON-encoded data and return it as InputInlineQueryResultAnimatedMpeg4 object.
 func UnmarshalInputInlineQueryResultAnimatedMpeg4(data json.RawMessage) (*InputInlineQueryResultAnimatedMpeg4, error) {
-	var resp InputInlineQueryResultAnimatedMpeg4
+	var response InputInlineQueryResultAnimatedMpeg4
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputInlineQueryResultArticle parses the JSON-encoded data and return it as InputInlineQueryResultArticle object.
 func UnmarshalInputInlineQueryResultArticle(data json.RawMessage) (*InputInlineQueryResultArticle, error) {
-	var resp InputInlineQueryResultArticle
+	var response InputInlineQueryResultArticle
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputInlineQueryResultAudio parses the JSON-encoded data and return it as InputInlineQueryResultAudio object.
 func UnmarshalInputInlineQueryResultAudio(data json.RawMessage) (*InputInlineQueryResultAudio, error) {
-	var resp InputInlineQueryResultAudio
+	var response InputInlineQueryResultAudio
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputInlineQueryResultContact parses the JSON-encoded data and return it as InputInlineQueryResultContact object.
 func UnmarshalInputInlineQueryResultContact(data json.RawMessage) (*InputInlineQueryResultContact, error) {
-	var resp InputInlineQueryResultContact
+	var response InputInlineQueryResultContact
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputInlineQueryResultDocument parses the JSON-encoded data and return it as InputInlineQueryResultDocument object.
 func UnmarshalInputInlineQueryResultDocument(data json.RawMessage) (*InputInlineQueryResultDocument, error) {
-	var resp InputInlineQueryResultDocument
+	var response InputInlineQueryResultDocument
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputInlineQueryResultGame parses the JSON-encoded data and return it as InputInlineQueryResultGame object.
 func UnmarshalInputInlineQueryResultGame(data json.RawMessage) (*InputInlineQueryResultGame, error) {
-	var resp InputInlineQueryResultGame
+	var response InputInlineQueryResultGame
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputInlineQueryResultLocation parses the JSON-encoded data and return it as InputInlineQueryResultLocation object.
 func UnmarshalInputInlineQueryResultLocation(data json.RawMessage) (*InputInlineQueryResultLocation, error) {
-	var resp InputInlineQueryResultLocation
+	var response InputInlineQueryResultLocation
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputInlineQueryResultPhoto parses the JSON-encoded data and return it as InputInlineQueryResultPhoto object.
 func UnmarshalInputInlineQueryResultPhoto(data json.RawMessage) (*InputInlineQueryResultPhoto, error) {
-	var resp InputInlineQueryResultPhoto
+	var response InputInlineQueryResultPhoto
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputInlineQueryResultSticker parses the JSON-encoded data and return it as InputInlineQueryResultSticker object.
 func UnmarshalInputInlineQueryResultSticker(data json.RawMessage) (*InputInlineQueryResultSticker, error) {
-	var resp InputInlineQueryResultSticker
+	var response InputInlineQueryResultSticker
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputInlineQueryResultVenue parses the JSON-encoded data and return it as InputInlineQueryResultVenue object.
 func UnmarshalInputInlineQueryResultVenue(data json.RawMessage) (*InputInlineQueryResultVenue, error) {
-	var resp InputInlineQueryResultVenue
+	var response InputInlineQueryResultVenue
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputInlineQueryResultVideo parses the JSON-encoded data and return it as InputInlineQueryResultVideo object.
 func UnmarshalInputInlineQueryResultVideo(data json.RawMessage) (*InputInlineQueryResultVideo, error) {
-	var resp InputInlineQueryResultVideo
+	var response InputInlineQueryResultVideo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputInlineQueryResultVoiceNote parses the JSON-encoded data and return it as InputInlineQueryResultVoiceNote object.
 func UnmarshalInputInlineQueryResultVoiceNote(data json.RawMessage) (*InputInlineQueryResultVoiceNote, error) {
-	var resp InputInlineQueryResultVoiceNote
+	var response InputInlineQueryResultVoiceNote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInlineQueryResultArticle parses the JSON-encoded data and return it as InlineQueryResultArticle object.
 func UnmarshalInlineQueryResultArticle(data json.RawMessage) (*InlineQueryResultArticle, error) {
-	var resp InlineQueryResultArticle
+	var response InlineQueryResultArticle
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInlineQueryResultContact parses the JSON-encoded data and return it as InlineQueryResultContact object.
 func UnmarshalInlineQueryResultContact(data json.RawMessage) (*InlineQueryResultContact, error) {
-	var resp InlineQueryResultContact
+	var response InlineQueryResultContact
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInlineQueryResultLocation parses the JSON-encoded data and return it as InlineQueryResultLocation object.
 func UnmarshalInlineQueryResultLocation(data json.RawMessage) (*InlineQueryResultLocation, error) {
-	var resp InlineQueryResultLocation
+	var response InlineQueryResultLocation
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInlineQueryResultVenue parses the JSON-encoded data and return it as InlineQueryResultVenue object.
 func UnmarshalInlineQueryResultVenue(data json.RawMessage) (*InlineQueryResultVenue, error) {
-	var resp InlineQueryResultVenue
+	var response InlineQueryResultVenue
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInlineQueryResultGame parses the JSON-encoded data and return it as InlineQueryResultGame object.
 func UnmarshalInlineQueryResultGame(data json.RawMessage) (*InlineQueryResultGame, error) {
-	var resp InlineQueryResultGame
+	var response InlineQueryResultGame
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInlineQueryResultAnimation parses the JSON-encoded data and return it as InlineQueryResultAnimation object.
 func UnmarshalInlineQueryResultAnimation(data json.RawMessage) (*InlineQueryResultAnimation, error) {
-	var resp InlineQueryResultAnimation
+	var response InlineQueryResultAnimation
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInlineQueryResultAudio parses the JSON-encoded data and return it as InlineQueryResultAudio object.
 func UnmarshalInlineQueryResultAudio(data json.RawMessage) (*InlineQueryResultAudio, error) {
-	var resp InlineQueryResultAudio
+	var response InlineQueryResultAudio
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInlineQueryResultDocument parses the JSON-encoded data and return it as InlineQueryResultDocument object.
 func UnmarshalInlineQueryResultDocument(data json.RawMessage) (*InlineQueryResultDocument, error) {
-	var resp InlineQueryResultDocument
+	var response InlineQueryResultDocument
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInlineQueryResultPhoto parses the JSON-encoded data and return it as InlineQueryResultPhoto object.
 func UnmarshalInlineQueryResultPhoto(data json.RawMessage) (*InlineQueryResultPhoto, error) {
-	var resp InlineQueryResultPhoto
+	var response InlineQueryResultPhoto
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInlineQueryResultSticker parses the JSON-encoded data and return it as InlineQueryResultSticker object.
 func UnmarshalInlineQueryResultSticker(data json.RawMessage) (*InlineQueryResultSticker, error) {
-	var resp InlineQueryResultSticker
+	var response InlineQueryResultSticker
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInlineQueryResultVideo parses the JSON-encoded data and return it as InlineQueryResultVideo object.
 func UnmarshalInlineQueryResultVideo(data json.RawMessage) (*InlineQueryResultVideo, error) {
-	var resp InlineQueryResultVideo
+	var response InlineQueryResultVideo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInlineQueryResultVoiceNote parses the JSON-encoded data and return it as InlineQueryResultVoiceNote object.
 func UnmarshalInlineQueryResultVoiceNote(data json.RawMessage) (*InlineQueryResultVoiceNote, error) {
-	var resp InlineQueryResultVoiceNote
+	var response InlineQueryResultVoiceNote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInlineQueryResults parses the JSON-encoded data and return it as InlineQueryResults object.
 func UnmarshalInlineQueryResults(data json.RawMessage) (*InlineQueryResults, error) {
-	var resp InlineQueryResults
+	var response InlineQueryResults
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCallbackQueryPayloadData parses the JSON-encoded data and return it as CallbackQueryPayloadData object.
 func UnmarshalCallbackQueryPayloadData(data json.RawMessage) (*CallbackQueryPayloadData, error) {
-	var resp CallbackQueryPayloadData
+	var response CallbackQueryPayloadData
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCallbackQueryPayloadGame parses the JSON-encoded data and return it as CallbackQueryPayloadGame object.
 func UnmarshalCallbackQueryPayloadGame(data json.RawMessage) (*CallbackQueryPayloadGame, error) {
-	var resp CallbackQueryPayloadGame
+	var response CallbackQueryPayloadGame
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCallbackQueryAnswer parses the JSON-encoded data and return it as CallbackQueryAnswer object.
 func UnmarshalCallbackQueryAnswer(data json.RawMessage) (*CallbackQueryAnswer, error) {
-	var resp CallbackQueryAnswer
+	var response CallbackQueryAnswer
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCustomRequestResult parses the JSON-encoded data and return it as CustomRequestResult object.
 func UnmarshalCustomRequestResult(data json.RawMessage) (*CustomRequestResult, error) {
-	var resp CustomRequestResult
+	var response CustomRequestResult
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalGameHighScore parses the JSON-encoded data and return it as GameHighScore object.
 func UnmarshalGameHighScore(data json.RawMessage) (*GameHighScore, error) {
-	var resp GameHighScore
+	var response GameHighScore
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalGameHighScores parses the JSON-encoded data and return it as GameHighScores object.
 func UnmarshalGameHighScores(data json.RawMessage) (*GameHighScores, error) {
-	var resp GameHighScores
+	var response GameHighScores
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEventMessageEdited parses the JSON-encoded data and return it as ChatEventMessageEdited object.
 func UnmarshalChatEventMessageEdited(data json.RawMessage) (*ChatEventMessageEdited, error) {
-	var resp ChatEventMessageEdited
+	var response ChatEventMessageEdited
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEventMessageDeleted parses the JSON-encoded data and return it as ChatEventMessageDeleted object.
 func UnmarshalChatEventMessageDeleted(data json.RawMessage) (*ChatEventMessageDeleted, error) {
-	var resp ChatEventMessageDeleted
+	var response ChatEventMessageDeleted
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEventMessagePinned parses the JSON-encoded data and return it as ChatEventMessagePinned object.
 func UnmarshalChatEventMessagePinned(data json.RawMessage) (*ChatEventMessagePinned, error) {
-	var resp ChatEventMessagePinned
+	var response ChatEventMessagePinned
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEventMessageUnpinned parses the JSON-encoded data and return it as ChatEventMessageUnpinned object.
 func UnmarshalChatEventMessageUnpinned(data json.RawMessage) (*ChatEventMessageUnpinned, error) {
-	var resp ChatEventMessageUnpinned
+	var response ChatEventMessageUnpinned
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEventMemberJoined parses the JSON-encoded data and return it as ChatEventMemberJoined object.
 func UnmarshalChatEventMemberJoined(data json.RawMessage) (*ChatEventMemberJoined, error) {
-	var resp ChatEventMemberJoined
+	var response ChatEventMemberJoined
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEventMemberLeft parses the JSON-encoded data and return it as ChatEventMemberLeft object.
 func UnmarshalChatEventMemberLeft(data json.RawMessage) (*ChatEventMemberLeft, error) {
-	var resp ChatEventMemberLeft
+	var response ChatEventMemberLeft
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEventMemberInvited parses the JSON-encoded data and return it as ChatEventMemberInvited object.
 func UnmarshalChatEventMemberInvited(data json.RawMessage) (*ChatEventMemberInvited, error) {
-	var resp ChatEventMemberInvited
+	var response ChatEventMemberInvited
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEventMemberPromoted parses the JSON-encoded data and return it as ChatEventMemberPromoted object.
 func UnmarshalChatEventMemberPromoted(data json.RawMessage) (*ChatEventMemberPromoted, error) {
-	var resp ChatEventMemberPromoted
+	var response ChatEventMemberPromoted
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEventMemberRestricted parses the JSON-encoded data and return it as ChatEventMemberRestricted object.
 func UnmarshalChatEventMemberRestricted(data json.RawMessage) (*ChatEventMemberRestricted, error) {
-	var resp ChatEventMemberRestricted
+	var response ChatEventMemberRestricted
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEventTitleChanged parses the JSON-encoded data and return it as ChatEventTitleChanged object.
 func UnmarshalChatEventTitleChanged(data json.RawMessage) (*ChatEventTitleChanged, error) {
-	var resp ChatEventTitleChanged
+	var response ChatEventTitleChanged
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEventDescriptionChanged parses the JSON-encoded data and return it as ChatEventDescriptionChanged object.
 func UnmarshalChatEventDescriptionChanged(data json.RawMessage) (*ChatEventDescriptionChanged, error) {
-	var resp ChatEventDescriptionChanged
+	var response ChatEventDescriptionChanged
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEventUsernameChanged parses the JSON-encoded data and return it as ChatEventUsernameChanged object.
 func UnmarshalChatEventUsernameChanged(data json.RawMessage) (*ChatEventUsernameChanged, error) {
-	var resp ChatEventUsernameChanged
+	var response ChatEventUsernameChanged
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEventPhotoChanged parses the JSON-encoded data and return it as ChatEventPhotoChanged object.
 func UnmarshalChatEventPhotoChanged(data json.RawMessage) (*ChatEventPhotoChanged, error) {
-	var resp ChatEventPhotoChanged
+	var response ChatEventPhotoChanged
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEventInvitesToggled parses the JSON-encoded data and return it as ChatEventInvitesToggled object.
 func UnmarshalChatEventInvitesToggled(data json.RawMessage) (*ChatEventInvitesToggled, error) {
-	var resp ChatEventInvitesToggled
+	var response ChatEventInvitesToggled
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEventSignMessagesToggled parses the JSON-encoded data and return it as ChatEventSignMessagesToggled object.
 func UnmarshalChatEventSignMessagesToggled(data json.RawMessage) (*ChatEventSignMessagesToggled, error) {
-	var resp ChatEventSignMessagesToggled
+	var response ChatEventSignMessagesToggled
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEventStickerSetChanged parses the JSON-encoded data and return it as ChatEventStickerSetChanged object.
 func UnmarshalChatEventStickerSetChanged(data json.RawMessage) (*ChatEventStickerSetChanged, error) {
-	var resp ChatEventStickerSetChanged
+	var response ChatEventStickerSetChanged
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEventIsAllHistoryAvailableToggled parses the JSON-encoded data and return it as ChatEventIsAllHistoryAvailableToggled object.
 func UnmarshalChatEventIsAllHistoryAvailableToggled(data json.RawMessage) (*ChatEventIsAllHistoryAvailableToggled, error) {
-	var resp ChatEventIsAllHistoryAvailableToggled
+	var response ChatEventIsAllHistoryAvailableToggled
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEvent parses the JSON-encoded data and return it as ChatEvent object.
 func UnmarshalChatEvent(data json.RawMessage) (*ChatEvent, error) {
-	var resp ChatEvent
+	var response ChatEvent
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEvents parses the JSON-encoded data and return it as ChatEvents object.
 func UnmarshalChatEvents(data json.RawMessage) (*ChatEvents, error) {
-	var resp ChatEvents
+	var response ChatEvents
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatEventLogFilters parses the JSON-encoded data and return it as ChatEventLogFilters object.
 func UnmarshalChatEventLogFilters(data json.RawMessage) (*ChatEventLogFilters, error) {
-	var resp ChatEventLogFilters
+	var response ChatEventLogFilters
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalLanguagePackStringValueOrdinary parses the JSON-encoded data and return it as LanguagePackStringValueOrdinary object.
 func UnmarshalLanguagePackStringValueOrdinary(data json.RawMessage) (*LanguagePackStringValueOrdinary, error) {
-	var resp LanguagePackStringValueOrdinary
+	var response LanguagePackStringValueOrdinary
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalLanguagePackStringValuePluralized parses the JSON-encoded data and return it as LanguagePackStringValuePluralized object.
 func UnmarshalLanguagePackStringValuePluralized(data json.RawMessage) (*LanguagePackStringValuePluralized, error) {
-	var resp LanguagePackStringValuePluralized
+	var response LanguagePackStringValuePluralized
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalLanguagePackStringValueDeleted parses the JSON-encoded data and return it as LanguagePackStringValueDeleted object.
 func UnmarshalLanguagePackStringValueDeleted(data json.RawMessage) (*LanguagePackStringValueDeleted, error) {
-	var resp LanguagePackStringValueDeleted
+	var response LanguagePackStringValueDeleted
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalLanguagePackString parses the JSON-encoded data and return it as LanguagePackString object.
 func UnmarshalLanguagePackString(data json.RawMessage) (*LanguagePackString, error) {
-	var resp LanguagePackString
+	var response LanguagePackString
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalLanguagePackStrings parses the JSON-encoded data and return it as LanguagePackStrings object.
 func UnmarshalLanguagePackStrings(data json.RawMessage) (*LanguagePackStrings, error) {
-	var resp LanguagePackStrings
+	var response LanguagePackStrings
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalLanguagePackInfo parses the JSON-encoded data and return it as LanguagePackInfo object.
 func UnmarshalLanguagePackInfo(data json.RawMessage) (*LanguagePackInfo, error) {
-	var resp LanguagePackInfo
+	var response LanguagePackInfo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalLocalizationTargetInfo parses the JSON-encoded data and return it as LocalizationTargetInfo object.
 func UnmarshalLocalizationTargetInfo(data json.RawMessage) (*LocalizationTargetInfo, error) {
-	var resp LocalizationTargetInfo
+	var response LocalizationTargetInfo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalDeviceTokenGoogleCloudMessaging parses the JSON-encoded data and return it as DeviceTokenGoogleCloudMessaging object.
 func UnmarshalDeviceTokenGoogleCloudMessaging(data json.RawMessage) (*DeviceTokenGoogleCloudMessaging, error) {
-	var resp DeviceTokenGoogleCloudMessaging
+	var response DeviceTokenGoogleCloudMessaging
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalDeviceTokenApplePush parses the JSON-encoded data and return it as DeviceTokenApplePush object.
 func UnmarshalDeviceTokenApplePush(data json.RawMessage) (*DeviceTokenApplePush, error) {
-	var resp DeviceTokenApplePush
+	var response DeviceTokenApplePush
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalDeviceTokenApplePushVoIP parses the JSON-encoded data and return it as DeviceTokenApplePushVoIP object.
 func UnmarshalDeviceTokenApplePushVoIP(data json.RawMessage) (*DeviceTokenApplePushVoIP, error) {
-	var resp DeviceTokenApplePushVoIP
+	var response DeviceTokenApplePushVoIP
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalDeviceTokenWindowsPush parses the JSON-encoded data and return it as DeviceTokenWindowsPush object.
 func UnmarshalDeviceTokenWindowsPush(data json.RawMessage) (*DeviceTokenWindowsPush, error) {
-	var resp DeviceTokenWindowsPush
+	var response DeviceTokenWindowsPush
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalDeviceTokenMicrosoftPush parses the JSON-encoded data and return it as DeviceTokenMicrosoftPush object.
 func UnmarshalDeviceTokenMicrosoftPush(data json.RawMessage) (*DeviceTokenMicrosoftPush, error) {
-	var resp DeviceTokenMicrosoftPush
+	var response DeviceTokenMicrosoftPush
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalDeviceTokenMicrosoftPushVoIP parses the JSON-encoded data and return it as DeviceTokenMicrosoftPushVoIP object.
 func UnmarshalDeviceTokenMicrosoftPushVoIP(data json.RawMessage) (*DeviceTokenMicrosoftPushVoIP, error) {
-	var resp DeviceTokenMicrosoftPushVoIP
+	var response DeviceTokenMicrosoftPushVoIP
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalDeviceTokenWebPush parses the JSON-encoded data and return it as DeviceTokenWebPush object.
 func UnmarshalDeviceTokenWebPush(data json.RawMessage) (*DeviceTokenWebPush, error) {
-	var resp DeviceTokenWebPush
+	var response DeviceTokenWebPush
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalDeviceTokenSimplePush parses the JSON-encoded data and return it as DeviceTokenSimplePush object.
 func UnmarshalDeviceTokenSimplePush(data json.RawMessage) (*DeviceTokenSimplePush, error) {
-	var resp DeviceTokenSimplePush
+	var response DeviceTokenSimplePush
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalDeviceTokenUbuntuPush parses the JSON-encoded data and return it as DeviceTokenUbuntuPush object.
 func UnmarshalDeviceTokenUbuntuPush(data json.RawMessage) (*DeviceTokenUbuntuPush, error) {
-	var resp DeviceTokenUbuntuPush
+	var response DeviceTokenUbuntuPush
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalDeviceTokenBlackBerryPush parses the JSON-encoded data and return it as DeviceTokenBlackBerryPush object.
 func UnmarshalDeviceTokenBlackBerryPush(data json.RawMessage) (*DeviceTokenBlackBerryPush, error) {
-	var resp DeviceTokenBlackBerryPush
+	var response DeviceTokenBlackBerryPush
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalDeviceTokenTizenPush parses the JSON-encoded data and return it as DeviceTokenTizenPush object.
 func UnmarshalDeviceTokenTizenPush(data json.RawMessage) (*DeviceTokenTizenPush, error) {
-	var resp DeviceTokenTizenPush
+	var response DeviceTokenTizenPush
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalWallpaper parses the JSON-encoded data and return it as Wallpaper object.
 func UnmarshalWallpaper(data json.RawMessage) (*Wallpaper, error) {
-	var resp Wallpaper
+	var response Wallpaper
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalWallpapers parses the JSON-encoded data and return it as Wallpapers object.
 func UnmarshalWallpapers(data json.RawMessage) (*Wallpapers, error) {
-	var resp Wallpapers
+	var response Wallpapers
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalHashtags parses the JSON-encoded data and return it as Hashtags object.
 func UnmarshalHashtags(data json.RawMessage) (*Hashtags, error) {
-	var resp Hashtags
+	var response Hashtags
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCheckChatUsernameResultOk parses the JSON-encoded data and return it as CheckChatUsernameResultOk object.
 func UnmarshalCheckChatUsernameResultOk(data json.RawMessage) (*CheckChatUsernameResultOk, error) {
-	var resp CheckChatUsernameResultOk
+	var response CheckChatUsernameResultOk
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCheckChatUsernameResultUsernameInvalid parses the JSON-encoded data and return it as CheckChatUsernameResultUsernameInvalid object.
 func UnmarshalCheckChatUsernameResultUsernameInvalid(data json.RawMessage) (*CheckChatUsernameResultUsernameInvalid, error) {
-	var resp CheckChatUsernameResultUsernameInvalid
+	var response CheckChatUsernameResultUsernameInvalid
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCheckChatUsernameResultUsernameOccupied parses the JSON-encoded data and return it as CheckChatUsernameResultUsernameOccupied object.
 func UnmarshalCheckChatUsernameResultUsernameOccupied(data json.RawMessage) (*CheckChatUsernameResultUsernameOccupied, error) {
-	var resp CheckChatUsernameResultUsernameOccupied
+	var response CheckChatUsernameResultUsernameOccupied
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCheckChatUsernameResultPublicChatsTooMuch parses the JSON-encoded data and return it as CheckChatUsernameResultPublicChatsTooMuch object.
 func UnmarshalCheckChatUsernameResultPublicChatsTooMuch(data json.RawMessage) (*CheckChatUsernameResultPublicChatsTooMuch, error) {
-	var resp CheckChatUsernameResultPublicChatsTooMuch
+	var response CheckChatUsernameResultPublicChatsTooMuch
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCheckChatUsernameResultPublicGroupsUnavailable parses the JSON-encoded data and return it as CheckChatUsernameResultPublicGroupsUnavailable object.
 func UnmarshalCheckChatUsernameResultPublicGroupsUnavailable(data json.RawMessage) (*CheckChatUsernameResultPublicGroupsUnavailable, error) {
-	var resp CheckChatUsernameResultPublicGroupsUnavailable
+	var response CheckChatUsernameResultPublicGroupsUnavailable
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalOptionValueBoolean parses the JSON-encoded data and return it as OptionValueBoolean object.
 func UnmarshalOptionValueBoolean(data json.RawMessage) (*OptionValueBoolean, error) {
-	var resp OptionValueBoolean
+	var response OptionValueBoolean
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalOptionValueEmpty parses the JSON-encoded data and return it as OptionValueEmpty object.
 func UnmarshalOptionValueEmpty(data json.RawMessage) (*OptionValueEmpty, error) {
-	var resp OptionValueEmpty
+	var response OptionValueEmpty
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalOptionValueInteger parses the JSON-encoded data and return it as OptionValueInteger object.
 func UnmarshalOptionValueInteger(data json.RawMessage) (*OptionValueInteger, error) {
-	var resp OptionValueInteger
+	var response OptionValueInteger
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalOptionValueString parses the JSON-encoded data and return it as OptionValueString object.
 func UnmarshalOptionValueString(data json.RawMessage) (*OptionValueString, error) {
-	var resp OptionValueString
+	var response OptionValueString
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserPrivacySettingRuleAllowAll parses the JSON-encoded data and return it as UserPrivacySettingRuleAllowAll object.
 func UnmarshalUserPrivacySettingRuleAllowAll(data json.RawMessage) (*UserPrivacySettingRuleAllowAll, error) {
-	var resp UserPrivacySettingRuleAllowAll
+	var response UserPrivacySettingRuleAllowAll
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserPrivacySettingRuleAllowContacts parses the JSON-encoded data and return it as UserPrivacySettingRuleAllowContacts object.
 func UnmarshalUserPrivacySettingRuleAllowContacts(data json.RawMessage) (*UserPrivacySettingRuleAllowContacts, error) {
-	var resp UserPrivacySettingRuleAllowContacts
+	var response UserPrivacySettingRuleAllowContacts
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserPrivacySettingRuleAllowUsers parses the JSON-encoded data and return it as UserPrivacySettingRuleAllowUsers object.
 func UnmarshalUserPrivacySettingRuleAllowUsers(data json.RawMessage) (*UserPrivacySettingRuleAllowUsers, error) {
-	var resp UserPrivacySettingRuleAllowUsers
+	var response UserPrivacySettingRuleAllowUsers
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserPrivacySettingRuleRestrictAll parses the JSON-encoded data and return it as UserPrivacySettingRuleRestrictAll object.
 func UnmarshalUserPrivacySettingRuleRestrictAll(data json.RawMessage) (*UserPrivacySettingRuleRestrictAll, error) {
-	var resp UserPrivacySettingRuleRestrictAll
+	var response UserPrivacySettingRuleRestrictAll
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserPrivacySettingRuleRestrictContacts parses the JSON-encoded data and return it as UserPrivacySettingRuleRestrictContacts object.
 func UnmarshalUserPrivacySettingRuleRestrictContacts(data json.RawMessage) (*UserPrivacySettingRuleRestrictContacts, error) {
-	var resp UserPrivacySettingRuleRestrictContacts
+	var response UserPrivacySettingRuleRestrictContacts
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserPrivacySettingRuleRestrictUsers parses the JSON-encoded data and return it as UserPrivacySettingRuleRestrictUsers object.
 func UnmarshalUserPrivacySettingRuleRestrictUsers(data json.RawMessage) (*UserPrivacySettingRuleRestrictUsers, error) {
-	var resp UserPrivacySettingRuleRestrictUsers
+	var response UserPrivacySettingRuleRestrictUsers
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserPrivacySettingRules parses the JSON-encoded data and return it as UserPrivacySettingRules object.
 func UnmarshalUserPrivacySettingRules(data json.RawMessage) (*UserPrivacySettingRules, error) {
-	var resp UserPrivacySettingRules
+	var response UserPrivacySettingRules
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserPrivacySettingShowStatus parses the JSON-encoded data and return it as UserPrivacySettingShowStatus object.
 func UnmarshalUserPrivacySettingShowStatus(data json.RawMessage) (*UserPrivacySettingShowStatus, error) {
-	var resp UserPrivacySettingShowStatus
+	var response UserPrivacySettingShowStatus
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserPrivacySettingAllowChatInvites parses the JSON-encoded data and return it as UserPrivacySettingAllowChatInvites object.
 func UnmarshalUserPrivacySettingAllowChatInvites(data json.RawMessage) (*UserPrivacySettingAllowChatInvites, error) {
-	var resp UserPrivacySettingAllowChatInvites
+	var response UserPrivacySettingAllowChatInvites
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUserPrivacySettingAllowCalls parses the JSON-encoded data and return it as UserPrivacySettingAllowCalls object.
 func UnmarshalUserPrivacySettingAllowCalls(data json.RawMessage) (*UserPrivacySettingAllowCalls, error) {
-	var resp UserPrivacySettingAllowCalls
+	var response UserPrivacySettingAllowCalls
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
-func UnmarshalAccountTtl(data json.RawMessage) (*AccountTtl, error) {
-	var resp AccountTtl
+// UnmarshalAccountTTL parses the JSON-encoded data and return it as AccountTTL object.
+func UnmarshalAccountTTL(data json.RawMessage) (*AccountTTL, error) {
+	var response AccountTTL
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSession parses the JSON-encoded data and return it as Session object.
 func UnmarshalSession(data json.RawMessage) (*Session, error) {
-	var resp Session
+	var response Session
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSessions parses the JSON-encoded data and return it as Sessions object.
 func UnmarshalSessions(data json.RawMessage) (*Sessions, error) {
-	var resp Sessions
+	var response Sessions
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalConnectedWebsite parses the JSON-encoded data and return it as ConnectedWebsite object.
 func UnmarshalConnectedWebsite(data json.RawMessage) (*ConnectedWebsite, error) {
-	var resp ConnectedWebsite
+	var response ConnectedWebsite
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalConnectedWebsites parses the JSON-encoded data and return it as ConnectedWebsites object.
 func UnmarshalConnectedWebsites(data json.RawMessage) (*ConnectedWebsites, error) {
-	var resp ConnectedWebsites
+	var response ConnectedWebsites
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatReportSpamState parses the JSON-encoded data and return it as ChatReportSpamState object.
 func UnmarshalChatReportSpamState(data json.RawMessage) (*ChatReportSpamState, error) {
-	var resp ChatReportSpamState
+	var response ChatReportSpamState
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatReportReasonSpam parses the JSON-encoded data and return it as ChatReportReasonSpam object.
 func UnmarshalChatReportReasonSpam(data json.RawMessage) (*ChatReportReasonSpam, error) {
-	var resp ChatReportReasonSpam
+	var response ChatReportReasonSpam
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatReportReasonViolence parses the JSON-encoded data and return it as ChatReportReasonViolence object.
 func UnmarshalChatReportReasonViolence(data json.RawMessage) (*ChatReportReasonViolence, error) {
-	var resp ChatReportReasonViolence
+	var response ChatReportReasonViolence
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatReportReasonPornography parses the JSON-encoded data and return it as ChatReportReasonPornography object.
 func UnmarshalChatReportReasonPornography(data json.RawMessage) (*ChatReportReasonPornography, error) {
-	var resp ChatReportReasonPornography
+	var response ChatReportReasonPornography
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatReportReasonCopyright parses the JSON-encoded data and return it as ChatReportReasonCopyright object.
 func UnmarshalChatReportReasonCopyright(data json.RawMessage) (*ChatReportReasonCopyright, error) {
-	var resp ChatReportReasonCopyright
+	var response ChatReportReasonCopyright
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalChatReportReasonCustom parses the JSON-encoded data and return it as ChatReportReasonCustom object.
 func UnmarshalChatReportReasonCustom(data json.RawMessage) (*ChatReportReasonCustom, error) {
-	var resp ChatReportReasonCustom
+	var response ChatReportReasonCustom
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalPublicMessageLink parses the JSON-encoded data and return it as PublicMessageLink object.
 func UnmarshalPublicMessageLink(data json.RawMessage) (*PublicMessageLink, error) {
-	var resp PublicMessageLink
+	var response PublicMessageLink
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalFileTypeNone parses the JSON-encoded data and return it as FileTypeNone object.
 func UnmarshalFileTypeNone(data json.RawMessage) (*FileTypeNone, error) {
-	var resp FileTypeNone
+	var response FileTypeNone
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalFileTypeAnimation parses the JSON-encoded data and return it as FileTypeAnimation object.
 func UnmarshalFileTypeAnimation(data json.RawMessage) (*FileTypeAnimation, error) {
-	var resp FileTypeAnimation
+	var response FileTypeAnimation
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalFileTypeAudio parses the JSON-encoded data and return it as FileTypeAudio object.
 func UnmarshalFileTypeAudio(data json.RawMessage) (*FileTypeAudio, error) {
-	var resp FileTypeAudio
+	var response FileTypeAudio
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalFileTypeDocument parses the JSON-encoded data and return it as FileTypeDocument object.
 func UnmarshalFileTypeDocument(data json.RawMessage) (*FileTypeDocument, error) {
-	var resp FileTypeDocument
+	var response FileTypeDocument
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalFileTypePhoto parses the JSON-encoded data and return it as FileTypePhoto object.
 func UnmarshalFileTypePhoto(data json.RawMessage) (*FileTypePhoto, error) {
-	var resp FileTypePhoto
+	var response FileTypePhoto
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalFileTypeProfilePhoto parses the JSON-encoded data and return it as FileTypeProfilePhoto object.
 func UnmarshalFileTypeProfilePhoto(data json.RawMessage) (*FileTypeProfilePhoto, error) {
-	var resp FileTypeProfilePhoto
+	var response FileTypeProfilePhoto
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalFileTypeSecret parses the JSON-encoded data and return it as FileTypeSecret object.
 func UnmarshalFileTypeSecret(data json.RawMessage) (*FileTypeSecret, error) {
-	var resp FileTypeSecret
+	var response FileTypeSecret
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalFileTypeSecretThumbnail parses the JSON-encoded data and return it as FileTypeSecretThumbnail object.
 func UnmarshalFileTypeSecretThumbnail(data json.RawMessage) (*FileTypeSecretThumbnail, error) {
-	var resp FileTypeSecretThumbnail
+	var response FileTypeSecretThumbnail
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalFileTypeSecure parses the JSON-encoded data and return it as FileTypeSecure object.
 func UnmarshalFileTypeSecure(data json.RawMessage) (*FileTypeSecure, error) {
-	var resp FileTypeSecure
+	var response FileTypeSecure
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalFileTypeSticker parses the JSON-encoded data and return it as FileTypeSticker object.
 func UnmarshalFileTypeSticker(data json.RawMessage) (*FileTypeSticker, error) {
-	var resp FileTypeSticker
+	var response FileTypeSticker
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalFileTypeThumbnail parses the JSON-encoded data and return it as FileTypeThumbnail object.
 func UnmarshalFileTypeThumbnail(data json.RawMessage) (*FileTypeThumbnail, error) {
-	var resp FileTypeThumbnail
+	var response FileTypeThumbnail
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalFileTypeUnknown parses the JSON-encoded data and return it as FileTypeUnknown object.
 func UnmarshalFileTypeUnknown(data json.RawMessage) (*FileTypeUnknown, error) {
-	var resp FileTypeUnknown
+	var response FileTypeUnknown
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalFileTypeVideo parses the JSON-encoded data and return it as FileTypeVideo object.
 func UnmarshalFileTypeVideo(data json.RawMessage) (*FileTypeVideo, error) {
-	var resp FileTypeVideo
+	var response FileTypeVideo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalFileTypeVideoNote parses the JSON-encoded data and return it as FileTypeVideoNote object.
 func UnmarshalFileTypeVideoNote(data json.RawMessage) (*FileTypeVideoNote, error) {
-	var resp FileTypeVideoNote
+	var response FileTypeVideoNote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalFileTypeVoiceNote parses the JSON-encoded data and return it as FileTypeVoiceNote object.
 func UnmarshalFileTypeVoiceNote(data json.RawMessage) (*FileTypeVoiceNote, error) {
-	var resp FileTypeVoiceNote
+	var response FileTypeVoiceNote
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalFileTypeWallpaper parses the JSON-encoded data and return it as FileTypeWallpaper object.
 func UnmarshalFileTypeWallpaper(data json.RawMessage) (*FileTypeWallpaper, error) {
-	var resp FileTypeWallpaper
+	var response FileTypeWallpaper
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalStorageStatisticsByFileType parses the JSON-encoded data and return it as StorageStatisticsByFileType object.
 func UnmarshalStorageStatisticsByFileType(data json.RawMessage) (*StorageStatisticsByFileType, error) {
-	var resp StorageStatisticsByFileType
+	var response StorageStatisticsByFileType
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalStorageStatisticsByChat parses the JSON-encoded data and return it as StorageStatisticsByChat object.
 func UnmarshalStorageStatisticsByChat(data json.RawMessage) (*StorageStatisticsByChat, error) {
-	var resp StorageStatisticsByChat
+	var response StorageStatisticsByChat
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalStorageStatistics parses the JSON-encoded data and return it as StorageStatistics object.
 func UnmarshalStorageStatistics(data json.RawMessage) (*StorageStatistics, error) {
-	var resp StorageStatistics
+	var response StorageStatistics
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalStorageStatisticsFast parses the JSON-encoded data and return it as StorageStatisticsFast object.
 func UnmarshalStorageStatisticsFast(data json.RawMessage) (*StorageStatisticsFast, error) {
-	var resp StorageStatisticsFast
+	var response StorageStatisticsFast
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalNetworkTypeNone parses the JSON-encoded data and return it as NetworkTypeNone object.
 func UnmarshalNetworkTypeNone(data json.RawMessage) (*NetworkTypeNone, error) {
-	var resp NetworkTypeNone
+	var response NetworkTypeNone
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalNetworkTypeMobile parses the JSON-encoded data and return it as NetworkTypeMobile object.
 func UnmarshalNetworkTypeMobile(data json.RawMessage) (*NetworkTypeMobile, error) {
-	var resp NetworkTypeMobile
+	var response NetworkTypeMobile
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalNetworkTypeMobileRoaming parses the JSON-encoded data and return it as NetworkTypeMobileRoaming object.
 func UnmarshalNetworkTypeMobileRoaming(data json.RawMessage) (*NetworkTypeMobileRoaming, error) {
-	var resp NetworkTypeMobileRoaming
+	var response NetworkTypeMobileRoaming
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalNetworkTypeWiFi parses the JSON-encoded data and return it as NetworkTypeWiFi object.
 func UnmarshalNetworkTypeWiFi(data json.RawMessage) (*NetworkTypeWiFi, error) {
-	var resp NetworkTypeWiFi
+	var response NetworkTypeWiFi
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalNetworkTypeOther parses the JSON-encoded data and return it as NetworkTypeOther object.
 func UnmarshalNetworkTypeOther(data json.RawMessage) (*NetworkTypeOther, error) {
-	var resp NetworkTypeOther
+	var response NetworkTypeOther
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalNetworkStatisticsEntryFile parses the JSON-encoded data and return it as NetworkStatisticsEntryFile object.
 func UnmarshalNetworkStatisticsEntryFile(data json.RawMessage) (*NetworkStatisticsEntryFile, error) {
-	var resp NetworkStatisticsEntryFile
+	var response NetworkStatisticsEntryFile
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalNetworkStatisticsEntryCall parses the JSON-encoded data and return it as NetworkStatisticsEntryCall object.
 func UnmarshalNetworkStatisticsEntryCall(data json.RawMessage) (*NetworkStatisticsEntryCall, error) {
-	var resp NetworkStatisticsEntryCall
+	var response NetworkStatisticsEntryCall
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalNetworkStatistics parses the JSON-encoded data and return it as NetworkStatistics object.
 func UnmarshalNetworkStatistics(data json.RawMessage) (*NetworkStatistics, error) {
-	var resp NetworkStatistics
+	var response NetworkStatistics
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalConnectionStateWaitingForNetwork parses the JSON-encoded data and return it as ConnectionStateWaitingForNetwork object.
 func UnmarshalConnectionStateWaitingForNetwork(data json.RawMessage) (*ConnectionStateWaitingForNetwork, error) {
-	var resp ConnectionStateWaitingForNetwork
+	var response ConnectionStateWaitingForNetwork
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalConnectionStateConnectingToProxy parses the JSON-encoded data and return it as ConnectionStateConnectingToProxy object.
 func UnmarshalConnectionStateConnectingToProxy(data json.RawMessage) (*ConnectionStateConnectingToProxy, error) {
-	var resp ConnectionStateConnectingToProxy
+	var response ConnectionStateConnectingToProxy
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalConnectionStateConnecting parses the JSON-encoded data and return it as ConnectionStateConnecting object.
 func UnmarshalConnectionStateConnecting(data json.RawMessage) (*ConnectionStateConnecting, error) {
-	var resp ConnectionStateConnecting
+	var response ConnectionStateConnecting
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalConnectionStateUpdating parses the JSON-encoded data and return it as ConnectionStateUpdating object.
 func UnmarshalConnectionStateUpdating(data json.RawMessage) (*ConnectionStateUpdating, error) {
-	var resp ConnectionStateUpdating
+	var response ConnectionStateUpdating
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalConnectionStateReady parses the JSON-encoded data and return it as ConnectionStateReady object.
 func UnmarshalConnectionStateReady(data json.RawMessage) (*ConnectionStateReady, error) {
-	var resp ConnectionStateReady
+	var response ConnectionStateReady
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTopChatCategoryUsers parses the JSON-encoded data and return it as TopChatCategoryUsers object.
 func UnmarshalTopChatCategoryUsers(data json.RawMessage) (*TopChatCategoryUsers, error) {
-	var resp TopChatCategoryUsers
+	var response TopChatCategoryUsers
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTopChatCategoryBots parses the JSON-encoded data and return it as TopChatCategoryBots object.
 func UnmarshalTopChatCategoryBots(data json.RawMessage) (*TopChatCategoryBots, error) {
-	var resp TopChatCategoryBots
+	var response TopChatCategoryBots
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTopChatCategoryGroups parses the JSON-encoded data and return it as TopChatCategoryGroups object.
 func UnmarshalTopChatCategoryGroups(data json.RawMessage) (*TopChatCategoryGroups, error) {
-	var resp TopChatCategoryGroups
+	var response TopChatCategoryGroups
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTopChatCategoryChannels parses the JSON-encoded data and return it as TopChatCategoryChannels object.
 func UnmarshalTopChatCategoryChannels(data json.RawMessage) (*TopChatCategoryChannels, error) {
-	var resp TopChatCategoryChannels
+	var response TopChatCategoryChannels
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTopChatCategoryInlineBots parses the JSON-encoded data and return it as TopChatCategoryInlineBots object.
 func UnmarshalTopChatCategoryInlineBots(data json.RawMessage) (*TopChatCategoryInlineBots, error) {
-	var resp TopChatCategoryInlineBots
+	var response TopChatCategoryInlineBots
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTopChatCategoryCalls parses the JSON-encoded data and return it as TopChatCategoryCalls object.
 func UnmarshalTopChatCategoryCalls(data json.RawMessage) (*TopChatCategoryCalls, error) {
-	var resp TopChatCategoryCalls
+	var response TopChatCategoryCalls
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
-func UnmarshalTMeUrlTypeUser(data json.RawMessage) (*TMeUrlTypeUser, error) {
-	var resp TMeUrlTypeUser
+// UnmarshalTMeURLTypeUser parses the JSON-encoded data and return it as TMeURLTypeUser object.
+func UnmarshalTMeURLTypeUser(data json.RawMessage) (*TMeURLTypeUser, error) {
+	var response TMeURLTypeUser
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
-func UnmarshalTMeUrlTypeSupergroup(data json.RawMessage) (*TMeUrlTypeSupergroup, error) {
-	var resp TMeUrlTypeSupergroup
+// UnmarshalTMeURLTypeSupergroup parses the JSON-encoded data and return it as TMeURLTypeSupergroup object.
+func UnmarshalTMeURLTypeSupergroup(data json.RawMessage) (*TMeURLTypeSupergroup, error) {
+	var response TMeURLTypeSupergroup
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
-func UnmarshalTMeUrlTypeChatInvite(data json.RawMessage) (*TMeUrlTypeChatInvite, error) {
-	var resp TMeUrlTypeChatInvite
+// UnmarshalTMeURLTypeChatInvite parses the JSON-encoded data and return it as TMeURLTypeChatInvite object.
+func UnmarshalTMeURLTypeChatInvite(data json.RawMessage) (*TMeURLTypeChatInvite, error) {
+	var response TMeURLTypeChatInvite
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
-func UnmarshalTMeUrlTypeStickerSet(data json.RawMessage) (*TMeUrlTypeStickerSet, error) {
-	var resp TMeUrlTypeStickerSet
+// UnmarshalTMeURLTypeStickerSet parses the JSON-encoded data and return it as TMeURLTypeStickerSet object.
+func UnmarshalTMeURLTypeStickerSet(data json.RawMessage) (*TMeURLTypeStickerSet, error) {
+	var response TMeURLTypeStickerSet
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
-func UnmarshalTMeUrl(data json.RawMessage) (*TMeUrl, error) {
-	var resp TMeUrl
+// UnmarshalTMeURL parses the JSON-encoded data and return it as TMeURL object.
+func UnmarshalTMeURL(data json.RawMessage) (*TMeURL, error) {
+	var response TMeURL
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
-func UnmarshalTMeUrls(data json.RawMessage) (*TMeUrls, error) {
-	var resp TMeUrls
+// UnmarshalTMeURLs parses the JSON-encoded data and return it as TMeURLs object.
+func UnmarshalTMeURLs(data json.RawMessage) (*TMeURLs, error) {
+	var response TMeURLs
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalCount parses the JSON-encoded data and return it as Count object.
 func UnmarshalCount(data json.RawMessage) (*Count, error) {
-	var resp Count
+	var response Count
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalText parses the JSON-encoded data and return it as Text object.
 func UnmarshalText(data json.RawMessage) (*Text, error) {
-	var resp Text
+	var response Text
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalSeconds parses the JSON-encoded data and return it as Seconds object.
 func UnmarshalSeconds(data json.RawMessage) (*Seconds, error) {
-	var resp Seconds
+	var response Seconds
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalDeepLinkInfo parses the JSON-encoded data and return it as DeepLinkInfo object.
 func UnmarshalDeepLinkInfo(data json.RawMessage) (*DeepLinkInfo, error) {
-	var resp DeepLinkInfo
+	var response DeepLinkInfo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTextParseModeMarkdown parses the JSON-encoded data and return it as TextParseModeMarkdown object.
 func UnmarshalTextParseModeMarkdown(data json.RawMessage) (*TextParseModeMarkdown, error) {
-	var resp TextParseModeMarkdown
+	var response TextParseModeMarkdown
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTextParseModeHTML parses the JSON-encoded data and return it as TextParseModeHTML object.
 func UnmarshalTextParseModeHTML(data json.RawMessage) (*TextParseModeHTML, error) {
-	var resp TextParseModeHTML
+	var response TextParseModeHTML
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalProxyTypeSocks5 parses the JSON-encoded data and return it as ProxyTypeSocks5 object.
 func UnmarshalProxyTypeSocks5(data json.RawMessage) (*ProxyTypeSocks5, error) {
-	var resp ProxyTypeSocks5
+	var response ProxyTypeSocks5
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
-func UnmarshalProxyTypeHttp(data json.RawMessage) (*ProxyTypeHttp, error) {
-	var resp ProxyTypeHttp
+// UnmarshalProxyTypeHTTP parses the JSON-encoded data and return it as ProxyTypeHTTP object.
+func UnmarshalProxyTypeHTTP(data json.RawMessage) (*ProxyTypeHTTP, error) {
+	var response ProxyTypeHTTP
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalProxyTypeMtproto parses the JSON-encoded data and return it as ProxyTypeMtproto object.
 func UnmarshalProxyTypeMtproto(data json.RawMessage) (*ProxyTypeMtproto, error) {
-	var resp ProxyTypeMtproto
+	var response ProxyTypeMtproto
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalProxy parses the JSON-encoded data and return it as Proxy object.
 func UnmarshalProxy(data json.RawMessage) (*Proxy, error) {
-	var resp Proxy
+	var response Proxy
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalProxies parses the JSON-encoded data and return it as Proxies object.
 func UnmarshalProxies(data json.RawMessage) (*Proxies, error) {
-	var resp Proxies
+	var response Proxies
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalInputSticker parses the JSON-encoded data and return it as InputSticker object.
 func UnmarshalInputSticker(data json.RawMessage) (*InputSticker, error) {
-	var resp InputSticker
+	var response InputSticker
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateAuthorizationState parses the JSON-encoded data and return it as UpdateAuthorizationState object.
 func UnmarshalUpdateAuthorizationState(data json.RawMessage) (*UpdateAuthorizationState, error) {
-	var resp UpdateAuthorizationState
+	var response UpdateAuthorizationState
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateNewMessage parses the JSON-encoded data and return it as UpdateNewMessage object.
 func UnmarshalUpdateNewMessage(data json.RawMessage) (*UpdateNewMessage, error) {
-	var resp UpdateNewMessage
+	var response UpdateNewMessage
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateMessageSendAcknowledged parses the JSON-encoded data and return it as UpdateMessageSendAcknowledged object.
 func UnmarshalUpdateMessageSendAcknowledged(data json.RawMessage) (*UpdateMessageSendAcknowledged, error) {
-	var resp UpdateMessageSendAcknowledged
+	var response UpdateMessageSendAcknowledged
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateMessageSendSucceeded parses the JSON-encoded data and return it as UpdateMessageSendSucceeded object.
 func UnmarshalUpdateMessageSendSucceeded(data json.RawMessage) (*UpdateMessageSendSucceeded, error) {
-	var resp UpdateMessageSendSucceeded
+	var response UpdateMessageSendSucceeded
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateMessageSendFailed parses the JSON-encoded data and return it as UpdateMessageSendFailed object.
 func UnmarshalUpdateMessageSendFailed(data json.RawMessage) (*UpdateMessageSendFailed, error) {
-	var resp UpdateMessageSendFailed
+	var response UpdateMessageSendFailed
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateMessageContent parses the JSON-encoded data and return it as UpdateMessageContent object.
 func UnmarshalUpdateMessageContent(data json.RawMessage) (*UpdateMessageContent, error) {
-	var resp UpdateMessageContent
+	var response UpdateMessageContent
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateMessageEdited parses the JSON-encoded data and return it as UpdateMessageEdited object.
 func UnmarshalUpdateMessageEdited(data json.RawMessage) (*UpdateMessageEdited, error) {
-	var resp UpdateMessageEdited
+	var response UpdateMessageEdited
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateMessageViews parses the JSON-encoded data and return it as UpdateMessageViews object.
 func UnmarshalUpdateMessageViews(data json.RawMessage) (*UpdateMessageViews, error) {
-	var resp UpdateMessageViews
+	var response UpdateMessageViews
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateMessageContentOpened parses the JSON-encoded data and return it as UpdateMessageContentOpened object.
 func UnmarshalUpdateMessageContentOpened(data json.RawMessage) (*UpdateMessageContentOpened, error) {
-	var resp UpdateMessageContentOpened
+	var response UpdateMessageContentOpened
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateMessageMentionRead parses the JSON-encoded data and return it as UpdateMessageMentionRead object.
 func UnmarshalUpdateMessageMentionRead(data json.RawMessage) (*UpdateMessageMentionRead, error) {
-	var resp UpdateMessageMentionRead
+	var response UpdateMessageMentionRead
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateNewChat parses the JSON-encoded data and return it as UpdateNewChat object.
 func UnmarshalUpdateNewChat(data json.RawMessage) (*UpdateNewChat, error) {
-	var resp UpdateNewChat
+	var response UpdateNewChat
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateChatTitle parses the JSON-encoded data and return it as UpdateChatTitle object.
 func UnmarshalUpdateChatTitle(data json.RawMessage) (*UpdateChatTitle, error) {
-	var resp UpdateChatTitle
+	var response UpdateChatTitle
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateChatPhoto parses the JSON-encoded data and return it as UpdateChatPhoto object.
 func UnmarshalUpdateChatPhoto(data json.RawMessage) (*UpdateChatPhoto, error) {
-	var resp UpdateChatPhoto
+	var response UpdateChatPhoto
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateChatLastMessage parses the JSON-encoded data and return it as UpdateChatLastMessage object.
 func UnmarshalUpdateChatLastMessage(data json.RawMessage) (*UpdateChatLastMessage, error) {
-	var resp UpdateChatLastMessage
+	var response UpdateChatLastMessage
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateChatOrder parses the JSON-encoded data and return it as UpdateChatOrder object.
 func UnmarshalUpdateChatOrder(data json.RawMessage) (*UpdateChatOrder, error) {
-	var resp UpdateChatOrder
+	var response UpdateChatOrder
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateChatIsPinned parses the JSON-encoded data and return it as UpdateChatIsPinned object.
 func UnmarshalUpdateChatIsPinned(data json.RawMessage) (*UpdateChatIsPinned, error) {
-	var resp UpdateChatIsPinned
+	var response UpdateChatIsPinned
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateChatIsMarkedAsUnread parses the JSON-encoded data and return it as UpdateChatIsMarkedAsUnread object.
 func UnmarshalUpdateChatIsMarkedAsUnread(data json.RawMessage) (*UpdateChatIsMarkedAsUnread, error) {
-	var resp UpdateChatIsMarkedAsUnread
+	var response UpdateChatIsMarkedAsUnread
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateChatIsSponsored parses the JSON-encoded data and return it as UpdateChatIsSponsored object.
 func UnmarshalUpdateChatIsSponsored(data json.RawMessage) (*UpdateChatIsSponsored, error) {
-	var resp UpdateChatIsSponsored
+	var response UpdateChatIsSponsored
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateChatDefaultDisableNotification parses the JSON-encoded data and return it as UpdateChatDefaultDisableNotification object.
 func UnmarshalUpdateChatDefaultDisableNotification(data json.RawMessage) (*UpdateChatDefaultDisableNotification, error) {
-	var resp UpdateChatDefaultDisableNotification
+	var response UpdateChatDefaultDisableNotification
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateChatReadInbox parses the JSON-encoded data and return it as UpdateChatReadInbox object.
 func UnmarshalUpdateChatReadInbox(data json.RawMessage) (*UpdateChatReadInbox, error) {
-	var resp UpdateChatReadInbox
+	var response UpdateChatReadInbox
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateChatReadOutbox parses the JSON-encoded data and return it as UpdateChatReadOutbox object.
 func UnmarshalUpdateChatReadOutbox(data json.RawMessage) (*UpdateChatReadOutbox, error) {
-	var resp UpdateChatReadOutbox
+	var response UpdateChatReadOutbox
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateChatUnreadMentionCount parses the JSON-encoded data and return it as UpdateChatUnreadMentionCount object.
 func UnmarshalUpdateChatUnreadMentionCount(data json.RawMessage) (*UpdateChatUnreadMentionCount, error) {
-	var resp UpdateChatUnreadMentionCount
+	var response UpdateChatUnreadMentionCount
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateChatNotificationSettings parses the JSON-encoded data and return it as UpdateChatNotificationSettings object.
 func UnmarshalUpdateChatNotificationSettings(data json.RawMessage) (*UpdateChatNotificationSettings, error) {
-	var resp UpdateChatNotificationSettings
+	var response UpdateChatNotificationSettings
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateScopeNotificationSettings parses the JSON-encoded data and return it as UpdateScopeNotificationSettings object.
 func UnmarshalUpdateScopeNotificationSettings(data json.RawMessage) (*UpdateScopeNotificationSettings, error) {
-	var resp UpdateScopeNotificationSettings
+	var response UpdateScopeNotificationSettings
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateChatReplyMarkup parses the JSON-encoded data and return it as UpdateChatReplyMarkup object.
 func UnmarshalUpdateChatReplyMarkup(data json.RawMessage) (*UpdateChatReplyMarkup, error) {
-	var resp UpdateChatReplyMarkup
+	var response UpdateChatReplyMarkup
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateChatDraftMessage parses the JSON-encoded data and return it as UpdateChatDraftMessage object.
 func UnmarshalUpdateChatDraftMessage(data json.RawMessage) (*UpdateChatDraftMessage, error) {
-	var resp UpdateChatDraftMessage
+	var response UpdateChatDraftMessage
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateDeleteMessages parses the JSON-encoded data and return it as UpdateDeleteMessages object.
 func UnmarshalUpdateDeleteMessages(data json.RawMessage) (*UpdateDeleteMessages, error) {
-	var resp UpdateDeleteMessages
+	var response UpdateDeleteMessages
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateUserChatAction parses the JSON-encoded data and return it as UpdateUserChatAction object.
 func UnmarshalUpdateUserChatAction(data json.RawMessage) (*UpdateUserChatAction, error) {
-	var resp UpdateUserChatAction
+	var response UpdateUserChatAction
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateUserStatus parses the JSON-encoded data and return it as UpdateUserStatus object.
 func UnmarshalUpdateUserStatus(data json.RawMessage) (*UpdateUserStatus, error) {
-	var resp UpdateUserStatus
+	var response UpdateUserStatus
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateUser parses the JSON-encoded data and return it as UpdateUser object.
 func UnmarshalUpdateUser(data json.RawMessage) (*UpdateUser, error) {
-	var resp UpdateUser
+	var response UpdateUser
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateBasicGroup parses the JSON-encoded data and return it as UpdateBasicGroup object.
 func UnmarshalUpdateBasicGroup(data json.RawMessage) (*UpdateBasicGroup, error) {
-	var resp UpdateBasicGroup
+	var response UpdateBasicGroup
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateSupergroup parses the JSON-encoded data and return it as UpdateSupergroup object.
 func UnmarshalUpdateSupergroup(data json.RawMessage) (*UpdateSupergroup, error) {
-	var resp UpdateSupergroup
+	var response UpdateSupergroup
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateSecretChat parses the JSON-encoded data and return it as UpdateSecretChat object.
 func UnmarshalUpdateSecretChat(data json.RawMessage) (*UpdateSecretChat, error) {
-	var resp UpdateSecretChat
+	var response UpdateSecretChat
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateUserFullInfo parses the JSON-encoded data and return it as UpdateUserFullInfo object.
 func UnmarshalUpdateUserFullInfo(data json.RawMessage) (*UpdateUserFullInfo, error) {
-	var resp UpdateUserFullInfo
+	var response UpdateUserFullInfo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateBasicGroupFullInfo parses the JSON-encoded data and return it as UpdateBasicGroupFullInfo object.
 func UnmarshalUpdateBasicGroupFullInfo(data json.RawMessage) (*UpdateBasicGroupFullInfo, error) {
-	var resp UpdateBasicGroupFullInfo
+	var response UpdateBasicGroupFullInfo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateSupergroupFullInfo parses the JSON-encoded data and return it as UpdateSupergroupFullInfo object.
 func UnmarshalUpdateSupergroupFullInfo(data json.RawMessage) (*UpdateSupergroupFullInfo, error) {
-	var resp UpdateSupergroupFullInfo
+	var response UpdateSupergroupFullInfo
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateServiceNotification parses the JSON-encoded data and return it as UpdateServiceNotification object.
 func UnmarshalUpdateServiceNotification(data json.RawMessage) (*UpdateServiceNotification, error) {
-	var resp UpdateServiceNotification
+	var response UpdateServiceNotification
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateFile parses the JSON-encoded data and return it as UpdateFile object.
 func UnmarshalUpdateFile(data json.RawMessage) (*UpdateFile, error) {
-	var resp UpdateFile
+	var response UpdateFile
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateFileGenerationStart parses the JSON-encoded data and return it as UpdateFileGenerationStart object.
 func UnmarshalUpdateFileGenerationStart(data json.RawMessage) (*UpdateFileGenerationStart, error) {
-	var resp UpdateFileGenerationStart
+	var response UpdateFileGenerationStart
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateFileGenerationStop parses the JSON-encoded data and return it as UpdateFileGenerationStop object.
 func UnmarshalUpdateFileGenerationStop(data json.RawMessage) (*UpdateFileGenerationStop, error) {
-	var resp UpdateFileGenerationStop
+	var response UpdateFileGenerationStop
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateCall parses the JSON-encoded data and return it as UpdateCall object.
 func UnmarshalUpdateCall(data json.RawMessage) (*UpdateCall, error) {
-	var resp UpdateCall
+	var response UpdateCall
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateUserPrivacySettingRules parses the JSON-encoded data and return it as UpdateUserPrivacySettingRules object.
 func UnmarshalUpdateUserPrivacySettingRules(data json.RawMessage) (*UpdateUserPrivacySettingRules, error) {
-	var resp UpdateUserPrivacySettingRules
+	var response UpdateUserPrivacySettingRules
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateUnreadMessageCount parses the JSON-encoded data and return it as UpdateUnreadMessageCount object.
 func UnmarshalUpdateUnreadMessageCount(data json.RawMessage) (*UpdateUnreadMessageCount, error) {
-	var resp UpdateUnreadMessageCount
+	var response UpdateUnreadMessageCount
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateUnreadChatCount parses the JSON-encoded data and return it as UpdateUnreadChatCount object.
 func UnmarshalUpdateUnreadChatCount(data json.RawMessage) (*UpdateUnreadChatCount, error) {
-	var resp UpdateUnreadChatCount
+	var response UpdateUnreadChatCount
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateOption parses the JSON-encoded data and return it as UpdateOption object.
 func UnmarshalUpdateOption(data json.RawMessage) (*UpdateOption, error) {
-	var resp UpdateOption
+	var response UpdateOption
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateInstalledStickerSets parses the JSON-encoded data and return it as UpdateInstalledStickerSets object.
 func UnmarshalUpdateInstalledStickerSets(data json.RawMessage) (*UpdateInstalledStickerSets, error) {
-	var resp UpdateInstalledStickerSets
+	var response UpdateInstalledStickerSets
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateTrendingStickerSets parses the JSON-encoded data and return it as UpdateTrendingStickerSets object.
 func UnmarshalUpdateTrendingStickerSets(data json.RawMessage) (*UpdateTrendingStickerSets, error) {
-	var resp UpdateTrendingStickerSets
+	var response UpdateTrendingStickerSets
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateRecentStickers parses the JSON-encoded data and return it as UpdateRecentStickers object.
 func UnmarshalUpdateRecentStickers(data json.RawMessage) (*UpdateRecentStickers, error) {
-	var resp UpdateRecentStickers
+	var response UpdateRecentStickers
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateFavoriteStickers parses the JSON-encoded data and return it as UpdateFavoriteStickers object.
 func UnmarshalUpdateFavoriteStickers(data json.RawMessage) (*UpdateFavoriteStickers, error) {
-	var resp UpdateFavoriteStickers
+	var response UpdateFavoriteStickers
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateSavedAnimations parses the JSON-encoded data and return it as UpdateSavedAnimations object.
 func UnmarshalUpdateSavedAnimations(data json.RawMessage) (*UpdateSavedAnimations, error) {
-	var resp UpdateSavedAnimations
+	var response UpdateSavedAnimations
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateLanguagePackStrings parses the JSON-encoded data and return it as UpdateLanguagePackStrings object.
 func UnmarshalUpdateLanguagePackStrings(data json.RawMessage) (*UpdateLanguagePackStrings, error) {
-	var resp UpdateLanguagePackStrings
+	var response UpdateLanguagePackStrings
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateConnectionState parses the JSON-encoded data and return it as UpdateConnectionState object.
 func UnmarshalUpdateConnectionState(data json.RawMessage) (*UpdateConnectionState, error) {
-	var resp UpdateConnectionState
+	var response UpdateConnectionState
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateTermsOfService parses the JSON-encoded data and return it as UpdateTermsOfService object.
 func UnmarshalUpdateTermsOfService(data json.RawMessage) (*UpdateTermsOfService, error) {
-	var resp UpdateTermsOfService
+	var response UpdateTermsOfService
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateNewInlineQuery parses the JSON-encoded data and return it as UpdateNewInlineQuery object.
 func UnmarshalUpdateNewInlineQuery(data json.RawMessage) (*UpdateNewInlineQuery, error) {
-	var resp UpdateNewInlineQuery
+	var response UpdateNewInlineQuery
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateNewChosenInlineResult parses the JSON-encoded data and return it as UpdateNewChosenInlineResult object.
 func UnmarshalUpdateNewChosenInlineResult(data json.RawMessage) (*UpdateNewChosenInlineResult, error) {
-	var resp UpdateNewChosenInlineResult
+	var response UpdateNewChosenInlineResult
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateNewCallbackQuery parses the JSON-encoded data and return it as UpdateNewCallbackQuery object.
 func UnmarshalUpdateNewCallbackQuery(data json.RawMessage) (*UpdateNewCallbackQuery, error) {
-	var resp UpdateNewCallbackQuery
+	var response UpdateNewCallbackQuery
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateNewInlineCallbackQuery parses the JSON-encoded data and return it as UpdateNewInlineCallbackQuery object.
 func UnmarshalUpdateNewInlineCallbackQuery(data json.RawMessage) (*UpdateNewInlineCallbackQuery, error) {
-	var resp UpdateNewInlineCallbackQuery
+	var response UpdateNewInlineCallbackQuery
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateNewShippingQuery parses the JSON-encoded data and return it as UpdateNewShippingQuery object.
 func UnmarshalUpdateNewShippingQuery(data json.RawMessage) (*UpdateNewShippingQuery, error) {
-	var resp UpdateNewShippingQuery
+	var response UpdateNewShippingQuery
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateNewPreCheckoutQuery parses the JSON-encoded data and return it as UpdateNewPreCheckoutQuery object.
 func UnmarshalUpdateNewPreCheckoutQuery(data json.RawMessage) (*UpdateNewPreCheckoutQuery, error) {
-	var resp UpdateNewPreCheckoutQuery
+	var response UpdateNewPreCheckoutQuery
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateNewCustomEvent parses the JSON-encoded data and return it as UpdateNewCustomEvent object.
 func UnmarshalUpdateNewCustomEvent(data json.RawMessage) (*UpdateNewCustomEvent, error) {
-	var resp UpdateNewCustomEvent
+	var response UpdateNewCustomEvent
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalUpdateNewCustomQuery parses the JSON-encoded data and return it as UpdateNewCustomQuery object.
 func UnmarshalUpdateNewCustomQuery(data json.RawMessage) (*UpdateNewCustomQuery, error) {
-	var resp UpdateNewCustomQuery
+	var response UpdateNewCustomQuery
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTestInt parses the JSON-encoded data and return it as TestInt object.
 func UnmarshalTestInt(data json.RawMessage) (*TestInt, error) {
-	var resp TestInt
+	var response TestInt
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTestString parses the JSON-encoded data and return it as TestString object.
 func UnmarshalTestString(data json.RawMessage) (*TestString, error) {
-	var resp TestString
+	var response TestString
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTestBytes parses the JSON-encoded data and return it as TestBytes object.
 func UnmarshalTestBytes(data json.RawMessage) (*TestBytes, error) {
-	var resp TestBytes
+	var response TestBytes
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTestVectorInt parses the JSON-encoded data and return it as TestVectorInt object.
 func UnmarshalTestVectorInt(data json.RawMessage) (*TestVectorInt, error) {
-	var resp TestVectorInt
+	var response TestVectorInt
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTestVectorIntObject parses the JSON-encoded data and return it as TestVectorIntObject object.
 func UnmarshalTestVectorIntObject(data json.RawMessage) (*TestVectorIntObject, error) {
-	var resp TestVectorIntObject
+	var response TestVectorIntObject
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTestVectorString parses the JSON-encoded data and return it as TestVectorString object.
 func UnmarshalTestVectorString(data json.RawMessage) (*TestVectorString, error) {
-	var resp TestVectorString
+	var response TestVectorString
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalTestVectorStringObject parses the JSON-encoded data and return it as TestVectorStringObject object.
 func UnmarshalTestVectorStringObject(data json.RawMessage) (*TestVectorStringObject, error) {
-	var resp TestVectorStringObject
+	var response TestVectorStringObject
 
-	err := json.Unmarshal(data, &resp)
+	err := json.Unmarshal(data, &response)
 
-	return &resp, err
+	return &response, err
 }
 
+// UnmarshalType parses the JSON-encoded data and return it as %s object.
 func UnmarshalType(data json.RawMessage) (Type, error) {
 	var meta meta
 
@@ -7044,8 +7700,8 @@ func UnmarshalType(data json.RawMessage) (Type, error) {
 	case TypeFile:
 		return UnmarshalFile(data)
 
-	case TypeInputFileId:
-		return UnmarshalInputFileId(data)
+	case TypeInputFileID:
+		return UnmarshalInputFileID(data)
 
 	case TypeInputFileRemote:
 		return UnmarshalInputFileRemote(data)
@@ -7308,8 +7964,8 @@ func UnmarshalType(data json.RawMessage) (Type, error) {
 	case TypeKeyboardButton:
 		return UnmarshalKeyboardButton(data)
 
-	case TypeInlineKeyboardButtonTypeUrl:
-		return UnmarshalInlineKeyboardButtonTypeUrl(data)
+	case TypeInlineKeyboardButtonTypeURL:
+		return UnmarshalInlineKeyboardButtonTypeURL(data)
 
 	case TypeInlineKeyboardButtonTypeCallback:
 		return UnmarshalInlineKeyboardButtonTypeCallback(data)
@@ -7356,8 +8012,8 @@ func UnmarshalType(data json.RawMessage) (Type, error) {
 	case TypeRichTextFixed:
 		return UnmarshalRichTextFixed(data)
 
-	case TypeRichTextUrl:
-		return UnmarshalRichTextUrl(data)
+	case TypeRichTextURL:
+		return UnmarshalRichTextURL(data)
 
 	case TypeRichTextEmailAddress:
 		return UnmarshalRichTextEmailAddress(data)
@@ -7788,8 +8444,8 @@ func UnmarshalType(data json.RawMessage) (Type, error) {
 	case TypeMessageScreenshotTaken:
 		return UnmarshalMessageScreenshotTaken(data)
 
-	case TypeMessageChatSetTtl:
-		return UnmarshalMessageChatSetTtl(data)
+	case TypeMessageChatSetTTL:
+		return UnmarshalMessageChatSetTTL(data)
 
 	case TypeMessageCustomServiceAction:
 		return UnmarshalMessageCustomServiceAction(data)
@@ -7830,8 +8486,8 @@ func UnmarshalType(data json.RawMessage) (Type, error) {
 	case TypeTextEntityTypeBotCommand:
 		return UnmarshalTextEntityTypeBotCommand(data)
 
-	case TypeTextEntityTypeUrl:
-		return UnmarshalTextEntityTypeUrl(data)
+	case TypeTextEntityTypeURL:
+		return UnmarshalTextEntityTypeURL(data)
 
 	case TypeTextEntityTypeEmailAddress:
 		return UnmarshalTextEntityTypeEmailAddress(data)
@@ -7851,8 +8507,8 @@ func UnmarshalType(data json.RawMessage) (Type, error) {
 	case TypeTextEntityTypePreCode:
 		return UnmarshalTextEntityTypePreCode(data)
 
-	case TypeTextEntityTypeTextUrl:
-		return UnmarshalTextEntityTypeTextUrl(data)
+	case TypeTextEntityTypeTextURL:
+		return UnmarshalTextEntityTypeTextURL(data)
 
 	case TypeTextEntityTypeMentionName:
 		return UnmarshalTextEntityTypeMentionName(data)
@@ -7932,8 +8588,8 @@ func UnmarshalType(data json.RawMessage) (Type, error) {
 	case TypeSearchMessagesFilterPhotoAndVideo:
 		return UnmarshalSearchMessagesFilterPhotoAndVideo(data)
 
-	case TypeSearchMessagesFilterUrl:
-		return UnmarshalSearchMessagesFilterUrl(data)
+	case TypeSearchMessagesFilterURL:
+		return UnmarshalSearchMessagesFilterURL(data)
 
 	case TypeSearchMessagesFilterChatPhoto:
 		return UnmarshalSearchMessagesFilterChatPhoto(data)
@@ -8049,8 +8705,8 @@ func UnmarshalType(data json.RawMessage) (Type, error) {
 	case TypeCallConnection:
 		return UnmarshalCallConnection(data)
 
-	case TypeCallId:
-		return UnmarshalCallId(data)
+	case TypeCallID:
+		return UnmarshalCallID(data)
 
 	case TypeCallStatePending:
 		return UnmarshalCallStatePending(data)
@@ -8355,8 +9011,8 @@ func UnmarshalType(data json.RawMessage) (Type, error) {
 	case TypeUserPrivacySettingAllowCalls:
 		return UnmarshalUserPrivacySettingAllowCalls(data)
 
-	case TypeAccountTtl:
-		return UnmarshalAccountTtl(data)
+	case TypeAccountTTL:
+		return UnmarshalAccountTTL(data)
 
 	case TypeSession:
 		return UnmarshalSession(data)
@@ -8508,23 +9164,23 @@ func UnmarshalType(data json.RawMessage) (Type, error) {
 	case TypeTopChatCategoryCalls:
 		return UnmarshalTopChatCategoryCalls(data)
 
-	case TypeTMeUrlTypeUser:
-		return UnmarshalTMeUrlTypeUser(data)
+	case TypeTMeURLTypeUser:
+		return UnmarshalTMeURLTypeUser(data)
 
-	case TypeTMeUrlTypeSupergroup:
-		return UnmarshalTMeUrlTypeSupergroup(data)
+	case TypeTMeURLTypeSupergroup:
+		return UnmarshalTMeURLTypeSupergroup(data)
 
-	case TypeTMeUrlTypeChatInvite:
-		return UnmarshalTMeUrlTypeChatInvite(data)
+	case TypeTMeURLTypeChatInvite:
+		return UnmarshalTMeURLTypeChatInvite(data)
 
-	case TypeTMeUrlTypeStickerSet:
-		return UnmarshalTMeUrlTypeStickerSet(data)
+	case TypeTMeURLTypeStickerSet:
+		return UnmarshalTMeURLTypeStickerSet(data)
 
-	case TypeTMeUrl:
-		return UnmarshalTMeUrl(data)
+	case TypeTMeURL:
+		return UnmarshalTMeURL(data)
 
-	case TypeTMeUrls:
-		return UnmarshalTMeUrls(data)
+	case TypeTMeURLs:
+		return UnmarshalTMeURLs(data)
 
 	case TypeCount:
 		return UnmarshalCount(data)
@@ -8547,8 +9203,8 @@ func UnmarshalType(data json.RawMessage) (Type, error) {
 	case TypeProxyTypeSocks5:
 		return UnmarshalProxyTypeSocks5(data)
 
-	case TypeProxyTypeHttp:
-		return UnmarshalProxyTypeHttp(data)
+	case TypeProxyTypeHTTP:
+		return UnmarshalProxyTypeHTTP(data)
 
 	case TypeProxyTypeMtproto:
 		return UnmarshalProxyTypeMtproto(data)

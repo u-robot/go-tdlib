@@ -4,9 +4,10 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/zelenin/go-tdlib/tlparser"
+	"github.com/u-robot/go-tdlib/tlparser"
 )
 
+// GenerateTypes generates source code from the Telegram API scheme.
 func GenerateTypes(schema *tlparser.Schema, packageName string) []byte {
 	buf := bytes.NewBufferString("")
 
@@ -18,13 +19,13 @@ func GenerateTypes(schema *tlparser.Schema, packageName string) []byte {
 
 `)
 
-	buf.WriteString("const (\n")
+	buf.WriteString("// Class constants.\nconst (\n")
 	for _, entity := range schema.Classes {
-		tdlibClass := TdlibClass(entity.Name, schema)
+		tdlibClass := NewTdlibClass(entity.Name, schema)
 		buf.WriteString(fmt.Sprintf("    %s = %q\n", tdlibClass.ToClassConst(), entity.Name))
 	}
 	for _, entity := range schema.Types {
-		tdlibType := TdlibType(entity.Name, schema)
+		tdlibType := NewTdlibType(entity.Name, schema)
 		if tdlibType.IsInternal() || tdlibType.HasClass() {
 			continue
 		}
@@ -34,9 +35,9 @@ func GenerateTypes(schema *tlparser.Schema, packageName string) []byte {
 
 	buf.WriteString("\n\n")
 
-	buf.WriteString("const (\n")
+	buf.WriteString("// Type constants.\nconst (\n")
 	for _, entity := range schema.Types {
-		tdlibType := TdlibType(entity.Name, schema)
+		tdlibType := NewTdlibType(entity.Name, schema)
 		if tdlibType.IsInternal() {
 			continue
 		}
@@ -47,30 +48,30 @@ func GenerateTypes(schema *tlparser.Schema, packageName string) []byte {
 	buf.WriteString("\n\n")
 
 	for _, class := range schema.Classes {
-		tdlibClass := TdlibClass(class.Name, schema)
+		tdlibClass := NewTdlibClass(class.Name, schema)
 
-		buf.WriteString(fmt.Sprintf(`// %s
+		buf.WriteString(fmt.Sprintf(`// %s %s
 type %s interface {
     %sType() string
 }
 
-`, class.Description, tdlibClass.ToGoType(), tdlibClass.ToGoType()))
+`, tdlibClass.ToGoType(), firstLower(class.Description), tdlibClass.ToGoType(), tdlibClass.ToGoType()))
 	}
 
 	for _, typ := range schema.Types {
-		tdlibType := TdlibType(typ.Name, schema)
+		tdlibType := NewTdlibType(typ.Name, schema)
 		if tdlibType.IsInternal() {
 			continue
 		}
 
-		buf.WriteString("// " + typ.Description + "\n")
+		buf.WriteString(fmt.Sprintf("// %s %s\n", tdlibType.ToGoType(), firstLower(typ.Description)))
 
 		if len(typ.Properties) > 0 {
 			buf.WriteString(`type ` + tdlibType.ToGoType() + ` struct {
     meta
 `)
 			for _, property := range typ.Properties {
-				tdlibTypeProperty := TdlibTypeProperty(property.Name, property.Type, schema)
+				tdlibTypeProperty := NewTdlibTypeProperty(property.Name, property.Type, schema)
 
 				buf.WriteString(fmt.Sprintf("    // %s\n", property.Description))
 				buf.WriteString(fmt.Sprintf("    %s %s `json:\"%s\"`\n", tdlibTypeProperty.ToGoName(), tdlibTypeProperty.ToGoType(), property.Name))
@@ -85,7 +86,8 @@ type %s interface {
 `)
 		}
 
-		buf.WriteString(fmt.Sprintf(`func (entity *%s) MarshalJSON() ([]byte, error) {
+		buf.WriteString(fmt.Sprintf(`// MarshalJSON returns %s object as the JSON encoding of %s.
+func (entity *%s) MarshalJSON() ([]byte, error) {
     entity.meta.Type = entity.GetType()
 
     type stub %s
@@ -93,12 +95,14 @@ type %s interface {
     return json.Marshal((*stub)(entity))
 }
 
-`, tdlibType.ToGoType(), tdlibType.ToGoType()))
+`, tdlibType.ToGoType(), tdlibType.ToGoType(), tdlibType.ToGoType(), tdlibType.ToGoType()))
 
-		buf.WriteString(fmt.Sprintf(`func (*%s) GetClass() string {
+		buf.WriteString(fmt.Sprintf(`// GetClass returns constant class string of the class.
+func (*%s) GetClass() string {
     return %s
 }
 
+// GetType returns constant class type string of the class.
 func (*%s) GetType() string {
     return %s
 }
@@ -106,24 +110,26 @@ func (*%s) GetType() string {
 `, tdlibType.ToGoType(), tdlibType.ToClassConst(), tdlibType.ToGoType(), tdlibType.ToTypeConst()))
 
 		if tdlibType.HasClass() {
-			tdlibClass := TdlibClass(tdlibType.GetClass().Name, schema)
+			tdlibClass := NewTdlibClass(tdlibType.GetClass().Name, schema)
 
-			buf.WriteString(fmt.Sprintf(`func (*%s) %sType() string {
+			buf.WriteString(fmt.Sprintf(`// %sType returns constant class type string of the class.
+func (*%s) %sType() string {
     return %s
 }
 
-`, tdlibType.ToGoType(), tdlibClass.ToGoType(), tdlibType.ToTypeConst()))
+`, tdlibClass.ToGoType(), tdlibType.ToGoType(), tdlibClass.ToGoType(), tdlibType.ToTypeConst()))
 		}
 
 		if tdlibType.HasClassProperties() {
-			buf.WriteString(fmt.Sprintf(`func (%s *%s) UnmarshalJSON(data []byte) error {
+			buf.WriteString(fmt.Sprintf(`// UnmarshalJSON sets %s object to a copy of JSON encoding of %s.
+func (entity *%s) UnmarshalJSON(data []byte) error {
     var tmp struct {
-`, typ.Name, tdlibType.ToGoType()))
+`, tdlibType.ToGoType(), tdlibType.ToGoType(), tdlibType.ToGoType()))
 
 			var countSimpleProperties int
 
 			for _, property := range typ.Properties {
-				tdlibTypeProperty := TdlibTypeProperty(property.Name, property.Type, schema)
+				tdlibTypeProperty := NewTdlibTypeProperty(property.Name, property.Type, schema)
 
 				if !tdlibTypeProperty.IsClass() || tdlibTypeProperty.IsList() {
 					buf.WriteString(fmt.Sprintf("        %s %s `json:\"%s\"`\n", tdlibTypeProperty.ToGoName(), tdlibTypeProperty.ToGoType(), property.Name))
@@ -143,10 +149,10 @@ func (*%s) GetType() string {
 `)
 
 			for _, property := range typ.Properties {
-				tdlibTypeProperty := TdlibTypeProperty(property.Name, property.Type, schema)
+				tdlibTypeProperty := NewTdlibTypeProperty(property.Name, property.Type, schema)
 
 				if !tdlibTypeProperty.IsClass() || tdlibTypeProperty.IsList() {
-					buf.WriteString(fmt.Sprintf("    %s.%s = tmp.%s\n", typ.Name, tdlibTypeProperty.ToGoName(), tdlibTypeProperty.ToGoName()))
+					buf.WriteString(fmt.Sprintf("    entity.%s = tmp.%s\n", tdlibTypeProperty.ToGoName(), tdlibTypeProperty.ToGoName()))
 				}
 			}
 
@@ -155,13 +161,13 @@ func (*%s) GetType() string {
 			}
 
 			for _, property := range typ.Properties {
-				tdlibTypeProperty := TdlibTypeProperty(property.Name, property.Type, schema)
+				tdlibTypeProperty := NewTdlibTypeProperty(property.Name, property.Type, schema)
 
 				if tdlibTypeProperty.IsClass() && !tdlibTypeProperty.IsList() {
 					buf.WriteString(fmt.Sprintf(`    field%s, _ := Unmarshal%s(tmp.%s)
-    %s.%s = field%s
+    entity.%s = field%s
 
-`, tdlibTypeProperty.ToGoName(), tdlibTypeProperty.ToGoType(), tdlibTypeProperty.ToGoName(), typ.Name, tdlibTypeProperty.ToGoName(), tdlibTypeProperty.ToGoName()))
+`, tdlibTypeProperty.ToGoName(), tdlibTypeProperty.ToGoType(), tdlibTypeProperty.ToGoName(), tdlibTypeProperty.ToGoName(), tdlibTypeProperty.ToGoName()))
 				}
 			}
 

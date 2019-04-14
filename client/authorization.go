@@ -1,18 +1,17 @@
 package client
 
 import (
-	"errors"
 	"fmt"
 	"time"
 )
 
-var ErrNotSupportedAuthorizationState = errors.New("not supported state")
-
+// AuthorizationStateHandler is interface declaring authorization state listener.
 type AuthorizationStateHandler interface {
 	Handle(client *Client, state AuthorizationState) error
 	Close()
 }
 
+// Authorize starts authorization process for the client.
 func Authorize(client *Client, authorizationStateHandler AuthorizationStateHandler) error {
 	defer authorizationStateHandler.Close()
 
@@ -35,7 +34,8 @@ func Authorize(client *Client, authorizationStateHandler AuthorizationStateHandl
 	}
 }
 
-type clientAuthorizer struct {
+// Authorizer implements AuthorizationStateHandler interface.
+type Authorizer struct {
 	TdlibParameters chan *TdlibParameters
 	PhoneNumber     chan string
 	Code            chan string
@@ -45,8 +45,9 @@ type clientAuthorizer struct {
 	Password        chan string
 }
 
-func ClientAuthorizer() *clientAuthorizer {
-	return &clientAuthorizer{
+// NewClientAuthorizer creates new instance of Authorizer.
+func NewClientAuthorizer() *Authorizer {
+	return &Authorizer{
 		TdlibParameters: make(chan *TdlibParameters, 1),
 		PhoneNumber:     make(chan string, 1),
 		Code:            make(chan string, 1),
@@ -57,72 +58,65 @@ func ClientAuthorizer() *clientAuthorizer {
 	}
 }
 
-func (stateHandler *clientAuthorizer) Handle(client *Client, state AuthorizationState) error {
-	stateHandler.State <- state
-
+// Handle is a function called during authorization.
+func (a *Authorizer) Handle(client *Client, state AuthorizationState) error {
+	a.State <- state
 	switch state.AuthorizationStateType() {
 	case TypeAuthorizationStateWaitTdlibParameters:
 		_, err := client.SetTdlibParameters(&SetTdlibParametersRequest{
-			Parameters: <-stateHandler.TdlibParameters,
+			Parameters: <-a.TdlibParameters,
 		})
 		return err
-
 	case TypeAuthorizationStateWaitEncryptionKey:
 		_, err := client.CheckDatabaseEncryptionKey(&CheckDatabaseEncryptionKeyRequest{})
 		return err
-
 	case TypeAuthorizationStateWaitPhoneNumber:
 		_, err := client.SetAuthenticationPhoneNumber(&SetAuthenticationPhoneNumberRequest{
-			PhoneNumber:          <-stateHandler.PhoneNumber,
+			PhoneNumber:          <-a.PhoneNumber,
 			AllowFlashCall:       false,
 			IsCurrentPhoneNumber: false,
 		})
 		return err
-
 	case TypeAuthorizationStateWaitCode:
 		_, err := client.CheckAuthenticationCode(&CheckAuthenticationCodeRequest{
-			Code:      <-stateHandler.Code,
-			FirstName: <-stateHandler.FirstName,
-			LastName:  <-stateHandler.LastName,
+			Code:      <-a.Code,
+			FirstName: <-a.FirstName,
+			LastName:  <-a.LastName,
 		})
 		return err
-
 	case TypeAuthorizationStateWaitPassword:
 		_, err := client.CheckAuthenticationPassword(&CheckAuthenticationPasswordRequest{
-			Password: <-stateHandler.Password,
+			Password: <-a.Password,
 		})
 		return err
-
 	case TypeAuthorizationStateReady:
 		return nil
-
 	case TypeAuthorizationStateLoggingOut:
-		return ErrNotSupportedAuthorizationState
-
+		return nil
 	case TypeAuthorizationStateClosing:
-		return ErrNotSupportedAuthorizationState
-
+		return nil
 	case TypeAuthorizationStateClosed:
-		return ErrNotSupportedAuthorizationState
+		return nil
 	}
-
-	return ErrNotSupportedAuthorizationState
+	return nil
 }
 
-func (stateHandler *clientAuthorizer) Close() {
-	close(stateHandler.TdlibParameters)
-	close(stateHandler.PhoneNumber)
-	close(stateHandler.Code)
-	close(stateHandler.State)
-	close(stateHandler.FirstName)
-	close(stateHandler.LastName)
-	close(stateHandler.Password)
+// Close is a function called when authorization is done or cancelled.
+func (a *Authorizer) Close() {
+	close(a.TdlibParameters)
+	close(a.PhoneNumber)
+	close(a.Code)
+	close(a.State)
+	close(a.FirstName)
+	close(a.LastName)
+	close(a.Password)
 }
 
-func CliInteractor(clientAuthorizer *clientAuthorizer) {
+// CliInteractor is a functions that implements simple authorization helper asking authorization data from terminal.
+func CliInteractor(a *Authorizer) {
 	for {
 		select {
-		case state, ok := <-clientAuthorizer.State:
+		case state, ok := <-a.State:
 			if !ok {
 				return
 			}
@@ -133,7 +127,7 @@ func CliInteractor(clientAuthorizer *clientAuthorizer) {
 				var phoneNumber string
 				fmt.Scanln(&phoneNumber)
 
-				clientAuthorizer.PhoneNumber <- phoneNumber
+				a.PhoneNumber <- phoneNumber
 
 			case TypeAuthorizationStateWaitCode:
 				var code string
@@ -153,16 +147,16 @@ func CliInteractor(clientAuthorizer *clientAuthorizer) {
 					fmt.Scanln(&lastName)
 				}
 
-				clientAuthorizer.Code <- code
-				clientAuthorizer.FirstName <- firstName
-				clientAuthorizer.LastName <- lastName
+				a.Code <- code
+				a.FirstName <- firstName
+				a.LastName <- lastName
 
 			case TypeAuthorizationStateWaitPassword:
 				fmt.Println("Enter password: ")
 				var password string
 				fmt.Scanln(&password)
 
-				clientAuthorizer.Password <- password
+				a.Password <- password
 
 			case TypeAuthorizationStateReady:
 				return
@@ -171,31 +165,34 @@ func CliInteractor(clientAuthorizer *clientAuthorizer) {
 	}
 }
 
-type botAuthorizer struct {
+// BotAuthorizer implements AuthorizationStateHandler interface.
+type BotAuthorizer struct {
 	TdlibParameters chan *TdlibParameters
 	Token           chan string
 	State           chan AuthorizationState
 }
 
-func BotAuthorizer(token string) *botAuthorizer {
-	botAuthorizer := &botAuthorizer{
+// NewBotAuthorizer creates new instance of BotAuthorizer.
+func NewBotAuthorizer(token string) *BotAuthorizer {
+	a := &BotAuthorizer{
 		TdlibParameters: make(chan *TdlibParameters, 1),
 		Token:           make(chan string, 1),
 		State:           make(chan AuthorizationState, 10),
 	}
 
-	botAuthorizer.Token <- token
+	a.Token <- token
 
-	return botAuthorizer
+	return a
 }
 
-func (stateHandler *botAuthorizer) Handle(client *Client, state AuthorizationState) error {
-	stateHandler.State <- state
+// Handle is a function called during authorization.
+func (a *BotAuthorizer) Handle(client *Client, state AuthorizationState) error {
+	a.State <- state
 
 	switch state.AuthorizationStateType() {
 	case TypeAuthorizationStateWaitTdlibParameters:
 		_, err := client.SetTdlibParameters(&SetTdlibParametersRequest{
-			Parameters: <-stateHandler.TdlibParameters,
+			Parameters: <-a.TdlibParameters,
 		})
 		return err
 
@@ -205,34 +202,35 @@ func (stateHandler *botAuthorizer) Handle(client *Client, state AuthorizationSta
 
 	case TypeAuthorizationStateWaitPhoneNumber:
 		_, err := client.CheckAuthenticationBotToken(&CheckAuthenticationBotTokenRequest{
-			Token: <-stateHandler.Token,
+			Token: <-a.Token,
 		})
 		return err
 
 	case TypeAuthorizationStateWaitCode:
-		return ErrNotSupportedAuthorizationState
+		return nil
 
 	case TypeAuthorizationStateWaitPassword:
-		return ErrNotSupportedAuthorizationState
+		return nil
 
 	case TypeAuthorizationStateReady:
 		return nil
 
 	case TypeAuthorizationStateLoggingOut:
-		return ErrNotSupportedAuthorizationState
+		return nil
 
 	case TypeAuthorizationStateClosing:
-		return ErrNotSupportedAuthorizationState
+		return nil
 
 	case TypeAuthorizationStateClosed:
-		return ErrNotSupportedAuthorizationState
+		return nil
 	}
 
-	return ErrNotSupportedAuthorizationState
+	return nil
 }
 
-func (stateHandler *botAuthorizer) Close() {
-	close(stateHandler.TdlibParameters)
-	close(stateHandler.Token)
-	close(stateHandler.State)
+// Close is a function called when authorization is done or cancelled.
+func (a *BotAuthorizer) Close() {
+	close(a.TdlibParameters)
+	close(a.Token)
+	close(a.State)
 }

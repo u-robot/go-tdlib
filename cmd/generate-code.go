@@ -8,8 +8,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/zelenin/go-tdlib/codegen"
-	"github.com/zelenin/go-tdlib/tlparser"
+	"github.com/u-robot/go-tdlib/codegen"
+	"github.com/u-robot/go-tdlib/tlparser"
 )
 
 type config struct {
@@ -33,14 +33,14 @@ func main() {
 
 	flag.Parse()
 
-	resp, err := http.Get("https://raw.githubusercontent.com/tdlib/td/" + config.version + "/td/generate/scheme/td_api.tl")
+	response, err := http.Get("https://raw.githubusercontent.com/tdlib/td/" + config.version + "/td/generate/scheme/td_api.tl")
 	if err != nil {
 		log.Fatalf("http.Get error: %s", err)
 		return
 	}
-	defer resp.Body.Close()
+	defer response.Body.Close()
 
-	schema, err := tlparser.Parse(resp.Body)
+	schema, err := tlparser.Parse(response.Body)
 	if err != nil {
 		log.Fatalf("schema parse error: %s", err)
 		return

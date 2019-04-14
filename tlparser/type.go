@@ -1,11 +1,13 @@
 package tlparser
 
+// Schema is object containing types, classes and functions decribed in schema.
 type Schema struct {
 	Types     []*Type     `json:"types"`
 	Classes   []*Class    `json:"classes"`
 	Functions []*Function `json:"functions"`
 }
 
+// Type contains info about schema type.
 type Type struct {
 	Name        string      `json:"name"`
 	Description string      `json:"description"`
@@ -13,20 +15,24 @@ type Type struct {
 	Properties  []*Property `json:"properties"`
 }
 
+// Class contains info about schema class.
 type Class struct {
 	Name        string `json:"name"`
 	Description string `json:"description"`
 }
 
+// FunctionType contains info about schema function type.
 type FunctionType int
 
+// FunctionType constants.
 const (
-	FUNCTION_TYPE_UNKNOWN FunctionType = iota
-	FUNCTION_TYPE_COMMON
-	FUNCTION_TYPE_USER
-	FUNCTION_TYPE_BOT
+	FunctionTypeUnknown FunctionType = iota
+	FunctionTypeCommon
+	FunctionTypeUser
+	FunctionTypeBot
 )
 
+// Function contains info about schema function.
 type Function struct {
 	Name          string       `json:"name"`
 	Description   string       `json:"description"`
@@ -36,6 +42,7 @@ type Function struct {
 	Type          FunctionType `json:"type"`
 }
 
+// Property contains info about schema property.
 type Property struct {
 	Name        string `json:"name"`
 	Type        string `json:"type"`

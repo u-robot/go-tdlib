@@ -5,9 +5,11 @@ import (
 	"math/rand"
 )
 
+// ExtraGenerator is a function type which returns random string.
 type ExtraGenerator func() string
 
-func UuidV4Generator() ExtraGenerator {
+// UUIDV4Generator returns a function which returns random string with 16 bytes length.
+func UUIDV4Generator() ExtraGenerator {
 	return func() string {
 		var uuid [16]byte
 		rand.Read(uuid[:])

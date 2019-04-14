@@ -3,9 +3,11 @@ package codegen
 import (
 	"bytes"
 	"fmt"
-	"github.com/zelenin/go-tdlib/tlparser"
+
+	"github.com/u-robot/go-tdlib/tlparser"
 )
 
+// GenerateUnmarshalers generates source code from the Telegram API scheme.
 func GenerateUnmarshalers(schema *tlparser.Schema, packageName string) []byte {
 	buf := bytes.NewBufferString("")
 
@@ -19,9 +21,10 @@ func GenerateUnmarshalers(schema *tlparser.Schema, packageName string) []byte {
 `)
 
 	for _, class := range schema.Classes {
-		tdlibClass := TdlibClass(class.Name, schema)
+		tdlibClass := NewTdlibClass(class.Name, schema)
 
-		buf.WriteString(fmt.Sprintf(`func Unmarshal%s(data json.RawMessage) (%s, error) {
+		buf.WriteString(fmt.Sprintf(`// Unmarshal%s parses the JSON-encoded data and return it as %s object.
+func Unmarshal%s(data json.RawMessage) (%s, error) {
     var meta meta
 
     err := json.Unmarshal(data, &meta)
@@ -30,7 +33,7 @@ func GenerateUnmarshalers(schema *tlparser.Schema, packageName string) []byte {
     }
 
     switch meta.Type {
-`, tdlibClass.ToGoType(), tdlibClass.ToGoType()))
+`, tdlibClass.ToGoType(), tdlibClass.ToGoType(), tdlibClass.ToGoType(), tdlibClass.ToGoType()))
 
 		for _, subType := range tdlibClass.GetSubTypes() {
 			buf.WriteString(fmt.Sprintf(`    case %s:
@@ -49,25 +52,27 @@ func GenerateUnmarshalers(schema *tlparser.Schema, packageName string) []byte {
 	}
 
 	for _, typ := range schema.Types {
-		tdlibType := TdlibType(typ.Name, schema)
+		tdlibType := NewTdlibType(typ.Name, schema)
 
 		if tdlibType.IsList() || tdlibType.IsInternal() {
 			continue
 		}
 
-		buf.WriteString(fmt.Sprintf(`func Unmarshal%s(data json.RawMessage) (*%s, error) {
-    var resp %s
+		buf.WriteString(fmt.Sprintf(`// Unmarshal%s parses the JSON-encoded data and return it as %s object.
+func Unmarshal%s(data json.RawMessage) (*%s, error) {
+    var response %s
 
-    err := json.Unmarshal(data, &resp)
+    err := json.Unmarshal(data, &response)
 
-    return &resp, err
+    return &response, err
 }
 
-`, tdlibType.ToGoType(), tdlibType.ToGoType(), tdlibType.ToGoType()))
+`, tdlibType.ToGoType(), tdlibType.ToGoType(), tdlibType.ToGoType(), tdlibType.ToGoType(), tdlibType.ToGoType()))
 
 	}
 
-	buf.WriteString(`func UnmarshalType(data json.RawMessage) (Type, error) {
+	buf.WriteString(`// UnmarshalType parses the JSON-encoded data and return it as %s object.
+func UnmarshalType(data json.RawMessage) (Type, error) {
     var meta meta
 
     err := json.Unmarshal(data, &meta)
@@ -79,7 +84,7 @@ func GenerateUnmarshalers(schema *tlparser.Schema, packageName string) []byte {
 `)
 
 	for _, typ := range schema.Types {
-		tdlibType := TdlibType(typ.Name, schema)
+		tdlibType := NewTdlibType(typ.Name, schema)
 
 		if tdlibType.IsList() || tdlibType.IsInternal() {
 			continue
